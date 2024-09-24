@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+:root {
+    --bg-color:#000c24;
+}
+
+#main-loader {z-index:1000; opacity:1; position:fixed; left:0; top:0; display:flex; align-items:center; justify-content:center; width:100%; height:100%; background:var(--bg-color); transition:all 0.4s; }
+#main-loader.hide {z-index:-100; opacity:0; }
+#main-loader img {width:60px; }
+
+/* btn */
+.btn {--tw-bg-opacity:0.9;}
+.btn:hover {--tw-bg-opacity:1 !important;}
+.btn-success {color:#fff; }
+

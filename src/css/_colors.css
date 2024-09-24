@@ -1,8 +1,8 @@
 /* Default colors */
 :root {
-    --color-primary: 167 31 103;
+    --color-primary: 210 38 129;
     --color-secondary: theme("colors.rgb.slate.200");
-    --color-success: 7 188 12;
+    --color-success: 21 190 43;
     --color-info: 52 152 219;
     --color-warning: 241 196 15;
     --color-pending: theme("colors.rgb.orange.500");

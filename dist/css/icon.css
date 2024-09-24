@@ -1,0 +1,4544 @@
+@charset "UTF-8";@font-face {
+    font-family: BetConstruct-Icons;
+    src: url(../fonts/BetConstruct-Icons-5cf60ce4.eot);
+    src: url(../fonts/BetConstruct-Icons-5cf60ce4.eot?jrs0er#iefix) format("embedded-opentype"),url(../fonts/BetConstruct-Icons-e7f6d75c.ttf?jrs0er) format("truetype"),url(../fonts/BetConstruct-Icons-d980a6b9.woff?jrs0er) format("woff"),url(../fonts/BetConstruct-Icons-37962c56.svg?jrs0er#BetConstruct-Icons) format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block
+}
+
+[class^=bc-i-],[class*=" bc-i-"] {
+    font-family: BetConstruct-Icons!important;
+    speak: never;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.bc-i-default-icon:before {
+    content: ""
+}
+
+.bc-i-Go:before {
+    content: ""
+}
+
+.bc-i-Sepaktakraw:before {
+    content: ""
+}
+
+.bc-i-AgeofEmpires:before {
+    content: ""
+}
+
+.bc-i-FreeFire:before {
+    content: ""
+}
+
+.bc-i-ArenaofValor:before {
+    content: ""
+}
+
+.bc-i-4000235:before {
+    content: ""
+}
+
+.bc-i-Headis:before {
+    content: ""
+}
+
+.bc-i-Teqball:before {
+    content: ""
+}
+
+.bc-i-MobileLegends:before {
+    content: ""
+}
+
+.bc-i-ApexLegends:before {
+    content: ""
+}
+
+.bc-i-Valorant:before {
+    content: ""
+}
+
+.bc-i-VirtualMarbleRacing:before {
+    content: ""
+}
+
+.bc-i-Kabaddi:before {
+    content: ""
+}
+
+.bc-i-RainbowSix:before {
+    content: ""
+}
+
+.bc-i-Petanque:before {
+    content: ""
+}
+
+.bc-i-ClashRoyale:before {
+    content: ""
+}
+
+.bc-i-JokerWild:before {
+    content: ""
+}
+
+.bc-i-420033728:before {
+    content: ""
+}
+
+.bc-i-Bodybuilding-icon:before {
+    content: ""
+}
+
+.bc-i-FIFA:before {
+    content: ""
+}
+
+.bc-i-circuit:before {
+    content: ""
+}
+
+.bc-i-PS4GAMING:before {
+    content: ""
+}
+
+.bc-i-E-IceHockey:before {
+    content: ""
+}
+
+.bc-i-BetOnBlackJack:before {
+    content: ""
+}
+
+.bc-i-LiveBetOnPoker:before {
+    content: ""
+}
+
+.bc-i-livebetonpoker:before {
+    content: ""
+}
+
+.bc-i-150025:before {
+    content: ""
+}
+
+.bc-i-eSports_logo_sportbook:before {
+    content: ""
+}
+
+.bc-i-KingOfGlory:before {
+    content: ""
+}
+
+.bc-i-PUBG:before {
+    content: ""
+}
+
+.bc-i-RocketLeague:before {
+    content: ""
+}
+
+.bc-i-WarcraftIII:before {
+    content: ""
+}
+
+.bc-i-StreetFighterSymbol:before {
+    content: ""
+}
+
+.bc-i-Esports:before {
+    content: ""
+}
+
+.bc-i-CrossFire:before {
+    content: ""
+}
+
+.bc-i-Halo:before {
+    content: ""
+}
+
+.bc-i-blank:before {
+    content: ""
+}
+
+.bc-i-HON:before {
+    content: ""
+}
+
+.bc-i-Vainglory:before {
+    content: ""
+}
+
+.bc-i-VirtualCarRacing:before {
+    content: ""
+}
+
+.bc-i-FTNSpaceTaxi:before {
+    content: ""
+}
+
+.bc-i-420031330:before {
+    content: ""
+}
+
+.bc-i-CallOfDuty:before {
+    content: ""
+}
+
+.bc-i-CounterStrike:before {
+    content: "!"
+}
+
+.bc-i-LeagueofLegendsWildRift:before {
+    content: ""
+}
+
+.bc-i-LeagueOfLegends:before {
+    content: '"'
+}
+
+.bc-i-halo:before {
+    content: "#"
+}
+
+.bc-i-Dota2:before {
+    content: "$"
+}
+
+.bc-i-BrawlStars:before {
+    content: ""
+}
+
+.bc-i-HeroesOfTheStorm:before {
+    content: "%"
+}
+
+.bc-i-Hearthstone:before {
+    content: "&"
+}
+
+.bc-i-MortalKombatXL:before {
+    content: "'"
+}
+
+.bc-i-WorldOfTanks:before {
+    content: "("
+}
+
+.bc-i-WorldOfWarcraft:before {
+    content: ")"
+}
+
+.bc-i-Overwatch:before {
+    content: "*"
+}
+
+.bc-i-Smite:before {
+    content: "+"
+}
+
+.bc-i-smash:before {
+    content: ","
+}
+
+.bc-i-StarCraft:before {
+    content: "-"
+}
+
+.bc-i-StarCraft2:before {
+    content: "-"
+}
+
+.bc-i-outright:before {
+    content: ""
+}
+
+.bc-i-goldengate:before {
+    content: ""
+}
+
+.bc-i-420031083:before {
+    content: ""
+}
+
+.bc-i-financials:before {
+    content: ""
+}
+
+.bc-i-ETennis:before {
+    content: ""
+}
+
+.bc-i-EBasketball:before {
+    content: ""
+}
+
+.bc-i-CyberFootball:before {
+    content: ""
+}
+
+.bc-i-Bowls:before {
+    content: ""
+}
+
+.bc-i-Futsal:before {
+    content: "."
+}
+
+.bc-i-vbet-sport-icons_tablehockey:before {
+    content: "/"
+}
+
+.bc-i-vbet-sport-icons_tankbiathlon:before {
+    content: "2"
+}
+
+.bc-i-TVShowsAndMovies:before {
+    content: "3"
+}
+
+.bc-i-MarathonSwimming:before {
+    content: ""
+}
+
+.bc-i-Olympics:before {
+    content: ""
+}
+
+.bc-i-Skateboarding:before {
+    content: ""
+}
+
+.bc-i-SynchronizedSwimming:before {
+    content: ""
+}
+
+.bc-i-Climbing:before {
+    content: ""
+}
+
+.bc-i-Equestrian:before {
+    content: ""
+}
+
+.bc-i-Karate:before {
+    content: ""
+}
+
+.bc-i-bingo:before {
+    content: ""
+}
+
+.bc-i-150027:before {
+    content: ""
+}
+
+.bc-i-instantgame:before {
+    content: ""
+}
+
+.bc-i-vbet-sport-icons_yachting:before {
+    content: ">"
+}
+
+.bc-i-Balls:before {
+    content: ""
+}
+
+.bc-i-sport:before {
+    content: ""
+}
+
+.bc-i-AmericanFootball:before {
+    content: ""
+}
+
+.bc-i-Angling:before {
+    content: ""
+}
+
+.bc-i-PistolShooting:before {
+    content: ""
+}
+
+.bc-i-PistolHead2Head:before {
+    content: ""
+}
+
+.bc-i-ArcheryH2H:before {
+    content: ""
+}
+
+.bc-i-CompoundArchery:before {
+    content: ""
+}
+
+.bc-i-CompoundArchery1:before {
+    content: ""
+}
+
+.bc-i-Archery:before {
+    content: ""
+}
+
+.bc-i-AustralianFootball:before {
+    content: ""
+}
+
+.bc-i-Badminton:before {
+    content: ""
+}
+
+.bc-i-3x3:before {
+    content: ""
+}
+
+.bc-i-3x3Basketball:before {
+    content: ""
+}
+
+.bc-i-Softball:before {
+    content: ""
+}
+
+.bc-i-Baseball:before {
+    content: ""
+}
+
+.bc-i-Tennis:before {
+    content: ""
+}
+
+.bc-i-vbet-sport-icons_tennis:before {
+    content: ""
+}
+
+.bc-i-Volleyball:before {
+    content: ""
+}
+
+.bc-i-vbet-sport-icons_volleyball:before {
+    content: ""
+}
+
+.bc-i-Basketball:before {
+    content: ""
+}
+
+.bc-i-Soccer:before {
+    content: ""
+}
+
+.bc-i-Football:before {
+    content: ""
+}
+
+.bc-i-BasketballShots:before {
+    content: ""
+}
+
+.bc-i-BeachHandball:before {
+    content: ""
+}
+
+.bc-i-BeachFootball:before {
+    content: ""
+}
+
+.bc-i-BeachVolleyball:before {
+    content: ""
+}
+
+.bc-i-Biathlon:before {
+    content: ""
+}
+
+.bc-i-Bobsleigh:before {
+    content: ""
+}
+
+.bc-i-Boxing:before {
+    content: ""
+}
+
+.bc-i-Bridge:before {
+    content: ""
+}
+
+.bc-i-Chess:before {
+    content: ""
+}
+
+.bc-i-Curling:before {
+    content: ""
+}
+
+.bc-i-Cycling:before {
+    content: ""
+}
+
+.bc-i-Cyclo-Cross:before {
+    content: ""
+}
+
+.bc-i-VirtualBicycle:before {
+    content: ""
+}
+
+.bc-i-4000240:before {
+    content: ""
+}
+
+.bc-i-Darts:before {
+    content: ""
+}
+
+.bc-i-Diving:before {
+    content: ""
+}
+
+.bc-i-Eurovision:before {
+    content: ""
+}
+
+.bc-i-X-Sports:before {
+    content: ""
+}
+
+.bc-i-Fencing:before {
+    content: ""
+}
+
+.bc-i-pirates:before {
+    content: ""
+}
+
+.bc-i-FigureSkating:before {
+    content: ""
+}
+
+.bc-i-Floorball:before {
+    content: ""
+}
+
+.bc-i-GaelicFootball:before {
+    content: ""
+}
+
+.bc-i-Golf:before {
+    content: ""
+}
+
+.bc-i-3320009:before {
+    content: ""
+}
+
+.bc-i-GrassHockey:before {
+    content: ""
+}
+
+.bc-i-Gymnastics:before {
+    content: ""
+}
+
+.bc-i-Handball:before {
+    content: ""
+}
+
+.bc-i-Weightlifting:before {
+    content: ""
+}
+
+.bc-i-AirHockey:before {
+    content: ""
+}
+
+.bc-i-Cricket:before {
+    content: ""
+}
+
+.bc-i-BallHockey:before {
+    content: ""
+}
+
+.bc-i-Hockey:before {
+    content: ""
+}
+
+.bc-i-Hurling:before {
+    content: ""
+}
+
+.bc-i-IceHockey:before {
+    content: ""
+}
+
+.bc-i-Judo:before {
+    content: ""
+}
+
+.bc-i-Lacross:before {
+    content: ""
+}
+
+.bc-i-Livemonitor:before {
+    content: ""
+}
+
+.bc-i-Lottery:before {
+    content: ""
+}
+
+.bc-i-Mafia:before {
+    content: ""
+}
+
+.bc-i-MiniSoccer:before {
+    content: ""
+}
+
+.bc-i-Greyhounds:before {
+    content: ""
+}
+
+.bc-i-VirtualGreyhoundRacing:before {
+    content: ""
+}
+
+.bc-i-4000238:before {
+    content: ""
+}
+
+.bc-i-420070:before {
+    content: ""
+}
+
+.bc-i-PMUHorseRacing:before {
+    content: ""
+}
+
+.bc-i-FutureHorseRacing:before {
+    content: ""
+}
+
+.bc-i-ModernPentathlon:before {
+    content: ""
+}
+
+.bc-i-VirtualHorses:before {
+    content: ""
+}
+
+.bc-i-HorseRacing:before {
+    content: ""
+}
+
+.bc-i-HorseRacingSpecials:before {
+    content: ""
+}
+
+.bc-i-VSHorses:before {
+    content: ""
+}
+
+.bc-i-4000509:before {
+    content: ""
+}
+
+.bc-i-420071:before {
+    content: ""
+}
+
+.bc-i-VirtualDogs:before {
+    content: ""
+}
+
+.bc-i-VirtualHorseRacing:before {
+    content: ""
+}
+
+.bc-i-Motorsport:before {
+    content: ""
+}
+
+.bc-i-Motorbikes:before {
+    content: ""
+}
+
+.bc-i-4000239:before {
+    content: ""
+}
+
+.bc-i-AutoRacing:before {
+    content: ""
+}
+
+.bc-i-Rally:before {
+    content: ""
+}
+
+.bc-i-BigCityCars:before {
+    content: ""
+}
+
+.bc-i-33060323:before {
+    content: ""
+}
+
+.bc-i-Nascar:before {
+    content: ""
+}
+
+.bc-i-VirtualDragRacing:before {
+    content: ""
+}
+
+.bc-i-Formula1:before {
+    content: ""
+}
+
+.bc-i-Netball:before {
+    content: ""
+}
+
+.bc-i-WinterOlympics:before {
+    content: ""
+}
+
+.bc-i-Oscar:before {
+    content: ""
+}
+
+.bc-i-Pesapallo:before {
+    content: ""
+}
+
+.bc-i-PokerLive:before {
+    content: ""
+}
+
+.bc-i-Poker:before {
+    content: ""
+}
+
+.bc-i-Politics:before {
+    content: ""
+}
+
+.bc-i-Pool:before {
+    content: ""
+}
+
+.bc-i-RinkHockey:before {
+    content: ""
+}
+
+.bc-i-Canoeing:before {
+    content: ""
+}
+
+.bc-i-Rowing:before {
+    content: ""
+}
+
+.bc-i-RugbySevens:before {
+    content: ""
+}
+
+.bc-i-RugbyLeague:before {
+    content: ""
+}
+
+.bc-i-RugbyUnion:before {
+    content: ""
+}
+
+.bc-i-Shooting:before {
+    content: ""
+}
+
+.bc-i-Skeleton:before {
+    content: ""
+}
+
+.bc-i-Swimming:before {
+    content: ""
+}
+
+.bc-i-DiscGolf:before {
+    content: ""
+}
+
+.bc-i-WaterPolo:before {
+    content: ""
+}
+
+.bc-i-vbet-sport-icons_waterpolo:before {
+    content: ""
+}
+
+.bc-i-Schwingen:before {
+    content: ""
+}
+
+.bc-i-FreestyleWrestling:before {
+    content: ""
+}
+
+.bc-i-GrecoRomanWrestling:before {
+    content: ""
+}
+
+.bc-i-Wrestling:before {
+    content: ""
+}
+
+.bc-i-WWE:before {
+    content: ""
+}
+
+.bc-i-Athletics:before {
+    content: ""
+}
+
+.bc-i-Luge:before {
+    content: ""
+}
+
+.bc-i-Speedskating:before {
+    content: ""
+}
+
+.bc-i-ShortTrackSpeedSkating:before {
+    content: ""
+}
+
+.bc-i-Skis:before {
+    content: ""
+}
+
+.bc-i-AlpineSkiing:before {
+    content: ""
+}
+
+.bc-i-CrossCountrySkiing:before {
+    content: ""
+}
+
+.bc-i-SkiJumping:before {
+    content: ""
+}
+
+.bc-i-NordicCombined:before {
+    content: ""
+}
+
+.bc-i-Snooker:before {
+    content: ""
+}
+
+.bc-i-Snowboard:before {
+    content: ""
+}
+
+.bc-i-VirtualFootballPro:before {
+    content: ""
+}
+
+.bc-i-400037037:before {
+    content: ""
+}
+
+.bc-i-SoccerWC2014:before {
+    content: ""
+}
+
+.bc-i-SpecialBets:before {
+    content: ""
+}
+
+.bc-i-Speedway:before {
+    content: ""
+}
+
+.bc-i-SportAndFun:before {
+    content: ""
+}
+
+.bc-i-Sumo:before {
+    content: ""
+}
+
+.bc-i-Surfing:before {
+    content: ""
+}
+
+.bc-i-SynchronisedSwimming:before {
+    content: ""
+}
+
+.bc-i-Tablehockey:before {
+    content: ""
+}
+
+.bc-i-Taekwondo:before {
+    content: ""
+}
+
+.bc-i-vbet-sport-icons_taekwondo:before {
+    content: ""
+}
+
+.bc-i-Tankbiathlon:before {
+    content: ""
+}
+
+.bc-i-Telecasts:before {
+    content: ""
+}
+
+.bc-i-Triathlon:before {
+    content: ""
+}
+
+.bc-i-vbet-sport-icons_triathlon:before {
+    content: ""
+}
+
+.bc-i-UltimateFighting:before {
+    content: ""
+}
+
+.bc-i-Mma:before {
+    content: ""
+}
+
+.bc-i-SportFight:before {
+    content: ""
+}
+
+.bc-i-vbet-sport-icons_ultimatefighting:before {
+    content: ""
+}
+
+.bc-i-UFS:before {
+    content: ""
+}
+
+.bc-i-Padel:before {
+    content: ""
+}
+
+.bc-i-Squash:before {
+    content: ""
+}
+
+.bc-i-VirtualTennis:before {
+    content: ""
+}
+
+.bc-i-4000236:before {
+    content: ""
+}
+
+.bc-i-TableTennis:before {
+    content: ""
+}
+
+.bc-i-vbet-sport-icons_tabletennis:before {
+    content: ""
+}
+
+.bc-i-missed-penalty:before {
+    content: ""
+}
+
+.bc-i-ThePenaltyKicks:before {
+    content: ""
+}
+
+.bc-i-games:before {
+    content: ""
+}
+
+.bc-i-55:before {
+    content: ""
+}
+
+.bc-i-games-1:before {
+    content: ""
+}
+
+.bc-i-games-2:before {
+    content: ""
+}
+
+.bc-i-penalty:before {
+    content: ""
+}
+
+.bc-i-penality:before {
+    content: ""
+}
+
+.bc-i-333:before {
+    content: ""
+}
+
+.bc-i-WhatWhereWhen:before {
+    content: ""
+}
+
+.bc-i-bet-builder:before {
+    content: ""
+}
+
+.bc-i-bet-builder-history:before {
+    content: ""
+}
+
+.bc-i-view-skins:before {
+    content: ""
+}
+
+.bc-i-layers:before {
+    content: ""
+}
+
+.bc-i-booking:before {
+    content: ""
+}
+
+.bc-i-toharmony:before {
+    content: ""
+}
+
+.bc-i-push-notification-fill:before {
+    content: ""
+}
+
+.bc-i-push-notification-outline:before {
+    content: ""
+}
+
+.bc-i-zoom-in:before {
+    content: ""
+}
+
+.bc-i-zoom-out:before {
+    content: ""
+}
+
+.bc-i-slotsforbonuses:before {
+    content: ""
+}
+
+.bc-i-specialslots:before {
+    content: ""
+}
+
+.bc-i-promotions:before {
+    content: ""
+}
+
+.bc-i-promotions-2:before {
+    content: ""
+}
+
+.bc-i-promotions-3:before {
+    content: ""
+}
+
+.bc-i-gamesoftheweek:before {
+    content: ""
+}
+
+.bc-i-gamesoftheweekwithvpn:before {
+    content: ""
+}
+
+.bc-i-jackpotswithvpn:before {
+    content: ""
+}
+
+.bc-i-newwithvpn:before {
+    content: ""
+}
+
+.bc-i-popularwithvpn:before {
+    content: ""
+}
+
+.bc-i-topwithvpn:before {
+    content: ""
+}
+
+.bc-i-promotionswithvpn:before {
+    content: ""
+}
+
+.bc-i-chinesegames:before {
+    content: ""
+}
+
+.bc-i-chinesenewyear:before {
+    content: ""
+}
+
+.bc-i-asiangames:before {
+    content: ""
+}
+
+.bc-i-livedealer:before {
+    content: ""
+}
+
+.bc-i-sportslots:before {
+    content: ""
+}
+
+.bc-i-summerslots:before {
+    content: ""
+}
+
+.bc-i-fruitslots:before {
+    content: ""
+}
+
+.bc-i-saintpatrick:before {
+    content: ""
+}
+
+.bc-i-deluxe:before {
+    content: ""
+}
+
+.bc-i-aliensandrobots:before {
+    content: ""
+}
+
+.bc-i-vegas:before {
+    content: ""
+}
+
+.bc-i-hotgirls:before {
+    content: ""
+}
+
+.bc-i-ladies:before {
+    content: ""
+}
+
+.bc-i-mythology:before {
+    content: ""
+}
+
+.bc-i-ancients:before {
+    content: ""
+}
+
+.bc-i-fairytaleslots:before {
+    content: ""
+}
+
+.bc-i-heroesandvillains:before {
+    content: ""
+}
+
+.bc-i-filmslot:before {
+    content: ""
+}
+
+.bc-i-animalslots:before {
+    content: ""
+}
+
+.bc-i-420019282:before {
+    content: ""
+}
+
+.bc-i-adventure:before {
+    content: ""
+}
+
+.bc-i-adventures:before {
+    content: ""
+}
+
+.bc-i-musicslots:before {
+    content: ""
+}
+
+.bc-i-journey:before {
+    content: ""
+}
+
+.bc-i-womeninslots:before {
+    content: ""
+}
+
+.bc-i-momo-sfavourites:before {
+    content: ""
+}
+
+.bc-i-buddy-transfer:before {
+    content: ""
+}
+
+.bc-i-pascal:before {
+    content: ""
+}
+
+.bc-i-141419:before {
+    content: ""
+}
+
+.bc-i-magic-dice:before {
+    content: ""
+}
+
+.bc-i-141415:before {
+    content: ""
+}
+
+.bc-i-crypto:before {
+    content: ""
+}
+
+.bc-i-bank-card:before {
+    content: ""
+}
+
+.bc-i-bank:before {
+    content: ""
+}
+
+.bc-i-agent:before {
+    content: ""
+}
+
+.bc-i-voucher:before {
+    content: ""
+}
+
+.bc-i-qr:before {
+    content: ""
+}
+
+.bc-i-100lines:before {
+    content: ""
+}
+
+.bc-i-minigames:before {
+    content: ""
+}
+
+.bc-i-skillgames:before {
+    content: ""
+}
+
+.bc-i-gameShows:before {
+    content: ""
+}
+
+.bc-i-jetx:before {
+    content: ""
+}
+
+.bc-i-400038601:before {
+    content: ""
+}
+
+.bc-i-fighters-xxx:before {
+    content: ""
+}
+
+.bc-i-141422:before {
+    content: ""
+}
+
+.bc-i-one-block:before {
+    content: ""
+}
+
+.bc-i-two-block:before {
+    content: ""
+}
+
+.bc-i-two-column:before {
+    content: ""
+}
+
+.bc-i-help:before {
+    content: ""
+}
+
+.bc-i-about:before {
+    content: ""
+}
+
+.bc-i-holdthejackpot:before {
+    content: ""
+}
+
+.bc-i-Ship:before {
+    content: ""
+}
+
+.bc-i-BattleShip:before {
+    content: ""
+}
+
+.bc-i-150026:before {
+    content: ""
+}
+
+.bc-i-multiview:before {
+    content: ""
+}
+
+.bc-i-window-two:before {
+    content: ""
+}
+
+.bc-i-window-one:before {
+    content: ""
+}
+
+.bc-i-dice:before {
+    content: ""
+}
+
+.bc-i-141418:before {
+    content: ""
+}
+
+.bc-i-LuckyEnvelopes:before {
+    content: ""
+}
+
+.bc-i-okey:before {
+    content: ""
+}
+
+.bc-i-508:before {
+    content: ""
+}
+
+.bc-i-fishing:before {
+    content: ""
+}
+
+.bc-i-141416:before {
+    content: ""
+}
+
+.bc-i-4000237:before {
+    content: ""
+}
+
+.bc-i-bettinggames:before {
+    content: ""
+}
+
+.bc-i-4000508:before {
+    content: ""
+}
+
+.bc-i-4000287:before {
+    content: ""
+}
+
+.bc-i-predictor:before {
+    content: ""
+}
+
+.bc-i-525:before {
+    content: ""
+}
+
+.bc-i-location:before {
+    content: ""
+}
+
+.bc-i-420015424:before {
+    content: ""
+}
+
+.bc-i-squad:before {
+    content: ""
+}
+
+.bc-i-refer-to-friend:before {
+    content: ""
+}
+
+.bc-i-standings:before {
+    content: ""
+}
+
+.bc-i-referee:before {
+    content: ""
+}
+
+.bc-i-live-chat:before {
+    content: ""
+}
+
+.bc-i-live-chat-v1:before {
+    content: ""
+}
+
+.bc-i-user:before {
+    content: ""
+}
+
+.bc-i-matches:before {
+    content: ""
+}
+
+.bc-i-stadium:before {
+    content: ""
+}
+
+.bc-i-x50-wheel:before {
+    content: ""
+}
+
+.bc-i-141414:before {
+    content: ""
+}
+
+.bc-i-420031086:before {
+    content: ""
+}
+
+.bc-i-reeloffortune:before {
+    content: ""
+}
+
+.bc-i-wonderwheel:before {
+    content: ""
+}
+
+.bc-i-instantwin:before {
+    content: ""
+}
+
+.bc-i-jackpotmania:before {
+    content: ""
+}
+
+.bc-i-mustdropjackpots:before {
+    content: ""
+}
+
+.bc-i-fireblazejackpots:before {
+    content: ""
+}
+
+.bc-i-valentinesdayslots:before {
+    content: ""
+}
+
+.bc-i-valentine:before {
+    content: ""
+}
+
+.bc-i-achievementsslots:before {
+    content: ""
+}
+
+.bc-i-arcadegames:before {
+    content: ""
+}
+
+.bc-i-pinnacle:before {
+    content: ""
+}
+
+.bc-i-vikings:before {
+    content: ""
+}
+
+.bc-i-esports:before {
+    content: ""
+}
+
+.bc-i-e-sport:before {
+    content: ""
+}
+
+.bc-i-E-sports:before {
+    content: ""
+}
+
+.bc-i-ElectronicSports:before {
+    content: ""
+}
+
+.bc-i-E-sports-2:before {
+    content: ""
+}
+
+.bc-i-mega-jackpot:before {
+    content: ""
+}
+
+.bc-i-major-jackpot:before {
+    content: ""
+}
+
+.bc-i-minor-jackpot:before {
+    content: ""
+}
+
+.bc-i-mini-jackpot:before {
+    content: ""
+}
+
+.bc-i-tvgames:before {
+    content: ""
+}
+
+.bc-i-tv:before {
+    content: ""
+}
+
+.bc-i-tv-games:before {
+    content: ""
+}
+
+.bc-i-tv-2:before {
+    content: ""
+}
+
+.bc-i-copy:before {
+    content: ""
+}
+
+.bc-i-authentication:before {
+    content: ""
+}
+
+.bc-i-two-factor-authentication:before {
+    content: ""
+}
+
+.bc-i-4000241:before {
+    content: ""
+}
+
+.bc-i-not-verified:before {
+    content: ""
+}
+
+.bc-i-verified:before {
+    content: ""
+}
+
+.bc-i-christmasslots:before {
+    content: ""
+}
+
+.bc-i-halloween:before {
+    content: ""
+}
+
+.bc-i-halloween2018:before {
+    content: ""
+}
+
+.bc-i-link:before {
+    content: ""
+}
+
+.bc-i-Yachting:before {
+    content: ""
+}
+
+.bc-i-bet-cloud:before {
+    content: ""
+}
+
+.bc-i-region:before {
+    content: ""
+}
+
+.bc-i-ageofthegods:before {
+    content: ""
+}
+
+.bc-i-demigods:before {
+    content: ""
+}
+
+.bc-i-exclusive:before {
+    content: ""
+}
+
+.bc-i-non-stopdrop:before {
+    content: ""
+}
+
+.bc-i-drops-wins:before {
+    content: ""
+}
+
+.bc-i-drops-winsslots:before {
+    content: ""
+}
+
+.bc-i-summerheatpromo:before {
+    content: ""
+}
+
+.bc-i-hot:before {
+    content: ""
+}
+
+.bc-i-suggested-bets:before {
+    content: ""
+}
+
+.bc-i-results:before {
+    content: ""
+}
+
+.bc-i-results-1:before {
+    content: ""
+}
+
+.bc-i-results-2:before {
+    content: ""
+}
+
+.bc-i-exclamation:before {
+    content: ""
+}
+
+.bc-i-remove-round:before {
+    content: ""
+}
+
+.bc-i-cancel-circle:before {
+    content: ""
+}
+
+.bc-i-check-circle:before {
+    content: ""
+}
+
+.bc-i-unsettled:before {
+    content: ""
+}
+
+.bc-i-watch:before {
+    content: ""
+}
+
+.bc-i-verify-account:before {
+    content: ""
+}
+
+.bc-i-BestNetentSlots:before {
+    content: ""
+}
+
+.bc-i-bestslots:before {
+    content: ""
+}
+
+.bc-i-filter:before {
+    content: ""
+}
+
+.bc-i-filter-outline:before {
+    content: ""
+}
+
+.bc-i-fantasy:before {
+    content: ""
+}
+
+.bc-i-fantasy-sport:before {
+    content: ""
+}
+
+.bc-i-goal:before {
+    content: ""
+}
+
+.bc-i-substitution:before {
+    content: ""
+}
+
+.bc-i-clear:before {
+    content: ""
+}
+
+.bc-i-buybonus:before {
+    content: ""
+}
+
+.bc-i-stats:before {
+    content: ""
+}
+
+.bc-i-deposit:before {
+    content: ""
+}
+
+.bc-i-withdraw:before {
+    content: ""
+}
+
+.bc-i-withdraws:before {
+    content: ""
+}
+
+.bc-i-sent:before {
+    content: ""
+}
+
+.bc-i-inbox:before {
+    content: ""
+}
+
+.bc-i-open-bets:before {
+    content: ""
+}
+
+.bc-i-bet-history:before {
+    content: ""
+}
+
+.bc-i-self-exclusion:before {
+    content: ""
+}
+
+.bc-i-time-out:before {
+    content: ""
+}
+
+.bc-i-change-password:before {
+    content: ""
+}
+
+.bc-i-game-stop:before {
+    content: ""
+}
+
+.bc-i-all-games:before {
+    content: ""
+}
+
+.bc-i-all:before {
+    content: ""
+}
+
+.bc-i-coupon:before {
+    content: ""
+}
+
+.bc-i-promo-code:before {
+    content: ""
+}
+
+.bc-i-apply-promo-code:before {
+    content: ""
+}
+
+.bc-i-gift-received:before {
+    content: ""
+}
+
+.bc-i-bonus-casino:before {
+    content: ""
+}
+
+.bc-i-bonus-sportsbook:before {
+    content: ""
+}
+
+.bc-i-bonus:before {
+    content: ""
+}
+
+.bc-i-bonus-1:before {
+    content: ""
+}
+
+.bc-i-bonus-request:before {
+    content: ""
+}
+
+.bc-i-exchange-shop:before {
+    content: ""
+}
+
+.bc-i-loyalty-points:before {
+    content: ""
+}
+
+.bc-i-fishing-hunting:before {
+    content: ""
+}
+
+.bc-i-irishluck:before {
+    content: ""
+}
+
+.bc-i-betconstruct:before {
+    content: ""
+}
+
+.bc-i-vgs:before {
+    content: ""
+}
+
+.bc-i-net:before {
+    content: ""
+}
+
+.bc-i-psn:before {
+    content: ""
+}
+
+.bc-i-fgs:before {
+    content: ""
+}
+
+.bc-i-apg:before {
+    content: ""
+}
+
+.bc-i-rtg:before {
+    content: ""
+}
+
+.bc-i-egt:before {
+    content: ""
+}
+
+.bc-i-dlv:before {
+    content: ""
+}
+
+.bc-i-ppg:before {
+    content: ""
+}
+
+.bc-i-hbn:before {
+    content: ""
+}
+
+.bc-i-tpg:before {
+    content: ""
+}
+
+.bc-i-mgs:before {
+    content: ""
+}
+
+.bc-i-ctg:before {
+    content: ""
+}
+
+.bc-i-pcg:before {
+    content: ""
+}
+
+.bc-i-egd:before {
+    content: ""
+}
+
+.bc-i-ppl:before {
+    content: ""
+}
+
+.bc-i-betfights:before {
+    content: ""
+}
+
+.bc-i-125157:before {
+    content: ""
+}
+
+.bc-i-pasoor:before {
+    content: ""
+}
+
+.bc-i-500:before {
+    content: ""
+}
+
+.bc-i-hokm:before {
+    content: ""
+}
+
+.bc-i-504:before {
+    content: ""
+}
+
+.bc-i-hokm-1:before {
+    content: ""
+}
+
+.bc-i-striker:before {
+    content: ""
+}
+
+.bc-i-5000001:before {
+    content: ""
+}
+
+.bc-i-blast:before {
+    content: ""
+}
+
+.bc-i-5000000:before {
+    content: ""
+}
+
+.bc-i-financial:before {
+    content: ""
+}
+
+.bc-i-14000:before {
+    content: ""
+}
+
+.bc-i-monti:before {
+    content: ""
+}
+
+.bc-i-141413:before {
+    content: ""
+}
+
+.bc-i-crash:before {
+    content: ""
+}
+
+.bc-i-5000002:before {
+    content: ""
+}
+
+.bc-i-plinko:before {
+    content: ""
+}
+
+.bc-i-102016:before {
+    content: ""
+}
+
+.bc-i-mines:before {
+    content: ""
+}
+
+.bc-i-27117:before {
+    content: ""
+}
+
+.bc-i-highestmultiplier:before {
+    content: ""
+}
+
+.bc-i-420031084:before {
+    content: ""
+}
+
+.bc-i-426634405:before {
+    content: ""
+}
+
+.bc-i-vr-live-dealer:before {
+    content: ""
+}
+
+.bc-i-45:before {
+    content: ""
+}
+
+.bc-i-empirelottery:before {
+    content: ""
+}
+
+.bc-i-400040631:before {
+    content: ""
+}
+
+.bc-i-bitupdown:before {
+    content: ""
+}
+
+.bc-i-3400000:before {
+    content: ""
+}
+
+.bc-i-aliensmasters:before {
+    content: ""
+}
+
+.bc-i-570:before {
+    content: ""
+}
+
+.bc-i-hi-lo:before {
+    content: ""
+}
+
+.bc-i-big-hilo:before {
+    content: ""
+}
+
+.bc-i-334:before {
+    content: ""
+}
+
+.bc-i-crystal-crush:before {
+    content: ""
+}
+
+.bc-i-131315:before {
+    content: ""
+}
+
+.bc-i-lightning-dice:before {
+    content: ""
+}
+
+.bc-i-sic-bo:before {
+    content: ""
+}
+
+.bc-i-buffalo-blitz-live-slots:before {
+    content: ""
+}
+
+.bc-i-spin-a-win:before {
+    content: ""
+}
+
+.bc-i-super-sic-bo:before {
+    content: ""
+}
+
+.bc-i-deal-or-no-deal:before {
+    content: ""
+}
+
+.bc-i-monopoly-live:before {
+    content: ""
+}
+
+.bc-i-backgammon:before {
+    content: ""
+}
+
+.bc-i-11:before {
+    content: ""
+}
+
+.bc-i-checker:before {
+    content: ""
+}
+
+.bc-i-checkers:before {
+    content: ""
+}
+
+.bc-i-88:before {
+    content: ""
+}
+
+.bc-i-chingachoong:before {
+    content: ""
+}
+
+.bc-i-29:before {
+    content: ""
+}
+
+.bc-i-ogwil:before {
+    content: ""
+}
+
+.bc-i-116:before {
+    content: ""
+}
+
+.bc-i-wildwest:before {
+    content: ""
+}
+
+.bc-i-power-ball:before {
+    content: ""
+}
+
+.bc-i-771:before {
+    content: ""
+}
+
+.bc-i-poolsbetting:before {
+    content: ""
+}
+
+.bc-i-152000:before {
+    content: ""
+}
+
+.bc-i-zeppelin:before {
+    content: ""
+}
+
+.bc-i-9010:before {
+    content: ""
+}
+
+.bc-i-poker-card:before {
+    content: ""
+}
+
+.bc-i-russian-roulette:before {
+    content: ""
+}
+
+.bc-i-24:before {
+    content: ""
+}
+
+.bc-i-talisman:before {
+    content: ""
+}
+
+.bc-i-1181:before {
+    content: ""
+}
+
+.bc-i-zonk:before {
+    content: ""
+}
+
+.bc-i-3539:before {
+    content: ""
+}
+
+.bc-i-28:before {
+    content: ""
+}
+
+.bc-i-poker-1:before {
+    content: ""
+}
+
+.bc-i-poker-2:before {
+    content: ""
+}
+
+.bc-i-live:before {
+    content: ""
+}
+
+.bc-i-live-1:before {
+    content: ""
+}
+
+.bc-i-live-2:before {
+    content: ""
+}
+
+.bc-i-live-v1:before {
+    content: ""
+}
+
+.bc-i-live-3:before {
+    content: ""
+}
+
+.bc-i-chain-bet:before {
+    content: ""
+}
+
+.bc-i-system-bet:before {
+    content: ""
+}
+
+.bc-i-multiple-bet:before {
+    content: ""
+}
+
+.bc-i-single-bet:before {
+    content: ""
+}
+
+.bc-i-prematch:before {
+    content: ""
+}
+
+.bc-i-prematch-1:before {
+    content: ""
+}
+
+.bc-i-prematch-2:before {
+    content: ""
+}
+
+.bc-i-prematch-v1:before {
+    content: ""
+}
+
+.bc-i-time:before {
+    content: ""
+}
+
+.bc-i-placed:before {
+    content: ""
+}
+
+.bc-i-login-limit:before {
+    content: ""
+}
+
+.bc-i-bet-limits:before {
+    content: ""
+}
+
+.bc-i-remove-circle:before {
+    content: ""
+}
+
+.bc-i-declined:before {
+    content: ""
+}
+
+.bc-i-lost:before {
+    content: ""
+}
+
+.bc-i-won:before {
+    content: ""
+}
+
+.bc-i-refresh:before {
+    content: ""
+}
+
+.bc-i-pending:before {
+    content: ""
+}
+
+.bc-i-repeat:before {
+    content: ""
+}
+
+.bc-i-exchange:before {
+    content: ""
+}
+
+.bc-i-on-hold:before {
+    content: ""
+}
+
+.bc-i-won-return:before {
+    content: ""
+}
+
+.bc-i-lost-return:before {
+    content: ""
+}
+
+.bc-i-returned:before {
+    content: ""
+}
+
+.bc-i-history:before {
+    content: ""
+}
+
+.bc-i-cashed-out:before {
+    content: ""
+}
+
+.bc-i-cash:before {
+    content: ""
+}
+
+.bc-i-boost:before {
+    content: ""
+}
+
+.bc-i-info:before {
+    content: ""
+}
+
+.bc-i-player-info:before {
+    content: ""
+}
+
+.bc-i-add-circle:before {
+    content: ""
+}
+
+.bc-i-transfer:before {
+    content: ""
+}
+
+.bc-i-round-arrow-left:before {
+    content: ""
+}
+
+.bc-i-round-arrow-right:before {
+    content: ""
+}
+
+.bc-i-slots:before {
+    content: ""
+}
+
+.bc-i-slots-v1:before {
+    content: ""
+}
+
+.bc-i-sports:before {
+    content: ""
+}
+
+.bc-i-jackpot:before {
+    content: ""
+}
+
+.bc-i-eye-hidden:before {
+    content: ""
+}
+
+.bc-i-download:before {
+    content: ""
+}
+
+.bc-i-upload:before {
+    content: ""
+}
+
+.bc-i-star:before {
+    content: ""
+}
+
+.bc-i-favorite:before {
+    content: ""
+}
+
+.bc-i-upcoming:before {
+    content: ""
+}
+
+.bc-i-datepicker:before {
+    content: ""
+}
+
+.bc-i-dragontiger:before {
+    content: ""
+}
+
+.bc-i-livekeno:before {
+    content: ""
+}
+
+.bc-i-keno:before {
+    content: ""
+}
+
+.bc-i-324:before {
+    content: ""
+}
+
+.bc-i-150024:before {
+    content: ""
+}
+
+.bc-i-524:before {
+    content: ""
+}
+
+.bc-i-420031085:before {
+    content: ""
+}
+
+.bc-i-420018888:before {
+    content: ""
+}
+
+.bc-i-420018887:before {
+    content: ""
+}
+
+.bc-i-rouletteftv:before {
+    content: ""
+}
+
+.bc-i-liveroulette:before {
+    content: ""
+}
+
+.bc-i-dreamcatcher:before {
+    content: ""
+}
+
+.bc-i-liveholdem:before {
+    content: ""
+}
+
+.bc-i-livecasino:before {
+    content: ""
+}
+
+.bc-i-live-casino:before {
+    content: ""
+}
+
+.bc-i-live-casino-1:before {
+    content: ""
+}
+
+.bc-i-live-casino-2:before {
+    content: ""
+}
+
+.bc-i-asianGames:before {
+    content: ""
+}
+
+.bc-i-open-chinese-poker:before {
+    content: ""
+}
+
+.bc-i-chinese-poker:before {
+    content: ""
+}
+
+.bc-i-44:before {
+    content: ""
+}
+
+.bc-i-tablegames:before {
+    content: ""
+}
+
+.bc-i-cards:before {
+    content: ""
+}
+
+.bc-i-side-bet-city:before {
+    content: ""
+}
+
+.bc-i-football-studio:before {
+    content: ""
+}
+
+.bc-i-blackjackftv:before {
+    content: ""
+}
+
+.bc-i-baccaratftv:before {
+    content: ""
+}
+
+.bc-i-supersixbaccarat:before {
+    content: ""
+}
+
+.bc-i-belote:before {
+    content: ""
+}
+
+.bc-i-10:before {
+    content: ""
+}
+
+.bc-i-livepoker:before {
+    content: ""
+}
+
+.bc-i-caribbeanstudpoker:before {
+    content: ""
+}
+
+.bc-i-threecardpoker:before {
+    content: ""
+}
+
+.bc-i-livebaccarat:before {
+    content: ""
+}
+
+.bc-i-liveblackjack:before {
+    content: ""
+}
+
+.bc-i-420033727:before {
+    content: ""
+}
+
+.bc-i-olympic:before {
+    content: ""
+}
+
+.bc-i-Betting-bet:before {
+    content: ""
+}
+
+.bc-i-tournament:before {
+    content: ""
+}
+
+.bc-i-VirtualFootballLeague:before {
+    content: ""
+}
+
+.bc-i-populargames:before {
+    content: ""
+}
+
+.bc-i-400037034:before {
+    content: ""
+}
+
+.bc-i-426634442:before {
+    content: ""
+}
+
+.bc-i-tournament-2:before {
+    content: ""
+}
+
+.bc-i-casino-tournament-1:before {
+    content: ""
+}
+
+.bc-i-tournament-1:before {
+    content: ""
+}
+
+.bc-i-counter-offer:before {
+    content: ""
+}
+
+.bc-i-freebet:before {
+    content: ""
+}
+
+.bc-i-profit-boost:before {
+    content: ""
+}
+
+.bc-i-superbet:before {
+    content: ""
+}
+
+.bc-i-gmail:before {
+    content: ""
+}
+
+.bc-i-ok:before {
+    content: ""
+}
+
+.bc-i-tumblr:before {
+    content: ""
+}
+
+.bc-i-blog:before {
+    content: ""
+}
+
+.bc-i-twitch:before {
+    content: ""
+}
+
+.bc-i-reddit:before {
+    content: ""
+}
+
+.bc-i-pinterest:before {
+    content: ""
+}
+
+.bc-i-tiktok:before {
+    content: ""
+}
+
+.bc-i-whatsapp:before {
+    content: ""
+}
+
+.bc-i-vk:before {
+    content: ""
+}
+
+.bc-i-youtube:before {
+    content: ""
+}
+
+.bc-i-instagram:before {
+    content: ""
+}
+
+.bc-i-telegram:before {
+    content: ""
+}
+
+.bc-i-facebook:before {
+    content: ""
+}
+
+.bc-i-twitter:before {
+    content: ""
+}
+
+.bc-i-viber:before {
+    content: ""
+}
+
+.bc-i-skype:before {
+    content: ""
+}
+
+.bc-i-yellow-card:before {
+    content: ""
+}
+
+.bc-i-imo:before {
+    content: ""
+}
+
+.bc-i-discord:before {
+    content: ""
+}
+
+.bc-i-corner:before {
+    content: ""
+}
+
+.bc-i-chat:before {
+    content: ""
+}
+
+.bc-i-message:before {
+    content: ""
+}
+
+.bc-i-balance-management:before {
+    content: ""
+}
+
+.bc-i-topslots:before {
+    content: ""
+}
+
+.bc-i-megaways:before {
+    content: ""
+}
+
+.bc-i-topmegaways:before {
+    content: ""
+}
+
+.bc-i-turkishTables:before {
+    content: ""
+}
+
+.bc-i-videopoker:before {
+    content: ""
+}
+
+.bc-i-euro2020slots:before {
+    content: ""
+}
+
+.bc-i-casualgames:before {
+    content: ""
+}
+
+.bc-i-new1:before {
+    content: ""
+}
+
+.bc-i-newrelease:before {
+    content: ""
+}
+
+.bc-i-scratchgames:before {
+    content: ""
+}
+
+.bc-i-jackpots:before {
+    content: ""
+}
+
+.bc-i-jackpots-1:before {
+    content: ""
+}
+
+.bc-i-jackpots-2:before {
+    content: ""
+}
+
+.bc-i-roulette:before {
+    content: ""
+}
+
+.bc-i-150022:before {
+    content: ""
+}
+
+.bc-i-150023:before {
+    content: ""
+}
+
+.bc-i-420072:before {
+    content: ""
+}
+
+.bc-i-videoslots:before {
+    content: ""
+}
+
+.bc-i-cardgames:before {
+    content: ""
+}
+
+.bc-i-virtualbetting:before {
+    content: ""
+}
+
+.bc-i-virtualbetting-1:before {
+    content: ""
+}
+
+.bc-i-virtualbetting-2:before {
+    content: ""
+}
+
+.bc-i-tacktics:before {
+    content: ""
+}
+
+.bc-i-betslip:before {
+    content: ""
+}
+
+.bc-i-lock:before {
+    content: ""
+}
+
+.bc-i-frozen:before {
+    content: ""
+}
+
+.bc-i-cashback-cashout:before {
+    content: ""
+}
+
+.bc-i-money-dollar:before {
+    content: ""
+}
+
+.bc-i-buyfeature:before {
+    content: ""
+}
+
+.bc-i-paper-dollar:before {
+    content: ""
+}
+
+.bc-i-circle-dollar:before {
+    content: ""
+}
+
+.bc-i-deposits:before {
+    content: ""
+}
+
+.bc-i-logout:before {
+    content: ""
+}
+
+.bc-i-edit:before {
+    content: ""
+}
+
+.bc-i-attention:before {
+    content: ""
+}
+
+.bc-i-stream:before {
+    content: ""
+}
+
+.bc-i-card-football:before {
+    content: ""
+}
+
+.bc-i-players:before {
+    content: ""
+}
+
+.bc-i-team-t-shirt:before {
+    content: ""
+}
+
+.bc-i-graph:before {
+    content: ""
+}
+
+.bc-i-half-time:before {
+    content: ""
+}
+
+.bc-i-head-t-head:before {
+    content: ""
+}
+
+.bc-i-field-soccer:before {
+    content: ""
+}
+
+.bc-i-result:before {
+    content: ""
+}
+
+.bc-i-field-basketball:before {
+    content: ""
+}
+
+.bc-i-block-to-right:before {
+    content: ""
+}
+
+.bc-i-block-to-left:before {
+    content: ""
+}
+
+.bc-i-burger-2:before {
+    content: ""
+}
+
+.bc-i-burger:before {
+    content: ""
+}
+
+.bc-i-burger-menu:before {
+    content: ""
+}
+
+.bc-i-reorder-dots:before {
+    content: ""
+}
+
+.bc-i-apps:before {
+    content: ""
+}
+
+.bc-i-search:before {
+    content: ""
+}
+
+.bc-i-wallet:before {
+    content: ""
+}
+
+.bc-i-delete:before {
+    content: ""
+}
+
+.bc-i-streaming:before {
+    content: ""
+}
+
+.bc-i-shorts:before {
+    content: ""
+}
+
+.bc-i-statistics:before {
+    content: ""
+}
+
+.bc-i-linkedin:before {
+    content: ""
+}
+
+.bc-i-android:before {
+    content: ""
+}
+
+.bc-i-app-store:before {
+    content: ""
+}
+
+.bc-i-mobile:before {
+    content: ""
+}
+
+.bc-i-applications:before {
+    content: ""
+}
+
+.bc-i-draw:before {
+    content: ""
+}
+
+.bc-i-eye:before {
+    content: ""
+}
+
+.bc-i-eye-no-fill:before {
+    content: ""
+}
+
+.bc-i-call:before {
+    content: ""
+}
+
+.bc-i-casino:before {
+    content: ""
+}
+
+.bc-i-casino-1:before {
+    content: ""
+}
+
+.bc-i-casino-2:before {
+    content: ""
+}
+
+.bc-i-notification:before {
+    content: ""
+}
+
+.bc-i-promotion:before {
+    content: ""
+}
+
+.bc-i-settings:before {
+    content: ""
+}
+
+.bc-i-swatches:before {
+    content: ""
+}
+
+.bc-i-play-circle:before {
+    content: ""
+}
+
+.bc-i-pause:before {
+    content: ""
+}
+
+.bc-i-play:before {
+    content: ""
+}
+
+.bc-i-stop:before {
+    content: ""
+}
+
+.bc-i-checked:before {
+    content: ""
+}
+
+.bc-i-close-with:before {
+    content: ""
+}
+
+.bc-i-center:before {
+    content: ""
+}
+
+.bc-i-open-with:before {
+    content: ""
+}
+
+.bc-i-settings1:before {
+    content: ""
+}
+
+.bc-i-config:before {
+    content: ""
+}
+
+.bc-i-duplicate:before {
+    content: ""
+}
+
+.bc-i-add:before {
+    content: ""
+}
+
+.bc-i-remove:before {
+    content: ""
+}
+
+.bc-i-radio-selected:before {
+    content: ""
+}
+
+.bc-i-radio-unselected:before {
+    content: ""
+}
+
+.bc-i-check-box-checked:before {
+    content: ""
+}
+
+.bc-i-check-box-unchecked:before {
+    content: ""
+}
+
+.bc-i-double-arrow-top:before {
+    content: ""
+}
+
+.bc-i-double-arrow-bottom:before {
+    content: ""
+}
+
+.bc-i-compare-arrows:before {
+    content: ""
+}
+
+.bc-i-arrow-to:before {
+    content: ""
+}
+
+.bc-i-arrow-to-left:before {
+    content: ""
+}
+
+.bc-i-arrow-to-right:before {
+    content: ""
+}
+
+.bc-i-arrow-back:before {
+    content: ""
+}
+
+.bc-i-arrow-forward:before {
+    content: ""
+}
+
+.bc-i-arrow-downward:before {
+    content: ""
+}
+
+.bc-i-arrow-upward:before {
+    content: ""
+}
+
+.bc-i-small-arrow-left:before {
+    content: ""
+}
+
+.bc-i-small-arrow-right:before {
+    content: ""
+}
+
+.bc-i-small-arrow-down:before {
+    content: ""
+}
+
+.bc-i-small-arrow-up:before {
+    content: ""
+}
+
+.bc-i-arrow-down:before {
+    content: ""
+}
+
+.bc-i-arrow-up:before {
+    content: ""
+}
+
+.bc-i-arrow-drop-down-left:before {
+    content: ""
+}
+
+.bc-i-arrow-drop-down-right:before {
+    content: ""
+}
+
+.bc-i-arrow-drop-down-bottom:before {
+    content: ""
+}
+
+.bc-i-arrow-drop-down-up:before {
+    content: ""
+}
+
+.bc-i-close-remove:before {
+    content: ""
+}
+
+.bc-i-lightning:before {
+    content: ""
+}
+
+.bc-i-thunderstorm:before {
+    content: ""
+}
+
+.bc-i-420031921:before {
+    content: ""
+}
+
+.bc-i-FlashGames:before {
+    content: ""
+}
+
+.bc-i-Slot777:before {
+    content: ""
+}
+
+.bc-i-lotterygames:before {
+    content: ""
+}
+
+.bc-i-VideoBingo:before {
+    content: ""
+}
+
+.bc-i-videobingo:before {
+    content: ""
+}
+
+.bc-i-othergames:before {
+    content: ""
+}
+
+.bc-i-others:before {
+    content: ""
+}
+
+.bc-i-vertical-toggle:before {
+    content: ""
+}
+
+.bc-i-new-icon:before {
+    content: ""
+}
+
+.bc-i-classic_slots_icon:before {
+    content: ""
+}
+
+.bc-i-classicslots:before {
+    content: ""
+}
+
+.bc-i-sesbettop20:before {
+    content: ""
+}
+
+.bc-i-skill_games:before {
+    content: ""
+}
+
+.bc-i-topgames:before {
+    content: ""
+}
+
+.bc-i-SlotMachine:before {
+    content: ""
+}
+
+.bc-i-Vip:before {
+    content: ""
+}
+
+.bc-i-egtdigitaljp:before {
+    content: ""
+}
+
+.bc-i-belllinkjackpot:before {
+    content: ""
+}
+
+.bc-i-Wheel-of-dice:before {
+    content: ""
+}
+
+.bc-i-LiveDraw:before {
+    content: "w"
+}
+
+.bc-i-Search:before {
+    content: ""
+}
+
+.bc-i-star-radius:before {
+    content: ""
+}
+
+.bc-i-Star:before {
+    content: ""
+}
+
+.bc-i-Star2:before {
+    content: ""
+}
+
+.bc-i-dailyjackpots:before {
+    content: ""
+}
+
+.bc-i-Favorite-2:before {
+    content: ""
+}
+
+.bc-i-Favorite:before {
+    content: ""
+}
+
+.bc-i-vgsweethearts:before {
+    content: ""
+}
+
+.bc-i-Favorite-outline:before {
+    content: ""
+}
+
+.bc-i-powerkeno:before {
+    content: ""
+}
+
+.bc-i-324121:before {
+    content: ""
+}
+
+.bc-i-426634866:before {
+    content: ""
+}
+
+.bc-i-wagering-bonus:before {
+    content: ""
+}
+
+.bc-i-arcade:before {
+    content: ""
+}
+
+.bc-i-3301632:before {
+    content: ""
+}
+
+.bc-i-gogoBanana:before {
+    content: ""
+}
+
+.bc-i-420014053:before {
+    content: ""
+}
+
+.bc-i-diamondQuest:before {
+    content: ""
+}
+
+.bc-i-420014058:before {
+    content: ""
+}
+
+.bc-i-plinko1:before {
+    content: ""
+}
+
+.bc-i-420014051:before {
+    content: ""
+}
+
+.bc-i-10921:before {
+    content: ""
+}
+
+.bc-i-magicIdol:before {
+    content: ""
+}
+
+.bc-i-420014052:before {
+    content: ""
+}
+
+.bc-i-nonStopRoulette:before {
+    content: ""
+}
+
+.bc-i-141417:before {
+    content: ""
+}
+
+.bc-i-catchMe:before {
+    content: ""
+}
+
+.bc-i-141426:before {
+    content: ""
+}
+
+.bc-i-nonStopBlackJack:before {
+    content: ""
+}
+
+.bc-i-161616:before {
+    content: ""
+}
+
+.bc-i-dreamWheel:before {
+    content: ""
+}
+
+.bc-i-141425:before {
+    content: ""
+}
+
+.bc-i-nonStopBaccarat:before {
+    content: ""
+}
+
+.bc-i-141427:before {
+    content: ""
+}
+
+.bc-i-turboBaccarat:before {
+    content: ""
+}
+
+.bc-i-141432:before {
+    content: ""
+}
+
+.bc-i-welcome:before {
+    content: ""
+}
+
+.bc-i-calendar:before {
+    content: ""
+}
+
+.bc-i-today-bets:before {
+    content: ""
+}
+
+.bc-i-fruits:before {
+    content: ""
+}
+
+.bc-i-books:before {
+    content: ""
+}
+
+.bc-i-wagerslots:before {
+    content: ""
+}
+
+.bc-i-egypt:before {
+    content: ""
+}
+
+.bc-i-popular:before {
+    content: ""
+}
+
+.bc-i-footballStreakChampions:before {
+    content: ""
+}
+
+.bc-i-400037044:before {
+    content: ""
+}
+
+.bc-i-426633697:before {
+    content: ""
+}
+
+.bc-i-virtualFootballLeague:before {
+    content: ""
+}
+
+.bc-i-400037043:before {
+    content: ""
+}
+
+.bc-i-420019060:before {
+    content: ""
+}
+
+.bc-i-420033862:before {
+    content: ""
+}
+
+.bc-i-420040039:before {
+    content: ""
+}
+
+.bc-i-greyhoundsStreak:before {
+    content: ""
+}
+
+.bc-i-40009992:before {
+    content: ""
+}
+
+.bc-i-horsesStreak:before {
+    content: ""
+}
+
+.bc-i-400037040:before {
+    content: ""
+}
+
+.bc-i-420015961:before {
+    content: ""
+}
+
+.bc-i-footballPenaltyDuel:before {
+    content: ""
+}
+
+.bc-i-40009991:before {
+    content: ""
+}
+
+.bc-i-420015962:before {
+    content: ""
+}
+
+.bc-i-420015963:before {
+    content: ""
+}
+
+.bc-i-footballCupWorld:before {
+    content: ""
+}
+
+.bc-i-400037060:before {
+    content: ""
+}
+
+.bc-i-scratch-card:before {
+    content: ""
+}
+
+.bc-i-Print:before {
+    content: ""
+}
+
+.bc-i-worldcup2022:before {
+    content: ""
+}
+
+.bc-i-icons-feed-throwin:before {
+    content: ""
+}
+
+.bc-i-throw_in:before {
+    content: ""
+}
+
+.bc-i-icons-feed-offside:before {
+    content: ""
+}
+
+.bc-i-offside:before {
+    content: ""
+}
+
+.bc-i-foul:before {
+    content: ""
+}
+
+.bc-i-Pelota:before {
+    content: ""
+}
+
+.bc-i-newyear:before {
+    content: ""
+}
+
+.bc-i-electric-crash:before {
+    content: ""
+}
+
+.bc-i-420014070:before {
+    content: ""
+}
+
+.bc-i-turbo-belote:before {
+    content: ""
+}
+
+.bc-i-33060318:before {
+    content: ""
+}
+
+.bc-i-hilo:before {
+    content: ""
+}
+
+.bc-i-420014065:before {
+    content: ""
+}
+
+.bc-i-double-wheel:before {
+    content: ""
+}
+
+.bc-i-141428:before {
+    content: ""
+}
+
+.bc-i-drift:before {
+    content: ""
+}
+
+.bc-i-141430:before {
+    content: ""
+}
+
+.bc-i-specialgames:before {
+    content: ""
+}
+
+.bc-i-buy-bonus-slots:before {
+    content: ""
+}
+
+.bc-i-medium:before {
+    content: ""
+}
+
+.bc-i-lucky-lotto:before {
+    content: ""
+}
+
+.bc-i-151516:before {
+    content: ""
+}
+
+.bc-i-mines1:before {
+    content: ""
+}
+
+.bc-i-33060324:before {
+    content: ""
+}
+
+.bc-i-420014075:before {
+    content: ""
+}
+
+.bc-i-Multi:before {
+    content: ""
+}
+
+.bc-i-keno1:before {
+    content: ""
+}
+
+.bc-i-12500:before {
+    content: ""
+}
+
+.bc-i-12501:before {
+    content: ""
+}
+
+.bc-i-12502:before {
+    content: ""
+}
+
+.bc-i-12503:before {
+    content: ""
+}
+
+.bc-i-12507:before {
+    content: ""
+}
+
+.bc-i-12508:before {
+    content: ""
+}
+
+.bc-i-420015766:before {
+    content: ""
+}
+
+.bc-i-pokerTH:before {
+    content: ""
+}
+
+.bc-i-12505:before {
+    content: ""
+}
+
+.bc-i-roulette1:before {
+    content: ""
+}
+
+.bc-i-12511:before {
+    content: ""
+}
+
+.bc-i-12512:before {
+    content: ""
+}
+
+.bc-i-12513:before {
+    content: ""
+}
+
+.bc-i-12514:before {
+    content: ""
+}
+
+.bc-i-12509:before {
+    content: ""
+}
+
+.bc-i-redlottery:before {
+    content: ""
+}
+
+.bc-i-12504:before {
+    content: ""
+}
+
+.bc-i-lotto-7-49:before {
+    content: ""
+}
+
+.bc-i-420015794:before {
+    content: ""
+}
+
+.bc-i-lotto-6-42:before {
+    content: ""
+}
+
+.bc-i-420015793:before {
+    content: ""
+}
+
+.bc-i-lotto-5-36:before {
+    content: ""
+}
+
+.bc-i-420015792:before {
+    content: ""
+}
+
+.bc-i-features:before {
+    content: ""
+}
+
+.bc-i-extrachance:before {
+    content: ""
+}
+
+.bc-i-occupation:before {
+    content: ""
+}
+
+.bc-i-show-all-categories:before {
+    content: ""
+}
+
+.bc-i-aviatrix:before {
+    content: ""
+}
+
+.bc-i-3606:before {
+    content: ""
+}
+
+.bc-i-JacksOrBetter:before {
+    content: ""
+}
+
+.bc-i-420015509:before {
+    content: ""
+}
+
+.bc-i-nonStopMatch:before {
+    content: ""
+}
+
+.bc-i-33060326:before {
+    content: ""
+}
+
+.bc-i-OddBall:before {
+    content: ""
+}
+
+.bc-i-33060314:before {
+    content: ""
+}
+
+.bc-i-champion-challenge:before {
+    content: ""
+}
+
+.bc-i-33060319:before {
+    content: ""
+}
+
+.bc-i-euro2024:before {
+    content: ""
+}
+
+.bc-i-turbo-blackjack:before {
+    content: ""
+}
+
+.bc-i-33060316:before {
+    content: ""
+}
+
+.bc-i-spaceman:before {
+    content: ""
+}
+
+.bc-i-400043028:before {
+    content: ""
+}
+
+.bc-i-BTC:before {
+    content: ""
+}
+
+.bc-i-ETH:before {
+    content: ""
+}
+
+.bc-i-TUS:before {
+    content: ""
+}
+
+.bc-i-LTC:before {
+    content: ""
+}
+
+.bc-i-FTN:before {
+    content: ""
+}
+
+.bc-i-ftnjackpotdrop:before {
+    content: ""
+}
+
+.bc-i-ftnmania:before {
+    content: ""
+}
+
+.bc-i-dog6:before {
+    content: ""
+}
+
+.bc-i-420015960:before {
+    content: ""
+}
+
+.bc-i-achievement:before {
+    content: ""
+}
+
+.bc-i-crashgamesur:before {
+    content: ""
+}
+
+.bc-i-crashgames:before {
+    content: ""
+}
+
+.bc-i-blast1:before {
+    content: ""
+}
+
+.bc-i-33060327:before {
+    content: ""
+}
+
+.bc-i-crazyWorm:before {
+    content: ""
+}
+
+.bc-i-33060325:before {
+    content: ""
+}
+
+.bc-i-stairs:before {
+    content: ""
+}
+
+.bc-i-420015275:before {
+    content: ""
+}
+
+.bc-i-Diia:before {
+    content: ""
+}
+
+.bc-i-fastTrade:before {
+    content: ""
+}
+
+.bc-i-141429:before {
+    content: ""
+}
+
+.bc-i-crash1:before {
+    content: ""
+}
+
+.bc-i-33060328:before {
+    content: ""
+}
+
+.bc-i-amigosFestival:before {
+    content: ""
+}
+
+.bc-i-400040635:before {
+    content: ""
+}
+
+.bc-i-goldenGlobe:before {
+    content: ""
+}
+
+.bc-i-400040633:before {
+    content: ""
+}
+
+.bc-i-jungleHashs:before {
+    content: ""
+}
+
+.bc-i-400040634:before {
+    content: ""
+}
+
+.bc-i-hotkwachagames:before {
+    content: ""
+}
+
+.bc-i-zambiagames:before {
+    content: ""
+}
+
+.bc-i-lowdatagames:before {
+    content: ""
+}
+
+.bc-i-view-list:before {
+    content: ""
+}
+
+.bc-i-view-module:before {
+    content: ""
+}
+
+.bc-i-menu-open:before {
+    content: ""
+}
+
+.bc-i-menu-close:before {
+    content: ""
+}
+
+.bc-i-rule:before {
+    content: ""
+}
+
+.bc-i-leaderboard:before {
+    content: ""
+}
+
+.bc-i-user1:before {
+    content: ""
+}
+
+.bc-i-bonus1:before {
+    content: ""
+}
+
+.bc-i-exclusivetotimebet:before {
+    content: ""
+}
+
+.bc-i-monthlymostpreferredslots:before {
+    content: ""
+}
+
+.bc-i-420015434:before {
+    content: ""
+}
+
+.bc-i-777poker:before {
+    content: ""
+}
+
+.bc-i-3150:before {
+    content: ""
+}
+
+.bc-i-space-taxi:before {
+    content: ""
+}
+
+.bc-i-420018881:before {
+    content: ""
+}
+
+.bc-i-instant-keno:before {
+    content: ""
+}
+
+.bc-i-420015499:before {
+    content: ""
+}
+
+.bc-i-striker1:before {
+    content: ""
+}
+
+.bc-i-trusted:before {
+    content: ""
+}
+
+.bc-i-connect-wallet:before {
+    content: ""
+}
+
+.bc-i-express-the-day:before {
+    content: ""
+}
+
+.bc-i-pragmaticplayjackpot:before {
+    content: ""
+}
+
+.bc-i-PUBGMobile:before {
+    content: ""
+}
+
+.bc-i-aviator:before {
+    content: ""
+}
+
+.bc-i-806666:before {
+    content: ""
+}
+
+.bc-i-stage:before {
+    content: ""
+}
+
+.bc-i-home:before {
+    content: ""
+}
+
+.bc-i-andarBahar:before {
+    content: ""
+}
+
+.bc-i-420016246:before {
+    content: ""
+}
+
+.bc-i-shumba:before {
+    content: ""
+}
+
+.bc-i-161617:before {
+    content: ""
+}
+
+.bc-i-xLogo:before {
+    content: ""
+}
+
+.bc-i-misio:before {
+    content: ""
+}
+
+.bc-i-threads:before {
+    content: ""
+}
+
+.bc-i-betslip-icon:before {
+    content: ""
+}
+
+.bc-i-prizes:before {
+    content: ""
+}
+
+.bc-i-summertime:before {
+    content: ""
+}
+
+.bc-i-profits:before {
+    content: ""
+}
+
+.bc-i-fast-news:before {
+    content: ""
+}
+
+.bc-i-keno2:before {
+    content: ""
+}
+
+.bc-i-420015425:before {
+    content: ""
+}
+
+.bc-i-touch-me:before {
+    content: ""
+}
+
+.bc-i-420016327:before {
+    content: ""
+}
+
+.bc-i-keno10:before {
+    content: ""
+}
+
+.bc-i-420018919:before {
+    content: ""
+}
+
+.bc-i-limbo:before {
+    content: ""
+}
+
+.bc-i-420015419:before {
+    content: ""
+}
+
+.bc-i-420018918:before {
+    content: ""
+}
+
+.bc-i-keno8:before {
+    content: ""
+}
+
+.bc-i-blackjack-crypto:before {
+    content: ""
+}
+
+.bc-i-420015421:before {
+    content: ""
+}
+
+.bc-i-winball:before {
+    content: ""
+}
+
+.bc-i-10918:before {
+    content: ""
+}
+
+.bc-i-penalty1:before {
+    content: ""
+}
+
+.bc-i-10917:before {
+    content: ""
+}
+
+.bc-i-formula1:before {
+    content: ""
+}
+
+.bc-i-10914:before {
+    content: ""
+}
+
+.bc-i-greyhound-racing:before {
+    content: ""
+}
+
+.bc-i-10915:before {
+    content: ""
+}
+
+.bc-i-SISGreyhound:before {
+    content: ""
+}
+
+.bc-i-wow-bow:before {
+    content: ""
+}
+
+.bc-i-10919:before {
+    content: ""
+}
+
+.bc-i-horse-racing:before {
+    content: ""
+}
+
+.bc-i-10916:before {
+    content: ""
+}
+
+.bc-i-boombasket:before {
+    content: ""
+}
+
+.bc-i-10912:before {
+    content: ""
+}
+
+.bc-i-darts:before {
+    content: ""
+}
+
+.bc-i-10913:before {
+    content: ""
+}
+
+.bc-i-boomball:before {
+    content: ""
+}
+
+.bc-i-10911:before {
+    content: ""
+}
+
+.bc-i-striker2:before {
+    content: ""
+}
+
+.bc-i-10920:before {
+    content: ""
+}
+
+.bc-i-thunder:before {
+    content: ""
+}
+
+.bc-i-10910:before {
+    content: ""
+}
+
+.bc-i-Quake:before {
+    content: ""
+}
+
+.bc-i-blackjack:before {
+    content: ""
+}
+
+.bc-i-baccarat:before {
+    content: ""
+}
+
+.bc-i-indianTables:before {
+    content: ""
+}
+
+.bc-i-soundcloud:before {
+    content: ""
+}
+
+.bc-i-poker:before {
+    content: ""
+}
+
+.bc-i-virtual-races:before {
+    content: ""
+}
+
+.bc-i-420030744:before {
+    content: ""
+}
+
+.bc-i-instant-euroleague-legends:before {
+    content: ""
+}
+
+.bc-i-420018930:before {
+    content: ""
+}
+
+.bc-i-nascar-streak:before {
+    content: ""
+}
+
+.bc-i-420018929:before {
+    content: ""
+}
+
+.bc-i-archive:before {
+    content: ""
+}
+
+.bc-i-the-power-of-choice:before {
+    content: ""
+}
+
+.bc-i-chance-to-change-blackjack:before {
+    content: ""
+}
+
+.bc-i-420016236:before {
+    content: ""
+}
+
+.bc-i-red-hot-line:before {
+    content: ""
+}
+
+.bc-i-420030856:before {
+    content: ""
+}
+
+.bc-i-crash-crypto:before {
+    content: ""
+}
+
+.bc-i-420015420:before {
+    content: ""
+}
+
+.bc-i-dice1:before {
+    content: ""
+}
+
+.bc-i-420015423:before {
+    content: ""
+}
+
+.bc-i-cryptogames:before {
+    content: ""
+}
+
+.bc-i-stake-and-earn:before {
+    content: ""
+}
+
+.bc-i-ClashofClans:before {
+    content: ""
+}
+
+.bc-i-world:before {
+    content: ""
+}
+
+.bc-i-whistle:before {
+    content: ""
+}
+
+.bc-i-stadium1:before {
+    content: ""
+}
+
+.bc-i-playoff:before {
+    content: ""
+}
+
+.bc-i-burger-menu2:before {
+    content: ""
+}
+
+.bc-i-winlandia:before {
+    content: ""
+}
+
+.bc-i-betonpoker:before {
+    content: ""
+}
+
+.bc-i-420030789:before {
+    content: ""
+}
+
+.bc-i-ninjafruitcubes:before {
+    content: ""
+}
+
+.bc-i-420031768:before {
+    content: ""
+}
+
+.bc-i-luckyspin:before {
+    content: ""
+}
+
+.bc-i-420032901:before {
+    content: ""
+}
+
+.bc-i-bonuswagering:before {
+    content: ""
+}
+
+.bc-i-bonusslots:before {
+    content: ""
+}
+
+.bc-i-returned1:before {
+    content: ""
+}
+
+.bc-i-calculate:before {
+    content: ""
+}
+
+.bc-i-Bowling:before {
+    content: ""
+}
+
+.bc-i-green-start:before {
+    content: ""
+}
+
+.bc-i-euro:before {
+    content: ""
+}
+
+.bc-i-trash:before {
+    content: ""
+}
+
+.bc-i-add-row:before {
+    content: ""
+}
+
+.bc-i-add-column:before {
+    content: ""
+}
+
+.bc-i-rewards:before {
+    content: ""
+}
+
+.bc-i-Vaquejada:before {
+    content: ""
+}
+
+.bc-i-X1Football:before {
+    content: ""
+}
+
+.bc-i-aviatrix-1:before {
+    content: ""
+}
+
+.bc-i-search-request:before {
+    content: ""
+}
+
+.bc-i-bring-friend:before {
+    content: ""
+}
+
+.bc-i-zeppelin-1:before {
+    content: ""
+}
+
+.bc-i-elementarDragonScore:before {
+    content: ""
+}
+
+.bc-i-towerScore:before {
+    content: ""
+}
+
+.bc-i-inhibitor:before {
+    content: ""
+}
+
+.bc-i-killScore:before {
+    content: ""
+}
+
+.bc-i-baronScore:before {
+    content: ""
+}
+
+.bc-i-share:before {
+    content: ""
+}
+
+.bc-i-easter:before {
+    content: ""
+}
+
+.bc-i-hoory:before {
+    content: ""
+}
+
+.bc-i-draggable:before {
+    content: ""
+}
+
+.bc-i-belllink:before {
+    content: ""
+}
+
+.bc-i-community:before {
+    content: ""
+}
+
+.bc-i-crashosaurus:before {
+    content: ""
+}
+
+.bc-i-426633798:before {
+    content: ""
+}
+
+.bc-i-RedHotLine2:before {
+    content: ""
+}
+
+.bc-i-420032827:before {
+    content: ""
+}
+
+.bc-i-dice2:before {
+    content: ""
+}
+
+.bc-i-426634207:before {
+    content: ""
+}
+
+.bc-i-CrashExtreme:before {
+    content: ""
+}
+
+.bc-i-420033385:before {
+    content: ""
+}
+
+.bc-i-CrashInfinity:before {
+    content: ""
+}
+
+.bc-i-420033108:before {
+    content: ""
+}
+
+.bc-i-crash-infinity:before {
+    content: ""
+}
+
+.bc-i-FootballCup:before {
+    content: ""
+}
+
+.bc-i-426634205:before {
+    content: ""
+}
+
+.bc-i-hooryAI-stars:before {
+    content: ""
+}
+
+.bc-i-crownslots:before {
+    content: ""
+}
+
+.bc-i-sloteuro2024:before {
+    content: ""
+}
+
+.bc-i-euro-cup:before {
+    content: ""
+}
+
+.bc-i-FastFlip:before {
+    content: ""
+}
+
+.bc-i-420030656:before {
+    content: ""
+}
+
+.bc-i-new:before {
+    content: ""
+}
+
+.bc-i-bftharena:before {
+    content: ""
+}
+
+.bc-i-Slap:before {
+    content: ""
+}
+
+.bc-i-copa-america:before {
+    content: ""
+}
+
+.bc-i-heylink:before {
+    content: ""
+}
+
+.bc-i-virtualbetting-3:before {
+    content: ""
+}
+
+.bc-i-ortak:before {
+    content: ""
+}
+
+.bc-i-Breaking:before {
+    content: ""
+}
+
+.bc-i-casinowelcomebonus:before {
+    content: ""
+}
+
+.bc-i-running-line-star:before {
+    content: ""
+}
+
+.bc-i-bigbassgames:before {
+    content: ""
+}
+
+.bc-i-Camogie:before {
+    content: ""
+}
+
+.bc-i-pool-masters:before {
+    content: ""
+}
+
+.bc-i-freespin:before {
+    content: ""
+}
+
+.bc-i-yiriwa:before {
+    content: ""
+}

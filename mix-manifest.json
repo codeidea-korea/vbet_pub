@@ -5,6 +5,7 @@
     "/dist/js/ckeditor-balloon.js": "/dist/js/ckeditor-balloon.js",
     "/dist/js/ckeditor-balloon-block.js": "/dist/js/ckeditor-balloon-block.js",
     "/dist/js/ckeditor-document.js": "/dist/js/ckeditor-document.js",
+    "/dist/css/app.css": "/dist/css/app.css",
     "/dist/json/location.json": "/dist/json/location.json",
     "/dist/fonts/roboto/LICENSE.txt": "/dist/fonts/roboto/LICENSE.txt",
     "/dist/fonts/roboto/Roboto-Black.ttf": "/dist/fonts/roboto/Roboto-Black.ttf",
@@ -22,5 +23,10 @@
     "/dist/images/logo.svg": "/dist/images/logo.svg",
     "/dist/images/placeholders/200x200.jpg": "/dist/images/placeholders/200x200.jpg",
     "/dist/images/placeholders/800x800.jpg": "/dist/images/placeholders/800x800.jpg",
-    "/dist/css/app.css": "/dist/css/app.css"
+    "/dist/images/common/loading.svg": "/dist/images/common/loading.svg",
+    "/dist/images/common/logo.svg": "/dist/images/common/logo.svg",
+    "/dist/images/common/telegram.svg": "/dist/images/common/telegram.svg",
+    "/dist/fonts/BetConstruct-Icons-37962c56.svg": "/dist/fonts/BetConstruct-Icons-37962c56.svg",
+    "/dist/fonts/BetConstruct-Icons-5cf60ce4.eot": "/dist/fonts/BetConstruct-Icons-5cf60ce4.eot",
+    "/dist/fonts/BetConstruct-Icons-e7f6d75c.ttf": "/dist/fonts/BetConstruct-Icons-e7f6d75c.ttf"
 }
