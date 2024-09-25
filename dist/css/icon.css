@@ -19,6 +19,8 @@
     -moz-osx-font-smoothing: grayscale
 }
 
+.deposit-btn:before { content: ""; font-family: BetConstruct-Icons;}
+
 .bc-i-default-icon:before {
     content: ""
 }
@@ -4541,4 +4543,1176 @@
 
 .bc-i-yiriwa:before {
     content: ""
+}
+
+
+
+.flagImg {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 14px;
+    background: url('../images/common/flags.png') no-repeat 0 0/100%;
+    margin-inline-end:5px}
+
+.flag-bc {
+    width: 22px;
+    height: 14px;
+    flex-shrink: 0;
+    background: url('../images/common/flags.png') no-repeat 0 0/100%
+}
+
+.afghanistan {
+    background-position: 0 .3460207612%
+}
+
+.africa {
+    background-position: 0 .6920415225%
+}
+
+.aland {
+    background-position: 0 1.0380622837%
+}
+
+.albania {
+    background-position: 0 1.384083045%
+}
+
+.alderney {
+    background-position: 0 1.7301038062%
+}
+
+.algeria {
+    background-position: 0 2.0761245675%
+}
+
+.americas {
+    background-position: 0 2.4221453287%
+}
+
+.americansamoa {
+    background-position: 0 2.76816609%
+}
+
+.andorra {
+    background-position: 0 3.1141868512%
+}
+
+.angola {
+    background-position: 0 3.4602076125%
+}
+
+.anguilla {
+    background-position: 0 3.8062283737%
+}
+
+.antiguaandbarbuda {
+    background-position: 0 4.1522491349%
+}
+
+.arableague {
+    background-position: 0 4.4982698962%
+}
+
+.argentina {
+    background-position: 0 4.8442906574%
+}
+
+.armenia {
+    background-position: 0 5.1903114187%
+}
+
+.aruba {
+    background-position: 0 5.5363321799%
+}
+
+.asia {
+    background-position: 0 5.8823529412%
+}
+
+.australia {
+    background-position: 0 6.2283737024%
+}
+
+.austria {
+    background-position: 0 6.5743944637%
+}
+
+.azerbaijan {
+    background-position: 0 6.9204152249%
+}
+
+.bahamas {
+    background-position: 0 7.2664359862%
+}
+
+.bahrain {
+    background-position: 0 7.6124567474%
+}
+
+.bangladesh {
+    background-position: 0 7.9584775087%
+}
+
+.barbados {
+    background-position: 0 8.3044982699%
+}
+
+.basquecountry {
+    background-position: 0 8.6505190311%
+}
+
+.belarus {
+    background-position: 0 8.9965397924%
+}
+
+.belgium {
+    background-position: 0 9.3425605536%
+}
+
+.belize {
+    background-position: 0 9.6885813149%
+}
+
+.benin {
+    background-position: 0 10.0346020761%
+}
+
+.bermuda {
+    background-position: 0 10.3806228374%
+}
+
+.bhutan {
+    background-position: 0 10.7266435986%
+}
+
+.bolivia {
+    background-position: 0 11.0726643599%
+}
+
+.bonairesinteustatiusandsaba {
+    background-position: 0 11.4186851211%
+}
+
+.bosniaherzegovina {
+    background-position: 0 11.7647058824%
+}
+
+.botswana {
+    background-position: 0 12.1107266436%
+}
+
+.bouvet {
+    background-position: 0 12.4567474048%
+}
+
+.brazil {
+    background-position: 0 12.8027681661%
+}
+
+.britishindianoceanterritory {
+    background-position: 0 13.1487889273%
+}
+
+.bruneidarussalam {
+    background-position: 0 13.4948096886%
+}
+
+.bulgaria {
+    background-position: 0 13.8408304498%
+}
+
+.burkinafaso {
+    background-position: 0 14.1868512111%
+}
+
+.burundi {
+    background-position: 0 14.5328719723%
+}
+
+.cambodia {
+    background-position: 0 14.8788927336%
+}
+
+.cameroon {
+    background-position: 0 15.2249134948%
+}
+
+.canada {
+    background-position: 0 15.5709342561%
+}
+
+.capeverde {
+    background-position: 0 15.9169550173%
+}
+
+.caricom {
+    background-position: 0 16.2629757785%
+}
+
+.catalonia {
+    background-position: 0 16.6089965398%
+}
+
+.caymanislands {
+    background-position: 0 16.955017301%
+}
+
+.centralafricanrepublic {
+    background-position: 0 17.3010380623%
+}
+
+.chad {
+    background-position: 0 17.6470588235%
+}
+
+.chile {
+    background-position: 0 17.9930795848%
+}
+
+.china {
+    background-position: 0 18.339100346%
+}
+
+.chinesetaipei {
+    background-position: 0 18.6851211073%
+}
+
+.christmas {
+    background-position: 0 19.0311418685%
+}
+
+.cis {
+    background-position: 0 19.3771626298%
+}
+
+.cocoskeeling {
+    background-position: 0 19.723183391%
+}
+
+.colombia {
+    background-position: 0 20.0692041522%
+}
+
+.commonwealth {
+    background-position: 0 20.4152249135%
+}
+
+.comoros {
+    background-position: 0 20.7612456747%
+}
+
+.congo {
+    background-position: 0 21.107266436%
+}
+
+.congokinshasa {
+    background-position: 0 21.4532871972%
+}
+
+.cookislands {
+    background-position: 0 21.7993079585%
+}
+
+.costarica {
+    background-position: 0 22.1453287197%
+}
+
+.cotedivoire {
+    background-position: 0 22.491349481%
+}
+
+.croatia {
+    background-position: 0 22.8373702422%
+}
+
+.cuba {
+    background-position: 0 23.1833910035%
+}
+
+.curacao {
+    background-position: 0 23.5294117647%
+}
+
+.cyprus {
+    background-position: 0 23.875432526%
+}
+
+.czechrepublic {
+    background-position: 0 24.2214532872%
+}
+
+.denmark {
+    background-position: 0 24.5674740484%
+}
+
+.djibouti {
+    background-position: 0 24.9134948097%
+}
+
+.dominica {
+    background-position: 0 25.2595155709%
+}
+
+.dominicanrepublic {
+    background-position: 0 25.6055363322%
+}
+
+.ecuador {
+    background-position: 0 25.9515570934%
+}
+
+.egypt {
+    background-position: 0 26.2975778547%
+}
+
+.elsalvador {
+    background-position: 0 26.6435986159%
+}
+
+.england {
+    background-position: 0 26.9896193772%
+}
+
+.equatorialguinea {
+    background-position: 0 27.3356401384%
+}
+
+.eritrea {
+    background-position: 0 27.6816608997%
+}
+
+.estonia {
+    background-position: 0 28.0276816609%
+}
+
+.ethiopia {
+    background-position: 0 28.3737024221%
+}
+
+.europe {
+    background-position: 0 28.7197231834%
+}
+
+.falkland {
+    background-position: 0 29.0657439446%
+}
+
+.fao {
+    background-position: 0 29.4117647059%
+}
+
+.faroeislands {
+    background-position: 0 29.7577854671%
+}
+
+.fiji {
+    background-position: 0 30.1038062284%
+}
+
+.finland {
+    background-position: 0 30.4498269896%
+}
+
+.france {
+    background-position: 0 30.7958477509%
+}
+
+.french-guiana {
+    background-position: 0 31.1418685121%
+}
+
+.frenchsouthernandantarcticlands {
+    background-position: 0 31.4878892734%
+}
+
+.gabon {
+    background-position: 0 31.8339100346%
+}
+
+.galicia {
+    background-position: 0 32.1799307958%
+}
+
+.gambia {
+    background-position: 0 32.5259515571%
+}
+
+.georgia {
+    background-position: 0 32.8719723183%
+}
+
+.germany {
+    background-position: 0 33.2179930796%
+}
+
+.ghana {
+    background-position: 0 33.5640138408%
+}
+
+.gibraltar {
+    background-position: 0 33.9100346021%
+}
+
+.greatbritain {
+    background-position: 0 34.2560553633%
+}
+
+.greece {
+    background-position: 0 34.6020761246%
+}
+
+.greenland {
+    background-position: 0 34.9480968858%
+}
+
+.grenada {
+    background-position: 0 35.2941176471%
+}
+
+.guadeloupe {
+    background-position: 0 35.6401384083%
+}
+
+.guam {
+    background-position: 0 35.9861591696%
+}
+
+.guatemala {
+    background-position: 0 36.3321799308%
+}
+
+.guernsey {
+    background-position: 0 36.678200692%
+}
+
+.guinea {
+    background-position: 0 37.0242214533%
+}
+
+.guineabissau {
+    background-position: 0 37.3702422145%
+}
+
+.guyana {
+    background-position: 0 37.7162629758%
+}
+
+.haiti {
+    background-position: 0 38.062283737%
+}
+
+.heardislandandmcdonald {
+    background-position: 0 38.4083044983%
+}
+
+.honduras {
+    background-position: 0 38.7543252595%
+}
+
+.hongkong {
+    background-position: 0 39.1003460208%
+}
+
+.hungary {
+    background-position: 0 39.446366782%
+}
+
+.iaea {
+    background-position: 0 39.7923875433%
+}
+
+.iceland {
+    background-position: 0 40.1384083045%
+}
+
+.iho {
+    background-position: 0 40.4844290657%
+}
+
+.india {
+    background-position: 0 40.830449827%
+}
+
+.indonesia {
+    background-position: 0 41.1764705882%
+}
+
+.international {
+    background-position: 0 41.5224913495%
+}
+
+.iran {
+    background-position: 0 41.8685121107%
+}
+
+.iraq {
+    background-position: 0 42.214532872%
+}
+
+.ireland {
+    background-position: 0 42.5605536332%
+}
+
+.islamicconference {
+    background-position: 0 42.9065743945%
+}
+
+.isleofman {
+    background-position: 0 43.2525951557%
+}
+
+.israel {
+    background-position: 0 43.598615917%
+}
+
+.italy {
+    background-position: 0 43.9446366782%
+}
+
+.jamaica {
+    background-position: 0 44.2906574394%
+}
+
+.japan {
+    background-position: 0 44.6366782007%
+}
+
+.jersey {
+    background-position: 0 44.9826989619%
+}
+
+.jordan {
+    background-position: 0 45.3287197232%
+}
+
+.kazakhstan {
+    background-position: 0 45.6747404844%
+}
+
+.kenya {
+    background-position: 0 46.0207612457%
+}
+
+.kiribati {
+    background-position: 0 46.3667820069%
+}
+
+.kosovo {
+    background-position: 0 46.7128027682%
+}
+
+.kurdish {
+    background-position: 0 47.0588235294%
+}
+
+.kuwait {
+    background-position: 0 47.4048442907%
+}
+
+.kyrgyzstan {
+    background-position: 0 47.7508650519%
+}
+
+.laos {
+    background-position: 0 48.0968858131%
+}
+
+.latvia {
+    background-position: 0 48.4429065744%
+}
+
+.lebanon {
+    background-position: 0 48.7889273356%
+}
+
+.lesotho {
+    background-position: 0 49.1349480969%
+}
+
+.liberia {
+    background-position: 0 49.4809688581%
+}
+
+.libya {
+    background-position: 0 49.8269896194%
+}
+
+.liechtenshein {
+    background-position: 0 50.1730103806%
+}
+
+.lithuania {
+    background-position: 0 50.5190311419%
+}
+
+.luxembourg {
+    background-position: 0 50.8650519031%
+}
+
+.macau {
+    background-position: 0 51.2110726644%
+}
+
+.northmacedonia {
+    background-position: 0 51.5570934256%
+}
+
+.madagascar {
+    background-position: 0 51.9031141869%
+}
+
+.malawi {
+    background-position: 0 52.2491349481%
+}
+
+.malaysia {
+    background-position: 0 52.5951557093%
+}
+
+.maldives {
+    background-position: 0 52.9411764706%
+}
+
+.mali {
+    background-position: 0 53.2871972318%
+}
+
+.malta {
+    background-position: 0 53.6332179931%
+}
+
+.marshallislands {
+    background-position: 0 53.9792387543%
+}
+
+.martinique {
+    background-position: 0 54.3252595156%
+}
+
+.mauritania {
+    background-position: 0 54.6712802768%
+}
+
+.mauritius {
+    background-position: 0 55.0173010381%
+}
+
+.mayotte {
+    background-position: 0 55.3633217993%
+}
+
+.mexico {
+    background-position: 0 55.7093425606%
+}
+
+.micronesia {
+    background-position: 0 56.0553633218%
+}
+
+.moldova {
+    background-position: 0 56.401384083%
+}
+
+.monaco {
+    background-position: 0 56.7474048443%
+}
+
+.mongolia {
+    background-position: 0 57.0934256055%
+}
+
+.montenegro {
+    background-position: 0 57.4394463668%
+}
+
+.montserrat {
+    background-position: 0 57.785467128%
+}
+
+.morocco {
+    background-position: 0 58.1314878893%
+}
+
+.mozambique {
+    background-position: 0 58.4775086505%
+}
+
+.myanmar {
+    background-position: 0 58.8235294118%
+}
+
+.namibia {
+    background-position: 0 59.169550173%
+}
+
+.nato {
+    background-position: 0 59.5155709343%
+}
+
+.nauru {
+    background-position: 0 59.8615916955%
+}
+
+.nepal {
+    background-position: 0 60.2076124567%
+}
+
+.netherlands {
+    background-position: 0 60.553633218%
+}
+
+.netherlandsantilles {
+    background-position: 0 60.8996539792%
+}
+
+.newcaledonia {
+    background-position: 0 61.2456747405%
+}
+
+.newzealand {
+    background-position: 0 61.5916955017%
+}
+
+.nicaragua {
+    background-position: 0 61.937716263%
+}
+
+.niger {
+    background-position: 0 62.2837370242%
+}
+
+.nigeria {
+    background-position: 0 62.6297577855%
+}
+
+.niue {
+    background-position: 0 62.9757785467%
+}
+
+.norfolk {
+    background-position: 0 63.321799308%
+}
+
+.northamerica {
+    background-position: 0 63.6678200692%
+}
+
+.northerncyprus {
+    background-position: 0 64.0138408304%
+}
+
+.northernireland {
+    background-position: 0 64.3598615917%
+}
+
+.northernmariana {
+    background-position: 0 64.7058823529%
+}
+
+.northkorea {
+    background-position: 0 65.0519031142%
+}
+
+.norway {
+    background-position: 0 65.3979238754%
+}
+
+.oas {
+    background-position: 0 65.7439446367%
+}
+
+.oceania {
+    background-position: 0 66.0899653979%
+}
+
+.olimpics {
+    background-position: 0 66.4359861592%
+}
+
+.oman {
+    background-position: 0 66.7820069204%
+}
+
+.opec {
+    background-position: 0 67.1280276817%
+}
+
+.pakistan {
+    background-position: 0 67.4740484429%
+}
+
+.palau {
+    background-position: 0 67.8200692042%
+}
+
+.palestine {
+    background-position: 0 68.1660899654%
+}
+
+.panama {
+    background-position: 0 68.5121107266%
+}
+
+.papuanewguinea {
+    background-position: 0 68.8581314879%
+}
+
+.paraguay {
+    background-position: 0 69.2041522491%
+}
+
+.peru {
+    background-position: 0 69.5501730104%
+}
+
+.philippines {
+    background-position: 0 69.8961937716%
+}
+
+.pitcairn {
+    background-position: 0 70.2422145329%
+}
+
+.poland {
+    background-position: 0 70.5882352941%
+}
+
+.portugal {
+    background-position: 0 70.9342560554%
+}
+
+.puertorico {
+    background-position: 0 71.2802768166%
+}
+
+.qatar {
+    background-position: 0 71.6262975779%
+}
+
+.quebec {
+    background-position: 0 71.9723183391%
+}
+
+.redcross {
+    background-position: 0 72.3183391003%
+}
+
+.reunion {
+    background-position: 0 72.6643598616%
+}
+
+.romania {
+    background-position: 0 73.0103806228%
+}
+
+.russia {
+    background-position: 0 73.3564013841%
+}
+
+.rwanda {
+    background-position: 0 73.7024221453%
+}
+
+.saintbarthelemy {
+    background-position: 0 74.0484429066%
+}
+
+.sainthelena {
+    background-position: 0 74.3944636678%
+}
+
+.saintlucia {
+    background-position: 0 74.7404844291%
+}
+
+.saintmartin {
+    background-position: 0 75.0865051903%
+}
+
+.saintpierreandmiquelon {
+    background-position: 0 75.4325259516%
+}
+
+.samoa {
+    background-position: 0 75.7785467128%
+}
+
+.sanmarino {
+    background-position: 0 76.124567474%
+}
+
+.saotomeandprincipe {
+    background-position: 0 76.4705882353%
+}
+
+.saudiarabia {
+    background-position: 0 76.8166089965%
+}
+
+.scotland {
+    background-position: 0 77.1626297578%
+}
+
+.senegal {
+    background-position: 0 77.508650519%
+}
+
+.serbia {
+    background-position: 0 77.8546712803%
+}
+
+.seychelles {
+    background-position: 0 78.2006920415%
+}
+
+.sierraleone {
+    background-position: 0 78.5467128028%
+}
+
+.singapore {
+    background-position: 0 78.892733564%
+}
+
+.sintmaarten {
+    background-position: 0 79.2387543253%
+}
+
+.slovakia {
+    background-position: 0 79.5847750865%
+}
+
+.slovenia {
+    background-position: 0 79.9307958478%
+}
+
+.solomonislands {
+    background-position: 0 80.276816609%
+}
+
+.somalia {
+    background-position: 0 80.6228373702%
+}
+
+.somaliland {
+    background-position: 0 80.9688581315%
+}
+
+.southafrica {
+    background-position: 0 81.3148788927%
+}
+
+.southamerica {
+    background-position: 0 81.660899654%
+}
+
+.southgeorgiaandsouthsandwich {
+    background-position: 0 82.0069204152%
+}
+
+.southkorea {
+    background-position: 0 82.3529411765%
+}
+
+.southsudan {
+    background-position: 0 82.6989619377%
+}
+
+.spain {
+    background-position: 0 83.044982699%
+}
+
+.srilanka {
+    background-position: 0 83.3910034602%
+}
+
+.srlmatches {
+    background-position: 0 83.7370242215%
+}
+
+.stkittsandnevis {
+    background-position: 0 84.0830449827%
+}
+
+.stvincentandthegrenadines {
+    background-position: 0 84.4290657439%
+}
+
+.sudan {
+    background-position: 0 84.7750865052%
+}
+
+.suriname {
+    background-position: 0 85.1211072664%
+}
+
+.svalbardandjanmayen {
+    background-position: 0 85.4671280277%
+}
+
+.swaziland {
+    background-position: 0 85.8131487889%
+}
+
+.sweden {
+    background-position: 0 86.1591695502%
+}
+
+.switzerland {
+    background-position: 0 86.5051903114%
+}
+
+.syria {
+    background-position: 0 86.8512110727%
+}
+
+.tahiti {
+    background-position: 0 87.1972318339%
+}
+
+.taiwan {
+    background-position: 0 87.5432525952%
+}
+
+.tajikistan {
+    background-position: 0 87.8892733564%
+}
+
+.unitedrepublicoftanzania {
+    background-position: 0 88.2352941176%
+}
+
+.thailand {
+    background-position: 0 88.5813148789%
+}
+
+.timorleste {
+    background-position: 0 88.9273356401%
+}
+
+.togo {
+    background-position: 0 89.2733564014%
+}
+
+.tokelau {
+    background-position: 0 89.6193771626%
+}
+
+.tonga {
+    background-position: 0 89.9653979239%
+}
+
+.trinidadtobago {
+    background-position: 0 90.3114186851%
+}
+
+.tristandacunha {
+    background-position: 0 90.6574394464%
+}
+
+.tunisia {
+    background-position: 0 91.0034602076%
+}
+
+.turkey {
+    background-position: 0 91.3494809689%
+}
+
+.turkmenistan {
+    background-position: 0 91.6955017301%
+}
+
+.turksandcaicosislands {
+    background-position: 0 92.0415224913%
+}
+
+.tuvalu {
+    background-position: 0 92.3875432526%
+}
+
+.uganda {
+    background-position: 0 92.7335640138%
+}
+
+.ukraine {
+    background-position: 0 93.0795847751%
+}
+
+.uae {
+    background-position: 0 93.4256055363%
+}
+
+.unitedkingdom {
+    background-position: 0 93.7716262976%
+}
+
+.uruguay {
+    background-position: 0 94.1176470588%
+}
+
+.usa {
+    background-position: 0 94.4636678201%
+}
+
+.uzbekistan {
+    background-position: 0 94.8096885813%
+}
+
+.vanutau {
+    background-position: 0 95.1557093426%
+}
+
+.vaticancity {
+    background-position: 0 95.5017301038%
+}
+
+.venezuela {
+    background-position: 0 95.8477508651%
+}
+
+.vietnam {
+    background-position: 0 96.1937716263%
+}
+
+.virginislandsbritish {
+    background-position: 0 96.5397923875%
+}
+
+.virginislandsus {
+    background-position: 0 96.8858131488%
+}
+
+.wales {
+    background-position: 0 97.23183391%
+}
+
+.wallisandfutuna {
+    background-position: 0 97.5778546713%
+}
+
+.westernsahara {
+    background-position: 0 97.9238754325%
+}
+
+.westindies {
+    background-position: 0 98.2698961938%
+}
+
+.world {
+    background-position: 0 98.615916955%
+}
+
+.yemen {
+    background-position: 0 98.9619377163%
+}
+
+.zambia {
+    background-position: 0 99.3079584775%
+}
+
+.zanzibar {
+    background-position: 0 99.6539792388%
+}
+
+.zimbabwe {
+    background-position: 0 100%
 }

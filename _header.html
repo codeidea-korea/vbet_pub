@@ -6,17 +6,93 @@
             <a href="https://t.me/VBET_AMBOT" target="_blank"><img class="w-16" src="./dist/images/common/telegram.svg" alt=""></a>
         </div>
         <div class="flex items-center gap-2">
-            <button type="button" class="btn btn-primary bc-i-promotions"><span class="ml-1">PROMOTIONS</span></button>
-            <button type="button" class="btn btn-success deposit-btn"><span class="ml-1">DEPOSIT</span></button>
-            <button type="button" class="btn btn-success bc-i-community"><span class="ml-1">OCCURSUM</span></button>
+            <div class="hidden md:flex items-center gap-2">
+                <button type="button" class="btn btn-primary h-7 px-1.5 bc-i-promotions"><span class="xl:block hidden ml-1">PROMOTIONS</span></button>
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+                <button type="button" class="btn btn-success h-7 px-1.5 py-1.5"><i class="deposit-btn xl:hidden block"></i><span class="xl:block hidden ml-1 font-normal">DEPOSIT</span></button>
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+                <button type="button" class="btn btn-success h-7 px-1.5 bc-i-community"><span class="xl:block hidden ml-1">OCCURSUM</span></button>
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+            </div>
+
             <a href="javascript:;" class="text-xs underline">SIGN IN</a>
-            <button type="button" class="btn btn-primary"><span class="ml-1">REGISTER</span></button>
-            <p class="flex items-center h-7 px-2.5 text-xs bg-white bg-opacity-10 rounded now_time"><span class="hour"></span>:<span class="min"></span>:<span class="sec"></span></p>
+            <button type="button" class="btn btn-primary h-7 px-1.5 py-1 text-xs"><span class="ml-1">REGISTER</span></button>
+
+            <div class="hidden md:flex items-center gap-2">
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+                <div class="custom_select">
+                    <button class="flex items-center gap-2"><p class="flex items-center gap-2"><i class="flag-bc unitedkingdom"></i> <span class="xl:block hidden text-xs">ENG</span></p><i class="arrow noabsolute bc-i-small-arrow-up !fs8"></i></button>
+                    <div class="!w-24 bg-bg shadow-1">
+                        <ul class="p-2">
+                            <li><p class="flex items-center gap-2 w-full p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20"><i class="flag-bc unitedkingdom"></i><span class="xl:block hidden text-xs">ENG</span></p></li>
+                            <li class="mt-1"><p class="flex items-center gap-2 w-full p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20"><i class="flag-bc armenia"></i><span class="xl:block hidden text-xs">ARM</span></p></li>
+                            <li class="mt-1"><p class="flex items-center gap-2 w-full p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20"><i class="flag-bc russia"></i><span class="xl:block hidden text-xs">RUS</span></p></li>
+                            <li class="mt-1"><p class="flex items-center gap-2 w-full p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20"><i class="flag-bc georgia"></i><span class="xl:block hidden text-xs">GEO</span></p></li>
+                            <li class="mt-1"><p class="flex items-center gap-2 w-full p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20"><i class="flag-bc iran"></i><span class="xl:block hidden text-xs">FAS</span></p></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class=" w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+                <p class="flex items-center h-7 px-2.5 text-xs bg-white bg-opacity-10 rounded now_time"><span class="hour"></span>:<span class="min"></span>:<span class="sec"></span></p>
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+            </div>
+            <div class="custom_select px-2 ">
+                <button class="profile_btn flex items-center justify-center w-9 h-7 bg-white bg-opacity-10 rounded-full md:rounded"><i class="bc-i-vertical-toggle"></i></button>
+                <div class="!bg-bg">
+                    <ul>
+                        <li class="p-2 hover-primary-color bg-white bg-opacity-20 hover:bg-opacity-10"><button class="flex items-center justify-center w-full text-lg h-10"><i class="bc-i-notification"></i></button></li>
+                        <li class="p-2 hover-primary-color bg-white bg-opacity-20 hover:bg-opacity-10"><button class="flex items-center justify-center w-full text-lg h-10"><i class="bc-i-star"></i></button></li>
+                        <li class="p-2 hover-primary-color bg-white bg-opacity-20 hover:bg-opacity-10"><button class="flex items-center justify-center w-full text-lg h-10"><i class="bc-i-settings"></i></button></li>
+                        <li class="p-2 hover-primary-color bg-white bg-opacity-20 hover:bg-opacity-10"><button class="flex items-center justify-center w-full text-lg h-10"><i class="bc-i-live-chat"></i></button></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </div>
+    
+    <div class="flex md:hidden items-center gap-1.5">
+        <button type="button" class="btn btn-primary h-7 px-1.5 bc-i-promotions"><span class="xl:block hidden ml-1">PROMOTIONS</span></button>
+        <button type="button" class="btn btn-success h-7 px-1.5 py-1.5"><i class="deposit-btn xl:hidden block"></i><span class="xl:block hidden ml-1 font-normal">DEPOSIT</span></button>
+        <button type="button" class="btn btn-success h-7 px-1.5 bc-i-community"><span class="xl:block hidden ml-1">OCCURSUM</span></button>
     </div>
 
     <!-- menu -->
-    <div>
-
+    <div class="flex items-center justify-between gap-3 bg-white/10 rounded">
+        <ul class="overflow-hidden flex flex-wrap items-center h-9">
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-live"></i>Live</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-prematch"></i>Sports</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-instantwin"></i>Casino</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-wonderwheel"></i>WONDER WHEEL</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base">TIK TAK</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-live-casino"></i>Live Casino</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-belote"></i>Belote</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-poker"></i>Poker</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-esports"></i>Esports</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-tv"></i>TV Games</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-games"></i>Games</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-virtualbetting-3"></i>Virtual Games</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-promotions"></i>Promotions</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-aviatrix"></i>Aviatrix</a></li>
+            <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-keno"></i>Keno</a></li>
+        </ul>
+        <ul>
+            <li>
+                <a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-apps"></i>MORE</a>
+                <ul class="hidden">
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-wonderwheel"></i>WONDER WHEEL</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base">TIK TAK</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-live-casino"></i>Live Casino</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-belote"></i>Belote</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-poker"></i>Poker</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-esports"></i>Esports</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-tv"></i>TV Games</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-games"></i>Games</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-virtualbetting-3"></i>Virtual Games</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-promotions"></i>Promotions</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-aviatrix"></i>Aviatrix</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-keno"></i>Keno</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
 </header>

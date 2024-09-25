@@ -16,8 +16,9 @@ window.addEventListener("load", ()=>{
     fetch("./_header.html")
     .then((response) => response.text())
     .then((htmlData) => {
-        $('#wrap').prepend(htmlData)
-        headerScript()
+        $('#wrap').prepend(htmlData);
+        headerScript();
+        loadJquery();
     })
     .catch((error) => {
         console.log(error);
@@ -61,4 +62,40 @@ const modalClose = (item)=>{
     modal.style.paddingLeft = "0";
     modal.style.zIndex = "0";
     document.querySelector('body').classList.remove('overflow-hidden');
+}
+
+
+// jquery 모음
+const loadJquery = ()=>{
+
+    // custom_select 버튼 클릭
+    $('.custom_select > button').on('click',function(){
+        let Parents = $(this).parents('.custom_select');
+        if(Parents.hasClass('open')){
+            Parents.removeClass('open')
+        }else{
+            Parents.addClass('open')
+        }
+    });
+
+    // custom_select option 클릭
+    $('.custom_select > div li').on('click',function(){
+        let Parents = $(this).parents('.custom_select');
+        let text = $(this).find('p').html();
+
+        // option 닫기
+        Parents.removeClass('open')
+        Parents.find('> button p').html(text);
+    })
+    // custom_select 외의 영역 선택했을 시 닫기 
+    document.addEventListener('click',(e)=>{
+        const select = document.querySelectorAll('.custom_select.open')
+
+        select.forEach((item)=>{
+            if(item && !item.contains(e.target)){
+                item.classList.remove('open')
+            }
+        })
+    })
+
 }
