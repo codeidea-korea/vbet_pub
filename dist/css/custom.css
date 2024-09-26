@@ -1,0 +1,12 @@
+
+
+
+/* ----------------------------------------------
+        MAIN_VISUAL
+---------------------------------------------- */
+.main_visual .pagination {position:relative; bottom:0; overflow:hidden; margin:0 -12px; }
+.main_visual .pagination:before {content:''; z-index:-1; position:absolute; right:calc(100% - 13px); top:calc(50% - 12px); width:24px; height:24px; box-shadow:-10px 0 0 24px #000000e6; border-radius:50%; background-color:transparent; }
+.main_visual .pagination:after {content:''; z-index:-1; position:absolute; left:calc(100% - 13px); top:calc(50% - 12px); width:24px; height:24px; box-shadow:-10px 0 0 24px #000000e6; border-radius:50%; background-color:transparent; }
+
+
+

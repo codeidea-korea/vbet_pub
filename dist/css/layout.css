@@ -2,13 +2,17 @@
 
 :root {
     --bg-color:#000c24;
+    --primary-color:#7f194f;
 
-    --shadow-1:0 0 10px 3px #0000004d,inset 0 0 0 300px rgba(255,255,255,.05); 
+    --shadow-1:0 0 10px 3px #bfbcbc4d,inset 0 0 0 300px rgba(255,255,255,.05); 
     
 }
 
+.inner {width:1620px; max-width:100%; margin:0 auto; padding:0 10px; }
+
 .fs8 {font-size:8px; }
 .\!fs8 {font-size:8px !important; }
+.fs10 {font-size:10px; }
 
 
 /* color / bg */
@@ -19,6 +23,8 @@
 
 .shadow-1 {box-shadow:var(--shadow-1); }
 
+/* 스크롤바 */
+.noscrollbar::-webkit-scrollbar {display:none; }
 
 /* btn */
 .btn {--tw-bg-opacity:0.8; --tw-border-opacity:0.8; }
@@ -28,17 +34,94 @@
 
 /* 
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
+
+        HEADER
         
         CUSTOM_SELECT
+
+        RUNNING-LINE
         
 
-        FLAG
 
 */
 
 #main-loader {z-index:1000; opacity:1; position:fixed; left:0; top:0; display:flex; align-items:center; justify-content:center; width:100%; height:100%; background:var(--bg-color); transition:all 0.4s; }
 #main-loader.hide {z-index:-100; opacity:0; }
 #main-loader img {width:60px; }
+
+
+/* ----------------------------------------------
+            HEADER
+---------------------------------------------- */
+header {z-index:100; position:sticky; top:0; background-color:var(--bg-color);}
+header .gnb > ul > li {position:relative; }
+header .gnb > ul > li a {border-top:2px solid transparent; transition:all 0.5s; }
+header .gnb > ul > li:hover > a {border-top-color:var(--primary-color); background-color:var(--bg-color); }
+header .gnb > ul > li ul {z-index:-1000; opacity:0; visibility:hidden; position:absolute; left:0; top:calc(100% + 10px); width:235px; padding:10px; background-color:var(--bg-color); transition:all 0.3s; }
+header .gnb > ul > li:hover ul {z-index:10; opacity:1; visibility:visible; top:100%; }
+header .gnb > ul > li ul li + li {margin-top:2px; }
+header .gnb > ul > li ul li a {padding:0 10px; border-left:2px solid rgba(255,255,255,0.1); background:linear-gradient(to right, rgba(255,255,255,0.15) 10%, rgba(255,255,255,0.05) 100%); transition:all 0.5s; }
+header .gnb > ul > li ul li:hover a {border-left-color:var(--primary-color); }
+
+header .gnb .more ul li {display:none; }
+header .gnb .more ul {left:auto; right:0 ; }
+
+header .gnb > ul li.new {position:relative; }
+header .gnb > ul li.new:before {content:'NEW'; position:absolute; right:2px; top:2px; padding:0 4px; font-size:8px; line-height:12px; background-color:var(--primary-color); border-radius:4px; }
+
+@media all and (max-width:2100px){
+    header .gnb .hide1 {display:none; }
+    header .gnb .more .hide1 {display:block; }
+}
+@media all and (max-width:1960px){
+    header .gnb .hide2 {display:none; }
+    header .gnb .more .hide2 {display:block; }
+}
+@media all and (max-width:1840px){
+    header .gnb .hide3 {display:none; }
+    header .gnb .more .hide3 {display:block; }
+}
+@media all and (max-width:1680px){
+    header .gnb .hide4 {display:none; }
+    header .gnb .more .hide4 {display:block; }
+}
+@media all and (max-width:1530px){
+    header .gnb .hide5 {display:none; }
+    header .gnb .more .hide5 {display:block; }
+}
+@media all and (max-width:1420px){
+    header .gnb .hide6 {display:none; }
+    header .gnb .more .hide6 {display:block; }
+}
+@media all and (max-width:1280px){
+    header .gnb .hide7 {display:none; }
+    header .gnb .more .hide7 {display:block; }
+}
+@media all and (max-width:1150px){
+    header .gnb .hide8 {display:none; }
+    header .gnb .more .hide8 {display:block; }
+}
+@media all and (max-width:1030px){
+    header .gnb .hide9 {display:none; }
+    header .gnb .more .hide9 {display:block; }
+}
+@media all and (max-width:940px){
+    header .gnb .hide10 {display:none; }
+    header .gnb .more .hide10 {display:block; }
+}
+@media all and (max-width:780px){
+    header .gnb .hide11 {display:none; }
+    header .gnb .more .hide11 {display:block; }
+}
+@media all and (max-width:670px){
+    header .gnb .hide12 {display:none; }
+    header .gnb .more .hide12 {display:block; }
+}
+
+header .mo_gnb {position:relative; }
+header .mo_gnb:after {content:''; position:absolute; right:0; top:0; width:50px; height:100%; background:linear-gradient(to left,rgba(0,12,36,1) 0%,transparent 100%)}
+header .mo_gnb ul {padding-right:30px; }
+
 
 
 /* ----------------------------------------------
@@ -62,6 +145,28 @@
 
 
 
+
 /* ----------------------------------------------
-            FLAG
+            RUNNING-LINE
 ---------------------------------------------- */
+.running-line {display:flex; align-items:center; animation-name:running-line-LTR; animation-timing-function:linear; animation-iteration-count: infinite; animation-fill-mode: backwoards;}
+.running-line-item { position: relative; display:inline-flex; padding:14px 20px; align-items:center;}
+.running-line-item+.running-line-item:before {content: ""; font-family: BetConstruct-Icons,sans-serif; font-size: 14px; line-height: 18px; color: rgb(var(--color-primary)); position: absolute; top: 50%; left:-7px; transform: translateY(-50%); }
+.running-line-item-label {font-size: 14px;white-space: nowrap;color: rgba(var(--b-sc),.8); letter-spacing: 1px; }
+.running-line-item-value {font-size: 14px;white-space: nowrap;color: rgba(var(--b-sc),1); margin-inline-start:5px; }
+
+@keyframes running-line-LTR {
+    0% {transform:translate(5%)}
+    100% {transform:translate(-100%)}
+}
+
+
+/* ----------------------------------------------
+            JACKPOT-BANNER
+---------------------------------------------- */
+.jackpot-banner {overflow:hidden; min-height:74px; background:#1c2539 url('../images/main/jackpot_bg.png') no-repeat center center / contain; border-radius:5px; }
+.jackpot-banner .jackpot-content {display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0px; width:100%; min-height:74px; line-height:1.2; }
+.jackpot-banner b {color:gold; text-transform:uppercase; }
+.jackpot-banner p {font-weight:900; }
+.jackpot-banner p:after {content:attr(data-cur); position:relative; top:-2px; font-size:10px; font-weight:900; }
+

@@ -68,9 +68,9 @@ echo txtRecord('./@record/');
 <div id="publishingContainer">
 
 	<ul class="page-link">
-		<li class="" data-label="메인 - 진행중">
+		<li class="" data-label="메인">
             <ul>
-                <!-- <li><a href="./index.html" target="_blank" class="">메인 - 로그인 후</a></li> -->
+                <li><a href="./index.html" target="_blank" class="">메인 - 진행중</a></li>
                 <!-- <li><a href="./index_logout.html" target="_blank" class="">메인 - 로그인 전</a></li> -->
             </ul>
         </li>
