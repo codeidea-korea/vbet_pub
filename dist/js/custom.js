@@ -18,6 +18,17 @@ window.addEventListener("load", ()=>{
     .then((htmlData) => {
         $('#wrap').prepend(htmlData);
         headerScript();
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+    // 푸터 
+    fetch("./_footer.html")
+    .then((response) => response.text())
+    .then((htmlData) => {
+        $('#wrap').append(htmlData);
+        footerScript()
         loadJquery();
     })
     .catch((error) => {
@@ -38,6 +49,18 @@ const headerScript = ()=>{
         $('header .now_time .sec').text(("0" + date.getSeconds()).slice(-2))
     },1000)
 
+}
+
+const footerScript = ()=>{
+
+    setInterval(()=>{
+        let timestamp = new Date().getTime();
+        let date = new Date(timestamp);
+
+        $('footer .now_time .hour').text(("0" + date.getHours()).slice(-2))
+        $('footer .now_time .min').text(("0" + date.getMinutes()).slice(-2))
+        $('footer .now_time .sec').text(("0" + date.getSeconds()).slice(-2))
+    },1000)
 
 }
 
@@ -65,6 +88,14 @@ const modalClose = (item)=>{
 }
 
 
+// faq
+const faqToggle = (item)=>{
+    $(item).parent().toggleClass('open')
+}
+
+
+
+
 // jquery 모음
 const loadJquery = ()=>{
 
@@ -80,7 +111,7 @@ const loadJquery = ()=>{
             effect = $(this).attr('data-effect') ? $(this).attr('data-effect') : 'slide';
             initial = $(this).attr('data-initial') ? $(this).attr('data-initial') : 0;
             itemSpeed = $(this).attr('data-speed') ? $(this).attr('data-speed') : 1000;
-        $(this).addClass('num'+index);		
+        $(this).addClass('num'+index);
         var swiper =  new Swiper( '.mySwiper.num' + index + ' .swiper-container', {
             spaceBetween: parseInt(itemGap),
             slidesPerView: itemPer == 'auto' ? "auto" : itemPer,
@@ -122,6 +153,50 @@ const loadJquery = ()=>{
             })
         }
     });
+
+    // 스포츠 슬라이드
+    $('.reactSlide').each(function(index){
+        let idx = index + 100
+        $(this).addClass('num'+idx);		
+        let xlpcItemPer = $(this).data('xl') ? $(this).data('xl') : 1,
+            pcItemPer = $(this).data('lg') ? $(this).data('lg') : xlpcItemPer,
+            taItemPer = $(this).data('md') ? $(this).data('md') : pcItemPer,
+            moItemPer = $(this).data('mo') ? $(this).data('mo') : 1,
+            itemGap = $(this).data('gap') ? $(this).data('gap') : 0,
+            // itemGroup = $(this).data('group') ?$(this).data('group') : 1,
+            slideLoop = $(this).data('loop') == true ? true : false ;
+        
+        var reactSlide = new Swiper( '.reactSlide.num' + idx + ' .swiper-container', {
+            spaceBetween: parseInt(itemGap),
+            slidesPerView : moItemPer,
+            slidesPerGroup : Math.floor(moItemPer),
+            loop: slideLoop,
+            pagination: {
+                el: '.reactSlide.num' + idx + ' .pagination',
+                clickable: true,
+                type:  $('.reactSlide.num' + idx + ' .pagination').hasClass('fraction') ? "fraction" : "bullets",
+            },
+            breakpoints: {
+                767: {
+                  slidesPerView: taItemPer,
+                  slidesPerGroup : Math.floor(taItemPer),
+                },
+                1020: {
+                  slidesPerView: pcItemPer,
+                  slidesPerGroup : Math.floor(pcItemPer),
+                },
+                1365: {
+                  slidesPerView: xlpcItemPer,
+                  slidesPerGroup : Math.floor(xlpcItemPer),
+                }
+            },
+            navigation: {
+                nextEl: '.reactSlide.num' + idx + ' .next',
+                prevEl: '.reactSlide.num' + idx + ' .prev'
+            },
+
+        });
+    })
 
     // custom_select 버튼 클릭
     $('.custom_select > button').on('click',function(){
