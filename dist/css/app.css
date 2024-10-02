@@ -1453,6 +1453,9 @@ select{
 .h-full{
     height: 100%;
 }
+.h-12{
+    height: 3rem;
+}
 .\!w-24{
     width: 6rem !important;
 }
@@ -1506,6 +1509,9 @@ select{
 }
 .shrink-0{
     flex-shrink: 0;
+}
+.flex-grow{
+    flex-grow: 1;
 }
 .rotate-180{
     --tw-rotate: 180deg;
@@ -1649,6 +1655,41 @@ select{
     --tw-bg-opacity: 1;
     background-color: rgb(7 102 255 / var(--tw-bg-opacity));
 }
+.bg-\[\#ff01087\]{
+    background-color: #ff01087;
+}
+.bg-\[\#ff0087\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 0 135 / var(--tw-bg-opacity));
+}
+.bg-\[\#6585a1\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(101 133 161 / var(--tw-bg-opacity));
+}
+.bg-\[\#6200ff\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(98 0 255 / var(--tw-bg-opacity));
+}
+.bg-\[\#3d6403\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(61 100 3 / var(--tw-bg-opacity));
+}
+.bg-\[\#34b2b2\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(52 178 178 / var(--tw-bg-opacity));
+}
+.bg-\[\#640303\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(100 3 3 / var(--tw-bg-opacity));
+}
+.bg-\[\#a13d6a\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(161 61 106 / var(--tw-bg-opacity));
+}
+.bg-\[\#f51919\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 25 25 / var(--tw-bg-opacity));
+}
 .bg-opacity-10{
     --tw-bg-opacity: 0.1;
 }
@@ -1775,6 +1816,10 @@ select{
 .text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+}
+.text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
 .font-bold{
     font-weight: 700;

@@ -15,13 +15,25 @@
                 <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
             </div>
 
-            <a href="javascript:;" class="text-xs underline">SIGN IN</a>
-            <button type="button" class="btn btn-primary h-7 px-1.5 py-1 text-xs"><span>REGISTER</span></button>
+            <a href="javascript:;" class="text-xs underline logout_show">SIGN IN</a>
+            <button type="button" class="btn btn-primary h-7 px-1.5 py-1 text-xs logout_show"><span>REGISTER</span></button>
+
+            <div class="custom_hover">
+                <button class="text-xs">0.0 <b>֏</b></button>
+                <div></div>
+            </div>
+
+            <hr class=" w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+
+            <div class="custom_hover">
+                <button><i class="bc-i-user text-shadow-1 text-2xl"></i></button>
+                <div></div>
+            </div>
 
             <div class="hidden md:flex items-center gap-2">
                 <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
                 <div class="custom_select">
-                    <button class="flex items-center gap-2"><p class="flex items-center gap-2"><i class="flag-bc unitedkingdom"></i> <span class="xl:block hidden text-xs">ENG</span></p><i class="arrow noabsolute bc-i-small-arrow-up !fs8"></i></button>
+                    <button class="flex items-center gap-2"><p class="flex items-center gap-2"><i class="flag-bc unitedkingdom"></i> <span class="xl:block hidden text-xs">ENG</span></p><i class="arrow noabsolute bc-i-small-arrow-down !fs8"></i></button>
                     <div class="!w-24 bg-bg shadow-1">
                         <ul class="p-2">
                             <li><p class="flex items-center gap-2 w-full p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20"><i class="flag-bc unitedkingdom"></i><span class="text-xs">ENG</span></p></li>
@@ -153,3 +165,92 @@
     </div>
 
 </header>
+
+
+
+<!-- 모바일 하단메뉴 -->
+<div class="mo_quick md:hidden block">
+    <ul>
+        <li><a href="javascript:;"><i class="bc-i-live"></i><span class="fs10">In-Play</span><b>64</b></a></li>
+        <li><a href="javascript:;"><i class="bc-i-prematch"></i><span class="fs10">Sport</span></a></li>
+        <li><a href="javascript:;"><i class="bc-i-chat"></i><span class="fs10">Occursum</span></a></li>
+        <li><a href="javascript:;"><i class="bc-i-slots"></i><span class="fs10">Casino</span></a></li>
+        <li><a href="javascript:;"><i class="bc-i-livecasino"></i><span class="fs10">Live Casino</span></a></li>
+        <li class="menu"><a href="javascript:;" onclick="moMenuToggle()"><i class="bc-i-burger"></i><span class="fs10">Menu</span></a></li>
+    </ul>
+</div>
+
+<div class="mo_quick_menu">
+    <div class="z-10 sticky top-0 flex items-center justify-between h-11 px-2 border-b border-white border-opacity-10 bg-bg">
+        <h4>MENU</h4>
+        <button class="bc-i-close-remove" onclick="moMenuToggle()"></button>
+    </div>
+    <ul class="menu">
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-live bg-[#ff0087] rounded"></i><p class="flex items-center justify-between flex-grow">Live <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>IN-PLAY</a></li>
+                    <li><a href="javascript:;">Event View</a></li>
+                    <li><a href="javascript:;">Tournaments</a></li>
+                    <li><a href="javascript:;">Live Calendar</a></li>
+                    <li><a href="javascript:;">Statistics</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-prematch bg-[#6585a1] rounded"></i><p class="flex items-center justify-between flex-grow">Sports <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>SPORTS</a></li>
+                    <li><a href="javascript:;" >Event View</a></li>
+                    <li><a href="javascript:;">Tournaments</a></li>
+                    <li><a href="javascript:;">Live Calendar</a></li>
+                    <li><a href="javascript:;">Statistics</a></li>
+                    <li><a href="javascript:;">Results</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-instantwin bg-[#6585a1] rounded"></i><p class="flex items-center justify-between flex-grow">Casino <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>CASINO</a></li>
+                    <li><a href="javascript:;" >Home</a></li>
+                    <li><a href="javascript:;">Tournaments</a></li>
+                    <li><a href="javascript:;">Jackpot</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-wonderwheel bg-[#6200ff] rounded"></i>WONDER WHEEL</a></li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-default-icon bg-[#6585a1] rounded"></i>TIK TAK</a></li>
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-live-casino bg-[#6585a1] rounded"></i><p class="flex items-center justify-between flex-grow">Live Casino <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>LIVE CASINO</a></li>
+                    <li><a href="javascript:;" >Home</a></li>
+                    <li><a href="javascript:;">Tournaments</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-belote bg-[#6585a1] rounded"></i>Belote</a></li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-poker bg-[#3d6403] rounded"></i>Poker</a></li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-esports bg-[#34b2b2] rounded"></i>Esports</a></li>
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-tv bg-[#640303] rounded"></i><p class="flex items-center justify-between flex-grow">TV Games <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>TV GAMES</a></li>
+                    <li><a href="javascript:;" >Home</a></li>
+                    <li><a href="javascript:;">Tournaments</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-games bg-[#f51919] rounded"></i>Games</a></li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-virtualbetting-3 bg-[#6585a1] rounded"></i>Virtual Games</a></li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-promotions bg-[#a13d6a] rounded"></i>Promotions</a></li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-aviatrix bg-[#6585a1] rounded"></i>Aviatrix</a></li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-keno bg-[#6585a1] rounded"></i>Keno</a></li>
+    </ul>
+</div>

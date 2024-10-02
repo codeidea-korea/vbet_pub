@@ -60,7 +60,28 @@ const footerScript = ()=>{
         $('footer .now_time .hour').text(("0" + date.getHours()).slice(-2))
         $('footer .now_time .min').text(("0" + date.getMinutes()).slice(-2))
         $('footer .now_time .sec').text(("0" + date.getSeconds()).slice(-2))
-    },1000)
+    },1000);
+
+    let fooT = $('footer').offset().top;
+    
+    $(window).on('resize',function(){
+        fooT = $('footer').offset().top;
+    })
+
+    $(window).on('scroll',function(){
+        let topStartPoint = fooT - $(window).outerHeight() - 400;
+        let scrollT = $(this).scrollTop();
+
+        if(topStartPoint < scrollT){
+            $('#quick_top').addClass('on')
+        }else{
+            $('#quick_top').removeClass('on')
+        }
+    })
+
+    $('#quick_top').on('click',function(){
+        $('html,body').animate({scrollTop:0})
+    })
 
 }
 
@@ -93,6 +114,24 @@ const faqToggle = (item)=>{
     $(item).parent().toggleClass('open')
 }
 
+// 모바일메뉴 토글
+const moMenuToggle = (item)=>{
+    $('.mo_quick .menu').toggleClass('on')
+    $('.mo_quick_menu').toggleClass('open')
+}
+
+// 모바일메뉴 - 2depth 토글
+const menuToggle = (item,state)=>{
+    if(state == "on"){
+        $(item).next('.depth2').addClass('on')
+        $(item).parent().siblings().find('.depth2').removeClass('on')
+        
+        $(item).parents('.menu').addClass('on')
+    }else{
+        $(item).parents('.depth2').prev().removeClass('on')
+        $(item).parents('.menu').removeClass('on')
+    }
+}
 
 
 
