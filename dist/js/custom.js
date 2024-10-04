@@ -83,6 +83,10 @@ const footerScript = ()=>{
         $('html,body').animate({scrollTop:0})
     })
 
+    $('footer .fold_btn').on('click',function(){
+        $('footer').toggleClass('on')
+    })
+
 }
 
 
@@ -133,6 +137,44 @@ const menuToggle = (item,state)=>{
     }
 }
 
+// provider
+const providerChange = (target,item)=>{
+    $(target).addClass('on').siblings('button').removeClass('on');
+    if(item=='list'){
+        $('.sub_game .provider_list').addClass('list')
+    }else{
+        $('.sub_game .provider_list').removeClass('list')
+    }
+}
+
+const providerToggle = (item)=>{
+    $('.sub_game').toggleClass('close')
+    if(item == "close"){
+        $('.sub_game .close_btn').addClass('hidden')
+        $('.sub_game .open_btn').removeClass('hidden')
+    }else{
+        $('.sub_game .open_btn').addClass('hidden')
+        $('.sub_game .close_btn').removeClass('hidden')
+    }
+}
+
+const GamesList = (item)=>{
+    $(item).toggleClass('on')
+    $('.sub_game .games .type_1').toggleClass('hidden')
+    $('.sub_game .games .type_2').toggleClass('hidden')
+}
+
+const gameMoSearch = ()=>{
+    $('.sub_game .games .mo_search').toggleClass('on')
+}
+
+const gameMoProvider = ()=>{
+    $('.sub_game .provider').toggleClass('fold')
+}
+
+const providerClick = (item)=>{
+    $(item).toggleClass('on')
+}
 
 
 // jquery 모음

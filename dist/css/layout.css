@@ -4,8 +4,11 @@
     --bg-color:#000c24;
     --primary-color:#7f194f;
 
+    
     /* gradient */
     --pink-gradient:linear-gradient(175deg,#7f0dd8 10%,#a937f0 50%,#c80dd8 100%); 
+    --gradient-bg:linear-gradient(to right, rgba(255,255,255,0.15) 10%, rgba(255,255,255,0.05) 100%); 
+    --bg2-gradient:linear-gradient(to bottom,rgba(255,255,255,.05) 1%,rgba(30,38,57,.05) 46%,transparent); 
 
     /* shadow */
     --shadow-1:0 0 10px 3px #bfbcbc4d,inset 0 0 0 300px rgba(255,255,255,.05); 
@@ -28,6 +31,7 @@
 .hover-primary-color:hover {color:rgb(var(--color-primary)); }
 
 .pink-gradient {background:var(--pink-gradient); }
+.bg2-gradient {background:var(--bg2-gradient); }
 
 /* shadow */
 .shadow-1 {box-shadow:var(--shadow-1); }
@@ -41,6 +45,14 @@
 .btn-success:hover {--color-success:var(--color-success-hover); }
 .btn-success {color:#fff; }
 
+.custom_btn + .custom_btn {margin-top:2px; }
+.custom_btn {padding:0 10px; border-left:2px solid rgba(255,255,255,0.1); background:var(--gradient-bg); transition:all 0.5s; }
+.custom_btn:hover {border-left-color:var(--primary-color); }
+
+
+::-webkit-scrollbar {width:4px; -webkit-appearance:none; }
+::-webkit-scrollbar-thumb {background:rgba(255,255,255,0.5); border-radius:5px; width:20px; }
+::-webkit-scrollbar-track {background:rgba(255,255,255,0.1); }
 
 /* 
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
@@ -50,11 +62,15 @@
         
         CUSTOM_SELECT
         SWIPER_ARROW
+        CUSTOM_HOVER
+        INPUT_GROUP
 
 
         CASINO_ITEM
         VBET_TOGGLE
-
+        CATEGORY_LIST
+        SUB_GAME
+        
 
         RUNNING-LINE
         
@@ -77,7 +93,7 @@ header .gnb > ul > li:hover > a {border-top-color:var(--primary-color); backgrou
 header .gnb > ul > li ul {z-index:-1000; opacity:0; visibility:hidden; position:absolute; left:0; top:calc(100% + 10px); width:235px; padding:10px; background-color:var(--bg-color); transition:all 0.3s; }
 header .gnb > ul > li:hover ul {z-index:10; opacity:1; visibility:visible; top:100%; }
 header .gnb > ul > li ul li + li {margin-top:2px; }
-header .gnb > ul > li ul li a {padding:0 10px; border-left:2px solid rgba(255,255,255,0.1); background:linear-gradient(to right, rgba(255,255,255,0.15) 10%, rgba(255,255,255,0.05) 100%); transition:all 0.5s; }
+header .gnb > ul > li ul li a {padding:0 10px; border-left:2px solid transparent; background:var(--gradient-bg); transition:all 0.5s; }
 header .gnb > ul > li ul li:hover a {border-left-color:var(--primary-color); }
 
 header .gnb .more ul li {display:none; }
@@ -139,6 +155,10 @@ header .mo_gnb {position:relative; }
 header .mo_gnb:after {content:''; position:absolute; right:0; top:0; width:50px; height:100%; background:linear-gradient(to left,rgba(0,12,36,1) 0%,transparent 100%)}
 header .mo_gnb ul {padding-right:30px; }
 
+@media all and (max-width:767px){
+    header .mo_gnb {display:none; }
+}
+
 header .logout_show {display:none; }
 .logout header .logout_show {display:block; }
 
@@ -150,7 +170,7 @@ header .logout_show {display:none; }
 .mo_quick ul li a b {position:absolute; left:55%; top:3px; display:flex; align-items:center; justify-content:center; width:15px; height:15px; font-size:8px; color:#fff; background-color:rgb(var(--color-primary)); border-radius:50%; }
 .mo_quick ul li.on a {background-color:rgba(255,255,255,0.15); color:#fff; }
 
-.mo_quick_menu {z-index:110; position:fixed; left:0; bottom:-100%; overflow-y:auto; width:100%; height:calc(100% - 54px); background-color:rgba(0, 12, 36, 1); box-shadow:0 -60px 0 rgba(0,0,0,0.8); transition:all 0.5s; }
+.mo_quick_menu {z-index:110; position:fixed; left:0; bottom:-100%; overflow-y:auto; width:100%; height:calc(100% - 60px); background-color:rgba(0, 12, 36, 1); box-shadow:0 -60px 0 rgba(0,0,0,0.8); transition:all 0.5s; }
 .mo_quick_menu.open {bottom:0; }
 .mo_quick_menu .menu {position:relative; padding:8px 8px 55px; }
 .mo_quick_menu .menu > li + li {margin-top:10px; }
@@ -172,9 +192,29 @@ header .logout_show {display:none; }
 .mo_quick_menu .menu.on > li > a p i {display:none; }
 .mo_quick_menu .menu.on > li .depth2.on {display:block; }
 
+header .sub_menu {display:none; border-bottom:1px solid rgba(255,255,255, 0.1);  }
+header .sub_menu ul {display:none; }
+header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
+
+.sub header .sub_menu {display:block; }
+
+.sub_1 header .sub_menu ul li:nth-of-type(1) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
+
+.casino header .sub_menu ul[data-sub-cate="casino"] {display:flex; }
+
+@media all and (max-width:767px){
+    .casino header .sub_menu ul[data-sub-cate="casino"] {display:grid; }
+}
+
 /* ----------------------------------------------
             FOOTER
 ---------------------------------------------- */
+body footer .fold_btn {display:none; }
+.fold_footer footer {z-index:100; position:fixed; left:0; bottom:-80vh; width:100%; height:80vh; }
+.fold_footer footer.on {bottom:0;}
+.fold_footer footer .fold_btn {position:absolute; left:calc(50% - 30px); top:-18px; display:block; width:60px; height:18px; border-radius:4px 4px 0 0; }
+.fold_footer footer.on .fold_btn i {display:block; transform:rotate(180deg); }
+
 #quick_top {z-index:-100; opacity:0; position:fixed; bottom:90px; right:0; left:0; visibility: hidden; width:56px; height:56px; margin:auto; background:rgba(255,255,255,0.15); backdrop-filter:blur(2px); border-radius:50%; transition:all 0.5s; }
 #quick_top.on {z-index:80; opacity:1; visibility: visible;}
 
@@ -187,6 +227,7 @@ header .logout_show {display:none; }
 .custom_select > button .arrow {font-size:20px; transform:rotate(0); }
 .custom_select > button .arrow:not(.noabsolute) {position:absolute; right:16px; top:50%; transform:translateY(-50%); }
 .custom_select > div {z-index:-1000; position:absolute; left:0; top:calc(100% + 10px); overflow-y:auto; overflow-x:hidden; display:none; width:100%; max-height:320px; border-radius:8px; }
+.custom_select > div.h-auto {max-height:fit-content; }
 .custom_select ul li {display:flex; align-items:center; justify-content:space-between; font-weight:700; cursor:pointer; }
 .custom_select.open {z-index:11; }
 .custom_select.open > button .arrow {transform:rotate(180deg); }
@@ -200,12 +241,28 @@ header .logout_show {display:none; }
 
 
 /* ----------------------------------------------
+            INPUT_GROUP
+---------------------------------------------- */
+.form-control {border:0 none; background-color:rgba(255,255,255,0.1); }
+
+
+/* ----------------------------------------------
             SWIPER_ARROW
 ---------------------------------------------- */
 .fade_arrow {z-index:10; position:absolute; top:0; display:flex; align-items:center; justify-content:center; width:40px; height:100%; }
 .fade_arrow:disabled {display:none; }
 .fade_arrow.prev {left:0; background-image:linear-gradient(to right, var(--bg-color) 0%, transparent 100% ); }
 .fade_arrow.next {right:0; background-image:linear-gradient(to left, var(--bg-color) 0%, transparent 100% ); }
+
+
+/* ----------------------------------------------
+            CUSTOM_HOVER
+---------------------------------------------- */
+.custom_hover {z-index:10; position:relative; }
+.custom_hover > button {border-top:2px solid transparent; }
+.custom_hover > div {opacity:0; visibility:hidden; position:absolute; right:0; top:calc(100% + 10px); transition:all 0.5s; }
+.custom_hover:hover > button {border-top-color:var(--primary-color); }
+.custom_hover:hover > div {opacity:1; visibility:visible; top:100%; transition:all 0.5s; }
 
 
 /* ----------------------------------------------
@@ -240,6 +297,69 @@ header .logout_show {display:none; }
 .vbet_toggle .faq_area dl.open dt i {transform:rotate(180deg); }
 .vbet_toggle .faq_area dl.open dd {display:block; }
 
+
+/* ----------------------------------------------
+            CATEGORY_LIST
+---------------------------------------------- */
+.category_list li {transition:all 0.3s; }
+.category_list li i {opacity:.2; transition:all 0.3s; }
+.category_list li span {opacity:.6; transition:all 0.3s; }
+.category_list li:hover,
+.category_list li.active {--tw-bg-opacity:.8; border:1px solid transparent; }
+.category_list li:hover i,
+.category_list li.active i {opacity:1; color:rgb(var(--color-primary)); }
+.category_list li:hover span,
+.category_list li.active span {opacity:1; color:var(--bg-color); }
+
+
+/* ----------------------------------------------
+            SUB_GAME
+---------------------------------------------- */
+.sub_game {display:flex; align-items:flex-start; width:100%; }
+.sub_game .provider {position:sticky; top:131px; width:218px; transition:all 0.2s; }
+.sub_game .provider .provide_type button {opacity:.6; }
+.sub_game .provider .provide_type button.on {opacity:1; }
+.sub_game .provider .provider_list {overflow-y:auto; max-height:calc(100vh - 227px); padding-right:5px; padding-bottom:10px; }
+.sub_game .provider .provider_list ul {display:grid; grid-template-columns:repeat(3,1fr); gap:4px; }
+.sub_game .provider .provider_list ul li {position:relative; height:66px; background-color:rgba(255,255,255,0.1); cursor:pointer; }
+.sub_game .provider .provider_list ul li span {position:absolute; left:10px; top:-3px; padding:4px; font-size:8px; line-height:1; background-color:#53934f; }
+.sub_game .provider .provider_list ul li span:before {content:''; position:absolute; top:0; left:-8px; width:0px; border-top:4px solid transparent; border-right:8px solid rgba(84,147,79,.6); }
+.sub_game .provider .provider_list ul li p {display:none; }
+.sub_game .provider .provider_list ul li svg,
+.sub_game .provider .provider_list ul li i {display:flex; align-items:center; justify-content:center; width:100%; height:100%; color:#fff; fill:#fff; font-size:10px; font-style:normal; font-weight:500; }
+.sub_game .provider .provider_list ul li.on {background-color:rgba(255,255,255,0.8); }
+.sub_game .provider .provider_list ul li.on svg,
+.sub_game .provider .provider_list ul li.on i {fill:var(--bg-color) !important; color:var(--bg-color); }
+.sub_game .provider .provider_list ul li.on p {color:var(--bg-color); }
+
+.sub_game .provider .provider_list.list ul {grid-template-columns:repeat(1,1fr); }
+.sub_game .provider .provider_list.list ul li {height:40px; padding:0 16px; }
+.sub_game .provider .provider_list.list ul li span {left:auto; right:-5px; top:0; }
+.sub_game .provider .provider_list.list ul li span:before {left:auto; right:0; top:auto; bottom:-4px; border-left:5px solid rgba(84,147,79,.6); border-bottom:4px solid transparent; border-top:0 none; border-right:0 none; }
+.sub_game .provider .provider_list.list ul li p {display:block; }
+.sub_game .provider .provider_list.list ul li svg,
+.sub_game .provider .provider_list.list ul li i {display:none; }
+
+.sub_game .games {width:calc(100% - 218px); padding-left:10px; padding-bottom:10px; transition:all 0.2s;}
+.sub_game .games .top {z-index:10; position:sticky; top:131px;}
+.sub_game .games .list_btn.on {background-color:rgba(255,255,255,0.8); color:rgba(0,12,36,0.8); }
+.sub_game .games .mo_search button {z-index:50; position:relative; }
+.sub_game .games .mo_search input {z-index:-10; opacity:0; visibility:hidden; position:absolute; right:0; top:0; width:0; background-color:#1a243b; transition:all 0.3s; }
+.sub_game .games .mo_search.on input {z-index:30; opacity:1; visibility:visible; width:100%; }
+
+
+.sub_game.close .provider {overflow:hidden; width:0; transition:all 0.5s; }
+.sub_game.close .games {width:100%; }
+
+@media all and (max-width:767px){
+    .sub_game .provider {z-index:120; position:fixed; left:-100%; top:56px; width:100%; height:calc(100% - 56px); padding:0 16px; background-color:var(--bg-color); }
+    .sub_game .provider.fold {left:0; }
+    .sub_game .provider .provider_list {max-height:calc(100vh - 245px); }
+
+    .sub_game .games {width:100%; padding-left:0; }
+    .sub_game .games .top {position:relative; top:0; }
+    .sub_game .games .top .list_btn.on {color:rgb(var(--color-primary)); background-color:transparent; }
+}
 
 /* ----------------------------------------------
             RUNNING-LINE

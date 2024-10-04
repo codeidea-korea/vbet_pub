@@ -74,6 +74,11 @@ echo txtRecord('./@record/');
                 <li><a href="./index.html" target="_blank" class="">메인</a></li>
             </ul>
         </li>
+		<li class="mt20" data-label="메뉴">
+            <ul>
+                <li><a href="./casino.html" target="_blank" class="">카지노</a></li>
+            </ul>
+        </li>
 	</ul>
 </div>
 
