@@ -112,6 +112,15 @@ const modalClose = (item)=>{
     document.querySelector('body').classList.remove('overflow-hidden');
 }
 
+// 버튼 토글
+const tabActiveToggle = (item)=>{
+    $(item).addClass('active').parent('li').siblings().find('button').removeClass('active')
+}
+
+const btnActiveRadio = (item)=>{
+    $(item).addClass('active').siblings().removeClass('active')
+}
+
 
 // faq
 const faqToggle = (item)=>{

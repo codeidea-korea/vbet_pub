@@ -51,24 +51,264 @@
 
 
                     <!-- tournaments -->
+                    <div class="hidden lg:grid grid-cols-5 gap-3 mt-5">
+                        <!-- 로딩시 bg-widget 클래스 추가 -->
+                        <div class="col-span-3 overflow-hidden flex items-center justify-center h-[440px] bg-casinoInfo rounded">
+                            <!-- 로딩 시 -->
+                            <!-- <div class="casino-loader">
+                                <img src="./dist/images/casino/loader.svg" alt="">
+                                <img src="./dist/images/casino/loader.svg" alt="">
+                                <img src="./dist/images/casino/loader.svg" alt="">
+                            </div> -->
+
+                            <!-- 로딩 후 -->
+                            <div class="mySwiper w-full" data-per="5" data-gap="10" data-loop="false">
+                                <div class="swiper-container">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide text-[44px] bc-i-vgs"></li>
+                                        <li class="swiper-slide text-[44px] bc-i-mgs"></li>
+                                        <li class="swiper-slide text-[44px] bc-i-tpg"></li>
+                                        <li class="swiper-slide text-[44px] bc-i-egt"></li>
+                                        <li class="swiper-slide text-[44px] bc-i-hbn"></li>
+                                        <li class="swiper-slide text-[44px] bc-i-apg"></li>
+                                        <li class="swiper-slide text-[44px] bc-i-ppg"></li>
+                                        <li class="swiper-slide text-[44px] bc-i-pcg"></li>
+                                        <li class="swiper-slide text-[44px] bc-i-ppl"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-full h-[1px] bg3-gradient"></div>
+                        </div>
+
+                        <div class="border border-white border-opacity-10 bg-white bg-opacity-10 rounded">
+                            <div class="flex items-center gap-2 h-11 border-b border-white border-opacity-10 px-4 text-base"><i class="bc-i-tournament text-xl"></i>TOURNAMENTS</div>
+                            <div class="p-4 pt-2">
+                                <div class="pb-2 text-right">
+                                    <button class="text-xs">View all</button>
+                                </div>
+                                <div class="flex items-center gap-2 px-2.5 py-2 bg-white bg-opacity-10 rounded">
+                                    <img src="./dist/images/casino/casino_2.webp" class="w-8 h-8 object-cover rounded" alt="">
+                                    <div class="truncate">
+                                        <p class="truncate text-warning font-semibold">TV GamesZone</p>
+                                        <b>100,000֏</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 mt-1 px-2.5 py-2 bg-white bg-opacity-10 rounded ">
+                                    <img src="./dist/images/casino/casino_5.webp" class="w-8 h-8 object-cover rounded" alt="">
+                                    <div class="truncate">
+                                        <p class="truncate text-warning font-semibold">SLOTS INC. Tournament Pragmatic Play</p>
+                                        <b>15,000,000֏</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 mt-1 px-2.5 py-2 bg-white bg-opacity-10 rounded">
+                                    <img src="./dist/images/casino/casino_10.webp" class="w-8 h-8 object-cover rounded" alt="">
+                                    <div class="truncate">
+                                        <p class="truncate text-warning font-semibold">TV GamesZone</p>
+                                        <b>100,000֏</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overflow-hidden border border-white border-opacity-10 bg-white bg-opacity-10 rounded">
+                            <ul class="nav nav-boxed-tabs border-b border-white border-opacity-10">
+                                <li class="nav-item flex-1"> 
+                                    <button class="nav-link w-full !px-0 py-2.5 !text-white !rounded-none active" type="button" onclick="tabActiveToggle(this)"> LAST WINNERS </button> 
+                                </li>
+                                <li class="nav-item flex-1"> 
+                                    <button class="nav-link w-full !px-0 py-2.5 !text-white !rounded-none"  type="button" onclick="tabActiveToggle(this)"> TOP WINNERS </button> 
+                                </li>
+                            </ul>
+                            <ul class="nav nav-boxed-tabs border-b border-white border-opacity-10">
+                                <li class="nav-item flex-1"> 
+                                    <button class="nav-link w-full !px-0 py-2.5 !text-white !rounded-none active" type="button" onclick="tabActiveToggle(this)"> DAY </button> 
+                                </li>
+                                <li class="nav-item flex-1"> 
+                                    <button class="nav-link w-full !px-0 py-2.5 !text-white !rounded-none"  type="button" onclick="tabActiveToggle(this)"> WEEK </button> 
+                                </li>
+                                <li class="nav-item flex-1"> 
+                                    <button class="nav-link w-full !px-0 py-2.5 !text-white !rounded-none"  type="button" onclick="tabActiveToggle(this)"> MONTH </button> 
+                                </li>
+                            </ul>
+                            <div class="p-4 pt-2">
+                                <div class="flex items-center gap-2 w-full mt-1 px-2.5 py-2 bg-white bg-opacity-10 rounded">
+                                    <img src="./dist/images/casino/casino_10.webp" class="w-8 h-8 object-cover rounded" alt="">
+                                    <div class="flex-grow truncate text-xs">
+                                        <p>131****3893</p>
+                                        <p class="truncate opacity-40">Belote</p>
+                                    </div>
+                                    <b class="text-warning">4,896֏</b>
+                                </div>
+                                <div class="flex items-center gap-2 w-full mt-1 px-2.5 py-2 bg-white bg-opacity-10 rounded">
+                                    <div class="flex-grow truncate text-xs">
+                                        <p>131****3893</p>
+                                        <p class="truncate opacity-40">Belote</p>
+                                    </div>
+                                    <b class="text-warning">9,944.97֏</b>
+                                </div>
+                                <div class="flex items-center gap-2 w-full mt-1 px-2.5 py-2 bg-white bg-opacity-10 rounded">
+                                    <img src="./dist/images/casino/casino_10.webp" class="w-8 h-8 object-cover rounded" alt="">
+                                    <div class="flex-grow truncate text-xs">
+                                        <p>131****3893</p>
+                                        <p class="truncate opacity-40">40 Shining Crown Bell Link</p>
+                                    </div>
+                                    <b class="text-warning">4,000֏</b>
+                                </div>
+                                <div class="flex items-center gap-2 w-full mt-1 px-2.5 py-2 bg-white bg-opacity-10 rounded">
+                                    <img src="./dist/images/casino/casino_10.webp" class="w-8 h-8 object-cover rounded" alt="">
+                                    <div class="flex-grow truncate text-xs">
+                                        <p>131****3893</p>
+                                        <p class="truncate opacity-40">Belote</p>
+                                    </div>
+                                    <b class="text-warning">4,896֏</b>
+                                </div>
+                                <div class="flex items-center gap-2 w-full mt-1 px-2.5 py-2 bg-white bg-opacity-10 rounded">
+                                    <div class="flex-grow truncate text-xs">
+                                        <p>131****3893</p>
+                                        <p class="truncate opacity-40">Belote</p>
+                                    </div>
+                                    <b class="text-warning">9,944.97֏</b>
+                                </div>
+                                <div class="flex items-center gap-2 w-full mt-1 px-2.5 py-2 bg-white bg-opacity-10 rounded">
+                                    <img src="./dist/images/casino/casino_10.webp" class="w-8 h-8 object-cover rounded" alt="">
+                                    <div class="flex-grow truncate text-xs">
+                                        <p>131****3893</p>
+                                        <p class="truncate opacity-40">40 Shining Crown Bell Link</p>
+                                    </div>
+                                    <b class="text-warning">4,000֏</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- special games -->
+                    <div class="md:hidden block mt-5 p-[1px] bg-gold rounded-lg">
+                        <div class="relative bg-bg rounded-lg pt-2">
+                            <h3 class="absolute left-0 -top-3 w-full text-warning text-xl text-center"><b class="px-2 bg-bg">SPECIAL GAMES</b></h3>
+                            <div class="overflow-hidden mySwiper relative py-4 px-2 gap-3" data-per="2" data-gap="10" data-loop="false">
+                                <div class="swiper-container">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <div class="overflow-hidden casino_item rounded">
+                                                <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <button class="bc-i-info"></button>
+                                                    </div>
+                                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                                    <div class="btn_box flex items-center justify-center gap-2">
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="overflow-hidden casino_item rounded">
+                                                <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <button class="bc-i-info"></button>
+                                                    </div>
+                                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                                    <div class="btn_box flex items-center justify-center gap-2">
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="overflow-hidden casino_item rounded">
+                                                <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <button class="bc-i-info"></button>
+                                                    </div>
+                                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                                    <div class="btn_box flex items-center justify-center gap-2">
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="overflow-hidden casino_item rounded">
+                                                <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <button class="bc-i-info"></button>
+                                                    </div>
+                                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                                    <div class="btn_box flex items-center justify-center gap-2">
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="overflow-hidden casino_item rounded">
+                                                <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <button class="bc-i-info"></button>
+                                                    </div>
+                                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                                    <div class="btn_box flex items-center justify-center gap-2">
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="overflow-hidden casino_item rounded">
+                                                <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <button class="bc-i-info"></button>
+                                                    </div>
+                                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                                    <div class="btn_box flex items-center justify-center gap-2">
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button class="prev slide_arrow bc-i-small-arrow-left"></button>
+                                    <button class="next slide_arrow bc-i-small-arrow-right"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <!-- category -->
                     <div class="relative mySwiper overflow-hidden mt-4" data-per="auto" data-gap="10" data-loop="false">
                         <div class="swiper-container">
                             <ul class="swiper-wrapper category_list">
-                                <li class="swiper-slide active flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-all-games"></i><span>All Games</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-lg md:text-2xl bc-i-ortak"></i><span>Ortak</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-populargames"></i><span>Popular Games</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-new"></i><span>New</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-jackpots"></i><span>Jackpots</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-buybonus"></i><span>Buy Bonus</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-bftharena"></i><span>B.F.T.H. Arena</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-exclusive"></i><span>Exclusive</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-jackpots"></i><span>JACKPOT RAIN</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-bigbassgames"></i><span>Big Bass Games</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-bettinggames"></i><span>Betting Games</span></li>
-                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer"><i class="text-xl md:text-5xl bc-i-crownslots"></i><span>CROWN SLOTS</span></li>
+                                <li class="swiper-slide active flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-all-games"></i><span>All Games</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-lg md:text-2xl bc-i-ortak"></i><span>Ortak</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-populargames"></i><span>Popular Games</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-new"></i><span>New</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-jackpots"></i><span>Jackpots</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-buybonus"></i><span>Buy Bonus</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-bftharena"></i><span>B.F.T.H. Arena</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-exclusive"></i><span>Exclusive</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-jackpots"></i><span>JACKPOT RAIN</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-bigbassgames"></i><span>Big Bass Games</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-bettinggames"></i><span>Betting Games</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4 !w-auto h-14 px-4 border border-primary border-opacity-60 bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-xl md:text-5xl bc-i-crownslots"></i><span>CROWN SLOTS</span></li>
                             </ul>
                             <button class="prev fade_arrow bc-i-small-arrow-left"></button>
                             <button class="next fade_arrow bc-i-small-arrow-right"></button>
@@ -89,7 +329,7 @@
                                 <button class="close_btn hidden md:block shrink-0 w-10 h-10 bg-white bg-opacity-10 rounded" onclick="providerToggle('close')"><i class="block bc-i-menu-open text-xl"></i></button>
                             </div>
                             <div class="flex items-center justify-between py-3">
-                                <h4>Providers</h4>
+                                <h4 class="opacity-80"><span>11</span>Providers <button class="ml-2 bc-i-clear"></button></h4>
                                 <div class="provide_type flex items-center gap-2">
                                     <hr class="w-[1px] h-4 bg-white bg-opacity-10 border-none" />
                                     <button onclick="providerChange(this,'list')"><i class="block text-lg bc-i-view-list"></i></button>
@@ -242,15 +482,35 @@
                                     </li>
                                 </ul>
                             </div>
-                            <button class="btn w-full bg-white text-black">APPLY</button>
+                            <button class="block md:hidden btn w-full bg-white text-black">APPLY</button>
                         </div>
                         <div class="games">
-                            <div class="top hidden md:flex items-center justify-between pt-3 pb-3 bg-bg">
-                                <div class="flex items-center gap-2">
+                            <div class="top hidden md:flex items-center justify-between w-full pt-3 pb-3 bg-bg">
+                                <div class="game_cate flex items-center gap-2">
                                     <button class="open_btn hidden shrink-0 w-10 h-10 bg-white bg-opacity-10 rounded" onclick="providerToggle('open')"><i class="block bc-i-menu-close text-xl"></i></button>
                                     <button class="list_btn shrink-0 w-10 h-10 bg-white bg-opacity-10 rounded" onclick="GamesList(this)"><i class="block bc-i-show-all-categories text-xl"></i></button>
+                                    <div class="relative flex-grow mySwiper overflow-hidden" data-per="auto" data-gap="10" data-loop="false">
+                                        <div class="swiper-container">
+                                            <ul class="swiper-wrapper">
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">Pragmatic Play<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                                <li class="swiper-slide flex items-center justify-center gap-2 !w-auto h-10 px-3 border border-white border-opacity-10 rounded bg-white bg-opacity-5">EGT Digital<button class="fs10 bc-i-close-remove"></button></li>
+                                            </ul>
+                                        </div>
+                                        <button class="prev fade_arrow bc-i-small-arrow-left"></button>
+                                        <button class="next fade_arrow bc-i-small-arrow-right"></button>
+                                    </div>
                                 </div>
-                                <div class="relative">
+                                <div class="shrink-0 relative">
                                     <input type="text" class="form-control h-10 pr-9" placeholder="Game Search">
                                     <button class="absolute right-0 top-0 flex items-center justify-center w-10 h-10"><i class="bc-i-search"></i></button>
                                 </div>
@@ -259,7 +519,8 @@
                                 <div class="flex items-center gap-3">
                                     <button class="list_btn" onclick="GamesList(this)"><i class="text-lg bc-i-burger-menu2"></i></button>
                                     <hr class="w-[1px] h-4 bg-white bg-opacity-10 border-none" />
-                                    <button class="flex items-center gap-1 opacity-80" onclick="gameMoProvider()"><i class="text-base bc-i-filter-outline"></i><span>Select provider</span></button>
+                                    <button class="flex items-center gap-1 opacity-80" onclick="gameMoProvider()"><i class="text-base bc-i-filter-outline text-primary"></i><span>Select provider</span></button>
+                                    <button class="bc-i-clear opacity-60"></button>
                                 </div>
                                 <div class="mo_search">
                                     <button class="p-3" onclick="gameMoSearch()"><i class="bc-i-search"></i></button>
