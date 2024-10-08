@@ -10,3 +10,11 @@
 
 
 
+
+/* ----------------------------------------------
+        CASINO_DETAIL
+---------------------------------------------- */
+.casino_detail .content {min-height:calc(100vh - 131px); }
+.content_box {width:100%; height:calc(100vh - 131px); padding-bottom:50px;  }
+.casino_detail_box {width:100%; height:68vh; }
+.content_box .grid .casino_detail_box {height:50vh;}

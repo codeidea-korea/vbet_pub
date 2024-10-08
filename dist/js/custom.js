@@ -28,8 +28,20 @@ window.addEventListener("load", ()=>{
     .then((response) => response.text())
     .then((htmlData) => {
         $('#wrap').append(htmlData);
-        footerScript()
-        loadJquery();
+        footerScript();
+        setTimeout(function(){
+            loadJquery();
+        },100)
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+    // 모달 
+    fetch("./_modal.html")
+    .then((response) => response.text())
+    .then((htmlData) => {
+        $('#wrap').append(htmlData);
     })
     .catch((error) => {
         console.log(error);
@@ -173,8 +185,8 @@ const GamesList = (item)=>{
     $('.sub_game .games .type_2').toggleClass('hidden')
 }
 
-const gameMoSearch = ()=>{
-    $('.sub_game .games .mo_search').toggleClass('on')
+const gameMoSearch = (item)=>{
+    $(item).parent('.mo_search').toggleClass('on')
 }
 
 const gameMoProvider = ()=>{
@@ -183,6 +195,13 @@ const gameMoProvider = ()=>{
 
 const providerClick = (item)=>{
     $(item).toggleClass('on')
+}
+
+// filter
+const mofilterShow = (item)=>{
+    $(item).toggleClass('rounded')
+    $(item).find('>i').toggleClass('rotate-180')
+    $(item).next('div').toggleClass('hidden')
 }
 
 
@@ -303,9 +322,21 @@ const loadJquery = ()=>{
         let Parents = $(this).parents('.custom_select');
         let text = $(this).find('p').html();
 
-        // option 닫기
-        Parents.removeClass('open')
-        Parents.find('> button p').html(text);
+        if(Parents.hasClass('check')){
+            let checkText = []
+            $(this).parents('ul').find('li').each(function(){
+                if($(this).find('input').val() !== "all"){
+                    if($(this).find('input').prop('checked')){
+                        checkText.push($(this).find('label').text())
+                    }
+                }
+            })
+            Parents.find('> button p').html(checkText.join());
+        }else{
+            // option 닫기
+            Parents.removeClass('open')
+            Parents.find('> button p').html(text);
+        }
     })
     // custom_select 외의 영역 선택했을 시 닫기 
     document.addEventListener('click',(e)=>{

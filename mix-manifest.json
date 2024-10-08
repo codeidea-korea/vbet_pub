@@ -118,5 +118,11 @@
     "/dist/images/casino/mo_casino_banner_3.webp": "/dist/images/casino/mo_casino_banner_3.webp",
     "/dist/images/casino/mo_casino_banner_4.webp": "/dist/images/casino/mo_casino_banner_4.webp",
     "/dist/images/casino/loader.svg": "/dist/images/casino/loader.svg",
-    "/dist/images/casino/casino_bg.jpg": "/dist/images/casino/casino_bg.jpg"
+    "/dist/images/casino/casino_bg.jpg": "/dist/images/casino/casino_bg.jpg",
+    "/dist/images/casino/casino_icon_1.png": "/dist/images/casino/casino_icon_1.png",
+    "/dist/images/casino/casino_icon_2.png": "/dist/images/casino/casino_icon_2.png",
+    "/dist/images/casino/casino_icon_3.png": "/dist/images/casino/casino_icon_3.png",
+    "/dist/images/casino/casino_toura_1.png": "/dist/images/casino/casino_toura_1.png",
+    "/dist/images/casino/casino_toura_2.jpg": "/dist/images/casino/casino_toura_2.jpg",
+    "/dist/images/casino/casino_detail_bg.webp": "/dist/images/casino/casino_detail_bg.webp"
 }
