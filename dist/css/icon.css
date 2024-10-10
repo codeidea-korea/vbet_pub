@@ -5716,3 +5716,219 @@
 .zimbabwe {
     background-position: 0 100%
 }
+
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot');
+    src:  url('../fonts/icomoon.eot') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf') format('truetype'),
+      url('../fonts/icomoon.woff') format('woff'),
+      url('../fonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-wallet:before {
+    content: "\e937";
+  }
+  .icon-home:before {
+    content: "\e936";
+  }
+  .icon-gift-burger:before {
+    content: "\e93d";
+  }
+  .icon-casino-slots:before {
+    content: "\e93c";
+  }
+  .icon-slot-777:before {
+    content: "\e93b";
+  }
+  .icon-search:before {
+    content: "\e93a";
+  }
+  .icon-exchange:before {
+    content: "\e939";
+  }
+  .icon-missio-misak:before {
+    content: "\e938";
+  }
+  .icon-coin-icon:before {
+    content: "\e934";
+  }
+  .icon-bonus:before {
+    content: "\e935";
+  }
+  .icon-top-winners:before {
+    content: "\e933";
+  }
+  .icon-copy:before {
+    content: "\e932";
+  }
+  .icon-vivaro:before {
+    content: "\e931";
+  }
+  .icon-bomb:before {
+    content: "\e92e";
+  }
+  .icon-jackpot:before {
+    content: "\e92f";
+  }
+  .icon-tournament:before {
+    content: "\e930";
+  }
+  .icon-info:before {
+    content: "\e92d";
+  }
+  .icon-warning:before {
+    content: "\e92c";
+  }
+  .icon-mini:before {
+    content: "\e913";
+  }
+  .icon-minor:before {
+    content: "\e914";
+  }
+  .icon-mega:before {
+    content: "\e915";
+  }
+  .icon-major:before {
+    content: "\e92b";
+  }
+  .icon-pointer:before {
+    content: "\e912";
+  }
+  .icon-swipe-up:before {
+    content: "\e911";
+  }
+  .icon-calendar:before {
+    content: "\e92a";
+  }
+  .icon-block:before {
+    content: "\e929";
+  }
+  .icon-refresh:before {
+    content: "\e928";
+  }
+  .icon-coin:before {
+    content: "\e927";
+  }
+  .icon-export:before {
+    content: "\e926";
+  }
+  .icon-filter:before {
+    content: "\e925";
+  }
+  .icon-right-p:before {
+    content: "\e921";
+  }
+  .icon-right-p-p:before {
+    content: "\e922";
+  }
+  .icon-left-p:before {
+    content: "\e923";
+  }
+  .icon-left-p-p:before {
+    content: "\e924";
+  }
+  .icon-close:before {
+    content: "\e91d";
+  }
+  .icon-select:before {
+    content: "\e920";
+  }
+  .icon-avatar:before {
+    content: "\e91c";
+  }
+  .icon-pen:before {
+    content: "\e91e";
+  }
+  .icon-password:before {
+    content: "\e91f";
+  }
+  .icon-Burger:before {
+    content: "\e91b";
+  }
+  .icon-Betconstruct-logo:before {
+    content: "\e91a";
+  }
+  .icon-add-to-list:before {
+    content: "\e900";
+  }
+  .icon-chevron-down:before {
+    content: "\e901";
+  }
+  .icon-chevron-left:before {
+    content: "\e902";
+  }
+  .icon-chevron-right:before {
+    content: "\e903";
+  }
+  .icon-chevron-small-down:before {
+    content: "\e904";
+  }
+  .icon-chevron-small-left:before {
+    content: "\e905";
+  }
+  .icon-chevron-small-right:before {
+    content: "\e906";
+  }
+  .icon-chevron-small-up:before {
+    content: "\e907";
+  }
+  .icon-chevron-thin-down:before {
+    content: "\e908";
+  }
+  .icon-chevron-thin-left:before {
+    content: "\e909";
+  }
+  .icon-chevron-thin-right:before {
+    content: "\e90a";
+  }
+  .icon-chevron-thin-up:before {
+    content: "\e90b";
+  }
+  .icon-chevron-up:before {
+    content: "\e90c";
+  }
+  .icon-chevron-with-circle-down:before {
+    content: "\e90d";
+  }
+  .icon-chevron-with-circle-left:before {
+    content: "\e90e";
+  }
+  .icon-chevron-with-circle-right:before {
+    content: "\e90f";
+  }
+  .icon-chevron-with-circle-up:before {
+    content: "\e910";
+  }
+  .icon-triangle-down:before {
+    content: "\e916";
+  }
+  .icon-triangle-left:before {
+    content: "\e917";
+  }
+  .icon-triangle-right:before {
+    content: "\e918";
+  }
+  .icon-triangle-up:before {
+    content: "\e919";
+  }
+  

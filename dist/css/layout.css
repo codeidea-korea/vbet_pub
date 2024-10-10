@@ -50,8 +50,6 @@
 .shadow-2 {box-shadow:var(--shadow-2); }
 .text-shadow-1 {text-shadow:var(--text-shadow-1); }
 
-/* 스크롤바 */
-.noscrollbar::-webkit-scrollbar {display:none; }
 
 /* btn */
 .btn-primary:hover {--color-primary:var(--color-primary-hover); }
@@ -63,9 +61,26 @@
 .custom_btn:hover {border-left-color:var(--primary-color); }
 
 
+/* 말줄임표 */
+.truncate-2 {-webkit-line-clamp: 2; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
+.truncate-3 {-webkit-line-clamp: 3; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
+.truncate-4 {-webkit-line-clamp: 4; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
+
+
+/* 스크롤바 */
+.noscrollbar::-webkit-scrollbar {display:none; }
 ::-webkit-scrollbar {width:4px; -webkit-appearance:none; }
 ::-webkit-scrollbar-thumb {background:rgba(255,255,255,0.5); border-radius:5px; width:20px; }
 ::-webkit-scrollbar-track {background:rgba(255,255,255,0.1); }
+
+.side-blur {position:relative; }
+.side-blur:before {content:''; z-index:10; position:absolute; left:0; top:0; width:100%; height:50%; background:linear-gradient(to bottom,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
+.side-blur:after {content:''; z-index:10; position:absolute; left:0; bottom:0; width:100%; height:50%; background:linear-gradient(to top,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
+.top-blur {position:relative; }
+.top-blur:before {content:''; z-index:10; position:absolute; left:0; top:0; width:30%; height:100%; background:linear-gradient(to right,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
+.top-blur:after {content:''; z-index:10; position:absolute; right:0; top:0; width:30%; height:100%; background:linear-gradient(to left,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
+.side-top-blur {position:relative; }
+.side-top-blur:before {content:''; z-index:10; position:absolute; left:0; top:0; width:100%; height:30%; background:linear-gradient(to bottom,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
 
 /* 
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
@@ -78,6 +93,7 @@
         SWIPER_ARROW
         CUSTOM_HOVER
         INPUT_GROUP
+        NAV-LINK-TABS
 
 
         CASINO_ITEM
@@ -216,24 +232,44 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .sub_3 header .sub_menu ul li:nth-of-type(3) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
 .sub_4 header .sub_menu ul li:nth-of-type(4) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
 
-.casino header .sub_menu ul[data-sub-cate="casino"] {display:flex; }
+.casino header .gnb li[data-category="casino"],
+.tvgame header .gnb li[data-category="tvgames"],
+.poker header .gnb li[data-category="poker"],
+.livecasino header .gnb li[data-category="live_casino"] {background-color:rgb(var(--color-primary)); }
+
+.casino header .sub_menu ul[data-sub-cate="casino"] ,
+.tvgame header .sub_menu ul[data-sub-cate="tvgames"] ,
+.poker header .sub_menu ul[data-sub-cate="poker"] ,
+.livecasino header .sub_menu ul[data-sub-cate="live_casino"] {display:flex; }
 
 @media all and (max-width:767px){
-    .casino header .sub_menu ul[data-sub-cate="casino"] {display:grid; }
-    .casino .mo_quick ul li[data-sub-cate="casino"] a {background-color:rgba(255,255,255,0.15); color:#fff; }
+    .casino header .sub_menu ul[data-sub-cate="casino"],
+    .tvgame header .sub_menu ul[data-sub-cate="tvgames"],
+    .poker header .sub_menu ul[data-sub-cate="poker"],
+    .livecasino header .sub_menu ul[data-sub-cate="live_casino"] {display:grid; }
+
+    .casino .mo_quick ul li[data-sub-cate="casino"] a,
+    .livecasino .mo_quick ul li[data-sub-cate="live_casino"] a {background-color:rgba(255,255,255,0.15); color:#fff; }
 }
 
 /* ----------------------------------------------
             FOOTER
 ---------------------------------------------- */
-body footer .fold_btn {display:none; }
-.fold_footer footer {z-index:100; position:fixed; left:0; bottom:-80vh; width:100%; height:80vh; }
-.fold_footer footer.on {bottom:0;}
-.fold_footer footer .fold_btn {position:absolute; left:calc(50% - 30px); top:-18px; display:block; width:60px; height:18px; border-radius:4px 4px 0 0; }
-.fold_footer footer.on .fold_btn i {display:block; transform:rotate(180deg); }
+@media all and (min-width:768px){
+    body footer .fold_btn {display:none; }
 
-.hide_footer footer {display:none; }
-.hide_footer #quick_top {display:none; }
+    .fold_footer footer {z-index:100; position:fixed; left:0; bottom:-80vh; width:100%; height:80vh; }
+    .fold_footer footer.on {bottom:0;}
+    .fold_footer footer .fold_btn {position:absolute; left:calc(50% - 30px); top:-18px; display:block; width:60px; height:18px; border-radius:4px 4px 0 0; }
+    .fold_footer footer.on .fold_btn i {display:block; transform:rotate(180deg); }
+
+    .hide_footer footer {display:none; }
+    .hide_footer #quick_top {display:none; }
+}
+@media all and (max-width:767px){
+    footer .fold_btn {display:none; }
+
+}
 
 #quick_top {z-index:-100; opacity:0; position:fixed; bottom:90px; right:0; left:0; visibility: hidden; width:56px; height:56px; margin:auto; background:rgba(255,255,255,0.15); backdrop-filter:blur(2px); border-radius:50%; transition:all 0.5s; }
 #quick_top.on {z-index:80; opacity:1; visibility: visible;}
@@ -243,7 +279,7 @@ body footer .fold_btn {display:none; }
             MODAL
 ---------------------------------------------- */
 .modal-content {background:var(--bg-color); }
-.modal .modal-body {position:relative; }
+.modal .modal-body {position:relative; overflow-y:auto; max-height:75vh; }
 .modal .modal-body .close_btn {z-index:100; position:absolute; right:15px; top:15px; }
 
 
@@ -277,6 +313,13 @@ body footer .fold_btn {display:none; }
 ---------------------------------------------- */
 .form-control {border:0 none; background-color:rgba(255,255,255,0.1); }
 .form-control.line-type {border:1px solid rgba(255,255,255,0.1); background:transparent; }
+
+
+/* ----------------------------------------------
+            NAV-LINK-TABS
+---------------------------------------------- */
+.nav.nav-link-tabs .nav-item .nav-link {color:#fff; opacity:.5; }
+.nav.nav-link-tabs .nav-item .nav-link.active {opacity:1; }
 
 
 /* ----------------------------------------------

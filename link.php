@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./dist/css/app.css" />
 	<link rel="stylesheet" href="./dist/css/layout.css" />
+	<link rel="stylesheet" href="./dist/css/icon.css" />
 	<link rel="stylesheet" href="./dist/css/custom.css" />
 	<style>
 		.ex_table th{
@@ -76,7 +77,43 @@ echo txtRecord('./@record/');
         </li>
 		<li class="mt20" data-label="메뉴">
             <ul>
-                <li><a href="./casino.html" target="_blank" class="">카지노</a></li>
+                <li data-label="Casino">
+					<ul>
+						<li>
+							<a href="./casino.html" target="_blank" class="">casino</a>
+							<ul>
+								<li><a href="./casino_detail.html" target="_blank" class="">casino detail - 1화면</a></li>
+								<li><a href="./casino_detail2.html" target="_blank" class="">casino detail - 2화면</a></li>
+								<li><button class="pop-modal" onclick="modalOpen('casino_list-modal')">카지노 리스트 모달</button></li>
+							</ul>
+						</li>
+						<li>
+							<a href="./casino_tournament.html" target="_blank">tournaments</a>
+							<ul>
+								<li><a href="./casino_tournament_detail.html" target="_blank">tournaments - detail</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Live Casino">
+					<ul>
+						<li><a href="./live_casino.html" target="_blank" class="">live casino</a></li>
+						<li><a href="./live_casino_tournament.html">tournaments</a></li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Poker">
+					<ul>
+						<li>
+							<a href="./poker.html" target="_blank" class="">poker</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="TV Games">
+					<ul>
+						<li><a href="./tvgame.html" target="_blank" class="">TV Games</a></li>
+						<li><a href="./tvgame_tournament.html" target="_blank" class="">tournaments</a></li>
+					</ul>
+				</li>
             </ul>
         </li>
 	</ul>

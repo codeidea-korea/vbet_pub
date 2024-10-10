@@ -30,12 +30,18 @@
         
             <!-- BEGIN: Content -->
             <div class="content" style="background:url('./dist/images/casino/casino_detail_bg.webp') no-repeat center center / cover; ">
+
+                <div class="md:hidden flex items-center justify-between gap-2 py-1 px-4 bg-bg">
+                    <button class="flex items-center px-2 bg-white bg-opacity-10 rounded"><i class="text-2xl icon-gift-burger"></i></button>
+                    <img class="h-10 md:h-12" src="./dist/images/common/logo.svg" alt="">
+                    <button class="btn h-6 p-1 fs10 btn-success">Deposit</button>
+                </div>
                 
                 <div class="content_box relative">
                     <div class="inner flex items-center h-full">
-                        <div class="casino_detail_box relative pr-10">
+                        <div class="casino_detail_box relative md:pr-10">
                             <div class="flex items-center justify-center w-full h-full bg-bg text-white">게임 들어가는 곳</div>    
-                            <div class="absolute right-0 top-0 w-10 casino_right_btn">
+                            <div class="absolute right-0 top-0 w-10 md:block hidden">
                                 <a href="./casino.html" class="flex items-center justify-center w-10 h-10 bg-black bg-opacity-20 rounded-tr bc-i-close-remove"></a>
                                 <button class="w-10 h-10 mt-[1px] bg-black bg-opacity-20 bc-i-multiview"></button>
                                 <button class="w-10 h-10 mt-[1px] bg-black bg-opacity-20 bc-i-refresh"></button>
@@ -48,9 +54,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="absolute left-0 bottom-0 flex items-center justify-center gap-[1px] w-full text-center">
-                        <button class="w-10 h-10 mt-[1px] text-lg bg-black bg-opacity-20 rounded-tl"><i class="bc-i-window-one"></i></button>
-                        <button class="w-10 h-10 mt-[1px] text-lg bg-black bg-opacity-20 rounded-tr"><i class="bc-i-window-two opacity-60"></i></button>
+                    <div class="absolute left-0 bottom-0 hidden md:flex items-center justify-center gap-[1px] w-full text-center">
+                        <a href="./casino_detail.html" class="flex items-center justify-center w-10 h-10 mt-[1px] text-lg bg-black bg-opacity-20 rounded-tl"><i class="bc-i-window-one"></i></ㅁ>
+                        <a href="./casino_detail2.html" class="flex items-center justify-center w-10 h-10 mt-[1px] text-lg bg-black bg-opacity-20 rounded-tr"><i class="bc-i-window-two opacity-60"></i></a>
                     </div>
                 </div>
 
