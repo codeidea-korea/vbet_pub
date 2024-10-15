@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+
+        <title>Sports Betting, Online Casino, Games and Poker | VBET ✌️</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/icon.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="games fold_footer">
+
+        <div id="main-loader">
+            <img src="./dist/images/common/loading.svg" alt="">
+        </div>
+      
+        <div id="wrap">
+        
+            <!-- BEGIN: Content -->
+            <div class="content">
+                
+                <div class="content_box px-2.5">
+                    <!-- 메인비주얼 -->
+                    <div class="relative mySwiper main_visual mt-3">
+                        <div class="swiper-container overflow-hidden rounded-lg">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide"><a href="javascript:;"><img class="md:block hidden" src="./dist/images/casino/casino_banner_4.webp" alt=""><img class="md:hidden block" src="./dist/images/casino/mo_casino_banner_4.webp" alt=""></a></li>
+                                <li class="swiper-slide"><a href="javascript:;"><img class="md:block hidden" src="./dist/images/casino/casino_banner_2.webp" alt=""><img class="md:hidden block" src="./dist/images/casino/mo_casino_banner_2.webp" alt=""></a></li>
+                                <li class="swiper-slide"><a href="javascript:;"><img class="md:block hidden" src="./dist/images/casino/casino_banner_1.webp" alt=""><img class="md:hidden block" src="./dist/images/casino/mo_casino_banner_1.webp" alt=""></a></li>
+                                <li class="swiper-slide"><a href="javascript:;"><img class="md:block hidden" src="./dist/images/casino/casino_banner_3.webp" alt=""><img class="md:hidden block" src="./dist/images/casino/mo_casino_banner_3.webp" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="z-10 absolute right-5 top-10 flex items-center">
+                            <button class="prev bc-i-small-arrow-left shrink-0 relative z-10 w-5 h-5 bg-black/90 rounded-full fs10"></button>
+                            <div class="pagination fraction flex items-center justify-center w-16 h-6 px-3 text-center text-xs"></div>
+                            <button class="next bc-i-small-arrow-right shrink-0 relative z-10 w-5 h-5 bg-black/90 rounded-full fs10"></button>
+                        </div>
+                    </div>
+
+
+
+                    <!-- category -->
+                    <div class="relative mySwiper overflow-hidden mt-4" data-per="auto" data-gap="10" data-loop="false">
+                        <div class="swiper-container">
+                            <ul class="swiper-wrapper category_list hover_primary">
+                                <li class="swiper-slide active flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-all-games"></i><span>All Games</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-ortak"></i><span>Ortak</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-populargames"></i><span>Popular Games</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-new"></i><span>New</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-jackpots"></i><span>Jackpots</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-buybonus"></i><span>Buy Bonus</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-bftharena"></i><span>B.F.T.H. Arena</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-exclusive"></i><span>Exclusive</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-jackpots"></i><span>JACKPOT RAIN</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-bigbassgames"></i><span>Big Bass Games</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-bettinggames"></i><span>Betting Games</span></li>
+                                <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-9 px-3 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-crownslots"></i><span>CROWN SLOTS</span></li>
+                            </ul>
+                            <button class="prev fade_arrow bc-i-small-arrow-left"></button>
+                            <button class="next fade_arrow bc-i-small-arrow-right"></button>
+                        </div>
+                    </div>
+
+                    <!-- sub_game -->
+                    <div class="games md:px-14 mt-10 pb-5">
+                        <div class="top hidden md:flex items-center gap-3 my-3">
+                            <div class="fold_search">
+                                <button class="h-9 py-2 px-3 bg-white bg-opacity-10 rounded" onclick="gameSearch(this)"><i class="search bc-i-search"></i><i class="close bc-i-close-remove"></i></button>
+                                <input type="text" class="form-control h-10 pr-9" placeholder="Search casino game">
+                            </div>
+                            <h3 class="font-bold text-base">GAMES</h3>
+                        </div>
+                        <div class="top relative md:hidden flex items-center justify-between my-3">
+                            <h3 class="font-bold text-base">GAMES</h3>
+                            <div class="mo_search">
+                                <button class="p-3" onclick="gameMoSearch(this)"><i class="bc-i-search"></i></button>
+                                <input type="text" class="form-control h-10 pr-9" placeholder="Game Search">
+                            </div>
+                        </div>
+
+                        <div class="type_1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_7.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_8.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_9.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_7.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_8.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_9.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_7.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_8.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_9.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_7.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_8.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_9.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_7.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_8.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_9.gif" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden casino_item rounded">
+                                <a href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""></a>
+                                <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                    <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                        <button class="bc-i-favorite"></button>
+                                        <button class="bc-i-info"></button>
+                                    </div>
+                                    <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                    <div class="btn_box flex items-center justify-center gap-2">
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                        <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type_2 hidden">
+                            <div class="p-2 mb-5 bg2-gradient rounded">
+                                <div class="flex items-center justify-between w-full text-base pb-2 border-b border-white border-opacity-10">
+                                    <h5 class="font-semibold">Ortak</h5>
+                                    <a href="javascript:;" class="opacity-80">All (+35)</a>
+                                </div>
+                                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-3">
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-2 mb-5 bg2-gradient rounded">
+                                <div class="flex items-center justify-between w-full text-base pb-2 border-b border-white border-opacity-10">
+                                    <h5 class="font-semibold">Ortak</h5>
+                                    <a href="javascript:;" class="opacity-80">All (+35)</a>
+                                </div>
+                                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-3">
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-2 mb-5 bg2-gradient rounded">
+                                <div class="flex items-center justify-between w-full text-base pb-2 border-b border-white border-opacity-10">
+                                    <h5 class="font-semibold">Ortak</h5>
+                                    <a href="javascript:;" class="opacity-80">All (+35)</a>
+                                </div>
+                                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-3">
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden casino_item rounded">
+                                        <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                        <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                            <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                                <button class="bc-i-favorite"></button>
+                                                <button class="bc-i-info"></button>
+                                            </div>
+                                            <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                            <div class="btn_box flex items-center justify-center gap-2">
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                                <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+           
+            
+        </div>
+        <!-- END: Content -->
+    </div>
+
+
+    
+    <!-- BEGIN: JS Assets-->
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-1.12.4.js"></script>
+    <script src="./dist/js/jquery-ui.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+    <!-- END: JS Assets-->
+</body>
+</html>

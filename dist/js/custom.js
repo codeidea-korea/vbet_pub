@@ -188,6 +188,9 @@ const GamesList = (item)=>{
 const gameMoSearch = (item)=>{
     $(item).parent('.mo_search').toggleClass('on')
 }
+const gameSearch = (item)=>{
+    $(item).parent('.fold_search').toggleClass('on')
+}
 
 const gameMoProvider = ()=>{
     $('.sub_game .provider').toggleClass('fold')
@@ -202,6 +205,11 @@ const mofilterShow = (item)=>{
     $(item).toggleClass('rounded')
     $(item).find('>i').toggleClass('rotate-180')
     $(item).next('div').toggleClass('hidden')
+}
+
+// detailProvider
+const detailProvider = (item)=>{
+    $(item).toggleClass('left-full left-0')
 }
 
 

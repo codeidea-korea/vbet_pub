@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+
+        <title>Sports Betting, Online Casino, Games and Poker | VBET ✌️</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/icon.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="promotion fold_footer">
+
+        <div id="main-loader">
+            <img src="./dist/images/common/loading.svg" alt="">
+        </div>
+      
+        <div id="wrap">
+        
+            <!-- BEGIN: Content -->
+            <div class="content">
+                
+                <div class="content_box px-2.5">
+
+                    <div class="inner">
+
+                        <!-- category -->
+                        <div class="relative flex items-center gap-2 overflow-hidden w-full mt-5">
+                            <ul class="z-10 relative category_list hover_primary">
+                                <li class="swiper-slide active flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 w-20 h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-all"></i><span>All</span></li>
+                            </ul>
+                            <div class="mySwiper" data-per="auto" data-gap="10" data-loop="false" style="width:calc(100% - 88px)">
+                                <div class="swiper-container">
+                                    <ul class="swiper-wrapper category_list hover_primary">
+                                        <!-- <li class="swiper-slide active flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-all"></i><span>All</span></li> -->
+                                        <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-sport"></i><span>SPORT</span></li>
+                                        <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-slots"></i><span>SLOTS</span></li>
+                                        <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-live-casino"></i><span>LIVE CASINO</span></li>
+                                        <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-poker"></i><span>POKER</span></li>
+                                        <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-belote"></i><span>BELOTE</span></li>
+                                        <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-backgammon"></i><span>BACKGAMMON</span></li>
+                                        <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-games"></i><span>GAMES</span></li>
+                                        <li class="swiper-slide flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2 !w-auto h-14 md:h-9 px-3 md:py-0 !border-none bg-white bg-opacity-10 rounded cursor-pointer" onclick="btnActiveRadio(this)"><i class="text-base md:text-lg bc-i-others"></i><span>OTHERS</span></li>
+                                    </ul>
+                                    <button class="next fade_arrow bc-i-small-arrow-right"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-2.5 mt-3">
+                            <div class="promotion_item overflow-hidden cursor-pointer rounded bg-white bg-opacity-10" onclick="modalOpen('promotion_detail-modal')">
+                                <i><img src="./dist/images/promotion/promotion_1.webp" alt=""></i>
+                                <p class="py-2 px-2.5 truncate font-bold text-xs">2 OFFERS FOR NEWLY REGISTERED USERS </p>
+                            </div>
+                            <div class="promotion_item overflow-hidden cursor-pointer rounded bg-white bg-opacity-10" onclick="modalOpen('promotion_detail-modal')">
+                                <i><img src="./dist/images/promotion/promotion_2.webp" alt=""></i>
+                                <p class="py-2 px-2.5 truncate font-bold text-xs">30,000,000 ֏ “GOLDEN AGE” TOURNAMENT SERIES</p>
+                            </div>
+                            <div class="promotion_item overflow-hidden cursor-pointer rounded bg-white bg-opacity-10" onclick="modalOpen('promotion_detail-modal')">
+                                <i><img src="./dist/images/promotion/promotion_3.webp" alt=""></i>
+                                <p class="py-2 px-2.5 truncate font-bold text-xs">WONDER WHEEL</p>
+                            </div>
+                            <div class="promotion_item overflow-hidden cursor-pointer rounded bg-white bg-opacity-10" onclick="modalOpen('promotion_detail-modal')">
+                                <i><img src="./dist/images/promotion/promotion_4.webp" alt=""></i>
+                                <p class="py-2 px-2.5 truncate font-bold text-xs">NEW LOYALTY PROGRAM</p>
+                            </div>
+                            <div class="promotion_item overflow-hidden cursor-pointer rounded bg-white bg-opacity-10" onclick="modalOpen('promotion_detail-modal')">
+                                <i><img src="./dist/images/promotion/promotion_5.webp" alt=""></i>
+                                <p class="py-2 px-2.5 truncate font-bold text-xs">DAILY 2 X 25% FREE BET UP TO 25,000 AMD | UEFA NATIONS LEAGUE</p>
+                            </div>
+                            <div class="promotion_item overflow-hidden cursor-pointer rounded bg-white bg-opacity-10" onclick="modalOpen('promotion_detail-modal')">
+                                <i><img src="./dist/images/promotion/promotion_6.webp" alt=""></i>
+                                <p class="py-2 px-2.5 truncate font-bold text-xs">2 OFFERS FOR NEWLY REGISTERED USERS </p>
+                            </div>
+                            <div class="promotion_item overflow-hidden cursor-pointer rounded bg-white bg-opacity-10" onclick="modalOpen('promotion_detail-modal')">
+                                <i><img src="./dist/images/promotion/promotion_7.webp" alt=""></i>
+                                <p class="py-2 px-2.5 truncate font-bold text-xs">30,000,000 ֏ “GOLDEN AGE” TOURNAMENT SERIES</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+           
+            
+        </div>
+        <!-- END: Content -->
+    </div>
+
+
+    
+    <!-- BEGIN: JS Assets-->
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-1.12.4.js"></script>
+    <script src="./dist/js/jquery-ui.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+    <!-- END: JS Assets-->
+</body>
+</html>

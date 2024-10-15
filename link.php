@@ -114,6 +114,31 @@ echo txtRecord('./@record/');
 						<li><a href="./tvgame_tournament.html" target="_blank" class="">tournaments</a></li>
 					</ul>
 				</li>
+				<li class="mt10" data-label="Games">
+					<ul>
+						<li><a href="./game.html" target="_blank" class="">Games</a></li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Virtual Games">
+					<ul>
+						<li><a href="./virtual_game.html" target="_blank" class="">Virtual Games</a></li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Promotions">
+					<ul>
+						<li>
+							<a href="./promotion.html" target="_blank" class="">Promotion</a>
+							<ul>
+								<li><button class="pop-modal" onclick="modalOpen('promotion_detail-modal')">promotion - detail 모달</button></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Aviatrix">
+					<ul>
+						<li><a href="./aviatrix.html" target="_blank" class="">Aviatrix</a></li>
+					</ul>
+				</li>
             </ul>
         </li>
 	</ul>

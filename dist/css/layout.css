@@ -100,6 +100,7 @@
         VBET_TOGGLE
         CATEGORY_LIST
         SUB_GAME
+        PROMOTION_ITEM
         
 
         RUNNING-LINE
@@ -185,7 +186,7 @@ header .mo_gnb:after {content:''; position:absolute; right:0; top:0; width:50px;
 header .mo_gnb ul {padding-right:30px; }
 
 @media all and (max-width:767px){
-    header .mo_gnb {display:none; }
+    /* header .mo_gnb {display:none; } */
 }
 
 header .logout_show {display:none; }
@@ -235,17 +236,26 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .casino header .gnb li[data-category="casino"],
 .tvgame header .gnb li[data-category="tvgames"],
 .poker header .gnb li[data-category="poker"],
+.games header .gnb li[data-category="games"],
+.virtual header .gnb li[data-category="virtual"],
+.promotion header .gnb li[data-category="promotion"],
 .livecasino header .gnb li[data-category="live_casino"] {background-color:rgb(var(--color-primary)); }
 
 .casino header .sub_menu ul[data-sub-cate="casino"] ,
 .tvgame header .sub_menu ul[data-sub-cate="tvgames"] ,
 .poker header .sub_menu ul[data-sub-cate="poker"] ,
+.games header .sub_menu ul[data-sub-cate="games"] ,
+.virtual header .sub_menu ul[data-sub-cate="virtual"] ,
+.promotion header .sub_menu ul[data-sub-cate="promotion"] ,
 .livecasino header .sub_menu ul[data-sub-cate="live_casino"] {display:flex; }
 
 @media all and (max-width:767px){
     .casino header .sub_menu ul[data-sub-cate="casino"],
     .tvgame header .sub_menu ul[data-sub-cate="tvgames"],
     .poker header .sub_menu ul[data-sub-cate="poker"],
+    .games header .sub_menu ul[data-sub-cate="games"],
+    .virtual header .sub_menu ul[data-sub-cate="virtual"],
+    .promotion header .sub_menu ul[data-sub-cate="promotion"],
     .livecasino header .sub_menu ul[data-sub-cate="live_casino"] {display:grid; }
 
     .casino .mo_quick ul li[data-sub-cate="casino"] a,
@@ -283,9 +293,30 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .modal .modal-body .close_btn {z-index:100; position:absolute; right:15px; top:15px; }
 
 
+.modal .modal-dialog.modal-2xl {width:1340px; max-width:90%; }
+
 @media (min-width:1024px){
     .modal .modal-dialog.modal-xl {width:944px; }
 }
+
+@media all and (min-width:768px){
+    .modal .modal-body.inner_scroll {overflow:hidden; max-height:unset; }
+    .modal .modal-body.inner_scroll .inner_height {overflow-y:auto; max-height:75vh; }
+}
+@media all and (max-width:767px){
+    .modal.mo_full {top:56px; height:calc(100% - 56px); }
+    .modal.mo_full .modal-dialog {max-width:100% !important; width:100%; height:100%; margin:0 !important; }
+    .modal.mo_full .modal-dialog .modal-content {height:100%; }
+    .modal.mo_full .modal-body {max-height:100%; }
+}
+
+
+/* ----------------------------------------------
+            TABLE
+---------------------------------------------- */
+
+.table.border-none td, 
+.table.border-none th {border:0 none; background:rgba(255,255,255,.1); } 
 
 /* ----------------------------------------------
             CUSTOM_SELECT
@@ -312,6 +343,7 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
             INPUT_GROUP
 ---------------------------------------------- */
 .form-control {border:0 none; background-color:rgba(255,255,255,0.1); }
+.form-control:focus {box-shadow:none;}
 .form-control.line-type {border:1px solid rgba(255,255,255,0.1); background:transparent; }
 
 
@@ -320,6 +352,10 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 ---------------------------------------------- */
 .nav.nav-link-tabs .nav-item .nav-link {color:#fff; opacity:.5; }
 .nav.nav-link-tabs .nav-item .nav-link.active {opacity:1; }
+
+.nav.nav-link-tabs.type02 {position:relative; }
+.nav.nav-link-tabs.type02:before {content:''; position:absolute; left:0; bottom:0; width:100%; height:2px; background-color:rgba(255,255,255,.1); }
+.nav.nav-link-tabs.type02 .nav-item .nav-link.active {border-bottom-color:rgba(170,127,0,1); }
 
 
 /* ----------------------------------------------
@@ -369,13 +405,13 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 
 .vbet_toggle .txt_area * {color:rgba(255,255,255,.5); }
 
-.vbet_toggle .faq_area dl + dl {margin-top:20px; }
-.vbet_toggle .faq_area dl dt {min-height:40px; cursor:pointer; }
-.vbet_toggle .faq_area dl dd {display:none; }
-.vbet_toggle .faq_area dl dd * {color:rgba(255,255,255,.5); }
-.vbet_toggle .faq_area dl.open dt {color:rgb(var(--color-primary-hover)); }
-.vbet_toggle .faq_area dl.open dt i {transform:rotate(180deg); }
-.vbet_toggle .faq_area dl.open dd {display:block; }
+.faq_area dl + dl {margin-top:20px; }
+.faq_area dl dt {min-height:40px; cursor:pointer; }
+.faq_area dl dd {display:none; }
+/* .faq_area dl dd * {color:rgba(255,255,255,.5); } */
+.faq_area dl.open dt {color:rgb(var(--color-primary-hover)); }
+.faq_area dl.open dt i {transform:rotate(180deg); }
+.faq_area dl.open dd {display:block; }
 
 
 /* ----------------------------------------------
@@ -390,6 +426,13 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .category_list li.active i {opacity:1; color:rgb(var(--color-primary)); }
 .category_list li:hover span,
 .category_list li.active span {opacity:1; color:var(--bg-color); }
+
+.category_list.hover_primary li:hover,
+.category_list.hover_primary li.active {background-color:rgb(var(--color-primary)); }
+.category_list.hover_primary li:hover i,
+.category_list.hover_primary li.active i {opacity:1; color:#fff; }
+.category_list.hover_primary li:hover span,
+.category_list.hover_primary li.active span {opacity:1; color:#fff; }
 
 
 /* ----------------------------------------------
@@ -424,9 +467,18 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .sub_game .games .top {z-index:10; position:sticky; top:131px;}
 .sub_game .games .list_btn.on {background-color:rgba(255,255,255,0.8); color:rgba(0,12,36,0.8); }
 .sub_game .games .game_cate {width:calc(100% - 200px); }
+
 .mo_search button {z-index:50; position:relative; }
 .mo_search input {z-index:-10; opacity:0; visibility:hidden; position:absolute; right:0; top:0; width:0; background-color:#1a243b; transition:all 0.3s; }
 .mo_search.on input {z-index:30; opacity:1; visibility:visible; width:100%; }
+
+.fold_search {position:relative; }
+.fold_search button .close {display:none; }
+.fold_search input {opacity:0; visibility:hidden; position:absolute; left:100%; top:0; width:0; height:100%; border:1px solid rgba(255,255,255,.1); background-color:var(--bg-color); border-radius:0 5px 5px 0; transition:all 0.5s; }
+.fold_search.on button {border-radius:5px 0 0 5px; }
+.fold_search.on button .search {display:none; }
+.fold_search.on button .close {display:block; }
+.fold_search.on input {opacity:1; visibility:visible; width:250px; }
 
 .sub_game.close .provider {overflow:hidden; width:0; transition:all 0.5s; }
 .sub_game.close .games {width:100%; }
@@ -440,6 +492,14 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
     .sub_game .games .top {position:relative; top:0; }
     .sub_game .games .top .list_btn.on {color:rgb(var(--color-primary)); background-color:transparent; }
 }
+
+
+/* ----------------------------------------------
+            PROMOTION_ITEM
+---------------------------------------------- */
+.promotion_item i {overflow:hidden; display:block; }
+.promotion_item i img {transform:scale(1); transition:all 0.5s; }
+.promotion_item:hover i img {transform:scale(1.1); }
 
 /* ----------------------------------------------
             RUNNING-LINE
