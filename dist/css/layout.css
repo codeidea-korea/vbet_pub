@@ -82,6 +82,10 @@
 .side-top-blur {position:relative; }
 .side-top-blur:before {content:''; z-index:10; position:absolute; left:0; top:0; width:100%; height:30%; background:linear-gradient(to bottom,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
 
+/* pc 높이 고정 */
+.full_height {height:calc(100vh - 95px); }
+
+
 /* 
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
 
@@ -239,6 +243,7 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .games header .gnb li[data-category="games"],
 .virtual header .gnb li[data-category="virtual"],
 .promotion header .gnb li[data-category="promotion"],
+.esports header .gnb li[data-category="esports"],
 .livecasino header .gnb li[data-category="live_casino"] {background-color:rgb(var(--color-primary)); }
 
 .casino header .sub_menu ul[data-sub-cate="casino"] ,
@@ -247,6 +252,7 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .games header .sub_menu ul[data-sub-cate="games"] ,
 .virtual header .sub_menu ul[data-sub-cate="virtual"] ,
 .promotion header .sub_menu ul[data-sub-cate="promotion"] ,
+.esports header .sub_menu ul[data-sub-cate="esports"] ,
 .livecasino header .sub_menu ul[data-sub-cate="live_casino"] {display:flex; }
 
 @media all and (max-width:767px){
@@ -256,6 +262,7 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
     .games header .sub_menu ul[data-sub-cate="games"],
     .virtual header .sub_menu ul[data-sub-cate="virtual"],
     .promotion header .sub_menu ul[data-sub-cate="promotion"],
+    .esports header .sub_menu ul[data-sub-cate="esports"],
     .livecasino header .sub_menu ul[data-sub-cate="live_casino"] {display:grid; }
 
     .casino .mo_quick ul li[data-sub-cate="casino"] a,
@@ -357,6 +364,8 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .nav.nav-link-tabs.type02:before {content:''; position:absolute; left:0; bottom:0; width:100%; height:2px; background-color:rgba(255,255,255,.1); }
 .nav.nav-link-tabs.type02 .nav-item .nav-link.active {border-bottom-color:rgba(170,127,0,1); }
 
+.nav.nav-boxed-tabs {overflow:hidden; border-radius:5px 5px 0 0; }
+.nav.nav-boxed-tabs .nav-item .nav-link {color:rgba(255,255,255,.5); background:rgba(255,255,255,0.1); border-radius:0; }
 
 /* ----------------------------------------------
             SWIPER_ARROW

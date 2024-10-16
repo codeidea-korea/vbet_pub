@@ -40,3 +40,85 @@
 @media all and (max-width:767px){
     .game_detail footer {display:none; }
 }
+
+
+/* ----------------------------------------------
+        Esports > category
+---------------------------------------------- */
+.egame_all.active .icon,
+.egame_upcoming.active .icon,
+.egame_live.active .icon,
+.egame_results.active .icon {color:#fff !important; }
+
+.egame_all.active,
+.egame_all:hover {background:linear-gradient(to right,rgba(167, 31, 103,1) 0%,rgba(210, 38, 129,1) 100%); }
+.egame_all .icon {color:#a71f67; }
+
+.egame_upcoming.active,
+.egame_upcoming:hover {background:rgba(2,108,144,.6); box-shadow:0 0 8px #026c9099; }
+.egame_upcoming .icon {color:#0097b7; }
+
+.egame_live.active,
+.egame_live:hover {background:rgba(255,52,73,.6); box-shadow:0 0 8px #ff344999; }
+.egame_live .icon {color:#f55461; }
+
+.egame_results.active,
+.egame_results:hover {background:rgba(170,127,0,.6); box-shadow:0 0 8px #aa7f0099; }
+.egame_results .icon {color:gold; }
+
+.egame_counterstrike.active,
+.egame_counterstrike:hover {background:rgba(204,88,31,.6); box-shadow:0 0 8px #cc581f99; }
+.egame_counterstrike .icon {background: linear-gradient(to bottom,#e58353,#cc581f); color:#000; }
+
+.egame_dota2.active,
+.egame_dota2:hover {background:rgba(155,16,19,.6); box-shadow:0 0 8px #9b101399; }
+.egame_dota2 .icon {background:linear-gradient(to bottom,#e0171c,#9b1013); color:#000; }
+
+.egame_leaguoflegends.active,
+.egame_leaguoflegends:hover {background:linear-gradient(to right,#06849d,#034653); }
+.egame_leaguoflegends .icon {background:linear-gradient(to bottom,#06849d,#034653); color:#000; }
+
+.egame_valorant.active,
+.egame_valorant:hover {background:linear-gradient(to right,#df5e67,#c82833); }
+.egame_valorant .icon {background:linear-gradient(to bottom,#df5e67,#c82833); color:#000; }
+
+.egame_overwatch.active,
+.egame_overwatch:hover {background:linear-gradient(to right,#f9af6a,#f68720); }
+.egame_overwatch .icon {background:linear-gradient(to bottom,#f9af6a,#f68720); color:#000; }
+
+.egame_rainbowsix.active,
+.egame_rainbowsix:hover {background:linear-gradient(to right,#8c9398,#666d72);}
+.egame_rainbowsix .icon {background:linear-gradient(to bottom,#8c9398,#666d72); color:#000; }
+
+.egame_crossfire.active,
+.egame_crossfire:hover {background:linear-gradient(to right,#cc9737,#926b25); }
+.egame_crossfire .icon {background:linear-gradient(to bottom,#cc9737,#926b25); color:#000; }
+
+.egame_kingofglory.active,
+.egame_kingofglory:hover {background:linear-gradient(to right,#9981b1,#73588e); }
+.egame_kingofglory .icon {background:linear-gradient(to bottom,#9981b1,#73588e); color:#000; }
+
+.egame_warcraft.active,
+.egame_warcraft:hover {background:linear-gradient(to right,#ea9730,#bb7013); }
+.egame_warcraft .icon {background:linear-gradient(to bottom,#ea9730,#bb7013); color:#000; }
+
+.egame_mobilelegends.active,
+.egame_mobilelegends:hover {background:linear-gradient(to right,#c3a78a,#a98157);}
+.egame_mobilelegends .icon {background:linear-gradient(to right,#c3a78a,#a98157); color:#000; }
+
+.egame_rocketleague.active,
+.egame_rocketleague:hover {background:linear-gradient(to right,#0670c9,#04477f); }
+.egame_rocketleague .icon {background:linear-gradient(to right,#0670c9,#04477f); color:#000; }
+
+.egame_pubg.active,
+.egame_pubg:hover {background:linear-gradient(to right,#e99c56,#d6751c); }
+.egame_pubg .icon {background:linear-gradient(to right,#e99c56,#d6751c); color:#000; }
+
+.egame_apexlegends.active,
+.egame_apexlegends:hover {background:linear-gradient(to right,#de323d,#a81b24); }
+.egame_apexlegends .icon {background:linear-gradient(to right,#de323d,#a81b24); color:#000; }
+
+.egame_efootball.active,
+.egame_efootball:hover {background:linear-gradient(to right,#45ba46,#308231); }
+.egame_efootball .icon {background:linear-gradient(to right,#45ba46,#308231); color:#000; }
+

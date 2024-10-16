@@ -1594,6 +1594,9 @@ select{
 .absolute{
     position: absolute;
 }
+.\!absolute{
+    position: absolute !important;
+}
 .relative{
     position: relative;
 }
@@ -1718,6 +1721,14 @@ select{
     margin-top: 1px;
     margin-bottom: 1px;
 }
+.my-0{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.my-0\.5{
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
+}
 .\!mr-0{
     margin-right: 0px !important;
 }
@@ -1814,6 +1825,15 @@ select{
 .mt-0{
     margin-top: 0px;
 }
+.mb-0{
+    margin-bottom: 0px;
+}
+.mb-0\.5{
+    margin-bottom: 0.125rem;
+}
+.mt-0\.5{
+    margin-top: 0.125rem;
+}
 .block{
     display: block;
 }
@@ -1907,6 +1927,17 @@ select{
 .\!max-h-full{
     max-height: 100% !important;
 }
+.max-h-60{
+    max-height: 15rem;
+}
+.min-h-fit{
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+}
+.\!min-h-fit{
+    min-height: -moz-fit-content !important;
+    min-height: fit-content !important;
+}
 .\!w-24{
     width: 6rem !important;
 }
@@ -1990,6 +2021,9 @@ select{
 }
 .w-12{
     width: 3rem;
+}
+.w-\[300px\]{
+    width: 300px;
 }
 .min-w-\[220px\]{
     min-width: 220px;
@@ -2139,6 +2173,9 @@ select{
 .gap-10{
     gap: 2.5rem;
 }
+.gap-0\.5{
+    gap: 0.125rem;
+}
 .overflow-hidden{
     overflow: hidden;
 }
@@ -2147,6 +2184,9 @@ select{
 }
 .overflow-y-auto{
     overflow-y: auto;
+}
+.overflow-x-hidden{
+    overflow-x: hidden;
 }
 .overflow-y-hidden{
     overflow-y: hidden;
@@ -2174,6 +2214,9 @@ select{
 .\!rounded-none{
     border-radius: 0px !important;
 }
+.\!rounded{
+    border-radius: 0.25rem !important;
+}
 .rounded-t-none{
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -2193,6 +2236,10 @@ select{
 .rounded-r-none{
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+}
+.rounded-r{
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 }
 .rounded-tr{
     border-top-right-radius: 0.25rem;
@@ -2467,6 +2514,18 @@ select{
     padding-top: 1px;
     padding-bottom: 1px;
 }
+.py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+.py-10{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
 .pb-7{
     padding-bottom: 1.75rem;
 }
@@ -2530,6 +2589,18 @@ select{
 .pt-0{
     padding-top: 0px;
 }
+.pt-11{
+    padding-top: 2.75rem;
+}
+.pr-1{
+    padding-right: 0.25rem;
+}
+.pr-4{
+    padding-right: 1rem;
+}
+.pr-3{
+    padding-right: 0.75rem;
+}
 .text-left{
     text-align: left;
 }
@@ -2581,6 +2652,10 @@ select{
 .text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+}
+.\!text-xs{
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
 }
 .font-bold{
     font-weight: 700;

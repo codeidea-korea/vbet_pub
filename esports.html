@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+
+        <title>Sports Betting, Online Casino, Games and Poker | VBET ✌️</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/icon.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="esports fold_footer">
+
+        <div id="main-loader">
+            <img src="./dist/images/common/loading.svg" alt="">
+        </div>
+      
+        <div id="wrap">
+        
+            <!-- BEGIN: Content -->
+            <div class="content !min-h-fit">
+                
+                <div class="content_box px-0 md:px-3">
+
+                    <div class="flex gap-3 full_height py-2">
+                        <!-- category -->
+                        <div class="overflow-y-auto w-[300px] pr-1">
+                            <div class="p-2.5 bg-white bg-opacity-5 rounded">
+                                <div class="custom_select w-20">
+                                    <button class="flex items-center justify-between gap-2 w-full py-2 px-3 bg-white bg-opacity-20 text-xs rounded"><i class="bc-i-time"></i><p>All</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                    <div class="max-h-60 g-bg shadow-2">
+                                        <ul class="p-2">
+                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">All</li>
+                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Today</li>
+                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">3 hours</li>
+                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">6 hours</li>
+                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">12 hours</li>
+                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">24 hours</li>
+                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">48 hours</li>
+                                            <li class="w-full p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">72 hours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-2.5 bg-white bg-opacity-5 rounded">
+                                <div class="relative md:w-auto w-full">
+                                    <input type="text" class="form-control line-type h-9 pr-10" placeholder="Search a competition or a team">
+                                    <button class="absolute right-0 top-0 flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded-r"><i class="bc-i-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 gap-0.5 mt-1">
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_all active" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-all text-lg"></i>All</div>
+                                    <div class="flex items-center gap-4"><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_upcoming" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-upcoming text-lg"></i>Upcoming</div>
+                                    <div class="flex items-center gap-4"><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_live" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-live text-lg"></i>Live</div>
+                                    <div class="flex items-center gap-4"><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_results" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-results text-lg"></i>Results</div>
+                                    <div class="flex items-center gap-4"><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_counterstrike" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-CounterStrike text-lg"></i>CounterStrike</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_dota2" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-Dota2 text-lg"></i>Dota 2</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_dota2" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-LeagueOfLegends text-lg"></i>League Of Legends</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_valorant" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-Valorant text-lg"></i>Valorant</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_overwatch" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-Overwatch text-lg"></i>Overwatch 2</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_rainbowsix" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-RainbowSix text-lg"></i>Rainbow Six</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_crossfire" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-CrossFire text-lg"></i>Cross Fire</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_kingofglory" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-KingOfGlory text-lg"></i>King Of Glory</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_warcraft" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-WarcraftIII text-lg"></i>Warcraft III</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_mobilelegends" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-MobileLegends text-lg"></i>Mobile Legends</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_rocketleague" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-RocketLeague text-lg"></i>Rocket League</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_pubg" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-PUBG text-lg"></i>PUBG</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_apexlegends" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-ApexLegends text-lg"></i>Apex Legends</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_efootball" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-CyberFootball text-lg"></i>E-Football</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- game_list -->
+                        <div class="overflow-y-auto flex-grow pr-1"></div>
+
+                        <!-- bets -->
+                        <div class="overflow-y-auto w-80 pr-1">
+                            <ul class="nav nav-boxed-tabs" role="tablist">
+                                <li id="bets-1-tab" class="nav-item flex-1" role="presentation"> 
+                                    <button class="nav-link w-full py-1.5 active" data-tw-toggle="pill" data-tw-target="#bets-tab-1" type="button" role="tab" aria-controls="bets-tab-1" aria-selected="true">BetSlip</button> 
+                                </li>
+                                <li id="bets-2-tab" class="nav-item flex-1" role="presentation"> 
+                                    <button class="nav-link w-full py-1.5" data-tw-toggle="pill" data-tw-target="#bets-tab-2" type="button" role="tab" aria-controls="bets-tab-2" aria-selected="false">Open Bets</button> 
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="bets-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="bets-1-tab">
+                                    <div class="flex items-center justify-between h-9 pr-3 bg-white bg-opacity-5 rounded">
+                                        <div class="custom_select">
+                                            <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded">
+                                                <i class="bc-i-settings text-base opacity-80"></i><span class="opacity-50">Always ask</span> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                            </button>
+                                            <div class="max-h-60 g-bg shadow-2">
+                                                <ul class="p-2">
+                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Always ask</li>
+                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Accept Higher odds</li>
+                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Accept Any odds</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button class="bc-i-calculate text-base opacity-80"></button>
+                                    </div>
+                                    <div class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 rounded">
+                                        <div class="custom_select">
+                                            <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded text-xs">
+                                                Multiple <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                            </button>
+                                            <div class="max-h-60 g-bg shadow-2">
+                                                <ul class="p-2">
+                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Single</li>
+                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Multiple</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button class="opacity-50 underline text-xs">Remove All</button>
+                                    </div>
+                                    <div class="my-0.5">
+                                        <div class="p-2 bg-white bg-opacity-10 rounded">
+                                            <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="py-10 text-center opacity-80">
+                                        Your betslip is empty
+                                    </div>
+                                    <div class="flex gap-0.5 p-2.5 bg-white bg-opacity-10 rounded">
+                                        <input type="text" class="form-control text-center !rounded" value="500">
+                                        <input type="text" class="form-control text-center !rounded" value="1000">
+                                        <input type="text" class="form-control text-center !rounded" value="5000">
+                                        <button class="shrink-0 flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded"><i class="bc-i-edit"></i></button>
+                                    </div>
+                                    <div class="mt-0.5 p-2.5 bg-white bg-opacity-10 rounded">
+                                        <button class="w-full h-9 bg-white bg-opacity-10 rounded">BET NOW</button>
+                                    </div>
+                                </div>
+                                <div id="bets-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="bets-2-tab">
+                                    <div class="mt-2 text-right"><button class="underline text-white text-opacity-50">Go to bet history.</button></div>
+                                    <div class="py-14 text-center">You have no open bets at the moment</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+           
+            
+        </div>
+        <!-- END: Content -->
+    </div>
+
+
+    
+    <!-- BEGIN: JS Assets-->
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-1.12.4.js"></script>
+    <script src="./dist/js/jquery-ui.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+    <!-- END: JS Assets-->
+</body>
+</html>

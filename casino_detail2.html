@@ -41,7 +41,210 @@
                     <div class="inner flex items-center h-full">
                         <div class="grid md:grid-cols-2 gap-10 w-full">
                             <div class="casino_detail_box relative md:pr-10">
-                                <div class="flex items-center justify-center w-full h-full bg-black text-white">게임 들어가는 곳</div>    
+                                <!-- <div class="flex items-center justify-center w-full h-full bg-black text-white">게임 들어가는 곳</div>     -->
+                                <div class="overflow-hidden flex w-full h-full bg-bg">
+                                    <div class="flex-grow flex items-center justify-center  h-full bg-black text-white">게임 들어가는 곳</div>    
+                                    <div class="relative md:block hidden w-56">
+                                        <ul class="z-10 !absolute left-0 top-0 w-full nav nav-link-tabs type02 bg-bg" role="tablist">
+                                            <li id="aviatrix-1-tab" class="nav-item flex-1" role="presentation">
+                                                 <button class="nav-link w-full py-2 active" data-tw-toggle="pill" data-tw-target="#aviatrix-tab-1" type="button" role="tab" aria-controls="aviatrix-tab-1" aria-selected="true"><i class="text-xl icon-casino-slots"></i></button> 
+                                            </li>
+                                            <li id="aviatrix-2-tab" class="nav-item flex-1" role="presentation">
+                                                 <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#aviatrix-tab-2" type="button" role="tab" aria-controls="aviatrix-tab-2" aria-selected="false"><i class="text-xl icon-jackpot"></i></button> 
+                                            </li>
+                                            <li id="aviatrix-3-tab" class="nav-item flex-1" role="presentation">
+                                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#aviatrix-tab-3" type="button" role="tab" aria-controls="aviatrix-tab-3" aria-selected="false"><i class="text-xl icon-top-winners"></i></button> 
+                                           </li>
+                                        </ul>
+                                        <div class="tab-content h-full pt-11">
+                                            <div id="aviatrix-tab-1" class="tab-pane leading-relaxed overflow-y-auto overflow-x-hidden h-full active" role="tabpanel" aria-labelledby="aviatrix-1-tab">
+                                                <div class="relative h-full px-4 py-2">
+                                                        
+                                                    <div class="flex items-center">
+                                                        <button class="h-10 py-2 pl-3 bg-white bg-opacity-10 rounded rounded-r-none" onclick="gameSearch(this)"><i class="search bc-i-search"></i></button>
+                                                        <input type="text" class="form-control h-10 rounded-l-none" placeholder="Search By Game Name">
+                                                    </div>
+                                                    <button class="flex items-center justify-between w-full h-10 mt-7 px-3 bg-white bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">Providers <i class="text-xs icon-chevron-thin-down"></i></button>
+            
+                                                    <h3 class="mt-5">All</h3>
+                                                    <div class="grid grid-cols-2 gap-2">
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_7.gif" alt=""></a>
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_8.gif" alt=""></a>
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_9.gif" alt=""></a>
+                                                        <a class="overflow-hidden rounded" href="javascript:;"><img src="./dist/images/casino/casino_10.webp" alt=""></a>
+                                                    </div>
+            
+                                                    <!-- provider -->
+                                                    <div class="provider overflow-y-auto absolute left-full top-0 w-full h-full pt-0 p-4 bg-bg transition-all duration-300">
+                                                        <div class="sticky top-0 pt-4 bg-bg">
+                                                            <button class="flex items-center gap-2" onclick="detailProvider('#aviatrix-tab-1 .provider')"><i class="icon-chevron-thin-left"></i> Back</button>
+                                                            <div class="flex items-center mt-3">
+                                                                <button class="h-10 py-2 pl-3 bg-white bg-opacity-10 rounded rounded-r-none" onclick="gameSearch(this)"><i class="search bc-i-search"></i></button>
+                                                                <input type="text" class="form-control h-10 rounded-l-none" placeholder="Search Provider">
+                                                            </div>
+                                                        </div>
+                                                        <div class="grid grid-cols-1 gap-1 mt-4 text-xs"> 
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">All</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">POPOK GAMING</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">Pragmatic Play</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">PatePlay</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">AMUSNET</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">EGT Digital</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">Pascal Gaming</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">Playtech</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">Novomatic</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">WAZDAN</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">RubyPlay</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">YGGDRASIL</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">POPOK GAMING</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">Pragmatic Play</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">PatePlay</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">AMUSNET</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">EGT Digital</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">Pascal Gaming</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">Playtech</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">Novomatic</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">WAZDAN</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">RubyPlay</button>
+                                                            <button class="h-9 px-3 text-left bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="detailProvider('#aviatrix-tab-1 .provider')">YGGDRASIL</button>
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                            <div id="aviatrix-tab-2" class="tab-pane leading-relaxed overflow-y-auto overflow-x-hidden h-full" role="tabpanel" aria-labelledby="aviatrix-2-tab">
+                                                <div class="relative h-full px-4 py-2">
+                                                    <h3 class="py-3 text-warning font-bold text-base text-center">BETTINGGAMES<br/>JACKPOT</h3>
+            
+                                                    <div class="flex items-center gap-2 h-16 mb-2 px-1 border border-white border-opacity-10 bg-white bg-opacity-5 rounded">
+                                                        <div class="w-12 text-warning text-center pb-1"><i class="icon-mega text-5xl"></i><span class="block -mt-3 text-xs">Mega</span></div>
+                                                        <p>11,139,601.5 AMD</p>
+                                                    </div>
+                                                    <div class="flex items-center gap-2 h-16 mb-2 px-1 border border-white border-opacity-10 bg-white bg-opacity-5 rounded">
+                                                        <div class="w-12 text-warning text-center pb-1"><i class="icon-major text-4xl"></i><span class="block -mt-2 text-xs">Major</span></div>
+                                                        <p>393,601.5 AMD</p>
+                                                    </div>
+                                                    <div class="flex items-center gap-2 h-16 mb-2 px-1 border border-white border-opacity-10 bg-white bg-opacity-5 rounded">
+                                                        <div class="w-12 text-warning text-center pb-1"><i class="icon-minor text-3xl"></i><span class="block -mt-1 text-xs">Minor</span></div>
+                                                        <p>154,601.5 AMD</p>
+                                                    </div>
+                                                    <div class="flex items-center gap-2 h-16 mb-2 px-1 border border-white border-opacity-10 bg-white bg-opacity-5 rounded">
+                                                        <div class="w-12 text-warning text-center pb-1"><i class="icon-mini text-xl"></i><span class="block text-xs">Mini</span></div>
+                                                        <p>15,601.5 AMD</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="aviatrix-tab-3" class="tab-pane leading-relaxed overflow-y-auto overflow-x-hidden h-full" role="tabpanel" aria-labelledby="aviatrix-3-tab">
+                                                <div class="relative h-full px-4 py-2">
+            
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_1.gif" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_2.webp" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_3.gif" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_4.gif" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_1.gif" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_2.webp" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_3.gif" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_4.gif" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_1.gif" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_2.webp" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_3.gif" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start gap-2 p-2.5 mb-2 bg-white bg-opacity-10 rounded">
+                                                        <div class="w-8 h-8"><img class="w-full h-full object-cover" src="./dist/images/casino/casino_4.gif" alt=""></div>
+                                                        <div>
+                                                            <p class="leading-none font-medium">215****64</p>
+                                                            <span class="leading-none text-xs opacity-60">Jackpot card</span>
+                                                            <p class="leading-none font-medium text-warning">526,806,789.56 AMD</p>
+                                                        </div>
+                                                    </div>
+            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="absolute right-0 top-0 w-10 md:block hidden">
                                     <a href="./casino.html" class="flex items-center justify-center w-10 h-10 bg-black bg-opacity-20 rounded-tr bc-i-close-remove"></a>
                                     <button class="w-10 h-10 mt-[1px] bg-black bg-opacity-20 bc-i-multiview"></button>
