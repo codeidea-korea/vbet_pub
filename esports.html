@@ -33,22 +33,90 @@
                 
                 <div class="content_box px-0 md:px-3">
 
+                    <!-- mo 전용 -->
+                    <div class="block md:hidden">
+                        <div class="p-2">
+                            <div class="relative overflow-hidden side-bottom-blur">
+                                <img class="rounded" src="./dist/images/esports/banner_1.webp" alt="">
+                                <button class="z-10 absolute left-0 bottom-0 w-full" onclick="bannerHeightToggle(this)"><i class="bc-i-small-arrow-up text-xs"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="px-2">
+                            <div class="flex mb-2">
+                                <div class="custom_select">
+                                    <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><i class="bc-i-time"></i><p>All</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                    <div class="max-h-60 bg-bg shadow-2">
+                                        <ul class="p-2">
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>All</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>Today</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>3 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>6 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>12 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>24 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>48 hours</p></li>
+                                            <li class="w-full p-2 rounded text-xs"><p>72 hours</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative md:w-auto w-full">
+                                <input type="text" class="form-control line-type h-9 pl-10 pr-10" placeholder="Search a competition or a team">
+                                <button class="z-10 absolute right-0 top-0 flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded"><i class="bc-i-search"></i></button>
+                                <button class="z-10 absolute left-0 top-0 flex items-center justify-center w-9 h-9 bg-primary rounded"><i class="bc-i-hoory text-2xl"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="my-2">
+                            <ul class="nav nav-link-tabs bg-white bg-opacity-10">
+                                <li class="nav-item"> <button class="flex items-start justify-center gap-1 nav-link py-2 active" onclick="tabActiveToggle(this)" type="button"> All <span class="fs9 font-medium leading-none">211</span> </button> </li>
+                                <li class="nav-item"> <button class="flex items-start justify-center gap-1 nav-link py-2" onclick="tabActiveToggle(this)" type="button"> Upcoming <span class="fs9 font-medium leading-none">189</span></button> </li>
+                                <li class="nav-item"> <button class="flex items-start justify-center gap-1 nav-link py-2" onclick="tabActiveToggle(this)" type="button"> LIve <span class="fs9 font-medium leading-none">21</span></button> </li>
+                                <li class="nav-item"> <button class="flex items-start justify-center gap-1 nav-link py-2" onclick="tabActiveToggle(this)" type="button"> Results </button> </li>
+                            </ul>
+                        </div>
+
+                        <div class="overflow-hidden mySwiper px-2 py-2" data-gap="13" data-per="auto" data-loop="false">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_counterstrike"><i class="bc-i-CounterStrike flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">56</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_dota2"><i class="bc-i-Dota2 flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_leaguoflegends"><i class="bc-i-LeagueOfLegends flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_valorant"><i class="bc-i-Valorant flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_overwatch"><i class="bc-i-Overwatch flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_rainbowsix"><i class="bc-i-RainbowSix flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_crossfire"><i class="bc-i-CrossFire flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_kingofglory"><i class="bc-i-KingOfGlory flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_warcraft"><i class="bc-i-WarcraftIII flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_mobilelegends"><i class="bc-i-MobileLegends flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_rocketleague"><i class="bc-i-RocketLeague flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_pubg"><i class="bc-i-PUBG flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_apexlegends"><i class="bc-i-ApexLegends flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                    <li class="swiper-slide !w-auto"><button class="relative egame_efootball"><i class="bc-i-CyberFootball flex items-center justify-center icon w-12 h-12 rounded-xl text-3xl"></i><span class="absolute -right-1 -top-1 py-1.5 px-2 bg-bg rounded-lg leading-none fs9">34</span></button></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+
+
                     <div class="flex gap-3 full_height py-2">
                         <!-- category -->
-                        <div class="overflow-y-auto w-[300px] pr-1">
-                            <div class="p-2.5 bg-white bg-opacity-5 rounded">
-                                <div class="custom_select w-20">
-                                    <button class="flex items-center justify-between gap-2 w-full py-2 px-3 bg-white bg-opacity-20 text-xs rounded"><i class="bc-i-time"></i><p>All</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
-                                    <div class="max-h-60 g-bg shadow-2">
+                        <div class="md:block hidden overflow-y-auto w-[300px] pr-1">
+                            <div class="flex items-center p-2.5 bg-white bg-opacity-5 rounded">
+                                <div class="custom_select">
+                                    <button class="flex items-center justify-between gap-2.5 w-full py-2 px-3 bg-white bg-opacity-20 text-xs rounded"><i class="bc-i-time"></i><p>All</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                    <div class="max-h-60 bg-bg shadow-2">
                                         <ul class="p-2">
-                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">All</li>
-                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Today</li>
-                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">3 hours</li>
-                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">6 hours</li>
-                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">12 hours</li>
-                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">24 hours</li>
-                                            <li class="w-full mb-1 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">48 hours</li>
-                                            <li class="w-full p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">72 hours</li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>All</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>Today</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>3 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>6 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>12 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>24 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>48 hours</p></li>
+                                            <li class="w-full p-2 rounded text-xs"><p>72 hours</p></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -136,10 +204,961 @@
                         </div>
 
                         <!-- game_list -->
-                        <div class="overflow-y-auto flex-grow pr-1"></div>
+                        <div class="overflow-y-auto flex-grow pr-1">
+
+                            <div class="flex justify-between h-7 bg-white bg-opacity-15 rounded">
+                                <div class="custom_select border-r border-[#000c24]">
+                                    <button class="flex items-center justify-between gap-2.5 w-full h-full px-3 text-xs"><p>WINNER</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                    <div class="max-h-60 g-bg shadow-2">
+                                        <ul class="p-2">
+                                            <li class="active w-full mb-0.5  p-2 rounded text-xs"><p>WINNER</p></li>
+                                            <li class="w-full mb-0.5  p-2 rounded text-xs"><p>HANDICAP</p></li>
+                                            <li class="w-full mb-0.5  p-2 rounded text-xs"><p>TOTALS</p></li>
+                                            <li class="w-full mb-0.5  p-2 rounded text-xs"><p>ODD/EVEN</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- LIVE -->
+                            <div class="my-1 text-base font-extrabold">LIVE</div>
+
+                            <div class="game_fold open counterstrike pb-2">
+                                <button class="egame_counterstrike border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-CounterStrike text-lg"></i>
+                                        <p>Counter-Strike 2</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>2</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                        <span class="px-3 py-0.5 bg-red-500 text-white rounded">Live</span>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (5:4)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                        <span class="px-3 py-0.5 bg-red-500 text-white rounded">Live</span>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded" onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                        <span class="px-3 py-0.5 bg-red-500 text-white rounded">Live</span>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (5:4)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="game_fold open dota2 pb-2">
+                                <button class="egame_dota2 border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-Dota2 text-lg"></i>
+                                        <p>Dota 2</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                        <span class="px-3 py-0.5 bg-red-500 text-white rounded">Live</span>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (5:4)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                        <span class="px-3 py-0.5 bg-red-500 text-white rounded">Live</span>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)"ㄴ>1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- UPCOMING -->
+                            <div class="my-1 text-base font-extrabold">UPCOMING</div>
+
+                            <div class="game_fold open counterstrike pb-2">
+                                <button class="egame_counterstrike border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-CounterStrike text-lg"></i>
+                                        <p>Counter-Strike 2</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-40 bg-white bg-opacity-10 rounded">
+                                                    <div class="flex-1 flex items-center gap-3 p-3">
+                                                        <div class="egame_counterstrike !bg-transparent !shadow-none"><i class="icon flex items-center justify-center w-12 h-12 rounded bc-i-CounterStrike text-4xl"></i></div>
+                                                        <div class="flex-1 grid grid-cols-2 gap-0.5">
+                                                            <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn bg-white bg-opacity-15 rounded" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Eternal Fire</span><span class="text-warning font-medium">3.00</span></button>
+                                                            <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn bg-white bg-opacity-15 rounded" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Team Falcons</span><span class="text-warning font-medium">5.50</span></button>
+                                                            <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn bg-white bg-opacity-15 rounded" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">sAw</span><span class="text-warning font-medium">4.50</span></button>
+                                                            <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn bg-white bg-opacity-15 rounded" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">MIBR</span><span class="text-warning font-medium">9.00</span></button>
+                                                            <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn bg-white bg-opacity-15 rounded" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">paiN Gaming</span><span class="text-warning font-medium">8.00</span></button>
+                                                            <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn bg-white bg-opacity-15 rounded" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">monte</span><span class="text-warning font-medium">12.00</span></button>
+                                                            <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn bg-white bg-opacity-15 rounded" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">B8</span><span class="text-warning font-medium">11.00</span></button>
+                                                            <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn bg-white bg-opacity-15 rounded" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Legacy</span><span class="text-warning font-medium">34.00</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="game_fold open leaguoflegends pb-2">
+                                <button class="egame_leaguoflegends border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-LeagueOfLegends text-lg"></i>
+                                        <p>League of Legends</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)"ㄴ>1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="game_fold open valorant pb-2">
+                                <button class="egame_valorant border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-Valorant text-lg"></i>
+                                        <p>Valorant</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)"ㄴ>1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="game_fold open overwatch pb-2">
+                                <button class="egame_overwatch border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-Overwatch text-lg"></i>
+                                        <p>overwatch</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)"ㄴ>1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="game_fold open rainbowsix pb-2">
+                                <button class="egame_rainbowsix border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-RainbowSix text-lg"></i>
+                                        <p>rainbowsix</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)"ㄴ>1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="game_fold open crossfire pb-2">
+                                <button class="egame_crossfire border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-CrossFire text-lg"></i>
+                                        <p>crossfire</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)"ㄴ>1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="game_fold open kingofglory pb-2">
+                                <button class="egame_kingofglory border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-KingOfGlory text-lg"></i>
+                                        <p>kingofglory</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)"ㄴ>1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="game_fold open warcraft pb-2">
+                                <button class="egame_warcraft border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-WarcraftIII text-lg"></i>
+                                        <p>warcraft</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)"ㄴ>1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="game_fold open mobilelegends pb-2">
+                                <button class="egame_mobilelegends border_type flex items-center justify-between w-full h-8.5 px-3 text-xs rounded" onclick="faqToggle(this)">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-MobileLegends text-lg"></i>
+                                        <p>mobilelegends</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <p>3</p>
+                                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                    </div>
+                                </button>
+                                <div class="mt-1">
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)"ㄴ>1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
 
                         <!-- bets -->
-                        <div class="overflow-y-auto w-80 pr-1">
+                        <div class="md:block hidden overflow-y-auto w-80 pr-1">
                             <ul class="nav nav-boxed-tabs" role="tablist">
                                 <li id="bets-1-tab" class="nav-item flex-1" role="presentation"> 
                                     <button class="nav-link w-full py-1.5 active" data-tw-toggle="pill" data-tw-target="#bets-tab-1" type="button" role="tab" aria-controls="bets-tab-1" aria-selected="true">BetSlip</button> 
@@ -153,13 +1172,13 @@
                                     <div class="flex items-center justify-between h-9 pr-3 bg-white bg-opacity-5 rounded">
                                         <div class="custom_select">
                                             <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded">
-                                                <i class="bc-i-settings text-base opacity-80"></i><span class="opacity-50">Always ask</span> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                                <i class="bc-i-settings text-base opacity-80"></i><p class="opacity-50">Always ask</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
                                             </button>
-                                            <div class="max-h-60 g-bg shadow-2">
+                                            <div class="max-h-60 bg-bg shadow-2">
                                                 <ul class="p-2">
-                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Always ask</li>
-                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Accept Higher odds</li>
-                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Accept Any odds</li>
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Always ask</p></li>
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Accept Higher odds</p></li>
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Accept Any odds</p></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -168,31 +1187,147 @@
                                     <div class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 rounded">
                                         <div class="custom_select">
                                             <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded text-xs">
-                                                Multiple <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                                <p>Multiple</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
                                             </button>
-                                            <div class="max-h-60 g-bg shadow-2">
+                                            <div class="max-h-60 bg-bg shadow-2">
                                                 <ul class="p-2">
-                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Single</li>
-                                                    <li class="w-full mb-0.5 p-2 rounded bg-white bg-opacity-10 hover:bg-opacity-20 text-xs">Multiple</li>
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Single</p></li>
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Multiple</p></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <button class="opacity-50 underline text-xs">Remove All</button>
                                     </div>
-                                    <div class="my-0.5">
-                                        <div class="p-2 bg-white bg-opacity-10 rounded">
+                                    <div class="grid grid-cols-1 gap-0.5 my-0.5">
+                                        <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
                                             <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
-                                            
+                                            <div>
+                                                <div class="flex items-center justify-between opacity-50">
+                                                    <p>Imperial e-Sports</p>
+                                                    <p class="text-warning">1.0004</p>
+                                                </div>
+                                                <div class="flex items-start justify-between mt-1 opacity-30">
+                                                    <p>Match Winner</p>
+                                                    <p class="text-danger font-semibold line-through"></p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p class="fs11 opacity-30">Imperial e-Sports - Sharks Esports</p>
+                                                    <p><i class="bc-i-attention text-danger fs10"></i></p>
+                                                </div>
+                                                <div class="flex items-center justify-between opacity-10">
+                                                    <p class="fs11">17.10.2024,07:00</p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center gap-3 mt-2">
+                                                <i class="text-base text-danger bc-i-remove-circle"></i>
+                                                Event has been deleted
+                                            </div>
+                                        </div>
+                                        <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                            <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Sharks Esports</p>
+                                                    <p class="text-warning font-semibold">2.44</p>
+                                                </div>
+                                                <div class="flex items-start justify-between mt-1 opacity-70">
+                                                    <p>Map 3 Winner</p>
+                                                    <p class="text-danger font-semibold line-through"></p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p class="fs11 opacity-70">Imperial e-Sports - Sharks Esports</p>
+                                                    <p><i class="bc-i-attention text-danger fs10"></i></p>
+                                                </div>
+                                                <div class="flex items-center justify-between opacity-50">
+                                                    <p class="fs11">17.10.2024,07:00</p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                            <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Sharks Esports</p>
+                                                    <p class="text-warning font-semibold">2.44</p>
+                                                </div>
+                                                <div class="flex items-start justify-between mt-1">
+                                                    <p class="opacity-70">Map 3 Winner</p>
+                                                    <p class="text-danger font-semibold line-through">1.29</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center justify-between opacity-70">
+                                                    <p class="fs11">Imperial e-Sports - Sharks Esports</p>
+                                                    <p></p>
+                                                </div>
+                                                <div class="flex items-center justify-between opacity-50">
+                                                    <p class="fs11">17.10.2024,07:00</p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                            <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Sharks Esports</p>
+                                                    <p class="text-warning font-semibold">2.44</p>
+                                                </div>
+                                                <div class="flex items-start justify-between mt-1 opacity-70">
+                                                    <p>Map 3 Winner</p>
+                                                    <p class="text-danger font-semibold line-through"></p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center justify-between opacity-70">
+                                                    <p class="fs11">Imperial e-Sports - Sharks Esports</p>
+                                                    <p></p>
+                                                </div>
+                                                <div class="flex items-center justify-between opacity-50">
+                                                    <p class="fs11">17.10.2024,07:00</p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
                                     <div class="py-10 text-center opacity-80">
                                         Your betslip is empty
                                     </div>
+
+                                    <div class="p-2">
+                                        <div class="flex items-center justify-between text-xs">
+                                            <p>Odds</p>
+                                            <p class="text-warning font-semibold">2.649</p>
+                                        </div>
+                                        <div class="py-2">
+                                            <input type="text" class="form-control line-add" placeholder="Enter stake">
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs">
+                                            <p>POssible win:</p>
+                                            <p class="text-success font-semibold">0 ֏</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center gap-2 fs11 py-2 px-2.5 my-0.5 bg-warning bg-opacity-20 rounded">
+                                        <i class="bc-i-attention text-base text-warning opacity-60"></i>
+                                        To place your bet, please <a href="javascript:;" class="underline">Sign in</a> or <a href="javascript:;" class="underline">Register</a>
+                                    </div>
+                                    <div class="flex items-center gap-2 fs11 py-2 px-2.5 my-0.5 bg-warning bg-opacity-20 rounded">
+                                        <i class="bc-i-attention text-base text-warning opacity-60"></i>
+                                        There are deleted events
+                                    </div>
                                     <div class="flex gap-0.5 p-2.5 bg-white bg-opacity-10 rounded">
-                                        <input type="text" class="form-control text-center !rounded" value="500">
-                                        <input type="text" class="form-control text-center !rounded" value="1000">
-                                        <input type="text" class="form-control text-center !rounded" value="5000">
-                                        <button class="shrink-0 flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded"><i class="bc-i-edit"></i></button>
+                                        <input type="text" class="form-control focus_type text-center !rounded" value="500">
+                                        <input type="text" class="form-control focus_type text-center !rounded" value="1000">
+                                        <input type="text" class="form-control focus_type text-center !rounded" value="5000">
+                                        <button class="shrink-0 flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded" onclick="inputReadToggle(this)"><i class="bc-i-edit"></i></button>
                                     </div>
                                     <div class="mt-0.5 p-2.5 bg-white bg-opacity-10 rounded">
                                         <button class="w-full h-9 bg-white bg-opacity-10 rounded">BET NOW</button>

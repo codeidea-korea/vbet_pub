@@ -133,6 +133,10 @@ const btnActiveRadio = (item)=>{
     $(item).addClass('active').siblings().removeClass('active')
 }
 
+const gameActive = (item)=>{
+    $(item).toggleClass('active')
+}
+
 
 // faq
 const faqToggle = (item)=>{
@@ -210,6 +214,25 @@ const mofilterShow = (item)=>{
 // detailProvider
 const detailProvider = (item)=>{
     $(item).toggleClass('left-full left-0')
+}
+
+// input readonly toggle
+const inputReadToggle = (item)=>{
+    let icon = $(item).find('i')
+
+    if(icon.hasClass('bc-i-edit')){
+        icon.removeClass('bc-i-edit').addClass('bc-i-checked')
+        $(item).siblings('input').attr('readonly',true)
+    }else{
+        icon.addClass('bc-i-edit').removeClass('bc-i-checked')
+        $(item).siblings('input').attr('readonly',false)
+    }
+}
+
+// banner toggle fold
+const bannerHeightToggle = (item)=>{
+    $(item).toggleClass('rotate-180')
+    $(item).parent().toggleClass('h-8')
 }
 
 
@@ -341,6 +364,7 @@ const loadJquery = ()=>{
             })
             Parents.find('> button p').html(checkText.join());
         }else{
+            $(this).addClass('active').siblings().removeClass('active')
             // option 닫기
             Parents.removeClass('open')
             Parents.find('> button p').html(text);

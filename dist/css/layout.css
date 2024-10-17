@@ -24,13 +24,20 @@
 
 .fs8 {font-size:8px; }
 .\!fs8 {font-size:8px !important; }
+.fs9 {font-size:9px; }
 .fs10 {font-size:10px; }
 .\!fs10 {font-size:10px !important; }
+.fs11 {font-size:11px; }
+.\!fs11 {font-size:11px !important; }
 .fs13 {font-size:13px; }
 
 .zoom-50 {zoom:0.5; }
 
+.h-8\.5 {height:2.125rem; }
+.h-18 {height:4.375rem; }
+
 /* color / bg */
+.bg-opacity-15 {--tw-bg-opacity:0.15; }
 .bg-bg {background:var(--bg-color); }
 .\!bg-bg {background:var(--bg-color) !important; }
 .bg-darky {background:var(--darky-color); }
@@ -81,9 +88,13 @@
 .top-blur:after {content:''; z-index:10; position:absolute; right:0; top:0; width:30%; height:100%; background:linear-gradient(to left,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
 .side-top-blur {position:relative; }
 .side-top-blur:before {content:''; z-index:10; position:absolute; left:0; top:0; width:100%; height:30%; background:linear-gradient(to bottom,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
+.side-bottom-blur {position:relative; }
+.side-bottom-blur:before {content:''; z-index:10; position:absolute; left:0; bottom:0; width:100%; height:30%; background:linear-gradient(to top,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
 
 /* pc 높이 고정 */
-.full_height {height:calc(100vh - 95px); }
+@media all and (min-width:768px){
+    .full_height {height:calc(100vh - 95px); }
+}
 
 
 /* 
@@ -105,6 +116,8 @@
         CATEGORY_LIST
         SUB_GAME
         PROMOTION_ITEM
+        GAME_FOLD
+        GAME_BTN
         
 
         RUNNING-LINE
@@ -334,7 +347,11 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .custom_select > button .arrow:not(.noabsolute) {position:absolute; right:16px; top:50%; transform:translateY(-50%); }
 .custom_select > div {z-index:-1000; position:absolute; left:0; top:100%; overflow-y:auto; overflow-x:hidden; display:none; width:100%; max-height:320px; border-radius:8px; }
 .custom_select > div.h-auto {max-height:fit-content; }
-.custom_select ul li {display:flex; align-items:center; justify-content:space-between; font-weight:700; cursor:pointer; }
+.custom_select ul li {display:flex; align-items:center; justify-content:space-between; font-weight:500; cursor:pointer; background:rgba(255,255,255,0.1); }
+.custom_select ul li:hover,
+.custom_select ul li.active {background:rgba(255,255,255,0.2); }
+.custom_select ul li p {color:rgba(255,255,255,0.6); }
+.custom_select ul li.active p {color:rgba(255,255,255,1); }
 .custom_select.open {z-index:11; }
 .custom_select.open > button .arrow {transform:rotate(180deg); }
 .custom_select.open > button .arrow:not(.noabsolute) {transform:translateY(-50%) rotate(180deg); }
@@ -352,7 +369,11 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .form-control {border:0 none; background-color:rgba(255,255,255,0.1); }
 .form-control:focus {box-shadow:none;}
 .form-control.line-type {border:1px solid rgba(255,255,255,0.1); background:transparent; }
+.form-control.line-add {border:1px solid rgba(255,255,255,.2); }
 
+.form-control[readonly] {background-color:inherit; cursor:pointer; }
+.form-control.focus_type:not([readonly]):focus {border:1px solid rgba(255,255,255,0.7); background:transparent; }
+.form-control.focus_type:active {background-color:var(--primary-color); }
 
 /* ----------------------------------------------
             NAV-LINK-TABS
@@ -509,6 +530,53 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .promotion_item i {overflow:hidden; display:block; }
 .promotion_item i img {transform:scale(1); transition:all 0.5s; }
 .promotion_item:hover i img {transform:scale(1.1); }
+
+
+/* ----------------------------------------------
+            GAME_FOLD
+---------------------------------------------- */
+.game_fold > div {display:none; } 
+.game_fold.open > div {display:block; }
+.game_fold.open > button .arrow {transform:rotate(180deg); } 
+
+
+/* ----------------------------------------------
+            GAME_BTN
+---------------------------------------------- */
+.is-down {position:relative; }
+.is-down:before {content:''; position:absolute; right:3px; bottom:3px; width:8px; height:8px; border-width:4px; border-style:solid; border-color:transparent #ff3449 #ff3449 transparent; box-sizing:border-box; transition:all 0.3s; animation:arrow-change 7s forwards; }
+
+.is-up {position:relative; }
+.is-up:before {content:''; position:absolute; right:3px; top:3px; width:8px; height:8px; border-width:4px; border-style:solid; border-color:#16c72e #16c72e transparent transparent; box-sizing:border-box; transition:all 0.3s;  animation:arrow-change 7s forwards; }
+
+.is-up:hover:before ,
+.is-up.active:before {border-color:#fff #fff transparent transparent; }
+.is-down:hover:before ,
+.is-down.active:before {border-color:transparent #fff #fff transparent; }
+
+@keyframes arrow-change {
+    0% {opacity:0; }
+    5% {opacity:1; }
+    10% {opacity:0; }
+    15% {opacity:1; }
+    20% {opacity:0; }
+    25% {opacity:1; }
+    30% {opacity:0; }
+    35% {opacity:1; }
+    40% {opacity:0; }
+    45% {opacity:1; }
+    50% {opacity:0; }
+    55% {opacity:1; }
+    60% {opacity:0; }
+    65% {opacity:1; }
+    70% {opacity:0; }
+    75% {opacity:1; }
+    80% {opacity:0; }
+    85% {opacity:1; }
+    90% {opacity:0; }
+    95% {opacity:1; }
+    100% {opacity:1; }
+}
 
 /* ----------------------------------------------
             RUNNING-LINE
