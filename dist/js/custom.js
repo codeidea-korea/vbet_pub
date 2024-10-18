@@ -142,6 +142,20 @@ const gameActive = (item)=>{
 const faqToggle = (item)=>{
     $(item).parent().toggleClass('open')
 }
+const gameToggle = (item)=>{
+    $(item).parents('.game_fold').toggleClass('open')
+}
+
+// game_fold 전체 제어
+const gameAllToggle = (item)=>{
+    if($(item).hasClass('active')){
+        $(item).removeClass('active')
+        $(item).siblings('.game_fold').removeClass('open')
+    }else{
+        $(item).addClass('active')
+        $(item).siblings('.game_fold').addClass('open')
+    }
+}
 
 // 모바일메뉴 토글
 const moMenuToggle = (item)=>{
@@ -234,6 +248,24 @@ const bannerHeightToggle = (item)=>{
     $(item).toggleClass('rotate-180')
     $(item).parent().toggleClass('h-8')
 }
+
+// search toggle
+const searchToggle = (item)=>{
+    if($(item).hasClass('bc-i-search')){
+        $(item).removeClass('bc-i-search').addClass('bc-i-close-remove')
+        $(item).next('input').show().css('width','calc(100% - 36px')
+    }else{
+        $(item).addClass('bc-i-search').removeClass('bc-i-close-remove')
+        $(item).next('input').hide().css('width','0')
+    }
+}
+
+// 찜아이콘
+const zzimToggle = (item) =>{
+    $(item).toggleClass('bc-i-favorite bc-i-star')
+}
+
+
 
 
 // jquery 모음
@@ -339,7 +371,7 @@ const loadJquery = ()=>{
     })
 
     // custom_select 버튼 클릭
-    $('.custom_select > button').on('click',function(){
+    $('.custom_select > button, .custom_select > .select_button').on('click',function(){
         let Parents = $(this).parents('.custom_select');
         if(Parents.hasClass('open')){
             Parents.removeClass('open')
@@ -362,12 +394,20 @@ const loadJquery = ()=>{
                     }
                 }
             })
-            Parents.find('> button p').html(checkText.join());
+            if(Parents.find('> button')){
+                Parents.find('> button p').html(checkText.join());
+            }else{
+                Parents.find('> .select_button p').html(checkText.join());
+            }
         }else{
             $(this).addClass('active').siblings().removeClass('active')
             // option 닫기
             Parents.removeClass('open')
-            Parents.find('> button p').html(text);
+            if(Parents.find('> button')){
+                Parents.find('> button p').html(text);
+            }else{
+                Parents.find('> .select_button p').html(text);
+            }
         }
     })
     // custom_select 외의 영역 선택했을 시 닫기 
@@ -380,5 +420,26 @@ const loadJquery = ()=>{
             }
         })
     })
+
+    // 드래그
+    const DraggModal = $(".draggable_modal");
+    
+    $('.draggable_modal_open').on('click', function() {
+        DraggModal.addClass('show');
+
+        // show 클래스가 추가된 후 300ms 지연
+        setTimeout(function() {
+            DraggModal.removeClass('transition-all');
+        }, 200);
+    });
+    
+    DraggModal.draggable({ handle: ".draggable_modal_header" });
+    
+    $('.draggable_modal_close').on('click', function() {
+        DraggModal.removeClass('show');
+        DraggModal.addClass('transition-all');
+    });
+
+        
 
 }

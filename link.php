@@ -75,6 +75,11 @@ echo txtRecord('./@record/');
                 <li><a href="./index.html" target="_blank" class="">메인</a></li>
             </ul>
         </li>
+		<li class="" data-label="공통모달">
+			<ul>
+				<li><button class="pop-modal draggable_modal_open">calculator 모달</button></li>
+			</ul>
+		</li>
 		<li class="mt20" data-label="메뉴">
             <ul>
                 <li data-label="Casino">
@@ -105,6 +110,16 @@ echo txtRecord('./@record/');
 					<ul>
 						<li>
 							<a href="./poker.html" target="_blank" class="">poker</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Esports">
+					<ul>
+						<li>
+							<a href="./esports.html" target="_blank" class="">esports</a>
+							<ul>
+								<li><a href="./esports_detail.html" target="_blank" class="">esports - detail</a></li>
+							</ul>
 						</li>
 					</ul>
 				</li>

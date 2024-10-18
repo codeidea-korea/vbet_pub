@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+
+        <title>Sports Betting, Online Casino, Games and Poker | VBET ✌️</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/icon.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="esports fold_footer">
+
+        <div id="main-loader">
+            <img src="./dist/images/common/loading.svg" alt="">
+        </div>
+      
+        <div id="wrap">
+        
+            <!-- BEGIN: Content -->
+            <div class="content !min-h-fit">
+                
+                <div class="content_box px-0 md:px-3">
+
+
+                    <div class="flex gap-3 full_height py-2">
+                        <!-- category -->
+                        <div class="md:block hidden overflow-y-auto shrink-0 w-[300px] pr-1">
+                            <div class="flex items-center p-2.5 bg-white bg-opacity-5 rounded">
+                                <div class="custom_select">
+                                    <button class="flex items-center justify-between gap-2.5 w-full py-2 px-3 bg-white bg-opacity-20 text-xs rounded"><i class="bc-i-time"></i><p>All</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                    <div class="max-h-60 bg-bg shadow-2">
+                                        <ul class="p-2">
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>All</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>Today</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>3 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>6 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>12 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>24 hours</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>48 hours</p></li>
+                                            <li class="w-full p-2 rounded text-xs"><p>72 hours</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-2.5 bg-white bg-opacity-5 rounded">
+                                <div class="relative md:w-auto w-full">
+                                    <input type="text" class="form-control line-type h-9 pr-10" placeholder="Search a competition or a team">
+                                    <button class="absolute right-0 top-0 flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded-r"><i class="bc-i-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 gap-0.5 mt-1">
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_all active" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-all text-lg"></i>All</div>
+                                    <div class="flex items-center gap-4"><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_upcoming" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-upcoming text-lg"></i>Upcoming</div>
+                                    <div class="flex items-center gap-4"><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_live" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-live text-lg"></i>Live</div>
+                                    <div class="flex items-center gap-4"><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_results" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-results text-lg"></i>Results</div>
+                                    <div class="flex items-center gap-4"><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_counterstrike" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-CounterStrike text-lg"></i>CounterStrike</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_dota2" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-Dota2 text-lg"></i>Dota 2</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_dota2" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-LeagueOfLegends text-lg"></i>League Of Legends</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_valorant" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-Valorant text-lg"></i>Valorant</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_overwatch" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-Overwatch text-lg"></i>Overwatch 2</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_rainbowsix" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-RainbowSix text-lg"></i>Rainbow Six</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_crossfire" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-CrossFire text-lg"></i>Cross Fire</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_kingofglory" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-KingOfGlory text-lg"></i>King Of Glory</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_warcraft" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-WarcraftIII text-lg"></i>Warcraft III</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_mobilelegends" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-MobileLegends text-lg"></i>Mobile Legends</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_rocketleague" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-RocketLeague text-lg"></i>Rocket League</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_pubg" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-PUBG text-lg"></i>PUBG</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_apexlegends" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-ApexLegends text-lg"></i>Apex Legends</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                                <button class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 text-xs rounded egame_efootball" onclick="btnActiveRadio(this)">
+                                    <div class="flex items-center gap-3"><i class="icon flex items-center justify-center w-6 h-6 rounded bc-i-CyberFootball text-lg"></i>E-Football</div>
+                                    <div class="flex items-center gap-4"><span class="opacity-50">65</span><i class="bc-i-small-arrow-right text-xs opacity-70"></i></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- game_list -->
+                        <div class="overflow-y-auto flex-grow px-0.5 md:pr-1">
+
+                            <!-- title -->
+                            <button class="egame_counterstrike border_type flex items-center gap-2 w-full h-8.5 px-3 text-xs rounded">
+                                <i class="bc-i-round-arrow-left text-xl"></i>
+                                <i class="icon flex items-center justify-center w-6 h-6 bc-i-CounterStrike text-lg rounded-full"></i>
+                                <p>ETERNITY LEAGUE</p>
+                            </button>
+                            
+                            <!-- top -->
+                            <div class="overflow-hidden grid grid-cols-1 md:grid-cols-2 h-44 rounded-b">
+                                <div class="h-full p-2 bg-white bg-opacity-5">
+                                    <div class="flex items-center justify-end gap-2">
+                                        <button class=" bc-i-push-notification-outline"></button>
+                                        <span class="px-3 py-0.5 bg-red-500 text-white text-xs rounded">Live</span>
+                                    </div>
+
+                                    <div class="my-2 text-center text-xs">ETERNITY LEAGUE</div>
+
+                                    <div class="flex items-center justify-center">
+                                        <div class="w-12 h-10"><img class="h-full" src="./dist/images/esports/team_2.png" alt=""></div>
+                                        <div class="flex items-center justify-center gap-2 w-12 text-xl">
+                                            <span class="font-bold">0</span>
+                                            <span>:</span>
+                                            <span class="font-bold">0</span>
+                                        </div>
+                                        <div class="w-12 h-10"><img class="h-full" src="./dist/images/esports/team.png" alt=""></div>
+                                    </div>
+                                    <div class="grid grid-cols-2 text-center fs13">
+                                        <p>Randy Esports</p>
+                                        <p>Team Merula</p>
+                                    </div>
+                                    <div class="mt-5 text-center text-xs">0:0, (<span class="text-blue-400">6</span>:<span class="text-yellow-400">12</span>)</div>
+                                    
+                                </div>
+                                <div class="hidden md:flex items-center justify-center">
+                                    <a href="javascript:;" class="underline text-xs text-white text-opacity-80">You need to sign in to be able to play video.</a>
+                                </div>
+                            </div>
+
+                            <!-- timeline -->
+                            <div class="game_fold open mt-2">
+                                <button class="flex items-center justify-between w-full h-8 px-3 bg-white bg-opacity-15 rounded">
+                                    <div class="flex items-center gap-2"><i class="w-1.5 h-1.5 bg-danger rounded-full"></i>Nuke</div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="custom_select">
+                                            <div class="select_button flex items-center justify-between gap-2.5 w-full py-1.5 px-3 text-xs rounded"><p>1. Ancient</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></div>
+                                            <div class="max-h-60 bg-bg shadow-2">
+                                                <ul class="p-2">
+                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>1. Ancient</p></li>
+                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>2. Nuke</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <i class="w-[1px] h-5 bg-white bg-opacity-10"></i>
+                                        <i class="bc-i-favorite"></i>
+                                        <i class="arrow bc-i-small-arrow-down" onclick="gameToggle(this)"></i>
+                                    </div>
+                                </button>
+                                <div class="bg-white bg-opacity-10 px-5">
+                                    <div class="overflow-x-auto xscrollbar flex py-5">
+                                        <div class="z-10 sticky left-0 flex flex-col w-20 h-20 shrink-0 bg-[#1a243b]">
+                                            <div class="flex items-center justify-center h-10"><img class="w-6" src="./dist/images/esports/team_2.png" alt=""></div>
+                                            <div class="w-full h-0.5 bg-white bg-opacity-10"></div>
+                                            <div class="flex items-center justify-center h-10"><img class="w-6" src="./dist/images/esports/team.png" alt=""></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-blue-600 bg-opacity-40"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-blue-600 bg-opacity-40"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-blue-600 bg-opacity-40"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-blue-600 bg-opacity-40"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-blue-600 bg-opacity-40"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-blue-600 bg-opacity-40"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                        </div>
+
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-yellow-500 bg-opacity-30"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-yellow-500 bg-opacity-30"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-yellow-500 bg-opacity-30"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-yellow-500 bg-opacity-30"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-yellow-500 bg-opacity-30"><img class="w-4" src="./dist/images/esports/time_icon.svg" alt=""></span></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"><span class="w-6 h-6 p-1 rounded-full bg-yellow-500 bg-opacity-30"><img class="w-4" src="./dist/images/esports/dead_icon.svg" alt=""></span></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i><span class="absolute left-0.5 -top-3 flex items-center justify-center w-6 h-6 rounded-full bg-white bg-opacity-10 text-white text-opacity-50 text-xs backdrop-blur-sm">H1</span></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+                                        <div class="flex flex-col w-7 h-20 shrink-0">
+                                            <div class="flex items-center justify-center h-10"></div>
+                                            <div class="relative w-full h-0.5 bg-white bg-opacity-10"><i class="absolute left-1/2 -top-2 w-0.5 h-4 bg-white bg-opacity-10"></i></div>
+                                            <div class="flex items-center justify-center h-10"></div>
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- tab -->
+                            <ul class="overflow-hidden nav nav-link-tabs mt-5 bg-white bg-opacity-15 rounded" role="tablist">
+                                <li id="esport_detail-1-tab" class="nav-item flex-1" role="presentation">
+                                    <button class="nav-link w-full py-2 active" data-tw-toggle="pill" data-tw-target="#esport_detail-tab-1" type="button" role="tab" aria-controls="esport_detail-tab-1" aria-selected="true">Markets (17)</button> 
+                                </li>
+                                <li id="esport_detail-2-tab" class="nav-item flex-1" role="presentation">
+                                    <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#esport_detail-tab-2" type="button" role="tab" aria-controls="esport_detail-tab-2" aria-selected="false"> MATCHES (6) </button> 
+                                </li>
+                            </ul>
+                            <div class="tab-content mt-3">
+
+                                <div id="esport_detail-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="esport_detail-1-tab">
+                                    <!-- 탭 -->
+                                    <div class="overflow-hidden relative flex h-9 bg-white bg-opacity-10 rounded">
+                                        <div class="flex items-center justify-center w-9 h-9 bg-white bg-opacity-15">
+                                            <button class="bc-i-search text-lg" onclick="searchToggle(this)"></button>
+                                            <input type="text" class="z-10 absolute left-9 top-0 hidden h-9 form-control line-add !bg-bg rounded-l-none" style="width:0" placeholder="Search market...">
+                                        </div>
+                                        <div class="flex-1 mySwiper" data-per="auto" data-gap="0" data-loop="false">
+                                            <div class="swiper-container">
+                                                <ul class="swiper-wrapper font-medium custom_tab">
+                                                    <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 bc-i-favorite text-white text-opacity-50 text-lg" onclick="tabActiveToggle(this)"></button></li>
+                                                    <li class="swiper-slide !w-auto leading-9"><button class="active h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">All</button></li>
+                                                    <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Match <span class="relative -top-2 fs9">9</span></button></li>
+                                                    <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Map 2 <span class="relative -top-2 fs9">2</span></button></li>
+                                                    <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Map 3 <span class="relative -top-2 fs9">3</span></button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 배팅 -->
+                                    <div class="bet_btn_box mt-0.5">
+                                        <!-- 전체 제어 -->
+                                        <button class="game_fold_all active flex items-center justify-between w-full h-8 px-3 bg-white bg-opacity-10 rounded" onclick="gameAllToggle(this)">
+                                            <p class="text-xs">Markets</p>
+                                            <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                                        </button>
+
+                                        <!-- 하단 베팅버튼 -->
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Match Winner</p>
+                                                    <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-2 gap-[1px]">
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Eternal Fire</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Eternal Fire</span><span class="text-warning font-medium">3.00</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Maps handicap</p>
+                                                    <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-2 gap-[1px]">
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Kasbah Gaming</p>
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Kanji Academy</p>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Maps Total</p>
+                                                    <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-2 gap-[1px]">
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Over</p>
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Uder</p>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">2.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">2.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Maps 2 Result (Excluding OT)</p>
+                                                    <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-3 gap-[1px]">
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Umbra Squad</span><span class="text-warning font-medium">1.35</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">X</span><span class="text-warning font-medium">7.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Team Merula</span><span class="text-warning font-medium">3.55</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="py-10 text-center text-xs">The time display shown within live betting serves as an indicator. The company takes no responsibility for the correctness and currentness of the displayed information like score or time.</div>
+
+
+                                    </div>
+                                </div>
+
+                                <div id="esport_detail-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="esport_detail-2-tab">
+
+                                    <div class="flex justify-between h-7 bg-white bg-opacity-15 rounded">
+                                        <div class="custom_select border-r border-[#000c24]">
+                                            <button class="flex items-center justify-between gap-2.5 w-full h-full px-3 text-xs"><p>WINNER</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                            <div class="max-h-60 g-bg shadow-2">
+                                                <ul class="p-2">
+                                                    <li class="active w-full mb-0.5  p-2 rounded text-xs"><p>WINNER</p></li>
+                                                    <li class="w-full mb-0.5  p-2 rounded text-xs"><p>HANDICAP</p></li>
+                                                    <li class="w-full mb-0.5  p-2 rounded text-xs"><p>TOTALS</p></li>
+                                                    <li class="w-full mb-0.5  p-2 rounded text-xs"><p>ODD/EVEN</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded"  onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <!-- pc -->
+                                            <div class="hidden md:block my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                        <span class="px-3 py-0.5 bg-red-500 text-white rounded">Live</span>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (5:4)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hidden md:block my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                        <span class="px-3 py-0.5 bg-red-500 text-white rounded">Live</span>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (0:0)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)">1.49</button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- mo -->
+                                            <div class="block md:hidden bg-white bg-opacity-10">
+                                                <div class="flex items-center justify-between h-7 mb-[1px] py-0.5 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex flex-1">
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 py-0.5 w-full px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid grid-cols-2 w-[180px] border-l border-[#000c24] text-center fs10">
+                                                        <p>W1</p>
+                                                        <p>W2</p>
+                                                    </div>
+                                                </div>
+                                                <div class="overflow-hidden p-2 ">
+                                                    <div class="overflow-hidden flex gap-[1px] rounded-t">
+                                                        <div class="flex-1 p-2 bg-white bg-opacity-10 text-xs">
+                                                            <p>Team Wiah</p>
+                                                            <p>Team Quvee</p>
+                                                        </div>
+                                                        <div class="grid grid-cols-2 gap-[1px] w-[180px]">
+                                                            <button class="flex-1 h-full egame_btn text-warning is-down font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                            <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="overflow-hidden mt-[1px] px-2 rounded-b bg-white bg-opacity-10">
+                                                        <div class="flex items-center gap-1.5 fs11">
+                                                            <i class="bc-i-live text-danger"></i>Map 3 <i class="w-[1px] h-3 bg-bg"></i>
+                                                            <p>1 : 1, (3:13),(13:7),(4:1)</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-1.5 fs11">
+                                                            <i class="bc-i-stream"></i>
+                                                            <i class="w-[1px] h-3 bg-bg"></i>
+                                                            <i class="bc-i-push-notification-outline"></i>
+                                                            <i class="w-[1px] h-3 bg-bg"></i>
+                                                            <p>+17</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block md:hidden bg-white bg-opacity-10">
+                                                <div class="flex items-center justify-between h-7 mb-[1px] py-0.5 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex flex-1">
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 py-0.5 w-full px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid grid-cols-2 w-[180px] border-l border-[#000c24] text-center fs10">
+                                                        <p>W1</p>
+                                                        <p>W2</p>
+                                                    </div>
+                                                </div>
+                                                <div class="overflow-hidden p-2 ">
+                                                    <div class="overflow-hidden flex gap-[1px] rounded-t">
+                                                        <div class="flex-1 p-2 bg-white bg-opacity-10 text-xs">
+                                                            <p>Team Wiah</p>
+                                                            <p>Team Quvee</p>
+                                                        </div>
+                                                        <div class="grid grid-cols-2 gap-[1px] w-[180px]">
+                                                            <button class="flex-1 h-full egame_btn text-warning is-down font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                            <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="overflow-hidden mt-[1px] px-2 rounded-b bg-white bg-opacity-10">
+                                                        <div class="flex items-center gap-1.5 fs11">
+                                                            <i class="bc-i-live text-danger"></i>Map 3 <i class="w-[1px] h-3 bg-bg"></i>
+                                                            <p>1 : 1, (3:13),(13:7),(4:1)</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-1.5 fs11">
+                                                            <i class="bc-i-stream"></i>
+                                                            <i class="w-[1px] h-3 bg-bg"></i>
+                                                            <i class="bc-i-push-notification-outline"></i>
+                                                            <i class="w-[1px] h-3 bg-bg"></i>
+                                                            <p>+17</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="game_fold open pb-2">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded" onclick="faqToggle(this)">
+                                            <div class="flex items-center gap-2">
+                                                <i class="flag-bc world"></i>
+                                                <p class="text-left fs13 leading-none">World<br/>ETERNITY LEAGUE</p>
+                                            </div>
+                                            <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                        </button>
+                                        <div>
+                                            <!-- 게임 -->
+                                            <div class="hidden md:block my-0.5">
+                                                <div class="flex items-center justify-between h-8.5 mb-[1px] py-1 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex items-center gap-2 font-medium">
+                                                        <p>17.10.24, 12:00</p>
+                                                        <span class="px-3 py-0.5 bg-red-500 text-white rounded">Live</span>
+                                                    </div>
+                                                    <div class="font-medium">0 : 0, (5:4)</div>
+                                                    <div class="flex items-center gap-3">
+                                                        <button class="text-sm"><i class="bc-i-stream"></i></button>
+                                                        <button class="text-sm"><i class="bc-i-push-notification-outline"></i></button>
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 w-full py-1.5 px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex justify-between w-full h-18 bg-white bg-opacity-10 rounded">
+                                                    <div class="grid grid-cols-3 flex-grow p-3">
+                                                        <div class="flex items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team_1.png" alt=""></div>
+                                                            <p>Team Boohoo</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <button class="flex-1 h-full egame_btn text-white font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)" disabled><i class="bc-i-lock"></i></button>
+                                                            <span>VS</span>
+                                                            <button class="flex-1 h-full egame_btn text-white font-medium bg-white bg-opacity-20 rounded" onclick="gameActive(this)" disabled><i class="bc-i-lock"></i></button>
+                                                        </div>
+                                                        <div class="flex flex-row-reverse items-center gap-2">
+                                                            <div class="flex items-center w-12 h-12 p-1 bg-white bg-opacity-10 rounded"><img src="./dist/images/esports/team.png" alt=""></div>
+                                                            <p>Needus Gaming</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col items-center justify-around w-10 shrink-0 border-l border-[#000c24]">
+                                                        <button class="bc-i-favorite"></button>
+                                                        <a href="javascript:;" class="text-xs font-medium">+17</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- mo -->
+                                            <div class="block md:hidden bg-white bg-opacity-10">
+                                                <div class="flex items-center justify-between h-7 mb-[1px] py-0.5 px-3 text-xs bg-white bg-opacity-15 rounded">
+                                                    <div class="flex flex-1">
+                                                        <div class="custom_select">
+                                                            <button class="flex items-center justify-between gap-2.5 py-0.5 w-full px-3 bg-white bg-opacity-20 text-xs rounded"><p>Map 1 Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                                            <div class="max-h-60 bg-bg shadow-2">
+                                                                <ul class="p-2">
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Match Winner</p></li>
+                                                                    <li class="active w-full mb-1 p-2 rounded text-xs"><p>Map 1 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 2 Winner</p></li>
+                                                                    <li class="w-full mb-1 p-2 rounded text-xs"><p>Map 3 Winner</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid grid-cols-2 w-[180px] border-l border-[#000c24] text-center fs10">
+                                                        <p>W1</p>
+                                                        <p>W2</p>
+                                                    </div>
+                                                </div>
+                                                <div class="overflow-hidden p-2 ">
+                                                    <div class="overflow-hidden flex gap-[1px] rounded-t">
+                                                        <div class="flex-1 p-2 bg-white bg-opacity-10 text-xs">
+                                                            <p>Team Wiah</p>
+                                                            <p>Team Quvee</p>
+                                                        </div>
+                                                        <div class="grid grid-cols-2 gap-[1px] w-[180px]">
+                                                            <button class="flex-1 h-full egame_btn text-white font-medium bg-white bg-opacity-20" onclick="gameActive(this)" disabled><i class="bc-i-lock"></i></button>
+                                                            <button class="flex-1 h-full egame_btn text-white font-medium bg-white bg-opacity-20" onclick="gameActive(this)" disabled><i class="bc-i-lock"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="overflow-hidden mt-[1px] px-2 rounded-b bg-white bg-opacity-10">
+                                                        <div class="flex items-center gap-1.5 fs11">
+                                                            <i class="bc-i-live text-danger"></i>Map 3 <i class="w-[1px] h-3 bg-bg"></i>
+                                                            <p>1 : 1, (3:13),(13:7),(4:1)</p>
+                                                        </div>
+                                                        <div class="flex items-center gap-1.5 fs11">
+                                                            <i class="bc-i-stream"></i>
+                                                            <i class="w-[1px] h-3 bg-bg"></i>
+                                                            <i class="bc-i-push-notification-outline"></i>
+                                                            <i class="w-[1px] h-3 bg-bg"></i>
+                                                            <p>+17</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- bets -->
+                        <div class="md:block hidden overflow-y-auto shrink-0 w-80 pr-1">
+                            <ul class="nav nav-boxed-tabs" role="tablist">
+                                <li id="bets-1-tab" class="nav-item flex-1" role="presentation"> 
+                                    <button class="nav-link w-full py-1.5 active" data-tw-toggle="pill" data-tw-target="#bets-tab-1" type="button" role="tab" aria-controls="bets-tab-1" aria-selected="true">BetSlip</button> 
+                                </li>
+                                <li id="bets-2-tab" class="nav-item flex-1" role="presentation"> 
+                                    <button class="nav-link w-full py-1.5" data-tw-toggle="pill" data-tw-target="#bets-tab-2" type="button" role="tab" aria-controls="bets-tab-2" aria-selected="false">Open Bets</button> 
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="bets-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="bets-1-tab">
+                                    <div class="flex items-center justify-between h-9 pr-3 bg-white bg-opacity-5 rounded">
+                                        <div class="custom_select">
+                                            <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded">
+                                                <i class="bc-i-settings text-base opacity-80"></i><p class="opacity-50">Always ask</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                            </button>
+                                            <div class="max-h-60 bg-bg shadow-2">
+                                                <ul class="p-2">
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Always ask</p></li>
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Accept Higher odds</p></li>
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Accept Any odds</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button class="draggable_modal_open bc-i-calculate text-base opacity-80"></button>
+                                    </div>
+                                    <div class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 rounded">
+                                        <div class="custom_select">
+                                            <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded text-xs">
+                                                <p>Multiple</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                            </button>
+                                            <div class="max-h-60 bg-bg shadow-2">
+                                                <ul class="p-2">
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Single</p></li>
+                                                    <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Multiple</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <button class="opacity-50 underline text-xs">Remove All</button>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-0.5 my-0.5">
+                                        <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                            <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                            <div>
+                                                <div class="flex items-center justify-between opacity-50">
+                                                    <p>Imperial e-Sports</p>
+                                                    <p class="text-warning">1.0004</p>
+                                                </div>
+                                                <div class="flex items-start justify-between mt-1 opacity-30">
+                                                    <p>Match Winner</p>
+                                                    <p class="text-danger font-semibold line-through"></p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p class="fs11 opacity-30">Imperial e-Sports - Sharks Esports</p>
+                                                    <p><i class="bc-i-attention text-danger fs10"></i></p>
+                                                </div>
+                                                <div class="flex items-center justify-between opacity-10">
+                                                    <p class="fs11">17.10.2024,07:00</p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center gap-3 mt-2">
+                                                <i class="text-base text-danger bc-i-remove-circle"></i>
+                                                Event has been deleted
+                                            </div>
+                                        </div>
+                                        <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                            <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Sharks Esports</p>
+                                                    <p class="text-warning font-semibold">2.44</p>
+                                                </div>
+                                                <div class="flex items-start justify-between mt-1 opacity-70">
+                                                    <p>Map 3 Winner</p>
+                                                    <p class="text-danger font-semibold line-through"></p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p class="fs11 opacity-70">Imperial e-Sports - Sharks Esports</p>
+                                                    <p><i class="bc-i-attention text-danger fs10"></i></p>
+                                                </div>
+                                                <div class="flex items-center justify-between opacity-50">
+                                                    <p class="fs11">17.10.2024,07:00</p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                            <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Sharks Esports</p>
+                                                    <p class="text-warning font-semibold">2.44</p>
+                                                </div>
+                                                <div class="flex items-start justify-between mt-1">
+                                                    <p class="opacity-70">Map 3 Winner</p>
+                                                    <p class="text-danger font-semibold line-through">1.29</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center justify-between opacity-70">
+                                                    <p class="fs11">Imperial e-Sports - Sharks Esports</p>
+                                                    <p></p>
+                                                </div>
+                                                <div class="flex items-center justify-between opacity-50">
+                                                    <p class="fs11">17.10.2024,07:00</p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                            <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                            <div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Sharks Esports</p>
+                                                    <p class="text-warning font-semibold">2.44</p>
+                                                </div>
+                                                <div class="flex items-start justify-between mt-1 opacity-70">
+                                                    <p>Map 3 Winner</p>
+                                                    <p class="text-danger font-semibold line-through"></p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center justify-between opacity-70">
+                                                    <p class="fs11">Imperial e-Sports - Sharks Esports</p>
+                                                    <p></p>
+                                                </div>
+                                                <div class="flex items-center justify-between opacity-50">
+                                                    <p class="fs11">17.10.2024,07:00</p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="py-10 text-center opacity-80">
+                                        Your betslip is empty
+                                    </div>
+
+                                    <div class="p-2">
+                                        <div class="flex items-center justify-between text-xs">
+                                            <p>Odds</p>
+                                            <p class="text-warning font-semibold">2.649</p>
+                                        </div>
+                                        <div class="py-2">
+                                            <input type="text" class="form-control line-add" placeholder="Enter stake">
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs">
+                                            <p>POssible win:</p>
+                                            <p class="text-success font-semibold">0 ֏</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center gap-2 fs11 py-2 px-2.5 my-0.5 bg-warning bg-opacity-20 rounded">
+                                        <i class="bc-i-attention text-base text-warning opacity-60"></i>
+                                        To place your bet, please <a href="javascript:;" class="underline">Sign in</a> or <a href="javascript:;" class="underline">Register</a>
+                                    </div>
+                                    <div class="flex items-center gap-2 fs11 py-2 px-2.5 my-0.5 bg-warning bg-opacity-20 rounded">
+                                        <i class="bc-i-attention text-base text-warning opacity-60"></i>
+                                        There are deleted events
+                                    </div>
+                                    <div class="flex gap-0.5 p-2.5 bg-white bg-opacity-10 rounded">
+                                        <input type="text" class="form-control focus_type text-center !rounded" value="500">
+                                        <input type="text" class="form-control focus_type text-center !rounded" value="1000">
+                                        <input type="text" class="form-control focus_type text-center !rounded" value="5000">
+                                        <button class="shrink-0 flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded" onclick="inputReadToggle(this)"><i class="bc-i-edit"></i></button>
+                                    </div>
+                                    <div class="mt-0.5 p-2.5 bg-white bg-opacity-10 rounded">
+                                        <button class="w-full h-9 bg-white bg-opacity-10 rounded">BET NOW</button>
+                                    </div>
+                                </div>
+                                <div id="bets-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="bets-2-tab">
+                                    <div class="mt-2 text-right"><button class="underline text-white text-opacity-50">Go to bet history.</button></div>
+                                    <div class="py-14 text-center">You have no open bets at the moment</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+           
+            
+        </div>
+        <!-- END: Content -->
+    </div>
+
+
+    
+    <!-- BEGIN: JS Assets-->
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-1.12.4.js"></script>
+    <script src="./dist/js/jquery-ui.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+    <!-- END: JS Assets-->
+</body>
+</html>

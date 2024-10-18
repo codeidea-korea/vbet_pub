@@ -4,6 +4,7 @@
     --bg-color:#000c24;
     --darky-color:#1a243b;
     --primary-color:#7f194f;
+    --primary-light-color:#a71f67;
 
     
     /* gradient */
@@ -80,6 +81,8 @@
 ::-webkit-scrollbar-thumb {background:rgba(255,255,255,0.5); border-radius:5px; width:20px; }
 ::-webkit-scrollbar-track {background:rgba(255,255,255,0.1); }
 
+.xscrollbar::-webkit-scrollbar {height:4px; -webkit-appearance:none; }
+
 .side-blur {position:relative; }
 .side-blur:before {content:''; z-index:10; position:absolute; left:0; top:0; width:100%; height:50%; background:linear-gradient(to bottom,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
 .side-blur:after {content:''; z-index:10; position:absolute; left:0; bottom:0; width:100%; height:50%; background:linear-gradient(to top,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
@@ -103,6 +106,7 @@
         HEADER
         FOOTER
         MODAL
+        DRAGGABLE_MODAL
         
         CUSTOM_SELECT
         SWIPER_ARROW
@@ -330,6 +334,12 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
     .modal.mo_full .modal-body {max-height:100%; }
 }
 
+/* ----------------------------------------------
+            DRAGGABLE_MODAL
+---------------------------------------------- */
+.draggable_modal {z-index:100; position:fixed; left:50%; top:30%; display:none; }
+.draggable_modal.show {display:block; }
+
 
 /* ----------------------------------------------
             TABLE
@@ -342,20 +352,27 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
             CUSTOM_SELECT
 ---------------------------------------------- */
 .custom_select {z-index:5; position:relative; }
-.custom_select > button {position:relative; }
-.custom_select > button .arrow {font-size:20px; transform:rotate(0); }
-.custom_select > button .arrow:not(.noabsolute) {position:absolute; right:16px; top:50%; transform:translateY(-50%); }
-.custom_select > div {z-index:-1000; position:absolute; left:0; top:100%; overflow-y:auto; overflow-x:hidden; display:none; width:100%; max-height:320px; border-radius:8px; }
+.custom_select > button,
+.custom_select > .select_button {position:relative; }
+.custom_select > button .arrow,
+.custom_select > .select_button .arrow {font-size:20px; transform:rotate(0) !important; }
+.custom_select > button .arrow:not(.noabsolute),
+.custom_select > .select_button .arrow:not(.noabsolute) {position:absolute; right:16px; top:50%; transform:translateY(-50%); }
+
+.custom_select > div:not(.select_button) {z-index:-1000; position:absolute; left:0; top:100%; overflow-y:auto; overflow-x:hidden; display:none; width:100%; max-height:320px; border-radius:8px; }
 .custom_select > div.h-auto {max-height:fit-content; }
 .custom_select ul li {display:flex; align-items:center; justify-content:space-between; font-weight:500; cursor:pointer; background:rgba(255,255,255,0.1); }
 .custom_select ul li:hover,
 .custom_select ul li.active {background:rgba(255,255,255,0.2); }
 .custom_select ul li p {color:rgba(255,255,255,0.6); }
 .custom_select ul li.active p {color:rgba(255,255,255,1); }
+
 .custom_select.open {z-index:11; }
-.custom_select.open > button .arrow {transform:rotate(180deg); }
-.custom_select.open > button .arrow:not(.noabsolute) {transform:translateY(-50%) rotate(180deg); }
-.custom_select.open > div {z-index:10; display:block; }
+.custom_select.open > button .arrow ,
+.custom_select.open > .select_button .arrow {transform:rotate(180deg) !important; }
+.custom_select.open > button .arrow:not(.noabsolute),
+.custom_select.open > .select_button .arrow:not(.noabsolute) {transform:translateY(-50%) rotate(180deg); }
+.custom_select.open > div:not(.select_button) {z-index:10; display:block; }
 
 .custom_select .profile_btn {transition:all 0.3s;}
 .custom_select .profile_btn i {color:#fff; transition:all 0.3s; }
@@ -375,6 +392,10 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .form-control.focus_type:not([readonly]):focus {border:1px solid rgba(255,255,255,0.7); background:transparent; }
 .form-control.focus_type:active {background-color:var(--primary-color); }
 
+.form-check-input[type="radio"] {border:2px solid rgba(255,255,255,0.6); background-color:transparent; }
+.form-check-input[type="radio"]:checked {border:2px solid rgb(var(--color-primary)); background-color:transparent; background-image:url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='mediumvioletred' xmlns='http://www.w3.org/2000/svg'><circle cx='8' cy='8' r='3'/></svg>"); }
+
+
 /* ----------------------------------------------
             NAV-LINK-TABS
 ---------------------------------------------- */
@@ -387,6 +408,10 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 
 .nav.nav-boxed-tabs {overflow:hidden; border-radius:5px 5px 0 0; }
 .nav.nav-boxed-tabs .nav-item .nav-link {color:rgba(255,255,255,.5); background:rgba(255,255,255,0.1); border-radius:0; }
+
+.custom_tab li button.active {color:#fff; border-bottom:1px solid rgb(var(--color-primary)); }
+
+.tab-content > div {width:100% !important; }
 
 /* ----------------------------------------------
             SWIPER_ARROW
@@ -494,7 +519,8 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .sub_game .provider .provider_list.list ul li i {display:none; }
 
 .sub_game .games {width:calc(100% - 218px); padding-left:10px; padding-bottom:10px; transition:all 0.2s;}
-.sub_game .games .top {z-index:10; position:sticky; top:131px;}
+.sub_game .games .top {z-index:10; position:sticky; top:93px;}
+.sub .sub_game .games .top {z-index:10; position:sticky; top:131px;}
 .sub_game .games .list_btn.on {background-color:rgba(255,255,255,0.8); color:rgba(0,12,36,0.8); }
 .sub_game .games .game_cate {width:calc(100% - 200px); }
 
@@ -535,6 +561,8 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 /* ----------------------------------------------
             GAME_FOLD
 ---------------------------------------------- */
+.game_fold_all.active .arrow {transform:rotate(180deg); }
+
 .game_fold > div {display:none; } 
 .game_fold.open > div {display:block; }
 .game_fold.open > button .arrow {transform:rotate(180deg); } 
