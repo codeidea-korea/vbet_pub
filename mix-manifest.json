@@ -181,5 +181,21 @@
     "/dist/images/esports/banner_1.webp": "/dist/images/esports/banner_1.webp",
     "/dist/images/esports/team_2.png": "/dist/images/esports/team_2.png",
     "/dist/images/esports/time_icon.svg": "/dist/images/esports/time_icon.svg",
-    "/dist/images/esports/dead_icon.svg": "/dist/images/esports/dead_icon.svg"
+    "/dist/images/esports/dead_icon.svg": "/dist/images/esports/dead_icon.svg",
+    "/dist/images/wonderwheel/Logo": "/dist/images/wonderwheel/Logo",
+    "/dist/fonts/wheel/icomoon.eot": "/dist/fonts/wheel/icomoon.eot",
+    "/dist/fonts/wheel/icomoon.svg": "/dist/fonts/wheel/icomoon.svg",
+    "/dist/fonts/wheel/icomoon.ttf": "/dist/fonts/wheel/icomoon.ttf",
+    "/dist/fonts/wheel/icomoon.woff": "/dist/fonts/wheel/icomoon.woff",
+    "/dist/images/wonderwheel/item_1.png": "/dist/images/wonderwheel/item_1.png",
+    "/dist/images/wonderwheel/item_2.png": "/dist/images/wonderwheel/item_2.png",
+    "/dist/images/wonderwheel/item_3.png": "/dist/images/wonderwheel/item_3.png",
+    "/dist/images/wonderwheel/item_4.png": "/dist/images/wonderwheel/item_4.png",
+    "/dist/images/wonderwheel/item_5.png": "/dist/images/wonderwheel/item_5.png",
+    "/dist/images/wonderwheel/item_6.png": "/dist/images/wonderwheel/item_6.png",
+    "/dist/images/wonderwheel/wheel.png": "/dist/images/wonderwheel/wheel.png",
+    "/dist/images/wonderwheel/wheel_arrow.png": "/dist/images/wonderwheel/wheel_arrow.png",
+    "/dist/images/wonderwheel/wheel_bg.png": "/dist/images/wonderwheel/wheel_bg.png",
+    "/dist/images/wonderwheel/wheel_center.png": "/dist/images/wonderwheel/wheel_center.png",
+    "/dist/images/wonderwheel/wheel_spin.png": "/dist/images/wonderwheel/wheel_spin.png"
 }

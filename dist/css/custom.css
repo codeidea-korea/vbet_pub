@@ -195,3 +195,8 @@
 .efootball .egame_btn.active {background:#308231; }
 .efootball .egame_btn:hover {box-shadow: 0 0 20px #308231; }
 
+@media all and (min-width:768px){
+    .egame_match_h {height:calc(100vh - 340px); }
+}
+
+

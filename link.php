@@ -118,6 +118,7 @@ echo txtRecord('./@record/');
 						<li>
 							<a href="./esports.html" target="_blank" class="">esports</a>
 							<ul>
+								<li><a href="./esports_list.html" target="_blank" class="">esports - list</a></li>
 								<li><a href="./esports_detail.html" target="_blank" class="">esports - detail</a></li>
 							</ul>
 						</li>

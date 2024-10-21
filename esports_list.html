@@ -480,11 +480,27 @@
 
                                 <div id="esport_list-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="esport_list-2-tab">
 
-                                    <div class="hidden md:grid grid-cols-1 md:grid-cols-4 gap-2 w-full p-2.5 bg-white bg-opacity-20 rounded-t-none md:rounded-t rounded">
-                                        <div></div>
-                                        <div></div>
+                                    <div class="hidden md:grid grid-cols-1 md:grid-cols-4 gap-1.5 w-full p-2.5 bg-white bg-opacity-15 rounded-t-none md:rounded-t rounded">
+                                        <div>
+                                            <div class="relative h-full">
+                                                <label class="absolute top-2 left-3 text-xs opacity-50" for="calendar_1">Range</label>
+                                                <div class="absolute right-0 w-10 h-full flex items-center justify-center "> 
+                                                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                                                </div>
+                                                <input type="text" class="datepicker form-control h-full pt-6 pr-12" id="calendar_1" data-single-mode="true">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="relative h-full">
+                                                <label class="absolute top-2 left-2" for="calendar_2"></label>
+                                                <div class="absolute right-0 w-10 h-full flex items-center justify-center "> 
+                                                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                                                </div>
+                                                <input type="text" class="datepicker form-control h-full pt-6 pr-12" id="calendar_2" data-single-mode="true">
+                                            </div>
+                                        </div>
                                         <div class="custom_select w-full">
-                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left"><span class="text-xs opacity-50">Sport</span><p>Counter-Strike 2</p> <i class="arrow bc-i-small-arrow-down !fs10"></i></button>
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left"><span class="block text-xs opacity-50">Sport</span><p>Counter-Strike 2</p> <i class="arrow bc-i-small-arrow-down !fs10"></i></button>
                                             <div class="!top-full bg-bg w-full p-3 shadow-2">
                                                 <ul>
                                                     <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Counter-Strike 2</p></li>
@@ -492,7 +508,7 @@
                                             </div>
                                         </div>
                                         <div class="custom_select w-full">
-                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left"><span class="text-xs opacity-50">Competition</span><p>All</p> <i class="arrow bc-i-small-arrow-down !fs10"></i></button>
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left"><span class="block text-xs opacity-50">Competition</span><p>All</p> <i class="arrow bc-i-small-arrow-down !fs10"></i></button>
                                             <div class="!top-full bg-bg w-full p-3 shadow-2">
                                                 <ul>
                                                     <li class="mt-[2px] px-3 h-8  text-xs !font-normal rounded active"><p>Al</p></li>
@@ -503,9 +519,192 @@
                                             </div>
                                         </div>
                                         <div class="col-span-4 text-right">
-                                            <button class="btn btn-success w-48 max-w-full">SHOW</button>
+                                            <button class="btn btn-success w-48 max-w-full mt-2 text-xs">SHOW</button>
                                         </div>
                                     </div>
+
+                                    <div class="overflow-hidden grid grid-cols-2 gap-3 egame_match_h mt-4">
+                                        <div class="overflow-y-auto">
+                                            <div class="game_fold open mb-2">
+                                                <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15 rounded" onclick="faqToggle(this)">
+                                                    <p class="flex items-center gap-2"><img class="w-6" src="./dist/images/esports/team.png" alt=""> A1 Gaming League</p>
+                                                    <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </button>
+                                                <div class="p-1 bg-white bg-opacity-5 font-medium cursor-pointer">
+                                                    <div class="bg-white bg-opacity-10 rounded-t py-2.5 px-1.5">
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Into the Breach</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Jognny Speeds</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="mt-2 fs10 text-white text-opacity-50">2:1 (10:13, 13:11, 13:9)</div>
+                                                    </div>
+                                                    <div class="flex items-center justify-between mt-[1px] bg-white bg-opacity-10 rounded-b p-1.5">
+                                                        <div class="flex items-center gap-1 text-white text-opacity-50 fs10"><i class="bc-i-watch text-xs"></i><span>21.10.2024</span><i class="w-[1px] h-3 bg-bg"></i><span>00:50</span></div>
+                                                        <div class="flex items-center gap-2 text-xs text-white text-opacity-70">VIEW <i class="bc-i-small-arrow-down -rotate-90"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="game_fold open mb-2">
+                                                <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15 rounded" onclick="faqToggle(this)">
+                                                    <p class="flex items-center gap-2"><img class="w-6" src="./dist/images/esports/team.png" alt=""> A1 Gaming League</p>
+                                                    <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </button>
+                                                <div class="p-1 bg-white bg-opacity-5 font-medium cursor-pointer">
+                                                    <div class="bg-white bg-opacity-10 rounded-t py-2.5 px-1.5">
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Into the Breach</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Jognny Speeds</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="mt-2 fs10 text-white text-opacity-50">2:1 (10:13, 13:11, 13:9)</div>
+                                                    </div>
+                                                    <div class="flex items-center justify-between mt-[1px] bg-white bg-opacity-10 rounded-b p-1.5">
+                                                        <div class="flex items-center gap-1 text-white text-opacity-50 fs10"><i class="bc-i-watch text-xs"></i><span>21.10.2024</span><i class="w-[1px] h-3 bg-bg"></i><span>00:50</span></div>
+                                                        <div class="flex items-center gap-2 text-xs text-white text-opacity-70">VIEW <i class="bc-i-small-arrow-down -rotate-90"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="game_fold open mb-2">
+                                                <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15 rounded" onclick="faqToggle(this)">
+                                                    <p class="flex items-center gap-2"><img class="w-6" src="./dist/images/esports/team.png" alt=""> A1 Gaming League</p>
+                                                    <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </button>
+                                                <div class="p-1 bg-white bg-opacity-5 font-medium cursor-pointer">
+                                                    <div class="bg-white bg-opacity-10 rounded-t py-2.5 px-1.5">
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Into the Breach</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Jognny Speeds</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="mt-2 fs10 text-white text-opacity-50">2:1 (10:13, 13:11, 13:9)</div>
+                                                    </div>
+                                                    <div class="flex items-center justify-between mt-[1px] bg-white bg-opacity-10 rounded-b p-1.5">
+                                                        <div class="flex items-center gap-1 text-white text-opacity-50 fs10"><i class="bc-i-watch text-xs"></i><span>21.10.2024</span><i class="w-[1px] h-3 bg-bg"></i><span>00:50</span></div>
+                                                        <div class="flex items-center gap-2 text-xs text-white text-opacity-70">VIEW <i class="bc-i-small-arrow-down -rotate-90"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="game_fold open mb-2">
+                                                <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15 rounded" onclick="faqToggle(this)">
+                                                    <p class="flex items-center gap-2"><img class="w-6" src="./dist/images/esports/team.png" alt=""> A1 Gaming League</p>
+                                                    <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </button>
+                                                <div class="p-1 bg-white bg-opacity-5 font-medium cursor-pointer">
+                                                    <div class="bg-white bg-opacity-10 rounded-t py-2.5 px-1.5">
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Into the Breach</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Jognny Speeds</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="mt-2 fs10 text-white text-opacity-50">2:1 (10:13, 13:11, 13:9)</div>
+                                                    </div>
+                                                    <div class="flex items-center justify-between mt-[1px] bg-white bg-opacity-10 rounded-b p-1.5">
+                                                        <div class="flex items-center gap-1 text-white text-opacity-50 fs10"><i class="bc-i-watch text-xs"></i><span>21.10.2024</span><i class="w-[1px] h-3 bg-bg"></i><span>00:50</span></div>
+                                                        <div class="flex items-center gap-2 text-xs text-white text-opacity-70">VIEW <i class="bc-i-small-arrow-down -rotate-90"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="game_fold open mb-2">
+                                                <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15 rounded" onclick="faqToggle(this)">
+                                                    <p class="flex items-center gap-2"><img class="w-6" src="./dist/images/esports/team.png" alt=""> A1 Gaming League</p>
+                                                    <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </button>
+                                                <div class="p-1 bg-white bg-opacity-5 font-medium cursor-pointer">
+                                                    <div class="bg-white bg-opacity-10 rounded-t py-2.5 px-1.5">
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Into the Breach</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="flex items-center justify-between text-xs">
+                                                            <p>Jognny Speeds</p>
+                                                            <b class="text-warning">2</b>
+                                                        </div>
+                                                        <div class="mt-2 fs10 text-white text-opacity-50">2:1 (10:13, 13:11, 13:9)</div>
+                                                    </div>
+                                                    <div class="flex items-center justify-between mt-[1px] bg-white bg-opacity-10 rounded-b p-1.5">
+                                                        <div class="flex items-center gap-1 text-white text-opacity-50 fs10"><i class="bc-i-watch text-xs"></i><span>21.10.2024</span><i class="w-[1px] h-3 bg-bg"></i><span>00:50</span></div>
+                                                        <div class="flex items-center gap-2 text-xs text-white text-opacity-70">VIEW <i class="bc-i-small-arrow-down -rotate-90"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-3 overflow-y-auto">
+                                            <div class="mb-10 bg-black p-2.5 rounded">
+                                                <div class="flex items-center justify-between text-base">
+                                                    <p>Into the Breach</p>
+                                                    <b>2</b>
+                                                </div>
+                                                <div class="flex items-center justify-between text-base">
+                                                    <p>Jognny Speeds</p>
+                                                    <b>2</b>
+                                                </div>
+                                                <div class="fs10 text-white text-opacity-80">2:1 (10:13, 13:11, 13:9)</div>
+                                            </div>
+
+                                            <div class="game_fold overflow-hidden rounded mb-2">
+                                                <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15" onclick="faqToggle(this)">
+                                                    <p class="flex items-center gap-2 text-xs">Match Winner</p>
+                                                    <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </button>
+                                                <div class="overflow-hidden cursor-pointer text-xs">
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">W1</button>
+                                                </div>
+                                            </div>
+                                            <div class="game_fold overflow-hidden rounded mb-2">
+                                                <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15" onclick="faqToggle(this)">
+                                                    <p class="flex items-center gap-2 text-xs">Maps Handicap</p>
+                                                    <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </button>
+                                                <div class="overflow-hidden cursor-pointer text-xs">
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(1.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(0.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(-0.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(1.5)</button>
+                                                </div>
+                                            </div>
+                                            <div class="game_fold overflow-hidden rounded mb-2">
+                                                <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15" onclick="faqToggle(this)">
+                                                    <p class="flex items-center gap-2 text-xs">Maps Total</p>
+                                                    <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </button>
+                                                <div class="overflow-hidden cursor-pointer text-xs">
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">W2</button>
+                                                </div>
+                                            </div>
+                                            <div class="game_fold open overflow-hidden rounded mb-2">
+                                                <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15" onclick="faqToggle(this)">
+                                                    <p class="flex items-center gap-2 text-xs">Map 1 Rounds Handicap</p>
+                                                    <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </button>
+                                                <div class="overflow-hidden cursor-pointer text-xs">
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(5.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(4.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(3.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(-2.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(2.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(3.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(4.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(5.5)</button>
+                                                    <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(6.5)</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
 
                             </div>

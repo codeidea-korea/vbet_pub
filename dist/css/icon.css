@@ -5932,3 +5932,192 @@
     content: "\e919";
   }
   
+  @font-face {
+    font-family: 'wheelicomoon';
+    src:  url('../fonts/wheel/icomoon.eot');
+    src:  url('../fonts/wheel/icomoon.eot') format('embedded-opentype'),
+      url('../fonts/wheel/icomoon.ttf') format('truetype'),
+      url('../fonts/wheel/icomoon.woff') format('woff'),
+      url('../fonts/wheel/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="wicon-"], [class*=" wicon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'wheelicomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .wicon-depo:before {
+    content: "\e935";
+  }
+  .wicon-birthday:before {
+    content: "\e934";
+  }
+  .wicon-viva:before {
+    content: "\e933";
+  }
+  .wicon-turbo-mode:before {
+    content: "\e931";
+  }
+  .wicon-auto-spin:before {
+    content: "\e932";
+  }
+  .wicon-dream-team:before {
+    content: "\e92f";
+  }
+  .wicon-terms:before {
+    content: "\e930";
+  }
+  .wicon-search:before {
+    content: "\e92e";
+  }
+  .wicon-lock:before {
+    content: "\e92d";
+  }
+  .wicon-fast-token:before {
+    content: "\e92c";
+  }
+  .wicon-tik-tak:before {
+    content: "\e92b";
+  }
+  .wicon-extra-sections:before {
+    content: "\e92a";
+  }
+  .wicon-vector:before {
+    content: "\e929";
+  }
+  .wicon-big-left:before {
+    content: "\e927";
+  }
+  .wicon-big-right:before {
+    content: "\e928";
+  }
+  .wicon-lock1:before {
+    content: "\e925";
+  }
+  .wicon-star:before {
+    content: "\e926";
+  }
+  .wicon-safe:before {
+    content: "\e924";
+  }
+  .wicon-extra:before {
+    content: "\e922";
+  }
+  .wicon-bonus:before {
+    content: "\e923";
+  }
+  .wicon-telegram:before {
+    content: "\e921";
+  }
+  .wicon-extra-1:before {
+    content: "\e920";
+  }
+  .wicon-exchange-1:before {
+    content: "\e91f";
+  }
+  .wicon-vip:before {
+    content: "\e91e";
+  }
+  .wicon-take-2:before {
+    content: "\e91d";
+  }
+  .wicon-exchange:before {
+    content: "\e91c";
+  }
+  .wicon-chest:before {
+    content: "\e90a";
+  }
+  .wicon-main:before {
+    content: "\e90d";
+  }
+  .wicon-chest-stroke:before {
+    content: "\e91b";
+  }
+  .wicon-results:before {
+    content: "\e91a";
+  }
+  .wicon-peoples:before {
+    content: "\e919";
+  }
+  .wicon-close-icon:before {
+    content: "\e909";
+  }
+  .wicon-eye-icon:before {
+    content: "\e912";
+  }
+  .wicon-slider-next-icon:before {
+    content: "\e913";
+  }
+  .wicon-slider-prev-icon:before {
+    content: "\e914";
+  }
+  .wicon-all-icon:before {
+    content: "\e915";
+  }
+  .wicon-carousel-icon:before {
+    content: "\e916";
+  }
+  .wicon-carousel-next-slider:before {
+    content: "\e917";
+  }
+  .wicon-carousel-prev-slider:before {
+    content: "\e918";
+  }
+  .wicon-info:before {
+    content: "\e901";
+  }
+  .wicon-reload:before {
+    content: "\e900";
+  }
+  .wicon-santa-bag:before {
+    content: "\e902";
+  }
+  .wicon-settings:before {
+    content: "\e903";
+  }
+  .wicon-socks:before {
+    content: "\e904";
+  }
+  .wicon-sound:before {
+    content: "\e905";
+  }
+  .wicon-sunduk:before {
+    content: "\e906";
+  }
+  .wicon-turbo-spin:before {
+    content: "\e907";
+  }
+  .wicon-user:before {
+    content: "\e908";
+  }
+  .wicon-auto-open:before {
+    content: "\e90b";
+  }
+  .wicon-box:before {
+    content: "\e90c";
+  }
+  .wicon-done:before {
+    content: "\e90e";
+  }
+  .wicon-home:before {
+    content: "\e90f";
+  }
+  .wicon-info-light:before {
+    content: "\e910";
+  }
+  .wicon-quick-open:before {
+    content: "\e911";
+  }
