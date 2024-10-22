@@ -484,3 +484,98 @@
     </div>
 </div>
 
+<!-- wonder wheel mobile modal - result -->
+<div id="wheel_promo_result-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-4 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                <button class="close_btn fixed" onclick="modalClose('wheel_promo_result-modal')"><i class="bc-i-close-remove text-primary text-lg"></i></button>
+                
+                <div class="mb-5 text-center font-medium text-base">Promo Results</div>
+                <div class="mb-3">         
+                    <div class="form-check form-switch promo-switch"> <input id="promo_check" class="form-check-input" type="checkbox"> </div>
+                </div>
+                <div class="overflow-y-auto primaryscrollbar pr-2">
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- wonder wheel ticket modal -->
+<div id="wheel_promo_ticket-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content !bg-transparent">
+            <div class="modal-body flex flex-col gap-5 fix_height !p-0">
+                <button class="close_btn fixed" onclick="modalClose('wheel_promo_ticket-modal')"><i class="bc-i-close-remove text-primary text-lg"></i></button>
+                
+                <ul class="nav nav-boxed-tabs bg_none_type overflow-hidden w-4/5 mx-auto !rounded-3xl border border-light2-opacity bg-dark-primary" role="tablist">
+                    <li id="wheel_ticket-3-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full h-14 py-2 !rounded-3xl active" data-tw-toggle="pill" data-tw-target="#wheel_ticket-tab-3" type="button" role="tab" aria-controls="wheel_ticket-tab-3" aria-selected="true"> MY TICKETS </button> 
+                    </li>
+                    <li id="wheel_ticket-4-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full h-14 py-2 !rounded-3xl" data-tw-toggle="pill" data-tw-target="#wheel_ticket-tab-4" type="button" role="tab" aria-controls="wheel_ticket-tab-4" aria-selected="false"> PROMO RESULTS </button> 
+                    </li>
+                </ul>
+                <div class="flex-1 tab-content">
+                    <div id="wheel_ticket-tab-3" class="tab-pane leading-relaxed h-full active" role="tabpanel" aria-labelledby="wheel_ticket-3-tab"> 
+                        <div class="flex flex-col items-center justify-around h-full rounded-3xl border border-light2-opacity bg-dark-primary shadow-3">
+                            <img class="w-2/5" src="./dist/images/wonderwheel/tickets.png" alt="">
+                            <input type="text" class="form-control !w-4/5" placeholder="Search">
+                            <div></div>
+                            <div class="text-center">
+                                <p class="fs10">No Available Tickets</p>
+                                <p class="text-base text-white text-opacity-50">There is no data to show.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wheel_ticket-tab-4" class="tab-pane leading-relaxed h-full" role="tabpanel" aria-labelledby="wheel_ticket-4-tab"> 
+                        <div class="flex flex-col items-center justify-around h-full rounded-3xl border border-light2-opacity bg-dark-primary shadow-3">
+                            <p class="text-center text-white text-opacity-50">No History Yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

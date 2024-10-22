@@ -303,8 +303,8 @@ const loadJquery = ()=>{
             loop: slideLoop,
             initialSlide: initial,
             scrollbar: {
-                el: '.mySwiper.num' + index + ' .swiper-scrollbar',
-                hide: true,
+                el: '.mySwiper.num' + index + ' .scrollbar',
+                // hide: true,
             }
         });		
         if($(this).attr('data-slideto') == '1') {

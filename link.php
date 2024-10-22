@@ -98,12 +98,22 @@ echo txtRecord('./@record/');
 								<li><a href="./casino_tournament_detail.html" target="_blank">tournaments - detail</a></li>
 							</ul>
 						</li>
+						<li><a href="./casino_jackpot.html" target="_blank">jackpot</a></li>
 					</ul>
 				</li>
 				<li class="mt10" data-label="Live Casino">
 					<ul>
 						<li><a href="./live_casino.html" target="_blank" class="">live casino</a></li>
-						<li><a href="./live_casino_tournament.html">tournaments</a></li>
+						<li><a href="./live_casino_tournament.html" target="_blank">tournaments</a></li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Wonder Wheel">
+					<ul>
+						<li><a href="./wonderwheel.html" target="_blank" class="">Wonder Wheel</a></li>
+						<li>
+							<button class="pop-modal" onclick="modalOpen('wheel_promo_ticket-modal')">ticket 모달</button>
+							<button class="pop-modal" onclick="modalOpen('wheel_promo_result-modal')">모바일 result 모달</button>
+						</li>
 					</ul>
 				</li>
 				<li class="mt10" data-label="Poker">

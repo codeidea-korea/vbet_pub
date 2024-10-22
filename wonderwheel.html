@@ -35,15 +35,15 @@
 
                     <div class="inner">
                         <div class="py-10 bg4-gradient">
-                            <div class="px-3 text-right">
+                            <div class="px-3 text-center md:text-right">
                                 <img class="mx-auto h-12" src="./dist/images/wonderwheel/Logo" alt="">
-                                <a href="javascript:;" class="block -mt-4 underline">TERMS & CONDITIONS</a>
+                                <a href="javascript:;" class="block mt-2 md:-mt-4 underline">TERMS & CONDITIONS</a>
                             </div>
 
-                            <div class="mt-20">
-                                <div class="flex items-start gap-10 px-5">
-                                    <div class="shrink-0 w-72">
-                                        <div class="py-7 px-3 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                            <div class="mt-10 md:mt-20 pb-20">
+                                <div class="flex flex-col lg:flex-row gap-10 px-5">
+                                    <div class="shrink-0 flex flex-col gap-5 w-full lg:w-72 xl:w-80 order-2 lg:order-1">
+                                        <div class="hidden md:block flex-1 py-7 px-3 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
                                             <h3 class="mb-5 font-medium">ACHIEVEMENTS</h3>
                                             <div class="grid grid-cols-2 gap-2">
                                                 <div class="relative">
@@ -78,8 +78,53 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="md:hidden block flex-1 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                                            <ul class="nav nav-tabs round_type half_type" role="tablist">
+                                                <li id="mowheeltab-1-tab" class="nav-item flex-1" role="presentation"> 
+                                                    <button class="nav-link text-white active" data-tw-toggle="pill" data-tw-target="#mowheeltab-tab-1" type="button" role="tab" aria-controls="mowheeltab-tab-1" aria-selected="true"> ACHIEVEMENTS</button> 
+                                                </li>
+                                                <li id="mowheeltab-2-tab" class="nav-item flex-1" role="presentation"> 
+                                                    <button class="nav-link text-white" data-tw-toggle="pill" data-tw-target="#mowheeltab-tab-2" type="button" role="tab" aria-controls="mowheeltab-tab-2" aria-selected="false"> DAILY GAMES </button> 
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content round_type half_type">
+                                                <div id="mowheeltab-tab-1" class="tab-pane leading-relaxed p-5 active" role="tabpanel" aria-labelledby="mowheeltab-1-tab"><i class="round"></i> 
+                                                    <div class="grid grid-cols-2 gap-2">
+                                                        <div class="relative">
+                                                            <div class="circle_box">
+                                                                <svg viewBox="0 0 33.83098862 33.83098862" width="100%" xmlns="http://www.w3.org/2000/svg"><circle fill="none" r="14" cx="16.91549431" cy="16.91549431" stroke-width="2" class="circle-bg" stroke-linecap="round"></circle><circle fill="none" r="14" cx="16.91549431" cy="16.91549431" stroke-width="2" class="circle" stroke-linecap="round" stroke-dasharray="0, 360"></circle></svg>
+                                                                <div class="absolute left-0 w-full text-center text-xs"><b class="block text-lg font-bold">0</b>5000</div>
+                                                            </div>
+                                                            <button class="absolute right-0 top-0 tooltip" data-placement="bottom" title="By wagering a total of 5,000 AMD on Popok Gaming slots, you get 1 Wonder Wheel Spin once a day. This scale can be met once a day."><i class="text-lg wicon-info-light"></i></button>
+                                                            <div class="fs9 font-medium text-center uppercase">5,000 AMD Scale</div>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <div class="circle_box">
+                                                                <svg viewBox="0 0 33.83098862 33.83098862" width="100%" xmlns="http://www.w3.org/2000/svg"><circle fill="none" r="14" cx="16.91549431" cy="16.91549431" stroke-width="2" class="circle-bg" stroke-linecap="round"></circle><circle fill="none" r="14" cx="16.91549431" cy="16.91549431" stroke-width="2" class="circle" stroke-linecap="round" stroke-dasharray="0, 360"></circle></svg>
+                                                                <div class="absolute left-0 w-full text-center text-xs"><b class="block text-lg font-bold">0</b>10000</div>
+                                                            </div>
+                                                            <button class="absolute right-0 top-0 tooltip" data-placement="left" title="Make a 10,000 AMD total bet on VBET21 slot and get 2 Wonder Wheel Spins once a day. This scale can be completed once a day only."><i class="text-lg wicon-info-light"></i></button>
+                                                            <div class="fs9 font-medium text-center uppercase">Boosted Games</div>
+                                                        </div>  
+                                                    </div>  
+                                                </div>
+                                                <div id="mowheeltab-tab-2" class="tab-pane leading-relaxed p-5" role="tabpanel" aria-labelledby="mowheeltab-2-tab"><i class="round"></i> 
+                                                    <div class="text-right"><button class="tooltip" datas-placement="bottom" title="By wagering a total of 5,000 AMD on Popok Gaming slots, you get 1 Wonder Wheel Spin once a day. This scale can be met once a day."><i class="text-lg wicon-info-light"></i></button></div>
+                                                    <div class="overflow-hidden mySwiper" data-per="auto" data-gap="10" data-loop="false">
+                                                        <div class="swiper-container pb-20">
+                                                            <ul class="swiper-wrapper">
+                                                                <li class="swiper-slide !w-28"><a href="javascript:;"><img class="rounded" src="./dist/images/casino/casino_1.gif" alt=""></a></li>
+                                                                <li class="swiper-slide !w-28"><a href="javascript:;"><img class="rounded" src="./dist/images/casino/casino_2.webp" alt=""></a></li>
+                                                                <li class="swiper-slide !w-28"><a href="javascript:;"><img class="rounded" src="./dist/images/casino/casino_3.gif" alt=""></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="scrollbar"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                        <div class="py-7 px-3 mt-5 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                                        <div class="py-7 px-3 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
                                             <div class="flex items-center justify-center gap-2 mb-2 text-center font-medium">Wonder Wheel <i class="wicon-viva"></i></div>
                                             <div class="flex items-center justify-between py-5">
                                                 <p class="font-bold">80 CHANCES</p>
@@ -89,29 +134,36 @@
                                             <button class="w-full py-4 px-5 border-none bg-light2-primary rounded-3xl font-medium text-base">EXCHANGE</button>
                                         </div>
 
-                                        <div class="py-7 px-3 mt-5 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
-
+                                        <div class="flex-1 py-7 px-5 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                                            <div class="grid grid-cols-4 gap-6">
+                                                <div class="relative"><img src="./dist/images/wonderwheel/icon_o" alt=""><span class="absolute -right-2 -top-2 flex items-center justify-center w-6 h-6 bg-purple-900 rounded-full text-xs">0</span></div>
+                                                <div class="relative"><img src="./dist/images/wonderwheel/icon_r" alt=""><span class="absolute -right-2 -top-2 flex items-center justify-center w-6 h-6 bg-purple-900 rounded-full text-xs">0</span></div>
+                                                <div class="relative"><img src="./dist/images/wonderwheel/icon_t" alt=""><span class="absolute -right-2 -top-2 flex items-center justify-center w-6 h-6 bg-purple-900 rounded-full text-xs">0</span></div>
+                                                <div class="relative"><img src="./dist/images/wonderwheel/icon_a" alt=""><span class="absolute -right-2 -top-2 flex items-center justify-center w-6 h-6 bg-purple-900 rounded-full text-xs">0</span></div>
+                                                <div class="relative"><img src="./dist/images/wonderwheel/icon_k" alt=""><span class="absolute -right-2 -top-2 flex items-center justify-center w-6 h-6 bg-purple-900 rounded-full text-xs">0</span></div>
+                                                <div class="flex items-center justify-center"><button class="underline text-lg"><b>0</b> / 5</button></div>
+                                            </div>
                                         </div>
 
 
                                     </div>
 
-                                    <div class="flex-1">
-                                        <ul class="nav nav-boxed-tabs type02 pt-10" role="tablist">
+                                    <div class="flex-1 order-1 lg:order-2">
+                                        <ul class="nav nav-boxed-tabs type02 pt-4 md:pt-10" role="tablist">
                                             <li id="wheel-1-tab" class="nav-item" role="presentation"> 
-                                                <button class="nav-link w-full py-2 active" data-tw-toggle="pill" data-tw-target="#wheel-tab-1" type="button" role="tab" aria-controls="wheel-tab-1" aria-selected="true"><i class="text-2xl wicon-main"></i><span>WONDER WHEEL</span><b>0</b></button> 
+                                                <button class="nav-link w-full py-2 active" data-tw-toggle="pill" data-tw-target="#wheel-tab-1" type="button" role="tab" aria-controls="wheel-tab-1" aria-selected="true"><i class="text-lg md:text-2xl wicon-main"></i><span>WONDER WHEEL</span><b>0</b></button> 
                                             </li>
                                             <li id="wheel-2-tab" class="nav-item" role="presentation"> 
-                                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#wheel-tab-2" type="button" role="tab" aria-controls="wheel-tab-2" aria-selected="true"><i class="text-2xl wicon-vip"></i><span>VIP WHEEL</span><b>0</b></button> 
+                                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#wheel-tab-2" type="button" role="tab" aria-controls="wheel-tab-2" aria-selected="true"><i class="text-lg md:text-2xl wicon-vip"></i><span>VIP WHEEL</span><b>0</b></button> 
                                             </li>
                                             <li id="wheel-3-tab" class="nav-item" role="presentation"> 
-                                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#wheel-tab-3" type="button" role="tab" aria-controls="wheel-tab-3" aria-selected="true"><i class="text-2xl wicon-extra"></i><span>ROYAL WHEEL</span><b>0</b></button> 
+                                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#wheel-tab-3" type="button" role="tab" aria-controls="wheel-tab-3" aria-selected="true"><i class="text-lg md:text-2xl wicon-extra"></i><span>ROYAL WHEEL</span><b>0</b></button> 
                                             </li>
                                             <li id="wheel-4-tab" class="nav-item" role="presentation"> 
-                                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#wheel-tab-4" type="button" role="tab" aria-controls="wheel-tab-4" aria-selected="false"><i class="text-2xl wicon-take-2"></i><span>SUPER WHEEL</span><b>0</b></button> 
+                                                <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#wheel-tab-4" type="button" role="tab" aria-controls="wheel-tab-4" aria-selected="false"><i class="text-lg md:text-2xl wicon-take-2"></i><span>SUPER WHEEL</span><b>0</b></button> 
                                             </li>
                                         </ul>
-                                        <div class="tab-content mt-20">
+                                        <div class="tab-content wheel_tab-content mt-10 md:mt-20">
                                             <div id="wheel-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="wheel-3-tab">
                                                 <!-- wonder wheel -->
                                                 <div class="wheel_box wonder_wheel">
@@ -133,7 +185,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="mt-20 text-center">
+                                                <div class="mt-10 md:mt-20 text-center">
                                                     <button class="py-4 px-5 border-none bg-light2-primary rounded-3xl font-medium text-base">1 SPIN 1000 AMD</button>
                                                 </div>
                                                 <div class="flex items-center justify-center gap-5 mt-10 text-center">
@@ -157,7 +209,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="mt-20 text-center">
+                                                <div class="mt-10 md:mt-20 text-center">
                                                     <button class="py-4 px-5 border-none bg-light2-primary rounded-3xl font-medium text-base">1 SPIN 20000 AMD</button>
                                                 </div>
                                                 <div class="flex items-center justify-center gap-5 mt-10 text-center">
@@ -182,7 +234,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="mt-20 text-center">
+                                                <div class="mt-10 md:mt-20 text-center">
                                                     <button class="py-4 px-5 border-none bg-light2-primary rounded-3xl font-medium text-base">1 SPIN 20000 AMD</button>
                                                 </div>
                                             </div>
@@ -202,7 +254,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="flex items-center justify-center gap-5 mt-20 text-center">
+                                                <div class="flex items-center justify-center gap-5 mt-10 md:mt-20 text-center">
                                                     <button class="flex items-center gap-2 py-4 px-4 border border-[#d80d83] bg-transparent rounded-3xl font-medium text-xs"><i class="text-base wicon-reload"></i>AUTO SPIN</button>
                                                     <button class="flex items-center gap-2 py-4 px-4 border border-[#d80d83] bg-transparent rounded-3xl font-medium text-xs"><i class="text-base wicon-turbo-spin"></i>TURBO MODE</button>
                                                 </div>
@@ -210,24 +262,157 @@
                                         </div>
                                     </div>
 
-                                    <div class="shrink-0 w-72">
-                                        <div class="py-7 px-3 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
-                                            
+                                    <div class="shrink-0 flex flex-col gap-5 w-full lg:w-72 xl:w-80 order-3">
+                                        <div class="md:block hidden">
+                                            <div class="flex items-center justify-between">
+                                                <p class="font-medium">DAILY GAMES</p>
+                                                <button class="tooltip" datas-placement="bottom" title="By wagering a total of 5,000 AMD on Popok Gaming slots, you get 1 Wonder Wheel Spin once a day. This scale can be met once a day."><i class="text-lg wicon-info-light"></i></button>
+                                            </div>
+                                            <div class="overflow-hidden mySwiper" data-per="auto" data-gap="10" data-loop="false">
+                                                <div class="swiper-container pb-20">
+                                                    <ul class="swiper-wrapper">
+                                                        <li class="swiper-slide !w-28"><a href="javascript:;"><img class="rounded" src="./dist/images/casino/casino_1.gif" alt=""></a></li>
+                                                        <li class="swiper-slide !w-28"><a href="javascript:;"><img class="rounded" src="./dist/images/casino/casino_2.webp" alt=""></a></li>
+                                                        <li class="swiper-slide !w-28"><a href="javascript:;"><img class="rounded" src="./dist/images/casino/casino_3.gif" alt=""></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="scrollbar"></div>
+                                            </div>
                                         </div>
 
-                                        <div class="py-7 px-3 mt-5 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
-                                            
+                                        <div class="md:block hidden rounded-3xl border border-light2-opacity bg-dark-primary shadow-3">
+                                            <button class="w-full p-3 font-bold uppercase" onclick="modalOpen('wheel_promo_ticket-modal')">previous wheel results</button>
                                         </div>
 
-                                        <div class="py-7 px-3 mt-5 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
-                                            
+                                        <div class="md:block hidden py-5 px-3 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                                            <div class="mb-5 text-center font-medium">Promo Results</div>
+                                            <div class="mb-3">         
+                                                <div class="form-check form-switch promo-switch"> <input id="promo_check" class="form-check-input" type="checkbox"> </div>
+                                            </div>
+                                            <div class="overflow-y-auto primaryscrollbar h-44 pr-2">
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                                <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2">
+                                                    <p>10 FREE SPINS</p>
+                                                    <p class="fs11 text-white text-opacity-50">1079721817</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex-1 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                                            <ul class="nav nav-tabs round_type" role="tablist">
+                                                <li id="wheeltab-1-tab" class="nav-item flex-1" role="presentation"> 
+                                                    <button class="nav-link text-white active" data-tw-toggle="pill" data-tw-target="#wheeltab-tab-1" type="button" role="tab" aria-controls="wheeltab-tab-1" aria-selected="true"> <i class="wicon-main"></i><span>Wonder Wheel</span> </button> 
+                                                </li>
+                                                <li id="wheeltab-2-tab" class="nav-item flex-1" role="presentation"> 
+                                                    <button class="nav-link text-white" data-tw-toggle="pill" data-tw-target="#wheeltab-tab-2" type="button" role="tab" aria-controls="wheeltab-tab-2" aria-selected="false"> <i class="wicon-extra"></i><span>Royal Wheel</span> </button> 
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content round_type">
+                                                <div id="wheeltab-tab-1" class="tab-pane leading-relaxed p-5 active" role="tabpanel" aria-labelledby="wheeltab-1-tab"><i class="round"></i> 
+                                                    <div class="flex items-center justify-between py-2 border-b border-dark2">
+                                                        <div class="flex items-center gap-2"><img class="w-12" src="./dist/images/wonderwheel/item_6.png" alt=""><span class="text-base text-white text-opacity-80">Royal Wheel</span></div>
+                                                        <div class="fs11"><b class="text-lg">0 /</b> 30</div>
+                                                    </div>    
+                                                </div>
+                                                <div id="wheeltab-tab-2" class="tab-pane leading-relaxed p-5" role="tabpanel" aria-labelledby="wheeltab-2-tab"><i class="round"></i> 
+                                                    <div class="flex items-center justify-between py-2 border-b border-dark2">
+                                                        <div class="flex items-center gap-2"><img class="w-12" src="./dist/images/wonderwheel/item_1.png" alt=""><span class="text-base text-white text-opacity-80">NFT Of Game</span></div>
+                                                        <div class="fs11"><b class="text-lg">0 /</b> 10</div>
+                                                    </div>    
+                                                    <div class="flex items-center justify-between py-2 border-b border-dark2">
+                                                        <div class="flex items-center gap-2"><img class="w-12" src="./dist/images/wonderwheel/item_9.png" alt=""><span class="text-base text-white text-opacity-80">NFT Of Game</span></div>
+                                                        <div class="fs11"><b class="text-lg">0 /</b> 10</div>
+                                                    </div>  
+                                                    <div class="flex items-center justify-between py-2 border-b border-dark2">
+                                                        <div class="flex items-center gap-2"><img class="w-12" src="./dist/images/wonderwheel/item_10.png" alt=""><span class="text-base text-white text-opacity-80">SUPER SPIN</span></div>
+                                                        <div class="fs11"><b class="text-lg">0 /</b> 10</div>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="block md:hidden rounded-3xl border border-light2-opacity bg-dark-primary shadow-3">
+                                            <button class="w-full p-3 font-bold text-base uppercase" onclick="modalOpen('wheel_promo_result-modal')"><i class="mr-2 wicon-results"></i>PROMO RESULTS</button>
+                                        </div>
+
+                                        <div class="block md:hidden rounded-3xl border border-light2-opacity bg-dark-primary shadow-3">
+                                            <button class="w-full p-3 font-bold uppercase" onclick="modalOpen('wheel_promo_ticket-modal')">previous wheel results</button>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="py-7 px-3 mt-5 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
-                                            
+                                <div class="px-5">
+                                    <div class="md:block hidden py-7 px-3 mt-5 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                                        <div class="relative mySwiper overflow-hidden px-10" data-per="auto" data-gap="50" data-loop="false">
+                                            <div class="swiper-container">
+                                                <ul class="swiper-wrapper">
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_1.png" alt=""><p class="text-center">ORTAK</p></li>
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">2 Free Spins</p></li>
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_3.png" alt=""><p class="text-center">2000 ֏ Bonus</p></li>
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_4.png" alt=""><p class="text-center">1000 ֏</p></li>
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">5 Free Spins</p></li>
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">10 Free Spins</p></li>
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">30 Free Spins</p></li>
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_5.png" alt=""><p class="text-center">NFT Of Game</p></li>
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">7 Free Spins</p></li>
+                                                    <li class="swiper-slide !w-auto"><img class="w-20" src="./dist/images/wonderwheel/item_6.png" alt=""><p class="text-center">Royal Wheel</p></li>
+                                                </ul>
+                                            </div>
+                                            <button class="slide_arrow prev bc-i-small-arrow-left text-primary"></button>
+                                            <button class="slide_arrow next bc-i-small-arrow-right text-primary"></button>
+                                        </div>
+                                    </div>
+                                    <div class="block md:hidden py-7 px-3 mt-5 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                                        <ul class="grid grid-cols-2 gap-6">
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_1.png" alt=""><p class="text-center">ORTAK</p></li>
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">2 Free Spins</p></li>
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_3.png" alt=""><p class="text-center">2000 ֏ Bonus</p></li>
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_4.png" alt=""><p class="text-center">1000 ֏</p></li>
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">5 Free Spins</p></li>
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">10 Free Spins</p></li>
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">30 Free Spins</p></li>
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_5.png" alt=""><p class="text-center">NFT Of Game</p></li>
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_2.png" alt=""><p class="text-center">7 Free Spins</p></li>
+                                            <li><img class="w-20 mx-auto" src="./dist/images/wonderwheel/item_6.png" alt=""><p class="text-center">Royal Wheel</p></li>
+                                        </ul>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
