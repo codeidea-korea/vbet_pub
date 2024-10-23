@@ -115,6 +115,7 @@
 /* pc 높이 고정 */
 @media all and (min-width:768px){
     .full_height {height:calc(100vh - 95px); }
+    .sub .full_height {height:calc(100vh - 133px); }
 }
 
 
@@ -914,5 +915,56 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 
 
 
+.footballfield .field .rtl,
+.footballfield .events .rtl {transform-origin: center; transform: rotate(180deg); }
+
+.footballfield .fieldBg .bgRect {fill: #388E3C; }
+.footballfield .fieldBg .bgLineDark {fill: #43A047; opacity: 0.4; }
+.footballfield .fieldBg .bgLineLight {fill: #43A047; }
+
+.footballfield .teamsZones .homeZone,
+.footballfield .teamsZones .homeGoal,
+.footballfield .teamsZones .awayZone,
+.footballfield .teamsZones .awayGoal {fill: transparent;}
+.footballfield .teamsZones .homeGoal {transform: rotate(180deg); transform-origin: center;}
+
+.footballfield .layout path, 
+.footballfield .layout ellipse {fill: #8CC490;}
+.footballfield .layout .awayGoalLine {transform: rotate(180deg); transform-origin: center; }
+
+.footballfield .timer {transform: translate(50%, 0);}
+
+.footballfield .home .homeZone {fill: #29602999; animation: zoneFill 0.5s;}
+.footballfield .away .awayZone {fill: #29602999; animation: zoneFill 0.5s;}
+.footballfield .none .homeZone,
+.footballfield .none .awayZone {fill: #29602999; animation: zoneFill 0.5s;}
+
+.footballfield .goal .homeZone,
+.footballfield .goal .awayZone {fill: #29602999; animation: zoneFill 0.5s;}
+
+.footballfield .goal.home .awayGoal ,
+.footballfield .freeKick.home .awayGoal ,
+.footballfield .shotOff.home .awayGoal ,
+.footballfield .penaltyMissed.home .awayGoal {fill: #29602999; animation: zoneFill 0.5s;}
+
+.footballfield .goal.home .awayGoalLine ,
+.footballfield .freeKick.home .awayGoalLine ,
+.footballfield .shotOff.home .awayGoalLine ,
+.footballfield .penaltyMissed.home .awayGoalLine {fill: white;}
+
+.footballfield .goal.away .homeGoal ,
+.footballfield .freeKick.away .homeGoal ,
+.footballfield .shotOff.away .homeGoal ,
+.footballfield .penaltyMissed.away .homeGoal {fill: #29602999; animation: zoneFill 0.5s;}
+
+.footballfield .goal.away .homeGoalLine ,
+.footballfield .freeKick.away .homeGoalLine ,
+.footballfield .shotOff.away .homeGoalLine ,
+.footballfield .penaltyMissed.away .homeGoalLine {fill: white;}
 
 
+
+@keyframes zoneFill {
+    0% { fill: transparent; }
+    100% { fill: #29602999; }
+}

@@ -147,13 +147,13 @@ const gameToggle = (item)=>{
 }
 
 // game_fold 전체 제어
-const gameAllToggle = (item)=>{
+const gameAllToggle = (item,cate)=>{
     if($(item).hasClass('active')){
         $(item).removeClass('active')
-        $(item).siblings('.game_fold').removeClass('open')
+        $(item).parents('.bet_btn_box').find('.game_fold').removeClass('open')
     }else{
         $(item).addClass('active')
-        $(item).siblings('.game_fold').addClass('open')
+        $(item).parents('.bet_btn_box').find('.game_fold').addClass('open')
     }
 }
 
@@ -265,6 +265,16 @@ const zzimToggle = (item) =>{
     $(item).toggleClass('bc-i-favorite bc-i-star')
 }
 
+// grid 변경
+const changeGrid = (item,num)=>{
+    $(item).addClass('text-opacity-100').removeClass('text-opacity-50');
+    $(item).siblings().removeClass('text-opacity-100').addClass('text-opacity-50');
+    if(num=='one'){
+        $('.game_fold_wrap').removeClass('grid-cols-2').addClass('grid-cols-1');
+    }else{
+        $('.game_fold_wrap').addClass('grid-cols-2').removeClass('grid-cols-1');
+    }
+}
 
 
 

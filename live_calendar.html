@@ -32,14 +32,750 @@
             <div class="content !min-h-fit">
                 
                 <div class="content_box">
-                    <div class="flex gap-3 full_height py-2">
+                    <div class="flex gap-3 full_height py-2 px-3">
                         
                         <div class="overflow-y-auto flex-grow px-0.5 md:pr-1">
+                            <!-- top filter -->
+                            <div class="overflow-hidden z-10 sticky top-0 flex flex-col lg:flex-row items-center gap-3 w-full bg-bg">
+                                <div class="custom_select check w-full lg:w-2/6">
+                                    <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left"><span class="text-xs opacity-50">Sport</span><p>Football</p> <i class="arrow bc-i-small-arrow-down !fs10"></i></button>
+                                    <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                        <ul>
+                                            <li class="bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_1" class="form-check-input" type="checkbox" value="all">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_1"><i class="mr-2 text-base bc-i-sport"></i>All</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_2" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_2"><i class="mr-2 text-base bc-i-Soccer i-soccer"></i>Football</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_3" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_3"><i class="mr-2 text-base bc-i-Basketball i-basketball"></i>Basketball</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_4" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_4"><i class="mr-2 text-base bc-i-Tennis i-Tennis"></i>Tennis</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_5" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_5"><i class="mr-2 text-base bc-i-IceHockey i-IceHockey"></i>Ice Hockey</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_6" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_6"><i class="mr-2 text-base bc-i-Volleyball i-volleyball"></i>Volleyball</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_7" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_7"><i class="mr-2 text-base bc-i-Handball i-handball"></i>Handball</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_8" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_8"><i class="mr-2 text-base bc-i-TableTennis i-tabletennis"></i>Table Tennis</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_9" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_9"><i class="mr-2 text-base bc-i-Mma i-mma"></i>MMA</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_10" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_10"><i class="mr-2 text-base bc-i-AmericanFootball i-americanFootball"></i>American Football</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_11" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_11"><i class="mr-2 text-base bc-i-Baseball i-baseball"></i>Baseball</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_12" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_12"><i class="mr-2 text-base bc-i-Cricket i-cricket"></i>Cricket</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_13" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_13"><i class="mr-2 text-base bc-i-Cycling i-cycling"></i>Cycling</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_14" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_14"><i class="mr-2 text-base bc-i-Formula1 i-formula1"></i>Formula1</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_15" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_15"><i class="mr-2 text-base bc-i-Politics i-politics"></i>Politics</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_16" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_16"><i class="mr-2 text-base bc-i-RugbyUnion i-rugbyunion"></i>Rugby Union</label>
+                                                </div>
+                                            </li>
+                                            <li class="mt-[2px] bg-white text-xs !font-normal bg-opacity-10 hover:bg-opacity-20 rounded">
+                                                <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                    <input id="sport_cate_17" class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="sport_cate_17"><i class="mr-2 text-base bc-i-CounterStrike i-counterstrike2"></i>Counter Strike</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sport_calender w-full lg:w-4/6 p-3 bg-white bg-opacity-5 rounded noscrollbar">
+                                    <button class="active border border-white h-7 px-4 text-xs bg-white bg-opacity-0 hover:bg-opacity-20 rounded" onclick="btnActiveRadio(this)">23.10 WED</button>
+                                    <button class="border border-white h-7 px-4 text-xs bg-white bg-opacity-0 hover:bg-opacity-20 rounded" onclick="btnActiveRadio(this)">23.10 THU</button>
+                                    <button class="border border-white h-7 px-4 text-xs bg-white bg-opacity-0 hover:bg-opacity-20 rounded" onclick="btnActiveRadio(this)">23.10 FRI</button>
+                                    <button class="border border-white h-7 px-4 text-xs bg-white bg-opacity-0 hover:bg-opacity-20 rounded" onclick="btnActiveRadio(this)">23.10 SAT</button>
+                                    <button class="border border-white h-7 px-4 text-xs bg-white bg-opacity-0 hover:bg-opacity-20 rounded" onclick="btnActiveRadio(this)">23.10 SUN</button>
+                                    <button class="border border-white h-7 px-4 text-xs bg-white bg-opacity-0 hover:bg-opacity-20 rounded" onclick="btnActiveRadio(this)">23.10 MON</button>
+                                    <button class="border border-white h-7 px-4 text-xs bg-white bg-opacity-0 hover:bg-opacity-20 rounded" onclick="btnActiveRadio(this)">23.10 TUE</button>
+                                </div>
+                            </div>
 
+                            <div>
+                                <div class="flex justify-between h-7 mt-3 mb-2 bg-white bg-opacity-15 rounded">
+                                    <div class="custom_select border-r border-[#000c24]">
+                                        <button class="flex items-center justify-between gap-2.5 w-full h-full px-3 text-xs"><p>WINNER</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                        <div class="max-h-60 g-bg shadow-2">
+                                            <ul class="p-2">
+                                                <li class="active w-full mb-0.5  p-2 rounded text-xs"><p>WINNER</p></li>
+                                                <li class="w-full mb-0.5  p-2 rounded text-xs"><p>HANDICAP</p></li>
+                                                <li class="w-full mb-0.5  p-2 rounded text-xs"><p>TOTALS</p></li>
+                                                <li class="w-full mb-0.5  p-2 rounded text-xs"><p>ODD/EVEN</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-[1px] w-44 lg:w-80">
+                                        <div class="flex items-center justify-center flex-1 bg-white bg-opacity-10 text-xs">W1</div>
+                                        <div class="flex items-center justify-center flex-1 bg-white bg-opacity-10 text-xs">X</div>
+                                        <div class="flex items-center justify-center flex-1 bg-white bg-opacity-10 text-xs">W2</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden mb-0.5 bg-white bg-opacity-10 hover:bg-opacity-20 rounded cursor-pointer">
+                                        <div class="flex">
+                                            <div class="relative hidden lg:flex items-center gap-1.5 w-40 px-2.5 text-xs">
+                                                <i class="absolute right-0 top-[10%] w-[1px] h-4/5 bg-white bg-opacity-10"></i>
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center justify-between flex-1 pl-4 pr-2.5 py-2">
+                                                <div>
+                                                    <p>Antigua GFC</p>
+                                                    <p>LD Alajuelense</p>
+                                                </div>
+                                                <div class="md:block hidden">
+                                                    <div class="flex items-center justify-end gap-2.5 mb-2 text-xs"><i class="flag-bc czechrepublic"></i> +16</div>
+                                                    <div class="flex items-center justify-end gap-2.5 text-white text-opacity-70 text-xs">
+                                                        <button class="bc-i-statistics"></button>
+                                                        <button class="bc-i-push-notification-outline"></button>
+                                                        <button class="bc-i-favorite"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="shrink-0 flex gap-[1px] w-44 lg:w-80">
+                                                <button class="flex-1 h-full egame_btn is-up text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn is-down text-warning font-medium bg-white bg-opacity-10" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="block lg:hidden border-t-[1px] border-black border-opacity-50 py-2 px-3">
+                                            <div class="flex items-center gap-2 text-xs text-white text-opacity-70">
+                                                <i class="bc-i-Soccer i-soccer"></i>
+                                                <i class="bc-i-prematch"></i>
+                                                <p class="text-white text-opacity-50">17:00</p>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1 text-xs text-white text-opacity-70">
+                                                <i class="flag-bc czechrepublic"></i>
+                                                <button class="bc-i-statistics"></button>
+                                                <button class="bc-i-push-notification-outline"></button>
+                                                <p>+205</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    
+                                </div>
+
+                            </div>
                         </div>
 
                         <!-- bets -->
-                        <div class="md:block hidden overflow-y-auto shrink-0 w-80 pr-1">
+                        <div class="lg:block hidden overflow-y-auto shrink-0 w-80 pr-1">
                             <ul class="nav nav-boxed-tabs" role="tablist">
                                 <li id="bets-1-tab" class="nav-item flex-1" role="presentation"> 
                                     <button class="nav-link w-full py-1.5 active" data-tw-toggle="pill" data-tw-target="#bets-tab-1" type="button" role="tab" aria-controls="bets-tab-1" aria-selected="true">BetSlip</button> 

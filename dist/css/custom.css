@@ -200,3 +200,38 @@
 }
 
 
+/* ----------------------------------------------
+        sport > category
+---------------------------------------------- */
+.i-soccer {color:#109121; }
+.i-basketball {color:#fca601; }
+.i-Tennis {color:#a19e3e; }
+.i-IceHockey {color:#50a2c6; }
+.i-volleyball {color:#dac179; }
+.i-handball {color:#42777f; }
+.i-tabletennis {color:#839d24; }
+.i-mma {color:#868686; }
+.i-americanFootball {color:#e7685c; }
+.i-baseball {color:#5caaa7; }
+.i-cricket {color:#1bab7d; }
+.i-cycling {color:#d9c68f; }
+.i-formula1 {color:#b8292b; }
+.i-politics {color:#641f6e; }
+.i-rugbyunion {color:#799755; }
+.i-counterstrike2 {color:#cc581f; }
+
+
+.sport_calender button.active {--tw-bg-opacity:1; color:#000c24e6; }
+
+@media all and (min-width:768px){
+    .sport_calender {display:grid; grid-template-columns:repeat(auto-fill,minmax(94px,1fr)); grid-gap:5px; }
+}
+@media all and (max-width:768px){
+    .sport_calender {overflow-x:auto; white-space:nowrap; }
+    .sport_calender button.active {position:sticky; left:0; }
+}
+
+
+
+
+

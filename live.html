@@ -33,19 +33,314 @@
                 
                 <div class="content_box">
                     <div class="flex gap-3 full_height py-2">
-                        
+                        <!-- category -->
+                        <div class="lg:block hidden overflow-y-auto shrink-0 w-[300px] pr-1">
+
+                        </div>
+
                         <div class="overflow-y-auto flex-grow px-0.5 md:pr-1">
+
+                            <!-- 상단 -->
+                            <div class="overflow-hidden p-2.5 mb-0.5 rounded" style="background:url('./dist/images/sports/soccer_bg.png') no-repeat center center / cover; ">
+
+                            </div>
+
+                            <!-- 점수 -->
+                            <div class="mb-3 p-2.5 bg-white bg-opacity-10 rounded">
+                                <div class="flex mb-2.5">
+                                    <div class="flex-1"></div>
+                                    <div class="w-7 text-center fs10 bc-i-half-time"></div>
+                                    <div class="w-7 text-center fs10 bc-i-card-football text-warning"></div>
+                                    <div class="w-7 text-center fs10 bc-i-card-football text-danger"></div>
+                                    <div class="w-7 text-center fs10 bc-i-corner"></div>
+                                    <div class="w-7 text-center fs10 bc-i-penalty"></div>
+                                </div>
+                                <div class="flex mb-0.5 text-xs">
+                                    <div class="flex-1">Dhurakij Pundit University U21</div>
+                                    <div class="w-7 text-center">1</div>
+                                    <div class="w-7 text-center">2</div>
+                                    <div class="w-7 text-center">0</div>
+                                    <div class="w-7 text-center">5</div>
+                                    <div class="w-7 text-center">0</div>
+                                </div>
+                                <div class="flex text-xs">
+                                    <div class="flex-1">Nakhon Pathom Rajabhat University U21</div>
+                                    <div class="w-7 text-center">1</div>
+                                    <div class="w-7 text-center">1</div>
+                                    <div class="w-7 text-center">0</div>
+                                    <div class="w-7 text-center">4</div>
+                                    <div class="w-7 text-center">0</div>
+                                </div>
+                            </div>
+
+
+                            <!-- 탭 -->
+                            <div class="overflow-hidden relative flex h-9 bg-white bg-opacity-10 rounded">
+                                <div class="flex items-center justify-center w-9 h-9 bg-white bg-opacity-15">
+                                    <button class="bc-i-search text-lg" onclick="searchToggle(this)"></button>
+                                    <input type="text" class="z-10 absolute left-9 top-0 hidden h-9 form-control line-add !bg-bg rounded-l-none" style="width:0" placeholder="Search market...">
+                                </div>
+                                <div class="relative flex-1 mySwiper" data-per="auto" data-gap="0" data-loop="false">
+                                    <div class="swiper-container">
+                                        <ul class="swiper-wrapper font-medium custom_tab">
+                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 bc-i-favorite text-white text-opacity-50 text-lg" onclick="tabActiveToggle(this)"></button></li>
+                                            <li class="swiper-slide !w-auto leading-9"><button class="active h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">All</button></li>
+                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Match <span class="relative -top-2 fs9">9</span></button></li>
+                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Totals <span class="relative -top-2 fs9">19</span></button></li>
+                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Handicaps <span class="relative -top-2 fs9">12</span></button></li>
+                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Halves <span class="relative -top-2 fs9">20</span></button></li>
+                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Combos <span class="relative -top-2 fs9">1</span></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="z-10 absolute right-0 top-0 flex items-center gap-1 h-full px-2">
+                                        <button class="text-lg text-white text-opacity-50 bc-i-one-block" onclick="changeGrid(this,'one')"></button>
+                                        <button class="text-lg text-white text-opacity-100 bc-i-two-block" onclick="changeGrid(this,'two')"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 배팅 -->
+                            <div class="bet_btn_box mt-0.5">
+                                <!-- 전체 제어 -->
+                                <button class="game_fold_all active flex items-center justify-between w-full h-8 px-3 bg-white bg-opacity-10 rounded" onclick="gameAllToggle(this,'sport')">
+                                    <p class="text-xs">Markets</p>
+                                    <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                                </button>
+                                
+                                <!-- 하단 베팅버튼 -->
+                                <div class="game_fold_wrap grid grid-cols-2 gap-1">
+                                    <div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Match Result</p>
+                                                    <div class="flex items-center gap-4">
+                                                        <p class="flex items-center gap-1"><i class="bc-i-link text-xs"></i><span>1</span></p>
+                                                        <i class="bc-i-cashed-out text-success"></i>
+                                                        <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-3 gap-[1px]">
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Feniks-pro</span><span class="text-warning font-medium">2.65</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Draw</span><span class="text-warning font-medium">2.30</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Yantar-pro</span><span class="text-warning font-medium">3.45</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Double Chance</p>
+                                                    <div class="flex items-center gap-4">
+                                                        <p class="flex items-center gap-1"><i class="bc-i-link text-xs"></i><span>1</span></p>
+                                                        <i class="bc-i-cashed-out text-success"></i>
+                                                        <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-3 gap-[1px]">
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Feniks-pro</span><span class="text-warning font-medium">2.65</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Draw</span><span class="text-warning font-medium">2.30</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Yantar-pro</span><span class="text-warning font-medium">3.45</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Total Goals</p>
+                                                    <div class="flex items-center gap-4">
+                                                        <p class="flex items-center gap-1"><i class="bc-i-link text-xs"></i><span>1</span></p>
+                                                        <i class="bc-i-cashed-out text-success"></i>
+                                                        <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-2 gap-[1px]">
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Over</p>
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Under</p>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Maps Total</p>
+                                                    <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-2 gap-[1px]">
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Over</p>
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Uder</p>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">2.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">2.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Goals Handicap</p>
+                                                    <div class="flex items-center gap-4">
+                                                        <p class="flex items-center gap-1"><i class="bc-i-link text-xs"></i><span>1</span></p>
+                                                        <i class="bc-i-cashed-out text-success"></i>
+                                                        <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-2 gap-[1px]">
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Feniks-pro</p>
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Yantar-pros</p>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Goals Asian Handicap</p>
+                                                    <div class="flex items-center gap-4">
+                                                        <p class="flex items-center gap-1"><i class="bc-i-link text-xs"></i><span>1</span></p>
+                                                        <i class="bc-i-cashed-out text-success"></i>
+                                                        <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-2 gap-[1px]">
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Feniks-pro</p>
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Yantar-pros</p>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">-1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">+1.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Match Result</p>
+                                                    <div class="flex items-center gap-4">
+                                                        <p class="flex items-center gap-1"><i class="bc-i-link text-xs"></i><span>1</span></p>
+                                                        <i class="bc-i-cashed-out text-success"></i>
+                                                        <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-3 gap-[1px]">
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Feniks-pro</span><span class="text-warning font-medium">2.65</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Draw</span><span class="text-warning font-medium">2.30</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Yantar-pro</span><span class="text-warning font-medium">3.45</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Double Chance</p>
+                                                    <div class="flex items-center gap-4">
+                                                        <p class="flex items-center gap-1"><i class="bc-i-link text-xs"></i><span>1</span></p>
+                                                        <i class="bc-i-cashed-out text-success"></i>
+                                                        <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-3 gap-[1px]">
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Feniks-pro</span><span class="text-warning font-medium">2.65</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Draw</span><span class="text-warning font-medium">2.30</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">Yantar-pro</span><span class="text-warning font-medium">3.45</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="game_fold open my-0.5">
+                                            <button class="flex items-center gap-2 w-full h-7 pl-3 pr-2 bg-white bg-opacity-5 rounded-t">
+                                                <i class="bc-i-favorite" onclick="zzimToggle(this); return false;"></i>
+                                                <div class="flex-1 flex items-center justify-between" onclick="gameToggle(this)">
+                                                    <p class="text-xs">Maps Total</p>
+                                                    <i class="arrow bc-i-small-arrow-down text-xs !text-white"></i>
+                                                </div>
+                                            </button>
+                                            <div>
+                                                <div class="grid grid-cols-2 gap-[1px]">
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Over</p>
+                                                    <p class="py-1.5 text-center bg-white bg-opacity-10">Uder</p>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-up bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">2.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                    <button class="flex items-center justify-between w-full py-1.5 px-3 egame_btn is-down bg-white bg-opacity-15" onclick="gameActive(this)"><span class="text-xs text-[#ffffffb3]">2.5</span><span class="text-warning font-medium">3.00</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="py-10 text-center text-xs">The time display shown within live betting serves as an indicator. The company takes no responsibility for the correctness and currentness of the displayed information like score or time.</div>
+
+                            </div>
 
                         </div>
 
                         <!-- bets -->
                         <div class="md:block hidden overflow-y-auto shrink-0 w-80 pr-1">
+                            <!-- soccer -->
+                            <div class="mb-2">
+                                <div class="flex items-center h-9 px-2.5 bg-white bg-opacity-5 rounded"><i class="bc-i-field-soccer active"></i></div>
+                                <div>
+                                    <div class="grid grid-cols-3 px-2.5 bg-gray-700 bg-opacity-90">
+                                        <div class="flex items-center gap-2">
+                                            <svg class="w-5 h-5" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#3970FF"></circle><path d="M16 6C14.0222 6 12.0888 6.58649 10.4443 7.6853C8.79981 8.78412 7.51809 10.3459 6.76121 12.1732C6.00433 14.0004 5.8063 16.0111 6.19215 17.9509C6.578 19.8907 7.53041 21.6725 8.92894 23.0711C10.3275 24.4696 12.1093 25.422 14.0491 25.8079C15.9889 26.1937 17.9996 25.9957 19.8268 25.2388C21.6541 24.4819 23.2159 23.2002 24.3147 21.5557C25.4135 19.9112 26 17.9778 26 16C26 14.6868 25.7413 13.3864 25.2388 12.1732C24.7363 10.9599 23.9997 9.85752 23.0711 8.92893C22.1425 8.00035 21.0401 7.26375 19.8268 6.7612C18.6136 6.25866 17.3132 6 16 6ZM24.79 15.75L22.72 14.28L23.72 11.72C24.3966 12.9573 24.7637 14.34 24.79 15.75ZM22.86 10.5L21.54 14L19.13 14.81L16.6 12.72V10.31L19.76 8.05C20.9621 8.62695 22.0209 9.46378 22.86 10.5ZM14.45 18.4L13.68 15.71L16 13.78L18.32 15.71L17.55 18.4H14.45ZM18.45 7.54L16 9.26L13.59 7.54C15.1647 7.08659 16.8353 7.08659 18.41 7.54H18.45ZM12.28 8.05L15.4 10.31V12.72L12.86 14.84L10 14L9.12 10.5C9.96484 9.46144 11.0307 8.62445 12.24 8.05H12.28ZM8.83 14.28L7.22 15.62C7.27125 14.3145 7.61287 13.0369 8.22 11.88L8.83 14.28ZM7.28 17.13L9.64 15.13L12.51 16L13.35 18.91L11.68 21.4H9.07C8.0999 20.1637 7.48148 18.6885 7.28 17.13ZM11.57 22.6L12 23.82C11.355 23.484 10.751 23.0746 10.2 22.6H11.57ZM13.44 24.42L12.66 22.09L14.32 19.6H17.68L19.34 22.09L18.56 24.42C16.891 24.9269 15.109 24.9269 13.44 24.42ZM21.8 22.6C21.249 23.0746 20.645 23.484 20 23.82L20.4 22.6H21.8ZM22.93 21.4H20.32L18.65 18.9L19.49 16L21.9 15.2L24.71 17.2C24.4999 18.7331 23.8855 20.1827 22.93 21.4Z" fill="white"></path></svg>
+                                            <p class="truncate">Djoker-pro</p>
+                                        </div>
+                                        <div class="flex items-center justify-center text-xl">1 : 1</div>
+                                        <div class="flex flex-row-reverse items-center gap-2">
+                                            <svg class="w-5 h-5" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#1CB702"></circle><path d="M16 6C14.0222 6 12.0888 6.58649 10.4443 7.6853C8.79981 8.78412 7.51809 10.3459 6.76121 12.1732C6.00433 14.0004 5.8063 16.0111 6.19215 17.9509C6.578 19.8907 7.53041 21.6725 8.92894 23.0711C10.3275 24.4696 12.1093 25.422 14.0491 25.8079C15.9889 26.1937 17.9996 25.9957 19.8268 25.2388C21.6541 24.4819 23.2159 23.2002 24.3147 21.5557C25.4135 19.9112 26 17.9778 26 16C26 14.6868 25.7413 13.3864 25.2388 12.1732C24.7363 10.9599 23.9997 9.85752 23.0711 8.92893C22.1425 8.00035 21.0401 7.26375 19.8268 6.7612C18.6136 6.25866 17.3132 6 16 6ZM24.79 15.75L22.72 14.28L23.72 11.72C24.3966 12.9573 24.7637 14.34 24.79 15.75ZM22.86 10.5L21.54 14L19.13 14.81L16.6 12.72V10.31L19.76 8.05C20.9621 8.62695 22.0209 9.46378 22.86 10.5ZM14.45 18.4L13.68 15.71L16 13.78L18.32 15.71L17.55 18.4H14.45ZM18.45 7.54L16 9.26L13.59 7.54C15.1647 7.08659 16.8353 7.08659 18.41 7.54H18.45ZM12.28 8.05L15.4 10.31V12.72L12.86 14.84L10 14L9.12 10.5C9.96484 9.46144 11.0307 8.62445 12.24 8.05H12.28ZM8.83 14.28L7.22 15.62C7.27125 14.3145 7.61287 13.0369 8.22 11.88L8.83 14.28ZM7.28 17.13L9.64 15.13L12.51 16L13.35 18.91L11.68 21.4H9.07C8.0999 20.1637 7.48148 18.6885 7.28 17.13ZM11.57 22.6L12 23.82C11.355 23.484 10.751 23.0746 10.2 22.6H11.57ZM13.44 24.42L12.66 22.09L14.32 19.6H17.68L19.34 22.09L18.56 24.42C16.891 24.9269 15.109 24.9269 13.44 24.42ZM21.8 22.6C21.249 23.0746 20.645 23.484 20 23.82L20.4 22.6H21.8ZM22.93 21.4H20.32L18.65 18.9L19.49 16L21.9 15.2L24.71 17.2C24.4999 18.7331 23.8855 20.1827 22.93 21.4Z" fill="white"></path></svg>
+                                            <p class="truncate">Izumrud-pro</p>
+                                        </div>
+                                    </div>
+                                    <div class="relative">
+                                        <svg id="FootballField_svg" class="footballfield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 850"><g class=""><g class="field none "><g class="fieldBg"><rect class="bgRect" width="1700" height="850"></rect><rect class="bgLineDark" x="140.8" y="1" width="142" height="850"></rect><rect class="bgLineDark" x="424.3" y="1" width="142" height="850"></rect><rect class="bgLineDark" x="1559.3" y="1" width="140" height="850"></rect><rect class="bgLineDark" x="707.8" y="1" width="142" height="850"></rect><rect class="bgLineDark" x="991.3" y="1" width="142" height="850"></rect><rect class="bgLineDark" x="1274.8" y="1" width="142" height="850"></rect><rect class="bgLineLight" x="849.5" y="1" width="142" height="850"></rect><rect class="bgLineLight" x="1133" y="1" width="142" height="850"></rect><rect class="bgLineLight" x="1416.5" y="1" width="142" height="850"></rect><rect class="bgLineLight" x="282.5" y="1" width="142" height="850"></rect><rect class="bgLineLight" x="566" y="1" width="142" height="850"></rect><rect class="bgLineLight" y="1" width="140" height="850"></rect></g></g><g><g></g><g class="field none "><g class="teamsZones"><rect class="homeZone" width="850" height="850"></rect><path class="homeGoal" d="M1451.9,198.4v145c-24.9,18.9-41,48.9-41,82.6s16.1,63.6,41,82.6v145h187.4V198.4H1451.9z"></path><rect class="awayZone" x="50%" width="850" height="850"></rect><path class="awayGoal" d="M1451.9,198.4v145c-24.9,18.9-41,48.9-41,82.6s16.1,63.6,41,82.6v145h187.4V198.4H1451.9z"></path></g><g class="layout"><ellipse cx="186.6" cy="426" rx="5" ry="5"></ellipse><path d="M1516.8,421c-2.8,0-5,2.2-5,5s2.2,5,5,5s5-2.2,5-5S1519.6,421,1516.8,421z"></path><path class="mainLines" d="M851.5,0h-3H0l0,850l1700,0l0-850H851.5z M3,3h845.5v54.9H58v139.1l0,0l-0.3,122.8l0.2,62.1H29.9v86.3H58  l-0.2,62.1L58,653.1l0,0V793h790.4l0,54L3,847L3,3z M1451.5,506.2c-24.1-19.4-37.9-48.1-37.9-79.1c0-31,13.8-59.7,37.9-79.1V506.2z   M1454.5,510.3V339.9V200h184.4l0,122.8h-63v210.4h63v116.8h-184.4V510.3z M1638.9,382v86.3v62h-60V325.9h60V382z M1641.9,382.9  h24.5v80.3h-24.5V382.9z M1638.9,197h-187.4v147.1c-26,20-40.9,50.2-40.9,82.9c0,32.8,14.9,62.9,40.9,82.9v143.1h187.4V790H851.5  V622.7c107.9-1.3,195.3-89.3,195.3-197.3c0-108-87.4-195.9-195.3-197.3V60.9h787.4V197z M851.5,430.1c2-0.6,3.5-2.5,3.5-4.7  c0-2.2-1.5-4.1-3.5-4.7V231.1c106.3,1.3,192.3,88,192.3,194.3s-86,192.9-192.3,194.3V430.1z M848.5,420.7c-2,0.6-3.5,2.5-3.5,4.7  c0,2.2,1.5,4.1,3.5,4.7v189.6c-107.2-0.3-194.3-87.3-194.3-194.3s87.1-194,194.3-194.3V420.7z M848.5,228.1  c-108.8,0.3-197.3,88.7-197.3,197.3c0,108.6,88.5,197,197.3,197.3V790H61V653.1h186.8V508c26-20,40.9-50.2,40.9-82.9  s-14.9-62.9-40.9-82.9V197.1H61V60.9h787.4V228.1z M58,465.3H32.9v-80.3H58V465.3z M247.8,346c24.1,19.4,37.9,48.1,37.9,79.1  s-13.8,59.7-37.9,79.1V346z M244.8,339.9v170.5v139.8H61V533.3h62.4V322.9H61V200.1h183.8V339.9z M61,325.9h59.4v204.5H61V325.9z   M1697,847l-845.5,0l0-54h790.4V466.3h27.5v-86.3h-27.5v-322H851.5V3H1697L1697,847z"></path><path class="homeGoalLine" d="M293.5,426c0-32.9-14.9-63.4-40.8-83.8V196.4h-0.1v0H59.1v0v459.4v0h193.5v0h0.1V510c26-20.4,40.8-50.9,40.8-83.8  C293.5,426.2,293.5,426.1,293.5,426C293.5,426.1,293.5,426.1,293.5,426z M245.9,506.2l-0.2,0.1v0.8V649H66.4V203.3h179.3v141.9v0.8  l0.2,0.1c25.5,17.4,40.8,47.3,40.9,80.1C286.7,458.9,271.4,488.8,245.9,506.2z"></path><path class="awayGoalLine" d="M293.5,426c0-32.9-14.9-63.4-40.8-83.8V196.4h-0.1v0H59.1v0v459.4v0h193.5v0h0.1V510c26-20.4,40.8-50.9,40.8-83.8  C293.5,426.2,293.5,426.1,293.5,426C293.5,426.1,293.5,426.1,293.5,426z M245.9,506.2l-0.2,0.1v0.8V649H66.4V203.3h179.3v141.9v0.8  l0.2,0.1c25.5,17.4,40.8,47.3,40.9,80.1C286.7,458.9,271.4,488.8,245.9,506.2z"></path></g></g><g class="wrapper "><g style=""></g></g><g></g></g></g></svg>
+                                        <div class="absolute left-0 top-0 w-full h-full flex items-center justify-center">
+                                            <div class="text-center"><b class="fs13">Match Info</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Betslip -->
                             <ul class="nav nav-boxed-tabs" role="tablist">
                                 <li id="bets-1-tab" class="nav-item flex-1" role="presentation"> 
                                     <button class="nav-link w-full py-1.5 active" data-tw-toggle="pill" data-tw-target="#bets-tab-1" type="button" role="tab" aria-controls="bets-tab-1" aria-selected="true">BetSlip</button> 
-                                </li>
-                                <li id="bets-2-tab" class="nav-item flex-1" role="presentation"> 
-                                    <button class="nav-link w-full py-1.5" data-tw-toggle="pill" data-tw-target="#bets-tab-2" type="button" role="tab" aria-controls="bets-tab-2" aria-selected="false">Open Bets</button> 
                                 </li>
                             </ul>
                             <div class="tab-content">
@@ -219,10 +514,15 @@
                                         <button><i class="bc-i-hoory mr-2"></i> Ask Hoory AI</button>
                                         <img src="./dist/images/icon/hoory.png" alt="">
                                     </div>
-                                </div>
-                                <div id="bets-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="bets-2-tab">
-                                    <div class="mt-2 text-right"><button class="underline text-white text-opacity-50">Go to bet history.</button></div>
-                                    <div class="py-14 text-center">You have no open bets at the moment</div>
+                                    <div class="grid grid-cols-1 gap-1">
+                                        <a href="javascript:;"><img src="./dist/images/sports/bet_banner_1.webp" alt=""></a>
+                                        <a href="javascript:;"><img src="./dist/images/sports/bet_banner_2.webp" alt=""></a>
+                                        <a href="javascript:;"><img src="./dist/images/sports/bet_banner_3.webp" alt=""></a>
+                                        <a href="javascript:;"><img src="./dist/images/sports/bet_banner_4.webp" alt=""></a>
+                                        <a href="javascript:;"><img src="./dist/images/sports/bet_banner_5.webp" alt=""></a>
+                                        <a href="javascript:;"><img src="./dist/images/sports/bet_banner_6.webp" alt=""></a>
+                                        <a href="javascript:;"><img src="./dist/images/sports/bet_banner_7.webp" alt=""></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

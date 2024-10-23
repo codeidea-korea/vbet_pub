@@ -31,7 +31,311 @@
             <!-- BEGIN: Content -->
             <div class="content">
                 
-                <div class="content_box">
+                <div class="content_box inner">
+
+                    <!-- filter -->
+                    <div class="my-2">
+                        <button class="flex md:hidden items-center justify-between w-full p-2.5 border-b border-black border-opacity-30 bg-white bg-opacity-20 rounded-t rounded" onclick="mofilterShow(this)">
+                            <p class="flex items-center gap-2"><i class="bc-i-filter"></i> Filter</p>
+                            <i class="bc-i-small-arrow-down fs10"></i>
+                        </button>
+                        
+                        <div class="hidden md:grid grid-cols-1 md:grid-cols-3 gap-2 w-full p-2.5 bg-white bg-opacity-20 rounded-t-none md:rounded-t rounded">
+                            <div class="custom_select check w-full">
+                                <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left"><span class="text-xs opacity-50">Statuses</span><p>All</p> <i class="arrow bc-i-small-arrow-down !fs10"></i></button>
+                                <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                    <ul>
+                                        <li class="text-xs !font-normal rounded">
+                                            <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                <input id="tourna_chec_1" class="form-check-input" type="checkbox" value="all">
+                                                <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="tourna_chec_1">All</label>
+                                            </div>
+                                        </li>
+                                        <li class="mt-[2px] text-xs !font-normal rounded">
+                                            <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                <input id="tourna_chec_2" class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="tourna_chec_2">Upcoming</label>
+                                            </div>
+                                        </li>
+                                        <li class="mt-[2px] text-xs !font-normal rounded">
+                                            <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                <input id="tourna_chec_3" class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="tourna_chec_3">Live</label>
+                                            </div>
+                                        </li>
+                                        <li class="mt-[2px] text-xs !font-normal rounded">
+                                            <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                <input id="tourna_chec_4" class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="tourna_chec_4">Finished</label>
+                                            </div>
+                                        </li>
+                                        <li class="mt-[2px] text-xs !font-normal rounded">
+                                            <div class="form-check flex-row-reverse justify-between w-full px-3 h-8">
+                                                <input id="tourna_chec_5" class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label flex-grow inline-flex items-center h-full !ml-0 " for="tourna_chec_5">Canceled</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="custom_select w-full md:mt-0 mt-0.5">
+                                <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left"><span class="text-xs opacity-50">Registration statuses</span><p>All</p> <i class="arrow bc-i-small-arrow-down !fs10"></i></button>
+                                <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                    <ul>
+                                        <li class="px-3 h-8 text-xs !font-normal rounded"><p>All</p></li>
+                                        <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Registration Started</p></li>
+                                        <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Registration Finished</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="custom_select w-full md:mt-0 mt-0.5">
+                                <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left"><span class="text-xs opacity-50">Entry Types</span><p>All</p> <i class="arrow bc-i-small-arrow-down !fs10"></i></button>
+                                <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                    <ul>
+                                        <li class="px-3 h-8 text-xs !font-normal rounded"><p>All</p></li>
+                                        <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Buy-in</p></li>
+                                        <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Free Entry</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 text-right md:mt-0 mt-0.5">
+                                <button class="btn btn-success w-96 max-w-full">SHOW</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- list -->
+                    <div class="mt-4">
+                        <div class="flex gap-4">
+                            <div class="shrink-0 md:flex gap-2 w-full md:w-1/5 md:min-w-[490px]">
+                                <a class="flex-1" href="./casino_tournament_detail.html"><img class="w-full rounded" src="./dist/images/sports/tour_img.png" alt=""></a>
+                                <div class="shrink-0 w-full md:w-40">
+                                    <div class="hidden md:flex items-center justify-center mt-[2px] h-20 bg-white bg-opacity-5 rounded">
+                                        <b class="text-warning text-2xl font-medium">100,000 ֏</b>
+                                    </div>
+                                    <div class="hidden md:flex items-center justify-center flex-col mt-[2px] h-24 bg-white bg-opacity-5 rounded">
+                                        <span class="px-2 py-1 text-xs text-danger bg-white bg-opacity-5 rounded">Ends in</span>
+                                        <div class="flex items-center justify-center">
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">00</b>DAYS</p>
+                                            <p>:</p>
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">13</b>HOURS</p>
+                                            <p>:</p>
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">42</b>MINUTES</p>
+                                            <p>:</p>
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">05</b>SECONDS</p>
+                                        </div>
+                                    </div>
+                                    <button class="hidden md:block btn btn-success w-full mt-1">JOIN NOW</button>
+                                    <div class="md:hidden block p-3 bg-white bg-opacity-10 rounded-b">
+                                        <b class="text-warning text-base font-medium">100,000 ֏</b>
+                                        <h5 class="text-base font-bold">VIRTUAL SPACE</h5>
+                                        <p class="mb-2 text-xs opacity-70">Buy in + Fee: 0֏<br/>10.10.2024,05:01 <i class="bc-i-arrow-to fs10"></i>11.10.2024,04:59</p>
+                                        <button class="btn btn-success w-full">JOIN</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-grow md:block hidden">
+                                <div class="py-2 px-3 bg-white bg-opacity-5 rounded">
+                                    <h4 class="text-lg font-bold">TV GamesZone</h4>
+                                    <div class="truncate-2">
+                                        1.	There is no other fee except for the minimum bet.
+                                        2.	The leaderboards are updated automatically. 
+                                        3.	Each leaderboard displays the top 15 Player IDs.
+                                        4.	At the end of each tournament the points are voided and the next tournament’s point calculation restarts in the same way.
+                                        5.	Players who place Reverse Bets won’t participate in the tournament. For example, even/odd, red/black, over/under ranges. 
+                                        6.	Only verified users on the Company website can qualify. 
+                                        7.	In case of equal results at the end of each tournament, Players take up positions on the leaderboard according to the highest bet count in the tournament. And in case of an equal bet count, advantage is given to the Player who has placed the highest bet. 
+                                        8.	In case of equal results at the end of the Extra tournament, Players take up positions on the leaderboard according to the bet count in the daily tournaments. For example, if 2 Players on the Extra leaderboard have an equal number of points, the Player who placed more bets during the daily tournaments takes up the higher position. 
+                                        9.	Points are calculated on real money bets only.
+                                        10.	Each tournament’s prizes are transferred to the winners’ gaming accounts within 1 business day after the end of that tournament. 
+                                        11.	The Company reserves the right to change, temporarily suspend, extend or cancel this tournament at any time.
+                                        12.	The Company reserves the right to cancel the bets or winnings or bonuses or jackpots or any other prize, which are displayed or provided to the Player due to any technical or mechanical or software defect (error). In this case, an application/complaint and/or an objection may be submitted by the Participants within 10 calendar days after the application of this clause. Applications and/or complaints or objections submitted later than that are not considered by the Company with no further legal consequences. In any disputable situation, the data on the Company’s server is taken into account.
+                                        13.	The Company reserves the right to void prizes if it is discovered that the Player has used a special program designed to defraud the Company or has made a deal with another Player. 
+                                        14.	Each Player participating in this tournament series allows and accepts the publication of their Player ID for any purpose related to this series. 
+                                        15.	Each Player participating in this tournament series confirms to have read and accepted these Terms and Conditions. 
+                                        16.	The Company Regulations, General Terms and Conditions also apply to this tournament series.
+                                    </div>
+                                    <div class="mt-1 text-right font-medium"><a class="text-success" href="./casino_tournament_detail.html">READ MORE</a></div>
+                                </div>
+                                <div class="grid grid-cols-2 lg:grid-cols-4 gap-1.5 my-1.5">
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center">Registration dates</h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Start Date</span><span class="text-success">09.10.2024, 23:00</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">End Date</span><span class="text-danger font-medium">11.10.2024, 04:59</span></div>
+                                    </div>
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center">Tournament duration</h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Start Date</span><span class="text-success">09.10.2024, 23:00</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">End Date</span><span class="text-danger font-medium">11.10.2024, 04:59</span></div>
+                                    </div>
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center"></h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Players</span><span class="font-medium">266</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Buy in + Fee</span><span class="text-success">0֏</span></div>
+                                    </div>
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center">Spins</h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Minimum</span><span class="font-medium">500֏</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Maximum</span><span class="font-medium">∞</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-4 w-full h-[1px] bg-white bg-opacity-10"></div>
+                        <div class="flex gap-4">
+                            <div class="shrink-0 md:flex gap-2 w-full md:w-1/5 md:min-w-[490px]">
+                                <a class="flex-1" href="./casino_tournament_detail.html"><img class="w-full rounded" src="./dist/images/sports/tour_img.png" alt=""></a>
+                                <div class="shrink-0 w-full md:w-40">
+                                    <div class="hidden md:flex items-center justify-center mt-[2px] h-20 bg-white bg-opacity-5 rounded">
+                                        <b class="text-warning text-2xl font-medium">100,000 ֏</b>
+                                    </div>
+                                    <div class="hidden md:flex items-center justify-center flex-col mt-[2px] h-24 bg-white bg-opacity-5 rounded">
+                                        <span class="px-2 py-1 text-xs text-danger bg-white bg-opacity-5 rounded">Ends in</span>
+                                        <div class="flex items-center justify-center">
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">00</b>DAYS</p>
+                                            <p>:</p>
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">13</b>HOURS</p>
+                                            <p>:</p>
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">42</b>MINUTES</p>
+                                            <p>:</p>
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">05</b>SECONDS</p>
+                                        </div>
+                                    </div>
+                                    <button class="hidden md:block btn btn-success w-full mt-1">JOIN NOW</button>
+                                    <div class="md:hidden block p-3 bg-white bg-opacity-10 rounded-b">
+                                        <b class="text-warning text-base font-medium">100,000 ֏</b>
+                                        <h5 class="text-base font-bold">VIRTUAL SPACE</h5>
+                                        <p class="mb-2 text-xs opacity-70">Buy in + Fee: 0֏<br/>10.10.2024,05:01 <i class="bc-i-arrow-to fs10"></i>11.10.2024,04:59</p>
+                                        <button class="btn btn-success w-full">JOIN</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-grow md:block hidden">
+                                <div class="py-2 px-3 bg-white bg-opacity-5 rounded">
+                                    <h4 class="text-lg font-bold">TV GamesZone</h4>
+                                    <div class="truncate-2">
+                                        1.	There is no other fee except for the minimum bet.
+                                        2.	The leaderboards are updated automatically. 
+                                        3.	Each leaderboard displays the top 15 Player IDs.
+                                        4.	At the end of each tournament the points are voided and the next tournament’s point calculation restarts in the same way.
+                                        5.	Players who place Reverse Bets won’t participate in the tournament. For example, even/odd, red/black, over/under ranges. 
+                                        6.	Only verified users on the Company website can qualify. 
+                                        7.	In case of equal results at the end of each tournament, Players take up positions on the leaderboard according to the highest bet count in the tournament. And in case of an equal bet count, advantage is given to the Player who has placed the highest bet. 
+                                        8.	In case of equal results at the end of the Extra tournament, Players take up positions on the leaderboard according to the bet count in the daily tournaments. For example, if 2 Players on the Extra leaderboard have an equal number of points, the Player who placed more bets during the daily tournaments takes up the higher position. 
+                                        9.	Points are calculated on real money bets only.
+                                        10.	Each tournament’s prizes are transferred to the winners’ gaming accounts within 1 business day after the end of that tournament. 
+                                        11.	The Company reserves the right to change, temporarily suspend, extend or cancel this tournament at any time.
+                                        12.	The Company reserves the right to cancel the bets or winnings or bonuses or jackpots or any other prize, which are displayed or provided to the Player due to any technical or mechanical or software defect (error). In this case, an application/complaint and/or an objection may be submitted by the Participants within 10 calendar days after the application of this clause. Applications and/or complaints or objections submitted later than that are not considered by the Company with no further legal consequences. In any disputable situation, the data on the Company’s server is taken into account.
+                                        13.	The Company reserves the right to void prizes if it is discovered that the Player has used a special program designed to defraud the Company or has made a deal with another Player. 
+                                        14.	Each Player participating in this tournament series allows and accepts the publication of their Player ID for any purpose related to this series. 
+                                        15.	Each Player participating in this tournament series confirms to have read and accepted these Terms and Conditions. 
+                                        16.	The Company Regulations, General Terms and Conditions also apply to this tournament series.
+                                    </div>
+                                    <div class="mt-1 text-right font-medium"><a class="text-success" href="./casino_tournament_detail.html">READ MORE</a></div>
+                                </div>
+                                <div class="grid grid-cols-2 lg:grid-cols-4 gap-1.5 my-1.5">
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center">Registration dates</h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Start Date</span><span class="text-success">09.10.2024, 23:00</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">End Date</span><span class="text-danger font-medium">11.10.2024, 04:59</span></div>
+                                    </div>
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center">Tournament duration</h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Start Date</span><span class="text-success">09.10.2024, 23:00</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">End Date</span><span class="text-danger font-medium">11.10.2024, 04:59</span></div>
+                                    </div>
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center"></h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Players</span><span class="font-medium">266</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Buy in + Fee</span><span class="text-success">0֏</span></div>
+                                    </div>
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center">Spins</h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Minimum</span><span class="font-medium">500֏</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Maximum</span><span class="font-medium">∞</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-4 w-full h-[1px] bg-white bg-opacity-10"></div>
+                        <div class="flex gap-4">
+                            <div class="shrink-0 md:flex gap-2 w-full md:w-1/5 md:min-w-[490px]">
+                                <a class="flex-1" href="./casino_tournament_detail.html"><img class="w-full rounded" src="./dist/images/sports/tour_img.png" alt=""></a>
+                                <div class="shrink-0 w-full md:w-40">
+                                    <div class="hidden md:flex items-center justify-center mt-[2px] h-20 bg-white bg-opacity-5 rounded">
+                                        <b class="text-warning text-2xl font-medium">100,000 ֏</b>
+                                    </div>
+                                    <div class="hidden md:flex items-center justify-center flex-col mt-[2px] h-24 bg-white bg-opacity-5 rounded">
+                                        <span class="px-2 py-1 text-xs text-danger bg-white bg-opacity-5 rounded">Ends in</span>
+                                        <div class="flex items-center justify-center">
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">00</b>DAYS</p>
+                                            <p>:</p>
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">13</b>HOURS</p>
+                                            <p>:</p>
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">42</b>MINUTES</p>
+                                            <p>:</p>
+                                            <p class="w-10 fs8 text-center leading-tight"><b class="block text-xl font-medium">05</b>SECONDS</p>
+                                        </div>
+                                    </div>
+                                    <button class="hidden md:block btn btn-success w-full mt-1">JOIN NOW</button>
+                                    <div class="md:hidden block p-3 bg-white bg-opacity-10 rounded-b">
+                                        <b class="text-warning text-base font-medium">100,000 ֏</b>
+                                        <h5 class="text-base font-bold">VIRTUAL SPACE</h5>
+                                        <p class="mb-2 text-xs opacity-70">Buy in + Fee: 0֏<br/>10.10.2024,05:01 <i class="bc-i-arrow-to fs10"></i>11.10.2024,04:59</p>
+                                        <button class="btn btn-success w-full">JOIN</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-grow md:block hidden">
+                                <div class="py-2 px-3 bg-white bg-opacity-5 rounded">
+                                    <h4 class="text-lg font-bold">TV GamesZone</h4>
+                                    <div class="truncate-2">
+                                        1.	There is no other fee except for the minimum bet.
+                                        2.	The leaderboards are updated automatically. 
+                                        3.	Each leaderboard displays the top 15 Player IDs.
+                                        4.	At the end of each tournament the points are voided and the next tournament’s point calculation restarts in the same way.
+                                        5.	Players who place Reverse Bets won’t participate in the tournament. For example, even/odd, red/black, over/under ranges. 
+                                        6.	Only verified users on the Company website can qualify. 
+                                        7.	In case of equal results at the end of each tournament, Players take up positions on the leaderboard according to the highest bet count in the tournament. And in case of an equal bet count, advantage is given to the Player who has placed the highest bet. 
+                                        8.	In case of equal results at the end of the Extra tournament, Players take up positions on the leaderboard according to the bet count in the daily tournaments. For example, if 2 Players on the Extra leaderboard have an equal number of points, the Player who placed more bets during the daily tournaments takes up the higher position. 
+                                        9.	Points are calculated on real money bets only.
+                                        10.	Each tournament’s prizes are transferred to the winners’ gaming accounts within 1 business day after the end of that tournament. 
+                                        11.	The Company reserves the right to change, temporarily suspend, extend or cancel this tournament at any time.
+                                        12.	The Company reserves the right to cancel the bets or winnings or bonuses or jackpots or any other prize, which are displayed or provided to the Player due to any technical or mechanical or software defect (error). In this case, an application/complaint and/or an objection may be submitted by the Participants within 10 calendar days after the application of this clause. Applications and/or complaints or objections submitted later than that are not considered by the Company with no further legal consequences. In any disputable situation, the data on the Company’s server is taken into account.
+                                        13.	The Company reserves the right to void prizes if it is discovered that the Player has used a special program designed to defraud the Company or has made a deal with another Player. 
+                                        14.	Each Player participating in this tournament series allows and accepts the publication of their Player ID for any purpose related to this series. 
+                                        15.	Each Player participating in this tournament series confirms to have read and accepted these Terms and Conditions. 
+                                        16.	The Company Regulations, General Terms and Conditions also apply to this tournament series.
+                                    </div>
+                                    <div class="mt-1 text-right font-medium"><a class="text-success" href="./casino_tournament_detail.html">READ MORE</a></div>
+                                </div>
+                                <div class="grid grid-cols-2 lg:grid-cols-4 gap-1.5 my-1.5">
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center">Registration dates</h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Start Date</span><span class="text-success">09.10.2024, 23:00</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">End Date</span><span class="text-danger font-medium">11.10.2024, 04:59</span></div>
+                                    </div>
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center">Tournament duration</h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Start Date</span><span class="text-success">09.10.2024, 23:00</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">End Date</span><span class="text-danger font-medium">11.10.2024, 04:59</span></div>
+                                    </div>
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center"></h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Players</span><span class="font-medium">266</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Buy in + Fee</span><span class="text-success">0֏</span></div>
+                                    </div>
+                                    <div class="p-2.5 bg-white bg-opacity-10 rounded">
+                                        <h5 class="h-6 text-xs text-center">Spins</h5>
+                                        <div class="flex items-center justify-between p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Minimum</span><span class="font-medium">500֏</span></div>
+                                        <div class="flex items-center justify-between mt-[2px] p-2 text-xs bg-white bg-opacity-10 rounded"><span class="opacity-70">Maximum</span><span class="font-medium">∞</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
 
                 </div>
             </div>
