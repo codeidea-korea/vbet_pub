@@ -17,6 +17,7 @@
     --bg2-gradient:linear-gradient(to bottom,rgba(255,255,255,.05) 1%,rgba(30,38,57,.05) 46%,transparent); 
     --bg3-gradient:linear-gradient(to right,transparent,rgba(255,255,255,.5),transparent); 
     --bg4-gradient:radial-gradient(39.93% 60.21% at 50% 50%,#183149 0,#000 100%); 
+    --bg5-gradient:linear-gradient(to left,#8d17c7,#031778);
     
 
     /* shadow */
@@ -62,6 +63,7 @@
 .bg2-gradient {background:var(--bg2-gradient); }
 .bg3-gradient {background:var(--bg3-gradient); }
 .bg4-gradient {background:var(--bg4-gradient); }
+.bg5-gradient {background:var(--bg5-gradient); }
 
 /* shadow */
 .shadow-1 {box-shadow:var(--shadow-1); }
@@ -111,6 +113,7 @@
 .side-top-blur:before {content:''; z-index:10; position:absolute; left:0; top:0; width:100%; height:30%; background:linear-gradient(to bottom,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
 .side-bottom-blur {position:relative; }
 .side-bottom-blur:before {content:''; z-index:10; position:absolute; left:0; bottom:0; width:100%; height:30%; background:linear-gradient(to top,rgba(0, 12, 36,1), rgba(0, 12, 36,0)) }
+.full-bg:before {content:''; position:absolute; left:0; top:0; right:0; bottom:0; background-color:rgba(0,0,0,0.4);}
 
 /* pc 높이 고정 */
 @media all and (min-width:768px){
@@ -148,6 +151,7 @@
         CASINO-LOADER
         WHEEL
         BETSLIP - HOORY
+        FIELD
 
 */
 
@@ -277,6 +281,7 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .sub_2 header .sub_menu ul li:nth-of-type(2) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
 .sub_3 header .sub_menu ul li:nth-of-type(3) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
 .sub_4 header .sub_menu ul li:nth-of-type(4) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
+.sub_5 header .sub_menu ul li:nth-of-type(5) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
 
 .live header .gnb li[data-category="live"],
 .sports header .gnb li[data-category="sports"],
@@ -640,10 +645,17 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 ---------------------------------------------- */
 .game_fold_all.active .arrow {transform:rotate(180deg); }
 
-.game_fold > div {display:none; } 
-.game_fold.open > div {display:block; }
-.game_fold.open > button .arrow {transform:rotate(180deg); } 
+.game_fold > div,
+.game_fold2 > div {display:none; } 
+.game_fold.open > div,
+.game_fold2.open > div {display:block; }
+.game_fold.open > button .arrow,
+.game_fold2.open > button .arrow {transform:rotate(180deg); } 
 
+.live .game_fold:not(.open) > button .arrow {background-color:transparent; }
+
+.game_fold2 {--tw-bg-opacity:0; }
+.game_fold2.open {--tw-bg-opacity:0.05; }
 
 /* ----------------------------------------------
             GAME_BTN
@@ -913,7 +925,29 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 }
 
 
+/* ----------------------------------------------
+            hoory
+---------------------------------------------- */
+.hoory_box {overflow:hidden; position:relative; display:flex; align-items:center; width:100%; height:64px; padding:10px; background:linear-gradient(175deg,#7f0dd8 10%,#a937f0 50%,#c80dd8 100%); border-radius:8px; }
+.hoory_box:before {content:''; position:absolute; left:0; right:0; top:0; bottom:0; background:url('../images/icon/background-dots.svg') repeat center center / 150%; animation:hoory-bg2 2s alternate-reverse linear infinite; }
+.hoory_box .txt {background:linear-gradient(to right,#ffffff,rgba(255,255,255,.2),#ffffff) 0 0/200% 100%; -webkit-text-fill-color:transparent; -webkit-background-clip:text; background-clip:text; animation:hoory-text 3s reverse linear infinite; }
+.hoory_box:after {content:''; position:absolute; top:5px; bottom:0; right:-45%; width:100%; background:url('../images/icon/hoory.png') no-repeat top left / cover; animation:hoory-switch 3s alternate-reverse linear infinite; }
 
+@keyframes hoory-bg2{
+    0% {background-position:100% 100%; }
+    70%, 100% {background-position:0 0; }
+}
+@keyframes hoory-text{
+    100% {background-position:200%; }
+}
+@keyframes hoory-switch{
+    0% {transform:scale(1.2); }
+    95%,100% {transform:scale(1); }
+}
+
+/* ----------------------------------------------
+            FIELD
+---------------------------------------------- */
 
 .footballfield .field .rtl,
 .footballfield .events .rtl {transform-origin: center; transform: rotate(180deg); }

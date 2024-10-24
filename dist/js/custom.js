@@ -145,6 +145,9 @@ const faqToggle = (item)=>{
 const gameToggle = (item)=>{
     $(item).parents('.game_fold').toggleClass('open')
 }
+const gameToggle2 = (item)=>{
+    $(item).parents('.game_fold2').toggleClass('open')
+}
 
 // game_fold 전체 제어
 const gameAllToggle = (item,cate)=>{
@@ -274,6 +277,17 @@ const changeGrid = (item,num)=>{
     }else{
         $('.game_fold_wrap').addClass('grid-cols-2').removeClass('grid-cols-1');
     }
+}
+
+// gamecate
+const gameCateToggle = (item)=>{
+    $('.gamecate_btn').each(function(){
+        if($(this).data('btn') !== $(item).data('btn')){
+            $(this).removeClass('active')
+        }else{
+            $(this).toggleClass('active')
+        }
+    })
 }
 
 

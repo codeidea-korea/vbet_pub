@@ -82,7 +82,18 @@ echo txtRecord('./@record/');
 		</li>
 		<li class="mt20" data-label="메뉴">
             <ul>
-                <li data-label="Casino">
+				<li data-label="Live">
+					<ul>
+						<li>
+							<a href="" target="_blank" class="not">live casino</a>
+							<ul>
+								<li><a href="./live_torunament.html" target="_blank" class="">tournaments</a></li>
+								<li><a href="./live_calendar.html" target="_blank" class="">live calendar</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+                <li class="mt10" data-label="Casino">
 					<ul>
 						<li>
 							<a href="./casino.html" target="_blank" class="">casino</a>

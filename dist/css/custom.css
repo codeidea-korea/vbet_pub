@@ -195,6 +195,20 @@
 .efootball .egame_btn.active {background:#308231; }
 .efootball .egame_btn:hover {box-shadow: 0 0 20px #308231; }
 
+.egame_matches.active,
+.egame_matches:hover {background:linear-gradient(to right,#3b26ac 0%,#583de3 100%);  }
+.egame_matches:not(.active) .icon {color:#583de3; }
+
+.egame_boosted.active,
+.egame_boosted:hover {background:linear-gradient(to right,#097f18 0%,#00bf19 100%);  }
+
+.egame_multiple.active,
+.egame_multiple:hover {background:linear-gradient(to right,#ff5f00 0%,#ef9805 100%);  }
+
+.egame_upcoming.active,
+.egame_upcoming:hover {background:linear-gradient(to right,#026c90 0%,#0097b7 100%);  }
+.egame_upcoming:not(.active) .icon {color:#0097b7; }
+
 @media all and (min-width:768px){
     .egame_match_h {height:calc(100vh - 340px); }
 }
@@ -218,8 +232,49 @@
 .i-formula1 {color:#b8292b; }
 .i-politics {color:#641f6e; }
 .i-rugbyunion {color:#799755; }
-.i-counterstrike2 {color:#cc581f; }
+.i-Golf {color:#189946; }
+.i-Boxing {color:#0e7acc; }
+.i-Futsal {color:#65b5c2; }
+.i-Slap {color:#dac179; }
 
+.i-counterstrike2 {color:#cc581f; }
+.i-Archery {color:#f781d9; }
+.i-PistolShooting {color:#3c5182; }
+.i-Dota2 {color:#9b1013; }
+.i-LeagueOfLegends {color:#034653; }
+.i-MobileLegends {color:#a98157; }
+.i-CyberFootball {color:#308231; }
+.i-competition {color:#2275e9; }
+
+
+.bg-soccer {background-color:#109121; }
+.bg-basketball {background-color:#fca601; }
+.bg-Tennis {background-color:#a19e3e; }
+.bg-IceHockey {background-color:#50a2c6; }
+.bg-volleyball {background-color:#dac179; }
+.bg-handball {background-color:#42777f; }
+.bg-tabletennis {background-color:#839d24; }
+.bg-mma {background-color:#868686; }
+.bg-americanFootball {background-color:#e7685c; }
+.bg-baseball {background-color:#5caaa7; }
+.bg-cricket {background-color:#1bab7d; }
+.bg-cycling {background-color:#d9c68f; }
+.bg-formula1 {background-color:#b8292b; }
+.bg-politics {background-color:#641f6e; }
+.bg-rugbyunion {background-color:#799755; }
+.bg-Golf {background-color:#189946; }
+.bg-Boxing {background-color:#0e7acc; }
+.bg-Futsal {background-color:#65b5c2; }
+.bg-Slap {background-color:#dac179; }
+
+.bg-counterstrike2 {background-color:#cc581f; }
+.bg-Archery {background-color:#f781d9; }
+.bg-PistolShooting {background-color:#3c5182; }
+.bg-Dota2 {background-color:#9b1013; }
+.bg-LeagueOfLegends {background-color:#034653; }
+.bg-MobileLegends {background-color:#a98157; }
+.bg-CyberFootball {background-color:#308231; }
+.bg-competition {background-color:#0050bf; }
 
 .sport_calender button.active {--tw-bg-opacity:1; color:#000c24e6; }
 
@@ -231,6 +286,39 @@
     .sport_calender button.active {position:sticky; left:0; }
 }
 
+
+/* ----------------------------------------------
+            GAMECATE
+---------------------------------------------- */
+.sport_cate_wrap {overflow-y:auto; position:relative; height:calc(100vh - 425px); }
+.sport_cate_wrap .game_fold.open > button {z-index:10; position:sticky; top:0; background-color:#1a253b; }
+
+.gamecate_btn {border-left:2px solid transparent; }
+.gamecate_btn.active {border-left:2px solid rgb(var(--color-primary)); --tw-bg-opacity:0.2; }
+.gamecate_btn[data-cate="football"].active {border-left-color:#109121; }
+.gamecate_btn[data-cate="basketball"].active {border-left-color:#fca601; }
+.gamecate_btn[data-cate="Tennis"].active {border-left-color:#a19e3e; }
+.gamecate_btn[data-cate="IceHockey"].active {border-left-color:#50a2c6; }
+.gamecate_btn[data-cate="volleyball"].active {border-left-color:#dac179; }
+.gamecate_btn[data-cate="handball"].active {border-left-color:#42777f; }
+.gamecate_btn[data-cate="tabletennis"].active {border-left-color:#839d24; }
+.gamecate_btn[data-cate="mma"].active {border-left-color:#868686; }
+.gamecate_btn[data-cate="americanFootball"].active {border-left-color:#e7685c; }
+.gamecate_btn[data-cate="baseball"].active {border-left-color:#5caaa7; }
+.gamecate_btn[data-cate="cricket"].active {border-left-color:#1bab7d; }
+.gamecate_btn[data-cate="cycling"].active {border-left-color:#d9c68f; }
+.gamecate_btn[data-cate="formula1"].active {border-left-color:#b8292b; }
+.gamecate_btn[data-cate="politics"].active {border-left-color:#641f6e; }
+.gamecate_btn[data-cate="rugbyunion"].active {border-left-color:#799755; }
+.gamecate_btn[data-cate="Golf"].active {border-left-color:#189946; }
+
+.gamecate_btn[data-cate="counterstrike2"].active {border-left-color:#cc581f; }
+.gamecate_btn[data-cate="Archery"].active {border-left-color:#f781d9; }
+.gamecate_btn[data-cate="PistolShooting"].active {border-left-color:#3c5182; }
+.gamecate_btn[data-cate="Dota2"].active {border-left-color:#9b1013; }
+.gamecate_btn[data-cate="LeagueOfLegends"].active {border-left-color:#034653; }
+.gamecate_btn[data-cate="MobileLegends"].active {border-left-color:#a98157; }
+.gamecate_btn[data-cate="CyberFootball"].active {border-left-color:#308231; }
 
 
 
