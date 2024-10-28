@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+
+        <title>Sports Betting, Online Casino, Games and Poker | VBET ✌️</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/icon.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="sub sub_1 live fold_footer">
+
+        <div id="main-loader">
+            <img src="./dist/images/common/loading.svg" alt="">
+        </div>
+      
+        <div id="wrap">
+        
+            <!-- BEGIN: Content -->
+            <div class="content !min-h-fit">
+                
+                <div class="content_box">
+
+                    <div class="">
+                        <div class="px-2.5">
+                            <div class="betslip_hoory mt-3 pt-2">
+                                <p class="desc text-xs text-center text-white text-opacity-80">Meet Your Game-Changer</p>
+                                <p class="tit my-1 text-center text-2xl font-bold">Betting Assistant</p>
+                                <button><i class="bc-i-hoory mr-2"></i> Ask Hoory AI</button>
+                                <img src="./dist/images/icon/hoory.png" alt="">
+                            </div>
+
+                            <div class="relative flex items-center justify-between my-2">
+                                <div class="flex gap-2 bg-white bg-opacity-5 rounded">
+                                    <button class="h-7 px-4 border border-white border-opacity-60 rounded bc-i-stream"></button>
+                                    <button class="h-7 px-4 border border-white border-opacity-60 rounded bc-i-world"></button>
+                                    <button class="h-7 px-4 border border-white border-opacity-60 rounded bc-i-bet-cloud"></button>
+                                </div>
+                                <div class="flex items-center justify-center shrink-0 w-9 h-9 bg-white bg-opacity-15 rounded">
+                                    <button class="text-lg bc-i-search" onclick="searchToggle(this)"></button>
+                                    <input type="text" class="z-10 absolute left-0 top-0 hidden h-9 form-control line-add !bg-bg rounded-r-none" style="width: 0px; display: none;" placeholder="Search market...">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex items-center justify-between w-full p-2 bg5-gradient rounded">
+                                    <p class="flex items-center gap-2 w-full">
+                                        <i class="bc-i-tournament text-lg"></i>
+                                        <span class="flex-1 text-left leading-none">
+                                            <b class="block mb-0.5 fs8 font-normal">TOURNAMENTS</b>
+                                            <select name="tournament_select" id="tournament_select" class="w-full select_nostyle text-sm">
+                                                <option value="0">Select Tournaments</option>
+                                                <option value="1">MULTI VIBE | Week 1 |</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="p-2.5 bg-white bg-opacity-5 rounded-b text-xs">
+                                    <div class="flex items-center justify-between">
+                                        <b class="text-success">2,000,000 ֏</b>
+                                        <button class="text-white text-opacity-60">Reset <i class="ml-1 bc-i-close-remove fs8"></i></button>
+                                    </div>
+                                    <div class="fs10 text-white text-opacity-60">Buy in + Fee : 0 ֏</div>
+                                    <div class="flex items-center justify-between fs10 text-white text-opacity-60">
+                                        <p>21.10.2024, 17:30 <i class="bc-i-arrow-to"></i> 28.10.2024, 16:59</p>
+                                        <a href="javascript:;" class="underline text-xs">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- category -->
+                            <div class="flex items-center gap-2 mt-2 overflow-x-auto noscrollbar">
+                                <button onclick="btnActiveRadio(this)" data-cate="football" class="active gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-Soccer i-soccer text-3xl"></i><p class="fs10 leading-none">Football</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="basketball" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-Basketball i-basketball text-3xl"></i><p class="fs10 leading-none">Basketball</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="Tennis" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-Tennis i-Tennis text-3xl"></i><p class="fs10 leading-none">Tennis</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="IceHockey" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-IceHockey i-IceHockey text-3xl"></i><p class="fs10 leading-none">IceHockey</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="volleyball" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-Volleyball i-Volleyball text-3xl"></i><p class="fs10 leading-none">Volleyball</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="tabletennis" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-TableTennis i-TableTennis text-3xl"></i><p class="fs10 leading-none">TableTennis</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="Archery" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-Archery i-Archery text-3xl"></i><p class="fs10 leading-none">Archery</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="cricket" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-Cricket i-cricket text-3xl"></i><p class="fs10 leading-none">Cricket</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="baseball" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-Baseball i-baseball text-3xl"></i><p class="fs10 leading-none">Baseball</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="Golf" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-Golf i-Golf text-3xl"></i><p class="fs10 leading-none">Golf</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="counterstrike2" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-CounterStrike i-counterStrike text-3xl"></i><p class="fs10 leading-none">Counter-Strike 2</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="Dota2" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-Dota2 i-Dota2 text-3xl"></i><p class="fs10 leading-none">Dota 2</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="LeagueOfLegends" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-LeagueOfLegends i-LeagueOfLegends text-3xl"></i><p class="fs10 leading-none">League of Legends</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="MobileLegends" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-MobileLegends i-MobileLegends text-3xl"></i><p class="fs10 leading-none">Mobile Legends</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                                <button onclick="btnActiveRadio(this)" data-cate="CyberFootball" class="gamecate_bg_btn shrink-0 relative flex flex-col items-center justify-center gap-2 w-20 h-14 bg-white bg-opacity-10 text-white text-opacity-80 rounded"><i class="bc-i-CyberFootball i-CyberFootball text-3xl"></i><p class="fs10 leading-none">E-Football</p><span class="absolute left-2/3 top-1 pl-1 fs9 leading-none text-white">9</span></button>
+                            </div>
+                        </div>
+
+                        <!-- gamelist -->
+                        <div class="flex items-center justify-between h-7 mt-3 mb-[1px] py-0.5 px-1 text-xs bg-white bg-opacity-15 rounded">
+                            <div class="flex flex-1">
+                                <div class="custom_select">
+                                    <button class="flex items-center justify-between gap-2.5 py-0.5 w-full px-3 bg-white bg-opacity-10 text-xs rounded"><p>Winner</p><i class="arrow noabsolute bc-i-small-arrow-down !fs10"></i></button>
+                                    <div class="max-h-60 bg-bg shadow-2">
+                                        <ul class="p-2">
+                                            <li class="active w-full mb-1 p-2 rounded text-xs"><p>Winner</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>Handicap</p></li>
+                                            <li class="w-full mb-1 p-2 rounded text-xs"><p>Totals</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 w-[180px] border-l border-[#000c24] text-center fs10">
+                                <p>W1</p>
+                                <p>X</p>
+                                <p>W2</p>
+                            </div>
+                        </div>
+
+                        <div class="game_fold open pb-2">
+                            <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded" onclick="faqToggle(this)">
+                                <div class="flex items-center gap-2">
+                                    <i class="flag-bc russia"></i>
+                                    <p class="text-left fs13 leading-none">Russia<br>M-Liga</p>
+                                </div>
+                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                            </button>
+                            <div>
+                                <div class=" bg-white bg-opacity-10">
+                                    <div class="overflow-hidden p-2 ">
+                                        <div class="overflow-hidden flex gap-[1px] rounded-t">
+                                            <div class="flex-1 p-2 bg-white bg-opacity-10 text-xs">
+                                                <div class="flex items-center justify-between">
+                                                    <p>Izumrud-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Yantar-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-[1px] w-[180px]">
+                                                <button class="flex-1 h-full egame_btn text-warning is-down font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden mt-[1px] px-2 rounded-b bg-white bg-opacity-10">
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-live text-danger"></i>Map 3 <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>1 : 1, (3:13),(13:7),(4:1)</p>
+                                            </div>
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-stream"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <i class="bc-i-push-notification-outline"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>+17</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="game_fold open pb-2">
+                            <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded" onclick="faqToggle(this)">
+                                <div class="flex items-center gap-2">
+                                    <i class="flag-bc russia"></i>
+                                    <p class="text-left fs13 leading-none">Russia<br>M-Liga</p>
+                                </div>
+                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                            </button>
+                            <div>
+                                <div class=" bg-white bg-opacity-10">
+                                    <div class="overflow-hidden p-2 ">
+                                        <div class="overflow-hidden flex gap-[1px] rounded-t">
+                                            <div class="flex-1 p-2 bg-white bg-opacity-10 text-xs">
+                                                <div class="flex items-center justify-between">
+                                                    <p>Izumrud-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Yantar-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-[1px] w-[180px]">
+                                                <button class="flex-1 h-full egame_btn text-warning is-down font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden mt-[1px] px-2 rounded-b bg-white bg-opacity-10">
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-live text-danger"></i>Map 3 <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>1 : 1, (3:13),(13:7),(4:1)</p>
+                                            </div>
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-stream"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <i class="bc-i-push-notification-outline"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>+17</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game_fold open pb-2">
+                            <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded" onclick="faqToggle(this)">
+                                <div class="flex items-center gap-2">
+                                    <i class="flag-bc russia"></i>
+                                    <p class="text-left fs13 leading-none">Russia<br>M-Liga</p>
+                                </div>
+                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                            </button>
+                            <div>
+                                <div class=" bg-white bg-opacity-10">
+                                    <div class="overflow-hidden p-2 ">
+                                        <div class="overflow-hidden flex gap-[1px] rounded-t">
+                                            <div class="flex-1 p-2 bg-white bg-opacity-10 text-xs">
+                                                <div class="flex items-center justify-between">
+                                                    <p>Izumrud-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Yantar-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-[1px] w-[180px]">
+                                                <button class="flex-1 h-full egame_btn text-warning is-down font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden mt-[1px] px-2 rounded-b bg-white bg-opacity-10">
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-live text-danger"></i>Map 3 <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>1 : 1, (3:13),(13:7),(4:1)</p>
+                                            </div>
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-stream"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <i class="bc-i-push-notification-outline"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>+17</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="game_fold open pb-2">
+                            <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded" onclick="faqToggle(this)">
+                                <div class="flex items-center gap-2">
+                                    <i class="flag-bc russia"></i>
+                                    <p class="text-left fs13 leading-none">Russia<br>M-Liga</p>
+                                </div>
+                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                            </button>
+                            <div>
+                                <div class=" bg-white bg-opacity-10">
+                                    <div class="overflow-hidden p-2 ">
+                                        <div class="overflow-hidden flex gap-[1px] rounded-t">
+                                            <div class="flex-1 p-2 bg-white bg-opacity-10 text-xs">
+                                                <div class="flex items-center justify-between">
+                                                    <p>Izumrud-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Yantar-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-[1px] w-[180px]">
+                                                <button class="flex-1 h-full egame_btn text-warning is-down font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden mt-[1px] px-2 rounded-b bg-white bg-opacity-10">
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-live text-danger"></i>Map 3 <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>1 : 1, (3:13),(13:7),(4:1)</p>
+                                            </div>
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-stream"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <i class="bc-i-push-notification-outline"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>+17</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game_fold open pb-2">
+                            <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded" onclick="faqToggle(this)">
+                                <div class="flex items-center gap-2">
+                                    <i class="flag-bc russia"></i>
+                                    <p class="text-left fs13 leading-none">Russia<br>M-Liga</p>
+                                </div>
+                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                            </button>
+                            <div>
+                                <div class=" bg-white bg-opacity-10">
+                                    <div class="overflow-hidden p-2 ">
+                                        <div class="overflow-hidden flex gap-[1px] rounded-t">
+                                            <div class="flex-1 p-2 bg-white bg-opacity-10 text-xs">
+                                                <div class="flex items-center justify-between">
+                                                    <p>Izumrud-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Yantar-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-[1px] w-[180px]">
+                                                <button class="flex-1 h-full egame_btn text-warning is-down font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden mt-[1px] px-2 rounded-b bg-white bg-opacity-10">
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-live text-danger"></i>Map 3 <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>1 : 1, (3:13),(13:7),(4:1)</p>
+                                            </div>
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-stream"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <i class="bc-i-push-notification-outline"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>+17</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="game_fold open pb-2">
+                            <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-5 rounded" onclick="faqToggle(this)">
+                                <div class="flex items-center gap-2">
+                                    <i class="flag-bc russia"></i>
+                                    <p class="text-left fs13 leading-none">Russia<br>M-Liga</p>
+                                </div>
+                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                            </button>
+                            <div>
+                                <div class=" bg-white bg-opacity-10">
+                                    <div class="overflow-hidden p-2 ">
+                                        <div class="overflow-hidden flex gap-[1px] rounded-t">
+                                            <div class="flex-1 p-2 bg-white bg-opacity-10 text-xs">
+                                                <div class="flex items-center justify-between">
+                                                    <p>Izumrud-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                                <div class="flex items-center justify-between">
+                                                    <p>Yantar-pro</p>
+                                                    <b class="text-warning">4</b>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-[1px] w-[180px]">
+                                                <button class="flex-1 h-full egame_btn text-warning is-down font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                                <button class="flex-1 h-full egame_btn text-warning is-up font-medium bg-white bg-opacity-20" onclick="gameActive(this)">1.49</button>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden mt-[1px] px-2 rounded-b bg-white bg-opacity-10">
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-live text-danger"></i>Map 3 <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>1 : 1, (3:13),(13:7),(4:1)</p>
+                                            </div>
+                                            <div class="flex items-center gap-1.5 fs11">
+                                                <i class="bc-i-stream"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <i class="bc-i-push-notification-outline"></i>
+                                                <i class="w-[1px] h-3 bg-bg"></i>
+                                                <p>+17</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+           
+            
+        </div>
+        <!-- END: Content -->
+    </div>
+
+
+    
+    <!-- BEGIN: JS Assets-->
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-1.12.4.js"></script>
+    <script src="./dist/js/jquery-ui.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+    <!-- END: JS Assets-->
+</body>
+</html>

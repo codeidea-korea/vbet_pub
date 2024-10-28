@@ -277,11 +277,11 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 
 .sub header .sub_menu {display:block; }
 
-.sub_1 header .sub_menu ul li:nth-of-type(1) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
-.sub_2 header .sub_menu ul li:nth-of-type(2) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
-.sub_3 header .sub_menu ul li:nth-of-type(3) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
-.sub_4 header .sub_menu ul li:nth-of-type(4) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
-.sub_5 header .sub_menu ul li:nth-of-type(5) {opacity:1; border-bottom-color:rgb(var(--color-primary)); }
+.sub_1 header .sub_menu ul li:nth-of-type(1) {z-index:2; position:sticky; left:0; opacity:1; border-bottom-color:rgb(var(--color-primary)); }
+.sub_2 header .sub_menu ul li:nth-of-type(2) {z-index:2; position:sticky; left:0; opacity:1; border-bottom-color:rgb(var(--color-primary)); }
+.sub_3 header .sub_menu ul li:nth-of-type(3) {z-index:2; position:sticky; left:0; opacity:1; border-bottom-color:rgb(var(--color-primary)); }
+.sub_4 header .sub_menu ul li:nth-of-type(4) {z-index:2; position:sticky; left:0; opacity:1; border-bottom-color:rgb(var(--color-primary)); }
+.sub_5 header .sub_menu ul li:nth-of-type(5) {z-index:2; position:sticky; left:0; opacity:1; border-bottom-color:rgb(var(--color-primary)); }
 
 .live header .gnb li[data-category="live"],
 .sports header .gnb li[data-category="sports"],
@@ -303,10 +303,12 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 
 @media all and (max-width:767px){
     .live header .sub_menu ul[data-sub-cate="live"] ,
-    .sports header .sub_menu ul[data-sub-cate="sports"] ,
     .casino header .sub_menu ul[data-sub-cate="casino"] ,
     .tvgame header .sub_menu ul[data-sub-cate="tvgames"] ,
     .livecasino header .sub_menu ul[data-sub-cate="live_casino"] {display:grid; }
+
+    .sports header .sub_menu ul[data-sub-cate="sports"] {position:relative; display:flex; gap:18px; width:460px;}
+    .sports header .sub_menu ul[data-sub-cate="sports"] li {padding:0 10px; background:var(--bg-color); white-space:nowrap;}
 
     .live .mo_quick ul li[data-sub-cate="live"] a,
     .sports .mo_quick ul li[data-sub-cate="sports"] a,
@@ -409,6 +411,8 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .custom_select.open .profile_btn i {color:var(--bg-color); transform:rotate(90deg); }
 
 
+.select_nostyle {border:0 none; padding:0; background:transparent; }
+.select_nostyle:focus {box-shadow:none; }
 /* ----------------------------------------------
             INPUT_GROUP
 ---------------------------------------------- */
@@ -466,6 +470,8 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .nav.nav-link-tabs.type02:before {content:''; position:absolute; left:0; bottom:0; width:100%; height:2px; background-color:rgba(255,255,255,.1); }
 .nav.nav-link-tabs.type02 .nav-item .nav-link.active {border-bottom-color:rgba(170,127,0,1); }
 
+.nav.nav-link-tabs.type03 .nav-item .nav-link {background:rgba(255,255,255,.2); }
+
 .nav.nav-boxed-tabs {overflow:hidden; border-radius:5px 5px 0 0; }
 .nav.nav-boxed-tabs .nav-item .nav-link {color:rgba(255,255,255,.5); background:rgba(255,255,255,0.1); border-radius:0; }
 
@@ -507,6 +513,9 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 
 .mySwiper .scrollbar {position:relative; width:100%; height:2px; background-color:#470d3a; border-radius:4px; }
 .mySwiper .scrollbar .swiper-scrollbar-drag {background-color:#d90b83; }
+
+.mySwiper .progressbar {position:relative; }
+.mySwiper .progressbar .swiper-pagination-progressbar-fill {background-color:#848b97; }
 
 /* ----------------------------------------------
             CUSTOM_HOVER
@@ -897,7 +906,8 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .betslip_hoory button {z-index:2; position:relative; display:flex; align-items:center; justify-content:center; width:140px; margin:0 auto; padding:7px 15px; font-size:11px; line-height:1; font-weight:bold; border-radius:30px; box-shadow:0 2px 12px #fb275cb2; background:linear-gradient(329.84deg,rgba(216,13,131,.95) 27.27%,rgba(240,55,162,.95) 66.3%,rgba(216,13,131,.95) 110.73%); animation:btn 2s alternate-reverse linear infinite; }
 .betslip_hoory button:before {content:""; font-family:BetConstruct-Icons,sans-serif; position:absolute; left:-14px; top:0; font-size:14px; color:#d80d83; }
 .betslip_hoory button:after {content:""; font-family:BetConstruct-Icons,sans-serif; position:absolute; right:-14px; bottom:0; transform:rotate(-165deg); font-size:14px; color:#d80d83; }
-.betslip_hoory img {position:absolute; left:0; right:0; bottom:-50px; width:100%; height:100px; object-fit:cover; animation:hoory 2s alternate-reverse linear infinite; }
+.betslip_hoory img {z-index:2; position:absolute; left:0; right:0; bottom:-50px; width:100%; height:100px; object-fit:contain; animation:hoory 2s alternate-reverse linear infinite; }
+.betslip_hoory:after {content:''; z-index:1; position:absolute; left:0; bottom:0; right:0; height:60px; background:linear-gradient(180deg,rgba(29,25,38,0) 50%,#b21a7e 200%); }
 
 @keyframes tit {
     0% {top:20px; opacity:0; }

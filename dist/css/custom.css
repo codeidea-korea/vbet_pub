@@ -320,6 +320,31 @@
 .gamecate_btn[data-cate="MobileLegends"].active {border-left-color:#a98157; }
 .gamecate_btn[data-cate="CyberFootball"].active {border-left-color:#308231; }
 
+.gamecate_bg_btn.active {z-index:2; position:sticky; left:0; }
+.gamecate_bg_btn.active * {color:#fff; }
+.gamecate_bg_btn[data-cate="football"].active {background-color:#109121; }
+.gamecate_bg_btn[data-cate="basketball"].active {background-color:#fca601; }
+.gamecate_bg_btn[data-cate="Tennis"].active {background-color:#a19e3e; }
+.gamecate_bg_btn[data-cate="IceHockey"].active {background-color:#50a2c6; }
+.gamecate_bg_btn[data-cate="volleyball"].active {background-color:#dac179; }
+.gamecate_bg_btn[data-cate="handball"].active {background-color:#42777f; }
+.gamecate_bg_btn[data-cate="tabletennis"].active {background-color:#839d24; }
+.gamecate_bg_btn[data-cate="mma"].active {background-color:#868686; }
+.gamecate_bg_btn[data-cate="americanFootball"].active {background-color:#e7685c; }
+.gamecate_bg_btn[data-cate="baseball"].active {background-color:#5caaa7; }
+.gamecate_bg_btn[data-cate="cricket"].active {background-color:#1bab7d; }
+.gamecate_bg_btn[data-cate="cycling"].active {background-color:#d9c68f; }
+.gamecate_bg_btn[data-cate="formula1"].active {background-color:#b8292b; }
+.gamecate_bg_btn[data-cate="politics"].active {background-color:#641f6e; }
+.gamecate_bg_btn[data-cate="rugbyunion"].active {background-color:#799755; }
+.gamecate_bg_btn[data-cate="Golf"].active {background-color:#189946; }
 
+.gamecate_bg_btn[data-cate="counterstrike2"].active {background-color:#cc581f; }
+.gamecate_bg_btn[data-cate="Archery"].active {background-color:#f781d9; }
+.gamecate_bg_btn[data-cate="PistolShooting"].active {background-color:#3c5182; }
+.gamecate_bg_btn[data-cate="Dota2"].active {background-color:#9b1013; }
+.gamecate_bg_btn[data-cate="LeagueOfLegends"].active {background-color:#034653; }
+.gamecate_bg_btn[data-cate="MobileLegends"].active {background-color:#a98157; }
+.gamecate_bg_btn[data-cate="CyberFootball"].active {background-color:#308231; }
 
 

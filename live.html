@@ -32,7 +32,9 @@
             <div class="content !min-h-fit">
                 
                 <div class="content_box px-2.5">
+
                     <div class="flex gap-3 full_height py-2">
+
                         <!-- category -->
                         <div class="lg:block hidden overflow-y-auto shrink-0 w-[300px] pr-1">
 
@@ -57,7 +59,7 @@
                                 </li>
                             </ul>
                             <div class="tab-content mt-0.5">
-                                <div id="sport_cate-tab-1" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="sport_cate-1-tab">
+                                <div id="sport_cate-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="sport_cate-1-tab">
 
                                     <div class="flex gap-2 p-2.5 bg-white bg-opacity-5 rounded">
                                         <button class="h-7 px-4 border border-white border-opacity-60 rounded bc-i-stream"></button>
@@ -1362,7 +1364,7 @@
 
 
                                 </div>
-                                <div id="sport_cate-tab-2" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="sport_cate-2-tab">
+                                <div id="sport_cate-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="sport_cate-2-tab">
 
                                     <div class="flex gap-2 p-2.5 bg-white bg-opacity-5 rounded">
                                         <button class="h-7 px-4 border border-white border-opacity-60 rounded bc-i-bet-cloud"></button>
@@ -2231,24 +2233,75 @@
                                 </div>
                             </div>
 
+                            <!-- 슬라이드 -->
+                            <div class="game_fold open my-4">
+                                <button class="flex items-center justify-between w-full h-8 px-3 bg-white bg-opacity-10 rounded" onclick="gameToggle(this)">
+                                    <p class="text-xs">Bet-Insights</p>
+                                    <i class="arrow flex items-center justify-center w-6 h-6 bc-i-small-arrow-down text-xs !bg-white !bg-opacity-10 rounded"></i>
+                                </button>
+                                <div class="overflow-hidden">
+                                    <div class="mySwiper mt-2" data-per="1.2" data-gap="5" data-center="true" data-loop="false">
+                                        <div class="swiper-container">
+                                            <ul class="swiper-wrapper">
+                                                <li class="swiper-slide p-5 bg-white bg-opacity-15 rounded">
+                                                    <div class="grid grid-cols-2 py-5 text-xs">
+                                                        <div class="text-center">Los Angeles FC</div> 
+                                                        <div class="text-center">Vancouver<br/>Whitecaps FC</div> 
+                                                    </div>
+                                                    <div class="mb-2 text-base">Los Angeles FC has led at halftime in 6 of their last 8 matches, in which they failed to score by the 0th minute.</div>
+                                                    <button class="flex items-center justify-between w-full py-3 px-5 egame_btn is-down bg-white bg-opacity-20 rounded text-base" onclick="gameActive(this)">
+                                                        <span class="font-medium">W1</span>
+                                                        <span class="text-warning font-medium">3.45</span>
+                                                    </button>
+                                                </li>
+                                                <li class="swiper-slide p-5 bg-white bg-opacity-15 rounded">
+                                                    <div class="grid grid-cols-2 py-5 text-xs">
+                                                        <div class="text-center">Los Angeles FC</div> 
+                                                        <div class="text-center">Vancouver<br/>Whitecaps FC</div> 
+                                                    </div>
+                                                    <div class="mb-2 text-base">Los Angeles FC has led at halftime in 6 of their last 8 matches, in which they failed to score by the 0th minute.</div>
+                                                    <button class="flex items-center justify-between w-full py-3 px-5 egame_btn is-down bg-white bg-opacity-20 rounded text-base" onclick="gameActive(this)">
+                                                        <span class="font-medium">W1</span>
+                                                        <span class="text-warning font-medium">3.45</span>
+                                                    </button>
+                                                </li>
+                                                <li class="swiper-slide p-5 bg-white bg-opacity-15 rounded">
+                                                    <div class="grid grid-cols-2 py-5 text-xs">
+                                                        <div class="text-center">Los Angeles FC</div> 
+                                                        <div class="text-center">Vancouver<br/>Whitecaps FC</div> 
+                                                    </div>
+                                                    <div class="mb-2 text-base">Los Angeles FC has led at halftime in 6 of their last 8 matches, in which they failed to score by the 0th minute.</div>
+                                                    <button class="flex items-center justify-between w-full py-3 px-5 egame_btn is-down bg-white bg-opacity-20 rounded text-base" onclick="gameActive(this)">
+                                                        <span class="font-medium">W1</span>
+                                                        <span class="text-warning font-medium">3.45</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="pagination progressbar mt-2"></div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <!-- 탭 -->
                             <div class="overflow-hidden relative flex h-9 bg-white bg-opacity-10 rounded">
-                                <div class="flex items-center justify-center w-9 h-9 bg-white bg-opacity-15">
+                                <div class="flex items-center justify-center shrink-0 w-9 h-9 bg-white bg-opacity-15">
                                     <button class="bc-i-search text-lg" onclick="searchToggle(this)"></button>
                                     <input type="text" class="z-10 absolute left-9 top-0 hidden h-9 form-control line-add !bg-bg rounded-l-none" style="width:0" placeholder="Search market...">
                                 </div>
-                                <div class="relative flex-1 mySwiper" data-per="auto" data-gap="0" data-loop="false">
-                                    <div class="swiper-container">
-                                        <ul class="swiper-wrapper font-medium custom_tab">
-                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 bc-i-favorite text-white text-opacity-50 text-lg" onclick="tabActiveToggle(this)"></button></li>
-                                            <li class="swiper-slide !w-auto leading-9"><button class="active h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">All</button></li>
-                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Match <span class="relative -top-2 fs9">9</span></button></li>
-                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Totals <span class="relative -top-2 fs9">19</span></button></li>
-                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Handicaps <span class="relative -top-2 fs9">12</span></button></li>
-                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Halves <span class="relative -top-2 fs9">20</span></button></li>
-                                            <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Combos <span class="relative -top-2 fs9">1</span></button></li>
-                                        </ul>
+                                <div class="relative flex-1 w-11/12 mySwiper" data-per="auto" data-gap="0" data-loop="false">
+                                    <div class="pr-16">
+                                        <div class="swiper-container overflow-hidden">
+                                            <ul class="swiper-wrapper font-medium custom_tab">
+                                                <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 bc-i-favorite text-white text-opacity-50 text-lg" onclick="tabActiveToggle(this)"></button></li>
+                                                <li class="swiper-slide !w-auto leading-9"><button class="active h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">All</button></li>
+                                                <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Match <span class="relative -top-2 fs9">9</span></button></li>
+                                                <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Totals <span class="relative -top-2 fs9">19</span></button></li>
+                                                <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Handicaps <span class="relative -top-2 fs9">12</span></button></li>
+                                                <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Halves <span class="relative -top-2 fs9">20</span></button></li>
+                                                <li class="swiper-slide !w-auto leading-9"><button class="h-9 px-4 text-white text-opacity-50" onclick="tabActiveToggle(this)">Combos <span class="relative -top-2 fs9">1</span></button></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="z-10 absolute right-0 top-0 flex items-center gap-1 h-full px-2">
                                         <button class="text-lg text-white text-opacity-50 bc-i-one-block" onclick="changeGrid(this,'one')"></button>

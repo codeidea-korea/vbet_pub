@@ -290,6 +290,12 @@ const gameCateToggle = (item)=>{
     })
 }
 
+// 모바일 Result 페이지 오픈
+const moResultOpen = (item)=>{
+    console.log($(window).width())
+    if($(window).width()< 767 ){
+    }
+}
 
 
 // jquery 모음
@@ -315,7 +321,7 @@ const loadJquery = ()=>{
             pagination: {
                 el: '.mySwiper.num' + index + ' .pagination',
                 clickable: true,
-                type:  $('.mySwiper.num' + index + ' .pagination').hasClass('fraction') ? "fraction" : "bullets",
+                type:  $('.mySwiper.num' + index + ' .pagination').hasClass('fraction') ? "fraction" : $('.mySwiper.num' + index + ' .pagination').hasClass('progressbar') ? "progressbar": "bullets",
             },
             navigation: {
                 nextEl: '.mySwiper.num' + index + ' .next',
