@@ -77,7 +77,10 @@ echo txtRecord('./@record/');
         </li>
 		<li class="" data-label="공통모달">
 			<ul>
-				<li><button class="pop-modal draggable_modal_open">calculator 모달</button></li>
+				<li>
+					<button class="pop-modal draggable_modal_open">calculator 모달</button>
+					<button class="pop-modal" onclick="modalOpen('golden_age-modal')">GOLDEN AGE 모달</button>
+				</li>
 			</ul>
 		</li>
 		<li class="mt20" data-label="메뉴">
@@ -93,6 +96,26 @@ echo txtRecord('./@record/');
 						</li>
 						<li><a href="./live_mobile.html" target="_blank">live - 모바일</a></li>
 						<li><a href="./live_detail_mobile.html" target="_blank">live detail - 모바일</a></li>
+					</ul>
+				</li>
+				<li data-label="Sports">
+					<ul>
+						<li>
+							<a href="./sports.html" target="_blank">Sports</a>
+							<ul>
+								<li><a href="./sports_tournament.html" target="_blank" class="">tournaments</a></li>
+								<li><a href="./sports_calendar.html" target="_blank" class="">sports calendar</a></li>
+								<li>
+									<a href="./sports_results.html" target="_blank" class="">sports results</a>
+									<ul>
+										<li><button class="pop-modal" onclick="modalOpen('sport_result-modal')">모바일 result 모달</button></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="./sports_mobile.html" target="_blank">sports - 카테고리 선택 - 모바일</a></li>
+						<li><a href="./sports_list_mobile.html" target="_blank">sports 리스트 - 모바일</a></li>
+						<li><a href="./sports_detail_mobile.html" target="_blank">sports detail - 모바일</a></li>
 					</ul>
 				</li>
                 <li class="mt10" data-label="Casino">
@@ -141,7 +164,12 @@ echo txtRecord('./@record/');
 						<li>
 							<a href="./esports.html" target="_blank" class="">esports</a>
 							<ul>
-								<li><a href="./esports_list.html" target="_blank" class="">esports - list</a></li>
+								<li>
+									<a href="./esports_list.html" target="_blank" class="">esports - list</a>
+									<ul>
+									<li><button class="pop-modal" onclick="modalOpen('sport_result-modal')">모바일 result 모달</button></li>
+									</ul>
+								</li>
 								<li><a href="./esports_detail.html" target="_blank" class="">esports - detail</a></li>
 							</ul>
 						</li>

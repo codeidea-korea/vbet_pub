@@ -294,8 +294,27 @@ const gameCateToggle = (item)=>{
 const moResultOpen = (item)=>{
     console.log($(window).width())
     if($(window).width()< 767 ){
+        modalOpen('sport_result-modal')
     }
 }
+
+// sports > column
+const MultiColumnChecked = (item)=>{
+    $('.multi_column_wrap').toggleClass('active')
+    $('.multi_column > div').toggleClass('hidden')
+    if(!$(item).prop('checked')){
+        $('.multi_column_wrap').removeClass('one')
+    }
+}
+const MultiColumnToggle = (item)=>{
+    $('.multi_column_wrap').toggleClass('one')
+}
+
+// sport list toggle 
+const sportListToggle = (item)=>{
+    $('.multi_column_wrap').toggleClass('list')
+}
+
 
 
 // jquery 모음

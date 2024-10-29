@@ -1771,6 +1771,9 @@ select{
 .col-span-4{
     grid-column: span 4 / span 4;
 }
+.col-span-2{
+    grid-column: span 2 / span 2;
+}
 .mx-auto{
     margin-left: auto;
     margin-right: auto;
@@ -1934,6 +1937,9 @@ select{
 }
 .mb-2\.5{
     margin-bottom: 0.625rem;
+}
+.mt-2\.5{
+    margin-top: 0.625rem;
 }
 .block{
     display: block;
@@ -2194,6 +2200,21 @@ select{
 }
 .w-11\/12{
     width: 91.666667%;
+}
+.w-\[152px\]{
+    width: 152px;
+}
+.w-\[49px\]{
+    width: 49px;
+}
+.w-\[102px\]{
+    width: 102px;
+}
+.w-\[50px\]{
+    width: 50px;
+}
+.\!w-44{
+    width: 11rem !important;
 }
 .min-w-\[220px\]{
     min-width: 220px;
@@ -2541,6 +2562,9 @@ select{
 }
 .border-opacity-50{
     --tw-border-opacity: 0.5;
+}
+.border-opacity-40{
+    --tw-border-opacity: 0.4;
 }
 .bg-black\/90{
     background-color: rgb(0 0 0 / 0.9);
@@ -3145,6 +3169,9 @@ select{
 }
 .text-opacity-90{
     --tw-text-opacity: 0.9;
+}
+.text-opacity-5{
+    --tw-text-opacity: 0.05;
 }
 .underline{
     -webkit-text-decoration-line: underline;
@@ -14378,6 +14405,10 @@ html body{
         padding-top: 0px;
         padding-bottom: 0px;
     }
+    .md\:px-4{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     .md\:pb-7{
         padding-bottom: 1.75rem;
     }
@@ -14493,6 +14524,9 @@ html body{
     .xl\:block{
         display: block;
     }
+    .xl\:grid{
+        display: grid;
+    }
     .xl\:hidden{
         display: none;
     }
@@ -14507,5 +14541,13 @@ html body{
     }
     .xl\:flex-row{
         flex-direction: row;
+    }
+}
+@media (min-width: 1536px){
+    .\32xl\:block{
+        display: block;
+    }
+    .\32xl\:grid{
+        display: grid;
     }
 }

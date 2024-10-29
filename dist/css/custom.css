@@ -347,4 +347,5 @@
 .gamecate_bg_btn[data-cate="MobileLegends"].active {background-color:#a98157; }
 .gamecate_bg_btn[data-cate="CyberFootball"].active {background-color:#308231; }
 
-
+.sports_cate button {background-color:var(--bg-color); color:rgba(255,255,255,0.5); }
+.sports_cate button.active {z-index:10; position:sticky; left:0; color:rgba(255,255,255,1); background-color:#0d172f; }

@@ -153,6 +153,8 @@
         BETSLIP - HOORY
         FIELD
 
+        MULTI_COLUMN
+
 */
 
 #main-loader {z-index:1000; opacity:1; position:fixed; left:0; top:0; display:flex; align-items:center; justify-content:center; width:100%; height:100%; background:var(--bg-color); transition:all 0.4s; }
@@ -343,8 +345,8 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
             MODAL
 ---------------------------------------------- */
 .modal-content {background:var(--bg-color); }
-.modal .modal-body {position:relative; overflow-y:auto; max-height:75vh; }
-.modal .modal-body.fix_height {height:75vh; }
+.modal .modal-body {position:relative; overflow-y:auto; max-height:85vh; }
+.modal .modal-body.fix_height {height:85vh; }
 .modal .modal-body .close_btn {z-index:100; position:absolute; right:15px; top:15px; }
 
 
@@ -356,7 +358,7 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 
 @media all and (min-width:768px){
     .modal .modal-body.inner_scroll {overflow:hidden; max-height:unset; }
-    .modal .modal-body.inner_scroll .inner_height {overflow-y:auto; max-height:75vh; }
+    .modal .modal-body.inner_scroll .inner_height {overflow-y:auto; max-height:85vh; }
 }
 @media all and (max-width:767px){
     .modal.mo_full {top:56px; height:calc(100% - 56px); }
@@ -427,6 +429,11 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 
 .form-check-input[type="radio"] {border:2px solid rgba(255,255,255,0.6); background-color:transparent; }
 .form-check-input[type="radio"]:checked {border:2px solid rgb(var(--color-primary)); background-color:transparent; background-image:url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='mediumvioletred' xmlns='http://www.w3.org/2000/svg'><circle cx='8' cy='8' r='3'/></svg>"); }
+
+.form-switch input[type="checkbox"] {width:36px; height:20px; border:0 none; background-color:rgba(255,255,255,0.15); }
+.form-switch input[type="checkbox"]:before {width:16px; height:16px; margin-left:1px; background-color:rgba(255,255,255,0.6); }
+.form-switch input[type="checkbox"]:checked {background-color:rgba(255,255,255,0.7); }
+.form-switch input[type="checkbox"]:checked:before {margin-left:17px; background-color:#a71f67; }
 
 .form-switch.promo-switch input[type="checkbox"] {width:51px; height:28px; border:0 none; background-color:#6b084896; }
 .form-switch.promo-switch input[type="checkbox"]:focus {box-shadow:none; }
@@ -510,6 +517,10 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .slide_arrow:disabled {display:none; }
 .slide_arrow.prev {left:0; }
 .slide_arrow.next {right:0; }
+
+.center_arrow {z-index:10; position:absolute; top:50%; transform:translateY(-50%); }
+.center_arrow.prev {left:6%; }
+.center_arrow.next {right:6%; }
 
 .mySwiper .scrollbar {position:relative; width:100%; height:2px; background-color:#470d3a; border-radius:4px; }
 .mySwiper .scrollbar .swiper-scrollbar-drag {background-color:#d90b83; }
@@ -1011,4 +1022,36 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 @keyframes zoneFill {
     0% { fill: transparent; }
     100% { fill: #29602999; }
+}
+
+
+/* ----------------------------------------------
+            MULTI_COLUMN
+---------------------------------------------- */
+.multi_column_wrap > div {width:50%; }
+.multi_column_wrap.active > div:nth-of-type(1) {width:57%; }
+.multi_column_wrap.active > div:nth-of-type(2) {width:43%; }
+
+.multi_column_wrap.one > div {width:100% !important; }
+.multi_column_wrap.one > div:nth-of-type(2) {display:none; }
+
+.multi_column_wrap .back {display:none; }
+
+@media all and (max-width:1350px){
+    .multi_column_wrap > div {width:100% !important; }
+    .multi_column_wrap > div:nth-of-type(2) {z-index:10; position:absolute; left:0; top:0; background:var(--bg-color); }
+
+    .multi_column_wrap.list > div:nth-of-type(2) {display:none; }
+
+    .multi_column_wrap .back {display:flex; }
+
+    .multi_column .\33xl\:grid.hidden,
+    .multi_column .\32xl\:grid.hidden {display:grid; }
+    .multi_column .\33xl\:block.hidden,
+    .multi_column .\32xl\:block.hidden {display:block; }
+}
+
+@media all and (min-width:1760px) {
+    .\33xl\:grid {display:grid; }
+    .\33xl\:block {display:block; }
 }
