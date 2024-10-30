@@ -315,6 +315,27 @@ const sportListToggle = (item)=>{
     $('.multi_column_wrap').toggleClass('list')
 }
 
+// input_wrap 에서 input에 내용 입력했을때 클래스 추가
+const inputChange = (item)=>{
+    if($(item).val().length > 0){
+        $(item).parent('.input_wrap').addClass('on')
+    }else{
+        $(item).parent('.input_wrap').removeClass('on')
+    }
+}
+
+// password <---> text
+const passwordChange = (item)=>{
+    let type = $(item).siblings('input').attr('type')
+
+    if(type == 'text'){
+        $(item).siblings('input').attr('type','password')
+    }else{
+        $(item).siblings('input').attr('type','text')
+    }
+
+    $(item).toggleClass('bc-i-eye bc-i-eye-hidden')
+}
 
 
 // jquery 모음

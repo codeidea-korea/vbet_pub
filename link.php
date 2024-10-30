@@ -80,6 +80,9 @@ echo txtRecord('./@record/');
 				<li>
 					<button class="pop-modal draggable_modal_open">calculator 모달</button>
 					<button class="pop-modal" onclick="modalOpen('golden_age-modal')">GOLDEN AGE 모달</button>
+					<button class="pop-modal" onclick="modalOpen('sign_in-modal')">SIGN IN 모달</button>
+					<button class="pop-modal" onclick="modalOpen('reset_password-modal')">reset password 모달</button>
+					<button class="pop-modal" onclick="modalOpen('register-modal')">register 모달</button>
 				</li>
 			</ul>
 		</li>
