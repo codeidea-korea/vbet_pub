@@ -124,6 +124,14 @@ const modalClose = (item)=>{
     document.querySelector('body').classList.remove('overflow-hidden');
 }
 
+// right_pop open 
+const rightPopToggle = (item)=>{
+    $(`#${item}`).toggleClass('open')
+    setTimeout(function(){
+        $(`#${item}`).find('.right_pop_box').toggleClass('show')
+    },0)
+}
+
 // 버튼 토글
 const tabActiveToggle = (item)=>{
     $(item).addClass('active').parent('li').siblings().find('button').removeClass('active')
@@ -337,6 +345,25 @@ const passwordChange = (item)=>{
     $(item).toggleClass('bc-i-eye bc-i-eye-hidden')
 }
 
+// 테마색상 변경
+const themeColor = (item)=>{
+    $('html').removeClass('black light type2').addClass(item);
+}
+
+// 프로필 탭
+const profileTab = (item,target)=>{
+    // let target = $(item).data('target')
+
+    $('#profile-modal .profile_tab').each(function(){
+        if($(this).data('target') != $(item).data('target')){
+            $(this).removeClass('active')
+        }else{
+            $(this).addClass('active')
+        }
+    });
+    $('#profile-modal .profile_inner > div').removeClass('active');
+    // $(`#profile-modal .profile_inner > div.${target}`).addClass('active');
+}
 
 // jquery 모음
 const loadJquery = ()=>{
@@ -491,6 +518,16 @@ const loadJquery = ()=>{
         })
     })
 
+    document.addEventListener('click',(e)=>{
+        const right = document.querySelector('.right_pop_area.open')
+        const rightIn = document.querySelector('.right_pop_box.show')
+
+        if(rightIn && !rightIn.contains(e.target)){
+            right.classList.remove('open')
+            rightIn.classList.remove('show')
+        }
+    })
+
     // 드래그
     const DraggModal = $(".draggable_modal");
     
@@ -510,6 +547,53 @@ const loadJquery = ()=>{
         DraggModal.addClass('transition-all');
     });
 
+
+    // Litepicker
+    $(".datepicker").each(function () {
+        let options = {
+            autoApply: true,
+            singleMode: false,
+            numberOfColumns: 2,
+            numberOfMonths: 2,
+            showWeekNumbers: true,
+            format: "DD.MM.YYYY",
+            dropdowns: {
+                minYear: 1990,
+                maxYear: null,
+                months: true,
+                years: true,
+            },
+        };
+
+        if ($(this).data("single-mode")) {
+            options.singleMode = true;
+            options.numberOfColumns = 1;
+            options.numberOfMonths = 1;
+        }
+
+        if ($(this).data("format")) {
+            options.format = $(this).data("format");
+        }
+
+        if (!$(this).val()) {
+            let day = new Date().toLocaleDateString().split('.');
+            let today = `${day[2]}.${day[1]}.${day[0]}`;
+            $(this).val(today.replaceAll(' ',''));
+        }
+
+        // if (!$(this).val()) {
+        //     let date = dayjs().format(options.format);
+        //     date += !options.singleMode
+        //         ? " - " + dayjs().add(1, "month").format(options.format)
+        //         : "";
+        //     $(this).val(date);
+        // }
+
+        new Litepicker({
+            element: this,
+            ...options,
+        });
+    });
         
 
 }

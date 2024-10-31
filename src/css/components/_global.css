@@ -1,5 +1,4 @@
 html {
-    @apply bg-[#000c24];
     body {
         @apply antialiased overflow-x-hidden font-roboto text-sm text-white;
     }

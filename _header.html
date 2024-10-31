@@ -15,8 +15,8 @@
                 <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
             </div>
 
-            <a href="javascript:;" class="text-xs underline logout_show">SIGN IN</a>
-            <button type="button" class="btn btn-primary h-7 px-1.5 py-1 text-xs logout_show"><span>REGISTER</span></button>
+            <a href="javascript:;" class="text-xs underline logout_show" onclick="modalOpen('sign_in-modal')">SIGN IN</a>
+            <button type="button" class="btn btn-primary h-7 px-1.5 py-1 text-xs logout_show" onclick="modalOpen('register-modal')"><span>REGISTER</span></button>
 
             <div class="custom_hover">
                 <button class="h-7 px-2 text-xs rounded">0.0 <b>֏</b></button>
@@ -69,11 +69,11 @@
                 <div class="!bg-bg h-auto">
                     <ul>
                         <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-history"></i></button></li>
-                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-notification"></i></button></li>
-                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-star"></i></button></li>
+                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10" onclick="rightPopToggle('notification-right')"><i class="bc-i-notification"></i></button></li>
+                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10" onclick="rightPopToggle('favorite-right')"><i class="bc-i-star"></i></button></li>
                         <li class="p-2 hover-primary-color"><button class="relative flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-message"></i><span class="absolute -right-1 -top-1 flex items-center justify-center w-4 h-4 bg-primary text-white rounded-full text-xs">1</span></button></li>
                         <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-bonus"></i></button></li>
-                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-settings"></i></button></li>
+                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10" onclick="rightPopToggle('settings-right')"><i class="bc-i-settings"></i></button></li>
                         <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-live-chat"></i></button></li>
                     </ul>
                 </div>
@@ -300,4 +300,106 @@
         <li><a href="./promotion.html" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-promotions bg-[#a13d6a] rounded"></i>Promotions</a></li>
         <li><a href="./aviatrix.html" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-aviatrix bg-[#6585a1] rounded"></i>Aviatrix</a></li>
     </ul>
+</div>
+
+
+<!-- notifi -->
+<div id="notification-right" class="right_pop_area">
+    <div class="right_pop_box">
+        <div class="flex items-center gap-2 px-2 h-12 border-b border-white border-opacity-10 text-base font-medium">
+            <button class="p-2 bc-i-close-remove text-xs" onclick="rightPopToggle('notification-right')"></button>
+            WHAT'S NEW
+        </div>
+        <div class="flex-1 flex items-center justify-center w-full">
+            <div class="text-white text-opacity-70">You have no new notifications</div>
+        </div>
+    </div>
+</div>
+
+<!-- favorite -->
+<div id="favorite-right" class="right_pop_area">
+    <div class="right_pop_box">
+        <div class="flex items-center gap-2 px-2 h-12 border-b border-white border-opacity-10 text-base font-medium">
+            <button class="p-2 bc-i-close-remove text-xs" onclick="rightPopToggle('favorite-right')"></button>
+            FAVORITES
+        </div>
+        <div class="flex-1 w-full p-3">
+            <div class="text-right"><button class="text-white text-opacity-70">Remove All</button></div>
+            <div class="grid grid-cols-2 gap-2 ">
+                <div class="overflow-hidden casino_item rounded">
+                    <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                    <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                        <div class="flex items-center justify-between w-full text-xs md:text-base">
+                            <button class="bc-i-favorite"></button>
+                            <button class="bc-i-info"></button>
+                        </div>
+                        <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                        <div class="btn_box flex items-center justify-center gap-2">
+                            <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                            <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="p-5 text-white text-center text-opacity-70">You don't have favorite games. To add some, click the star icon near the game name.</div>
+        </div>
+    </div>
+</div>
+
+<!-- settings -->
+<div id="settings-right" class="right_pop_area">
+    <div class="right_pop_box">
+        <div class="flex items-center gap-2 px-2 h-12 border-b border-white border-opacity-10 text-base font-medium">
+            <button class="p-2 bc-i-close-remove text-xs" onclick="rightPopToggle('settings-right')"></button>
+            SETTINGS
+        </div>
+        <div class="flex-1 w-full p-3">
+            <div class="grid grid-cols-2 gap-2 ">
+
+                <div class="custom_select">
+                    <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
+                        <span class="text-xs opacity-40">Language</span>
+                        <p class="flex items-center gap-2"><i class="flag-bc unitedkingdom"></i> English</p> 
+                        <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                    </button>
+                    <div class="!top-full bg-bg w-full p-3 shadow-2">
+                        <div class="relative mb-1">
+                            <input type="text" class="form-control w-full pr-12 !bg-white !bg-opacity-15" placeholder="Search Country"> 
+                            <i class="bc-i-search absolute right-0 top-0 flex items-center justify-center w-9 h-9"></i>
+                        </div>
+                        <ul>
+                            <li class="px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc unitedkingdom"></i> English</p> </li>
+                            <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc armenia"></i> Հայերեն</p></li>
+                            <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc russia"></i> Русский</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="custom_select">
+                    <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
+                        <span class="text-xs opacity-40">Time format</span>
+                        <p>24h</p>
+                        <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                    </button>
+                    <div class="!top-full bg-bg w-full p-3 shadow-2">
+                        <div class="relative mb-1">
+                            <input type="text" class="form-control w-full pr-12 !bg-white !bg-opacity-15" placeholder="Search Country"> 
+                            <i class="bc-i-search absolute right-0 top-0 flex items-center justify-center w-9 h-9"></i>
+                        </div>
+                        <ul>
+                            <li class="px-3 h-8 text-xs !font-normal rounded"><p>12h</p></li>
+                            <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>24h</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-span-2 text-lg font-medium text-white text-opacity-60">THEME</div>
+                <div class="sp-theme-item-bc theme-default active dark" onclick="btnActiveRadio(this); themeColor()" style="background: rgb(0, 12, 36);"><div class="sp-theme-container"><span class="user-profile-nav-item-cursor"></span><div class="sp-theme-container-aside"><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p></div><div class="sp-theme-container-content"><div class="sp-them-logo"><span>Logo</span></div><div class="sp-theme-container-content-top"><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p></div><div class="sp-theme-container-content-middle"><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p></div><p class="sp-theme-bottom-item"></p><p class="sp-theme-last-item"></p></div></div></div>
+                <div class="sp-theme-item-bc theme-black  dark" onclick="btnActiveRadio(this); themeColor('black')" style="background: rgb(12, 12, 18);"><div class="sp-theme-container"><span class="user-profile-nav-item-cursor"></span><div class="sp-theme-container-aside"><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p></div><div class="sp-theme-container-content"><div class="sp-them-logo"><span>Logo</span></div><div class="sp-theme-container-content-top"><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p></div><div class="sp-theme-container-content-middle"><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p></div><p class="sp-theme-bottom-item"></p><p class="sp-theme-last-item"></p></div></div></div>
+                <div class="sp-theme-item-bc theme-white  light" onclick="btnActiveRadio(this); themeColor('light')" style="background: rgb(227, 227, 237);"><div class="sp-theme-container"><span class="user-profile-nav-item-cursor"></span><div class="sp-theme-container-aside"><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p></div><div class="sp-theme-container-content"><div class="sp-them-logo"><span>Logo</span></div><div class="sp-theme-container-content-top"><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p></div><div class="sp-theme-container-content-middle"><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p></div><p class="sp-theme-bottom-item"></p><p class="sp-theme-last-item"></p></div></div></div>
+                <div class="sp-theme-item-bc theme-blue  dark" onclick="btnActiveRadio(this); themeColor('type2')" style="background: rgb(36, 36, 71);"><div class="sp-theme-container"><span class="user-profile-nav-item-cursor"></span><div class="sp-theme-container-aside"><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p></div><div class="sp-theme-container-content"><div class="sp-them-logo"><span>Logo</span></div><div class="sp-theme-container-content-top"><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p></div><div class="sp-theme-container-content-middle"><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p></div><p class="sp-theme-bottom-item"></p><p class="sp-theme-last-item"></p></div></div></div>
+
+            </div>
+        </div>
+    </div>
 </div>

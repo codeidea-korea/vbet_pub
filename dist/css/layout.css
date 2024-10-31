@@ -1,7 +1,22 @@
 @charset "utf-8";
 
-:root {
+html {
     --bg-color:#000c24;
+}
+html.black {
+    --bg-color:#0c0c12;
+}
+html.type2 {
+    --bg-color:#242447;
+}
+html.light {
+    --bg-color:#e3e3ed;
+}
+html.light body {color:rgb(0,0,0 / var(--tw-text-opacity));}
+html.light .bg-white {background-color:rgb(0 0 0 / var(--tw-bg-opacity)); }
+html.light .bg-white\/10 {background-color:rgb(0 0 0 / 0.1); }
+
+:root {
     --darky-color:#1a243b;
     --primary-light-color:#a71f67;
     --primary-light2-color:#d80d83;
@@ -28,6 +43,8 @@
     --text-shadow-1:0 0 12px #ff3449,0 0 20px #ff3449;
 }
 
+html {background-color:var(--bg-color);}
+
 .inner {width:1620px; max-width:100%; margin:0 auto; padding:0 10px; }
 
 .fs8 {font-size:8px; }
@@ -46,6 +63,7 @@
 
 /* color / bg */
 .bg-opacity-15 {--tw-bg-opacity:0.15; }
+.\!bg-opacity-15 {--tw-bg-opacity:0.15 !important; }
 .bg-bg {background:var(--bg-color); }
 .\!bg-bg {background:var(--bg-color) !important; }
 .bg-darky {background:var(--darky-color); }
@@ -154,6 +172,7 @@
         FIELD
 
         MULTI_COLUMN
+        RIGHT_POP_AREA
 
 */
 
@@ -350,7 +369,11 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .modal .modal-body .close_btn {z-index:100; position:absolute; right:15px; top:15px; }
 
 
+.modal .modal-dialog.modal-2lg {width:720px; max-width:90%; }
 .modal .modal-dialog.modal-2xl {width:1340px; max-width:90%; }
+
+.modal .modal-dialog.modal-profile .modal-body {height:85vh; }
+.modal .modal-dialog.modal-profile .modal-body .profile_inner {height:calc(85vh - 80px); padding:15px; }
 
 @media (min-width:1024px){
     .modal .modal-dialog.modal-xl {width:944px; }
@@ -366,7 +389,11 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
     .modal.mo_full .modal-dialog .modal-content {height:100%; }
     .modal.mo_full .modal-body {max-height:100%; }
 }
-
+@media (min-width: 640px) {
+    .modal .modal-dialog.modal-sm {
+        width: 400px;
+    }
+}
 /* ----------------------------------------------
             DRAGGABLE_MODAL
 ---------------------------------------------- */
@@ -450,8 +477,8 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 
 .input_wrap.error {border:1px solid #ff4e4e; color:#FF4E4E; }
 
-.input_wrap .password_btn {position:absolute; right:0; top:0; width:52px; height:52px; }
-
+.input_wrap .password_btn {position:absolute; right:0; top:0; display:none; width:52px; height:52px; }
+.input_wrap.on .password_btn {display:block; }
 
 /* ----------------------------------------------
             NAV-LINK-TABS
@@ -574,6 +601,7 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .vbet_toggle.open > button {transform:rotate(180deg); }
 
 .vbet_toggle .txt_area * {color:rgba(255,255,255,.5); }
+html.light .vbet_toggle .txt_area * {color:rgba(0,0,0,.5); }
 
 .faq_area dl + dl {margin-top:20px; }
 .faq_area dl dt {min-height:40px; cursor:pointer; }
@@ -1068,3 +1096,23 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
     .\33xl\:grid {display:grid; }
     .\33xl\:block {display:block; }
 }
+
+
+/* ----------------------------------------------
+            RIGHT_POP_AREA
+---------------------------------------------- */
+.right_pop_area {z-index:111; position:fixed; left:0; top:57px; display:none; justify-content:flex-end;  width:100%; height:calc(100% - 57px); background:rgba(0,0,0,.6); }
+.right_pop_area .right_pop_box {position:relative; right:-100%; display:flex; flex-direction:column; width:500px; background:var(--bg-color); }
+.right_pop_area.open {display:flex; }
+.right_pop_area .right_pop_box.show {right:0; transition:all 0.5s; }
+
+@media all and (max-width:767px){
+    .right_pop_area .right_pop_box {width:100%; }
+}
+
+
+/* ----------------------------------------------
+            PROFILE
+---------------------------------------------- */
+.profile_tab.active {border-left-color:rgb(var(--color-primary)); background:linear-gradient(45deg, #232c42, #2c364a); }
+

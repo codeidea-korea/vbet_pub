@@ -758,8 +758,8 @@
 </div>
 
 <!-- register 모달 -->
-<div id="register-modal" class="modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
+<div id="register-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-2lg">
         <div class="modal-content">
             <div class="modal-body flex flex-col justify-between fix_height !p-0">
                 <div class="flex items-center justify-between h-12 px-3 border-b border-white border-opacity-5">
@@ -767,73 +767,88 @@
                     <button class="underline text-white text-opacity-80 mr-10"  onclick="modalClose('register-modal'); modalOpen('sign_in-modal')">SIGN IN</button>
                     <button class="close_btn" onclick="modalClose('register-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
                 </div>
-                <div class="flex-1 p-4">
-                    <div class="mb-2.5 font-medium text-white text-opacity-50 leading-none">New member?</div>
-                    <div class="text-lg font-medium uppercase leading-none">register now,it's easy!</div>
-
-                    <div class="input_wrap mt-3"> 
-                        <input id="register-email" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
-                        <label for="register-email" class="form-label text-xs text-white text-opacity-40">E-mail</label> 
-                    </div> 
-                    <div class="input_wrap mt-3"> 
-                        <input id="register-password" type="password" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
-                        <label for="register-password" class="form-label text-xs text-white text-opacity-40">Password</label> 
-                        <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
-                    </div>
-
-                    <div class="input_wrap error mt-3"> 
-                        <input id="register-password" type="password" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
-                        <label for="register-password" class="form-label text-xs text-white text-opacity-40">Password</label> 
-                        <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
-                    </div>
-                    <div class="p-4 text-xs text-white text-opacity-90 bg-white bg-opacity-10 rounded">
-                        <div class="mb-4 font-bold">Password strength - middle. </div>
-                        <div class="flex gap-1 mb-4">
-                            <span class="w-9 h-0.5 bg-success rounded"></span>
-                            <span class="w-9 h-0.5 bg-success rounded"></span>
-                            <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
-                            <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
-                            <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
-                            <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
-                            <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <i class="flex items-center justify-center w-3 h-3 bc-i-checked text-success"></i>
-                            <span>This field is required</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
-                            <span>Password must contain at least one digit.</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
-                            <span>Password cannot contain spaces.</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
-                            <span>Password must contain lowercase and uppercase letters.</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
-                            <span>Password should contain English alphabet characters (A-Z).</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
-                            <span>Too short password .</span>
-                        </div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
-                            <span>Too long password.</span>
+                <div class="flex-1 grid-cols-1 grid md:grid-cols-2 gap-3 p-4">
+                    <div class="md:block hidden">
+                        <div class="mySwiper overflow-hidden relative h-full">
+                            <div class="swiper-container h-full">
+                                <ul class="swiper-wrapper h-full">
+                                    <li class="swiper-slide h-full"><a href="javascript:;" class="block w-full h-full"><img class="w-full h-full object-fill" src="./dist/images/banner/regi_1.webp" alt=""></a></li>
+                                    <li class="swiper-slide h-full"><a href="javascript:;" class="block w-full h-full"><img class="w-full h-full object-fill" src="./dist/images/banner/regi_2.webp" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <div class="z-10 absolute right-3 top-3 flex items-center">
+                                <div class="pagination fraction flex items-center justify-center px-3 py-1 bg-primary text-center text-xs rounded"></div>
+                            </div>
                         </div>
                     </div>
+                    <div>
+                        <div class="mb-2.5 font-medium text-white text-opacity-50 leading-none">New member?</div>
+                        <div class="text-lg font-medium uppercase leading-none">register now,it's easy!</div>
 
-                    <div class="input_wrap mt-3"> 
-                        <input id="register-password2" type="text" class="form-control w-full"> 
-                        <label for="register-password2" class="form-label text-xs text-white text-opacity-40">Repeat Password</label> 
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-email" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-email" class="form-label text-xs text-white text-opacity-40">E-mail</label> 
+                        </div> 
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-password" type="password" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-password" class="form-label text-xs text-white text-opacity-40">Password</label> 
+                            <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                        </div>
+
+                        <div class="input_wrap error mt-3"> 
+                            <input id="register-password" type="password" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-password" class="form-label text-xs text-white text-opacity-40">Password</label> 
+                            <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                        </div>
+                        <div class="p-4 text-xs text-white text-opacity-90 bg-white bg-opacity-10 rounded">
+                            <div class="mb-4 font-bold">Password strength - middle. </div>
+                            <div class="flex gap-1 mb-4">
+                                <span class="w-9 h-0.5 bg-success rounded"></span>
+                                <span class="w-9 h-0.5 bg-success rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3 bc-i-checked text-success"></i>
+                                <span>This field is required</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Password must contain at least one digit.</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Password cannot contain spaces.</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Password must contain lowercase and uppercase letters.</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Password should contain English alphabet characters (A-Z).</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Too short password .</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Too long password.</span>
+                            </div>
+                        </div>
+
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-password2" type="text" class="form-control w-full"> 
+                            <label for="register-password2" class="form-label text-xs text-white text-opacity-40">Repeat Password</label> 
+                        </div>
                     </div>
                    
                 </div>
-                <div class="sticky bottom-0 bg-[#0c182f]">
+                <div class="z-10 sticky bottom-0 bg-[#0c182f]">
                     <div class="py-5 px-3">
                         <button class="btn btn-success w-full" onclick="modalClose('register-modal'); modalOpen('register2-modal')">NEXT</button>
                     </div>
@@ -848,8 +863,8 @@
 </div>
 
 <!-- register step2 모달 -->
-<div id="register2-modal" class="modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
+<div id="register2-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-2lg">
         <div class="modal-content">
             <div class="modal-body flex flex-col justify-between fix_height !p-0">
                 <div class="flex items-center justify-between h-12 px-3 border-b border-white border-opacity-5">
@@ -857,63 +872,89 @@
                     <button class="underline text-white text-opacity-80 mr-10"  onclick="modalClose('register2-modal'); modalOpen('sign_in-modal')">SIGN IN</button>
                     <button class="close_btn" onclick="modalClose('register2-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
                 </div>
-                <div class="flex-1 p-4">
-                    <div class="mb-2.5 font-medium text-white text-opacity-50 leading-none">New member?</div>
-                    <div class="mb-3 text-lg font-medium uppercase leading-none">register now,it's easy!</div>
-                    <div class="text-base font-medium uppercase leading-none">registeration step 2</div>
-
-                    <div class="input_wrap mt-3"> 
-                        <input id="register-name" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
-                        <label for="register-name" class="form-label text-xs text-white text-opacity-40">First name</label> 
-                    </div> 
-                    <div class="input_wrap mt-3"> 
-                        <input id="register-lname" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
-                        <label for="register-lname" class="form-label text-xs text-white text-opacity-40">Last name</label> 
-                    </div> 
-                    <div class="custom_select w-full mt-3">
-                        <button class="w-full py-2 px-4 bg-white bg-opacity-15 rounded text-left">
-                            <span class="text-xs opacity-40">Gender</span>
-                            <p>Choose gender</p> 
-                            <i class="arrow bc-i-small-arrow-down !fs10"></i>
-                        </button>
-                        <div class="!top-full bg-bg w-full p-3 shadow-2">
-                            <ul>
-                                <li class="px-3 h-8 text-xs !font-normal rounded"><p>Male</p></li>
-                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Female</p></li>
-                            </ul>
+                <div class="flex-1 grid-cols-1 grid md:grid-cols-2 gap-3 p-4">
+                    <div class="md:block hidden">
+                        <div class="mySwiper overflow-hidden relative h-full">
+                            <div class="swiper-container h-full">
+                                <ul class="swiper-wrapper h-full">
+                                    <li class="swiper-slide h-full"><a href="javascript:;" class="block w-full h-full"><img class="w-full h-full object-fill" src="./dist/images/banner/regi_1.webp" alt=""></a></li>
+                                    <li class="swiper-slide h-full"><a href="javascript:;" class="block w-full h-full"><img class="w-full h-full object-fill" src="./dist/images/banner/regi_2.webp" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <div class="z-10 absolute right-3 top-3 flex items-center">
+                                <div class="pagination fraction flex items-center justify-center px-3 py-1 bg-primary text-center text-xs rounded"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="input_wrap mt-3"> 
-                        <input id="register-passport" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
-                        <label for="register-passport" class="form-label text-xs text-white text-opacity-40">Passport / ID</label> 
-                    </div> 
-                    <div class="custom_select w-full mt-3">
-                        <button class="w-full py-2 px-4 bg-white bg-opacity-15 rounded text-left">
-                            <span class="text-xs opacity-40">Currency</span>
-                            <p>AMD</p> 
-                            <i class="arrow bc-i-small-arrow-down !fs10"></i>
-                        </button>
-                        <div class="!top-full bg-bg w-full p-3 shadow-2">
-                            <ul>
-                                <li class="px-3 h-8 text-xs !font-normal rounded"><p>AMD</p></li>
-                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>EUR</p></li>
-                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>GEL</p></li>
-                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>KZT</p></li>
-                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>USD</p></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <div>
+                        <div class="mb-2.5 font-medium text-white text-opacity-50 leading-none">New member?</div>
+                        <div class="mb-3 text-lg font-medium uppercase leading-none">register now,it's easy!</div>
+                        <div class="text-base font-medium uppercase leading-none">registeration step 2</div>
 
-                    <div class="flex items-center gap-2 mt-3">
-                        <div class="custom_select w-24">
-                            <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
-                                <span class="text-xs opacity-40">Code</span>
-                                <p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> 82</p> 
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-name" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-name" class="form-label text-xs text-white text-opacity-40">First name</label> 
+                        </div> 
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-lname" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-lname" class="form-label text-xs text-white text-opacity-40">Last name</label> 
+                        </div> 
+                        <div class="relative mt-3 h-[52px]">
+                            <label class="absolute top-2 left-4 text-xs opacity-50" for="calendar_1">Birth date</label>
+                            <div class="absolute right-0 w-10 h-full flex items-center justify-center "> 
+                                <i class="w-5 h-5 bc-i-datepicker"></i>
+                            </div>
+                            <input type="text" class="datepicker form-control h-full !bg-white !bg-opacity-15 pt-6 pl-4 pr-12" id="calendar_1" data-single-mode="true" value=" ">
+                        </div>
+                        <div class="custom_select w-full mt-3">
+                            <button class="w-full py-2 px-4 bg-white bg-opacity-15 rounded text-left">
+                                <span class="text-xs opacity-40">Gender</span>
+                                <p>Choose gender</p> 
                                 <i class="arrow bc-i-small-arrow-down !fs10"></i>
                             </button>
                             <div class="!top-full bg-bg w-full p-3 shadow-2">
                                 <ul>
-                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> 82</p> </li>
+                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>Male</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Female</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-passport" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-passport" class="form-label text-xs text-white text-opacity-40">Passport / ID</label> 
+                        </div> 
+                        <div class="custom_select mt-3">
+                            <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
+                                <span class="text-xs opacity-40">Country</span>
+                                <p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> South Korea</p> 
+                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                            </button>
+                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                <div class="relative mb-1">
+                                    <input type="text" class="form-control w-full pr-12 !bg-white !bg-opacity-15" placeholder="Search Country"> 
+                                    <i class="bc-i-search absolute right-0 top-0 flex items-center justify-center w-9 h-9"></i>
+                                </div>
+                                <ul>
+                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc aland"></i> Aland Islands</p> </li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc albania"></i> Albania</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc aLgeria"></i> ALgeria</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc americansamoa"></i> American Samoa</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc andorra"></i> Andorra</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc angola"></i> Angola</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc anguilla"></i> Anguilla</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> South Korea</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="custom_select w-full mt-3">
+                            <button class="w-full py-2 px-4 bg-white bg-opacity-15 rounded text-left">
+                                <span class="text-xs opacity-40">Currency</span>
+                                <p>AMD</p> 
+                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                            </button>
+                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                <ul>
+                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>AMD</p></li>
                                     <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>EUR</p></li>
                                     <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>GEL</p></li>
                                     <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>KZT</p></li>
@@ -921,20 +962,50 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="flex-1 input_wrap"> 
-                            <input id="register-phone" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
-                            <label for="register-phone" class="form-label text-xs text-white text-opacity-40">Phone number</label> 
+
+                        <div class="relative flex items-center gap-2 mt-3">
+                            <div class="!static custom_select w-24">
+                                <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
+                                    <span class="text-xs opacity-40">Code</span>
+                                    <p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> 82</p> 
+                                    <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                </button>
+                                <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                    <div class="relative mb-1">
+                                        <input type="text" class="form-control w-full pr-12 !bg-white !bg-opacity-15" placeholder="Search Country"> 
+                                        <i class="bc-i-search absolute right-0 top-0 flex items-center justify-center w-9 h-9"></i>
+                                    </div>
+                                    <ul>
+                                        <li class="px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc aland"></i> 358</p> </li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc albania"></i> 355</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc aLgeria"></i> 211</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc americansamoa"></i> 1654</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc andorra"></i> 376</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc angola"></i> 244</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc anguilla"></i> 672</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> 82</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex-1 input_wrap"> 
+                                <input id="register-phone" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                <label for="register-phone" class="form-label text-xs text-white text-opacity-40">Phone number</label> 
+                            </div> 
+                        </div>
+
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-promo" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-promo" class="form-label text-xs text-white text-opacity-40">Promo code</label> 
                         </div> 
+
+                        <div class="form-check mt-3"> 
+                            <input id="register_policy-1" class="form-check-input" type="checkbox" value=""> 
+                            <label class="form-check-label" for="register_policy-1">I am over 21 years of age and have accepted the <a href="javascript:;" class="underline">Privacy Policy</a>. and the <a href="javascript:;" class="underline">General Terms & Conditions</a></label> 
+                        </div>
                     </div>
-
-                    <div class="input_wrap mt-3"> 
-                        <input id="register-promo" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
-                        <label for="register-promo" class="form-label text-xs text-white text-opacity-40">Promo code</label> 
-                    </div> 
-
                    
                 </div>
-                <div class="sticky bottom-0 bg-[#0c182f]">
+                <div class="z-10 sticky bottom-0 bg-[#0c182f]">
                     <div class="grid grid-cols-2 gap-3 py-5 px-3">
                         <button class="btn btn-success w-full" onclick="modalClose('register2-modal'); modalOpen('register-modal')">BACK</button>
                         <button class="btn btn-success w-full" onclick="modalClose('register2-modal')">REGISTER</button>
@@ -949,7 +1020,135 @@
     </div>
 </div>
 
+<!-- Low balance 모달 -->
+<div id="low_balance-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body p-4">
+                <button class="close_btn" onclick="modalClose('low_balance-modal')"><i class="bc-i-close-remove"></i></button>
+                <div class="pt-5 pb-2 text-center text-base font-medium">LOW BALANCE</div>
+                <div class="p-3 bg-white bg-opacity-5 rounded">
+                    <button class="btn btn-success w-full">DEPOSIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- show overflow-y-auto -->
 <!-- 
 style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;" 
 -->
+
+<!-- 프로필 모달 -->
+<div id="profile-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-2xl modal-profile">
+        <div class="modal-content">
+            <div class="modal-body flex !p-0">
+
+                <div class="overflow-y-auto shrink-0 w-80 p-2.5 pr-3 bg-white bg-opacity-10">
+
+                    <div class="flex items-center gap-2.5 mb-3">
+                        <div class="flex items-center justify-center w-8 h-8 text-black bg-white bg-opacity-40 rounded-full">dd</div>
+                        <div>
+                            <p>no name</p>
+                            <div class="flex items-center gap-1 text-white text-opacity-50 fs11 leading-none">
+                                139620113
+                                <i class="bc-i-copy"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="bc-i-not-verified text-pending"></i>
+                            Sports Not Verified
+                        </div>
+                        <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase">verify now</button>
+                    </div>
+                    <div class="mb-3">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="bc-i-not-verified text-pending"></i>
+                            Casino Not Verified
+                        </div>
+                        <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase">verify now</button>
+                    </div>
+                    <div class="">
+
+                    </div>
+
+                    <button class="relative w-full h-12 py-1 px-2.5 mb-3 text-left bg-[#b8a338] rounded"><i class="absolute left-0 top-0 w-full h-full" style="background:radial-gradient(circle at -14% 113%,rgba(0,0,0,.3),rgba(0,0,0,0) 120%);"></i><span class="z-10 relative">Loyalty Points</span></button>
+
+                    <div class="overflow-hidden game_fold mb-3 rounded">
+                        <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5" onclick="gameToggle(this)">
+                            <div class="flex items-center gap-3 text-white text-opacity-70">
+                                <i class="bc-i-bet-builder-history text-xl"></i>
+                                <p class="font-medium uppercase">BET BUILDER HISTORY</p>
+                            </div>
+                            <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                        </button>
+                        <div class="p-4 bg-white bg-opacity-10">
+                            <ul>
+                                <li><button onclick="profileTab(this)" data-target="bet_all" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">All</button></li>
+                                <li><button onclick="profileTab(this)" data-target="bet_open" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Open bets</button></li>
+                                <li><button onclick="profileTab(this)" data-target="bet_won" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Won</button></li>
+                                <li><button onclick="profileTab(this)" data-target="bet_lost" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Lost</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="overflow-hidden game_fold mb-3 rounded">
+                        <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5" onclick="gameToggle(this)">
+                            <div class="flex items-center gap-3 text-white text-opacity-70">
+                                <i class="bc-i-balance-management text-xl"></i>
+                                <p class="font-medium uppercase">Balance Management</p>
+                            </div>
+                            <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                        </button>
+                        <div class="p-4 bg-white bg-opacity-10">
+                            <ul>
+                                <li><button onclick="profileTab(this)" data-target="balance_deposit" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Deposit</button></li>
+                                <li><button onclick="profileTab(this)" data-target="balance_transfer" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transfer</button></li>
+                                <li><button onclick="profileTab(this)" data-target="balance_withdraw" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw</button></li>
+                                <li><button onclick="profileTab(this)" data-target="balance_history" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transaction History</button></li>
+                                <li><button onclick="profileTab(this)" data-target="balance_status" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw Status</button></li>
+                                <li><button onclick="profileTab(this)" data-target="balance_my" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">My Wallets</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="overflow-hidden game_fold mb-3 rounded">
+                        <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5" onclick="gameToggle(this)">
+                            <div class="flex items-center gap-3 text-white text-opacity-70">
+                                <i class="bc-i-promotion text-xl"></i>
+                                <p class="font-medium uppercase">Bonuses</p>
+                            </div>
+                            <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                        </button>
+                        <div class="p-4 bg-white bg-opacity-10">
+                            <ul>
+                                <li><button onclick="profileTab(this)" data-target="bonuses_spins" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Free Spins</button></li>
+                                <li><button onclick="profileTab(this)" data-target="bonuses_point" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Loyalty Points</button></li>
+                                <li><button onclick="profileTab(this)" data-target="bonuses_histofy" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Bonus history</button></li>
+                                <li><button onclick="profileTab(this)" data-target="bonuses_bonus" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Bonus</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex-1">
+                    <div class="flex items-center justify-between h-[50px] px-4 border-b border-white border-opacity-10 bg-white bg-opacity-10">
+                        <h3></h3>
+                        <button class="p-2 bc-i-close-remove"></button>
+                    </div>
+                    <div class="profile_inner">
+                        <div></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

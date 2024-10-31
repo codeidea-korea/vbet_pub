@@ -9,7 +9,7 @@
 
     --color-info: 52 152 219;
     --color-warning: 241 196 15;
-    --color-pending: theme("colors.rgb.orange.500");
+    --color-pending: 255 52 73;
     --color-danger: 231 76 60;
     --color-light: theme("colors.rgb.slate.100");
     --color-dark: 18 18 18;
