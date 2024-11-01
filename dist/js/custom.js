@@ -47,6 +47,15 @@ window.addEventListener("load", ()=>{
         console.log(error);
     });
     
+    // 모달 
+    fetch("./_profile_modal.html")
+    .then((response) => response.text())
+    .then((htmlData) => {
+        $('#wrap').append(htmlData);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 
 });
 
@@ -351,8 +360,15 @@ const themeColor = (item)=>{
 }
 
 // 프로필 탭
-const profileTab = (item,target)=>{
-    // let target = $(item).data('target')
+const profileTab = (item)=>{
+    let target = $(item).data('target')
+    let name = '';
+    if($(item).find('p').length == 0){
+        name = $(item).text();
+    }else{
+        name = $(item).find('p').text()
+    }
+    $('#profile-modal #profielTit').text(name);
 
     $('#profile-modal .profile_tab').each(function(){
         if($(this).data('target') != $(item).data('target')){
@@ -362,7 +378,15 @@ const profileTab = (item,target)=>{
         }
     });
     $('#profile-modal .profile_inner > div').removeClass('active');
-    // $(`#profile-modal .profile_inner > div.${target}`).addClass('active');
+    $(`#profile-modal .profile_inner > div[data-cont="${target}"]`).addClass('active');
+
+    // 모바일에서 사용
+    $('#profile-modal .profile_left').removeClass('open')
+    $('#profile-modal .profile_right').addClass('open')
+}
+const profileTabPrev = (item)=>{
+    $('#profile-modal .profile_left').addClass('open')
+    $('#profile-modal .profile_right').removeClass('open')
 }
 
 // jquery 모음

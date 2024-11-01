@@ -1,0 +1,1012 @@
+
+<!-- 프로필 모달 -->
+<!-- <div id="profile-modal" class="modal mo_allfull show overflow-y-auto " tabindex="-1" aria-hidden="true" style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;" > -->
+<div id="profile-modal" class="modal mo_allfull " tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-2xl modal-profile">
+        <div class="modal-content">
+            <div class="modal-body !p-0">
+
+                <div class="z-20 sticky top-0 flex md:hidden items-center justify-between h-[50px] px-4 border-b border-white border-opacity-10 bg-bg">
+                    <img class="h-10" src="./dist/images/common/logo.svg" alt="">
+                    <button class="p-2 bc-i-close-remove" onclick="modalClose('profile-modal')"></button>
+                </div>
+
+                <div class="flex profile_area">
+                    <!-- 좌측메뉴 -->
+                    <div class="profile_left overflow-y-auto shrink-0 w-full md:w-80 p-2.5 pr-3 bg-white bg-opacity-10">
+
+                        <div class="overflow-hidden block md:hidden px-8 mb-3">
+                            <div class="profile_card mySwiper" data-loop="false" data-gap="0">
+                                <div class="swiper-container">
+                                    <ul class="swiper-wrapper items-center">
+                                        <li class="swiper-slide">
+                                            <div class="profile_balance py-2.5 px-4 rounded">
+                                                <i class="icon bc-i-circle-dollar"></i>
+                                                <div class="flex items-center justify-between mb-4">
+                                                    <div>
+                                                        <p>Main Balance</p>
+                                                        <b class="text-xl font-bold">0.0 ֏</b>
+                                                    </div>
+                                                    <button class="flex items-center justify-center w-8 h-8 bg-white bg-opacity-10 rounded bc-i-eye"></button>
+                                                </div>
+                                                <div class="grid grid-cols-2 gap-3">
+                                                    <button onclick="profileTab(this)" data-target="deposit" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-wallet"></i> DEPOSIT</button>
+                                                    <button onclick="profileTab(this)" data-target="withdraw" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-withdraw"></i> WITHDRAW</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="profile_balance bonus h-full py-2.5 px-4 rounded">
+                                                <i class="icon bc-i-promotion"></i>
+                                                <p>Total Bonus Balance</p>
+                                                <b class="text-xl font-bold">0.0 ֏</b>
+                                                <div class="flex items-center justify-between border-t border-white border-opacity-20 mt-2 pt-2 text-xs">
+                                                    <p>Bonus Balance</p>
+                                                    <b>0.0֏</b>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="relative block md:hidden w-full h-12 py-1 px-2.5 mb-3 text-left bg-[#b8a338] rounded">
+                            <i class="absolute left-0 top-0 w-full h-full" style="background:radial-gradient(circle at -14% 113%,rgba(0,0,0,.3),rgba(0,0,0,0) 120%);"></i>
+                            <span class="z-10 relative font-medium">Loyalty Points</span>
+                        </button>
+
+                        <div class="flex items-center gap-2.5 mb-3">
+                            <div class="flex items-center justify-center w-8 h-8 text-black bg-white bg-opacity-40 rounded-full">dd</div>
+                            <div>
+                                <p>no name</p>
+                                <div class="flex items-center gap-1 text-white text-opacity-50 fs11 leading-none">
+                                    139620113
+                                    <i class="bc-i-copy"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="bc-i-not-verified text-pending"></i>
+                                Sports Not Verified
+                            </div>
+                            <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase">verify now</button>
+                        </div>
+                        <div class="mb-3">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="bc-i-not-verified text-pending"></i>
+                                Casino Not Verified
+                            </div>
+                            <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase">verify now</button>
+                        </div>
+
+                        <div class="md:block hidden mb-9">
+                            <div class="profile_balance py-2.5 px-4 mb-4 rounded">
+                                <i class="icon bc-i-circle-dollar"></i>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div>
+                                        <p>Main Balance</p>
+                                        <b class="text-xl font-bold">0.0 ֏</b>
+                                    </div>
+                                    <button class="flex items-center justify-center w-8 h-8 bg-white bg-opacity-10 rounded bc-i-eye"></button>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button onclick="profileTab(this)" data-target="deposit" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-wallet"></i> DEPOSIT</button>
+                                    <button onclick="profileTab(this)" data-target="withdraw" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-withdraw"></i> WITHDRAW</button>
+                                </div>
+                            </div>
+                            <div class="profile_balance bonus py-2.5 px-4 mb-4 rounded">
+                                <i class="icon bc-i-promotion"></i>
+                                <p>Total Bonus Balance</p>
+                                <b class="text-xl font-bold">0.0 ֏</b>
+                                <div class="flex items-center justify-between border-t border-white border-opacity-20 mt-2 pt-2 text-xs">
+                                    <p>Bonus Balance</p>
+                                    <b>0.0֏</b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="relative md:block hidden w-full h-12 py-1 px-2.5 mb-3 text-left bg-[#b8a338] rounded">
+                            <i class="absolute left-0 top-0 w-full h-full" style="background:radial-gradient(circle at -14% 113%,rgba(0,0,0,.3),rgba(0,0,0,0) 120%);"></i>
+                            <span class="z-10 relative font-medium">Loyalty Points</span>
+                        </button>
+
+                        <div class="overflow-hidden game_fold mb-3 rounded">
+                            <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
+                                <div class="flex items-center gap-3 text-white text-opacity-70">
+                                    <i class="bc-i-bet-builder-history text-xl"></i>
+                                    <p class="font-medium uppercase">BET BUILDER HISTORY</p>
+                                </div>
+                                <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                            </button>
+                            <div class="p-4 bg-white bg-opacity-10">
+                                <ul>
+                                    <li><button onclick="profileTab(this)" data-target="bet_all" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">All</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="bet_open" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Open bets</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="bet_won" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Won</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="bet_lost" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Lost</button></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="overflow-hidden game_fold mb-3 rounded">
+                            <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
+                                <div class="flex items-center gap-3 text-white text-opacity-70">
+                                    <i class="bc-i-balance-management text-xl"></i>
+                                    <p class="font-medium uppercase">Balance Management</p>
+                                </div>
+                                <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                            </button>
+                            <div class="p-4 bg-white bg-opacity-10">
+                                <ul>
+                                    <li><button onclick="profileTab(this)" data-target="balance_deposit" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Deposit</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="balance_transfer" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transfer</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="balance_withdraw" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="balance_history" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transaction History</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="balance_status" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw Status</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="balance_my" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">My Wallets</button></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="overflow-hidden game_fold mb-3 rounded">
+                            <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
+                                <div class="flex items-center gap-3 text-white text-opacity-70">
+                                    <i class="bc-i-promotion text-xl"></i>
+                                    <p class="font-medium uppercase">Bonuses</p>
+                                </div>
+                                <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                            </button>
+                            <div class="p-4 bg-white bg-opacity-10">
+                                <ul>
+                                    <li><button onclick="profileTab(this)" data-target="bonuses_spins" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Free Spins</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="bonuses_point" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Loyalty Points</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="bonuses_histofy" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Bonus history</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="bonuses_bonus" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Bonus</button></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="overflow-hidden game_fold mb-3 rounded">
+                            <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
+                                <div class="flex items-center gap-3 text-white text-opacity-70">
+                                    <i class="bc-i-user text-xl"></i>
+                                    <p class="font-medium uppercase">My profile</p>
+                                </div>
+                                <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                            </button>
+                            <div class="p-4 bg-white bg-opacity-10">
+                                <ul>
+                                    <li><button onclick="profileTab(this)" data-target="profile_detail" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Personal Details</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="profile_password" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Change Password</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="profile_time" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Time-Out</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="profile_account" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Verify Account</button></li>
+                                    <li><button onclick="profileTab(this)" data-target="profile_twostep" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">TWO-STEP AUTHENTICATION</button></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="profileTab(this)">
+                            <div class="flex items-center gap-3 text-white text-opacity-70">
+                                <i class="bc-i-message text-xl"></i>
+                                <p class="font-medium uppercase">message</p>
+                            </div>
+                            <i class="arrow bc-i-small-arrow-right text-xs"></i>
+                            <span class="num">1</span>
+                        </button>
+
+                        <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="profileTab(this)">
+                            <div class="flex items-center gap-3 text-white text-opacity-70">
+                                <i class="bc-i-cashback-cashout text-xl"></i>
+                                <p class="font-medium uppercase">cashback</p>
+                            </div>
+                            <i class="arrow bc-i-small-arrow-right text-xs"></i>
+                        </button>
+
+                        <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="profileTab(this)">
+                            <div class="flex items-center gap-3 text-white text-opacity-70">
+                                <i class="bc-i-rewards text-xl"></i>
+                                <p class="font-medium uppercase">bonus - pie</p>
+                            </div>
+                            <i class="arrow bc-i-small-arrow-right text-xs"></i>
+                        </button>
+
+                        <div class="p-3">
+                            <div class="flex gap-3 p-3 bg-white bg-opacity-5 rounded">
+                                <div class="input_wrap"> 
+                                    <input id="promocode" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                    <label for="promocode" class="form-label text-xs text-white text-opacity-40">Promo Code</label> 
+                                </div> 
+                                <button class="btn btn-success text-xs">APPLY</button>
+                            </div>
+                        </div>
+
+                        <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="profileTab(this)">
+                            <div class="flex items-center gap-3 text-white text-opacity-70">
+                                <i class="bc-i-logout text-xl"></i>
+                                <p class="font-medium uppercase">Logout</p>
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <!-- 우측 컨텐츠 -->
+                    <div class="w-full md:flex-1 profile_right open">
+                        <!-- 타이틀 -->
+                        <div class="hidden md:flex items-center justify-between h-[50px] px-4 border-b border-white border-opacity-10 bg-white bg-opacity-0 md:bg-opacity-10">
+                            <h3 id="profielTit">Personal Details</h3>
+                            <button class="p-2 bc-i-close-remove" onclick="modalClose('profile-modal')"></button>
+                        </div>
+
+                        <!-- 컨텐츠 -->
+                        <div class="profile_inner">
+
+                            <!-- bet - all -->
+                            <div data-cont="bet_all" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">Bet Builder history</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar grid grid-cols-4 text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="bet_all" class="active">All</button>
+                                        <button onclick="profileTab(this)" data-target="bet_open" class="">Open bets</button>
+                                        <button onclick="profileTab(this)" data-target="bet_won" class="">Won</button>
+                                        <button onclick="profileTab(this)" data-target="bet_lost" class="">Lost</button>
+                                    </div>
+                                </div>
+
+                                <!-- filter -->
+                                <div class="my-2">
+                                    <button class="flex md:hidden items-center justify-between w-full p-2.5 border-b border-black border-opacity-30 bg-white bg-opacity-20 rounded-t rounded" onclick="mofilterShow(this)">
+                                        <div class="flex items-center gap-2">
+                                            <i class="bc-i-filter"></i>
+                                            <div class="text-left">
+                                                <p>Filter</p>
+                                                <!-- <p class="fs10 leading-none">ddd</p> -->
+                                            </div>
+                                        </div>
+                                        <i class="bc-i-small-arrow-down fs10"></i>
+                                    </button>
+                                    
+                                    <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 w-full p-2.5 bg-white bg-opacity-20 rounded-t-none md:rounded-t rounded">
+                                        <div class="input_wrap w-full !h-14 md:mt-0 mt-0.5 !bg-white !bg-opacity-10"> 
+                                            <input id="bet-id" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                            <label for="bet-id" class="form-label text-xs text-white text-opacity-40">Bet ID</label> 
+                                        </div> 
+                                        <div class="custom_select w-full md:mt-0 mt-0.5">
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left">
+                                                <span class="text-xs opacity-50">Period</span>
+                                                <p>24 hours</p> 
+                                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                            </button>
+                                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                                <ul>
+                                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>24 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>72 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>One week</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>30 Days</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Custom</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="md:col-span-2 text-right md:mt-0 mt-0.5">
+                                            <button class="btn btn-success w-56 max-w-full">SHOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 text-center text-white text-opacity-70 text-xs">No Bets to show</div>
+                            </div>
+
+                            <!-- bet - Open bets -->
+                            <div data-cont="bet_open" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">Bet Builder history</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar grid grid-cols-4 text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="bet_all" class="">All</button>
+                                        <button onclick="profileTab(this)" data-target="bet_open" class="active">Open bets</button>
+                                        <button onclick="profileTab(this)" data-target="bet_won" class="">Won</button>
+                                        <button onclick="profileTab(this)" data-target="bet_lost" class="">Lost</button>
+                                    </div>
+                                </div>
+
+                                <!-- filter -->
+                                <div class="my-2">
+                                    <button class="flex md:hidden items-center justify-between w-full p-2.5 border-b border-black border-opacity-30 bg-white bg-opacity-20 rounded-t rounded" onclick="mofilterShow(this)">
+                                        <div class="flex items-center gap-2">
+                                            <i class="bc-i-filter"></i>
+                                            <div class="text-left">
+                                                <p>Filter</p>
+                                                <!-- <p class="fs10 leading-none">ddd</p> -->
+                                            </div>
+                                        </div>
+                                        <i class="bc-i-small-arrow-down fs10"></i>
+                                    </button>
+                                    
+                                    <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 w-full p-2.5 bg-white bg-opacity-20 rounded-t-none md:rounded-t rounded">
+                                        <div class="input_wrap w-full !h-14 md:mt-0 mt-0.5 !bg-white !bg-opacity-10"> 
+                                            <input id="bet-id" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                            <label for="bet-id" class="form-label text-xs text-white text-opacity-40">Bet ID</label> 
+                                        </div> 
+                                        <div class="custom_select w-full md:mt-0 mt-0.5">
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left">
+                                                <span class="text-xs opacity-50">Period</span>
+                                                <p>24 hours</p> 
+                                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                            </button>
+                                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                                <ul>
+                                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>24 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>72 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>One week</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>30 Days</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Custom</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="md:col-span-2 text-right md:mt-0 mt-0.5">
+                                            <button class="btn btn-success w-56 max-w-full">SHOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 text-center text-white text-opacity-70 text-xs">No Bets to show</div>
+                            </div>
+
+                            <!-- bet - Won -->
+                            <div data-cont="bet_won" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">Bet Builder history</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar grid grid-cols-4 text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="bet_all" class="">All</button>
+                                        <button onclick="profileTab(this)" data-target="bet_open" class="">Open bets</button>
+                                        <button onclick="profileTab(this)" data-target="bet_won" class="active">Won</button>
+                                        <button onclick="profileTab(this)" data-target="bet_lost" class="">Lost</button>
+                                    </div>
+                                </div>
+
+                                <!-- filter -->
+                                <div class="my-2">
+                                    <button class="flex md:hidden items-center justify-between w-full p-2.5 border-b border-black border-opacity-30 bg-white bg-opacity-20 rounded-t rounded" onclick="mofilterShow(this)">
+                                        <div class="flex items-center gap-2">
+                                            <i class="bc-i-filter"></i>
+                                            <div class="text-left">
+                                                <p>Filter</p>
+                                                <!-- <p class="fs10 leading-none">ddd</p> -->
+                                            </div>
+                                        </div>
+                                        <i class="bc-i-small-arrow-down fs10"></i>
+                                    </button>
+                                    
+                                    <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 w-full p-2.5 bg-white bg-opacity-20 rounded-t-none md:rounded-t rounded">
+                                        <div class="input_wrap w-full !h-14 md:mt-0 mt-0.5 !bg-white !bg-opacity-10"> 
+                                            <input id="bet-id" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                            <label for="bet-id" class="form-label text-xs text-white text-opacity-40">Bet ID</label> 
+                                        </div> 
+                                        <div class="custom_select w-full md:mt-0 mt-0.5">
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left">
+                                                <span class="text-xs opacity-50">Period</span>
+                                                <p>24 hours</p> 
+                                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                            </button>
+                                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                                <ul>
+                                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>24 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>72 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>One week</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>30 Days</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Custom</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="md:col-span-2 text-right md:mt-0 mt-0.5">
+                                            <button class="btn btn-success w-56 max-w-full">SHOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 text-center text-white text-opacity-70 text-xs">No Bets to show</div>
+                            </div>
+
+                            <!-- bet - Lost -->
+                            <div data-cont="bet_lost" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">Bet Builder history</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar grid grid-cols-4 text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="bet_all" class="">All</button>
+                                        <button onclick="profileTab(this)" data-target="bet_open" class="">Open bets</button>
+                                        <button onclick="profileTab(this)" data-target="bet_won" class="">Won</button>
+                                        <button onclick="profileTab(this)" data-target="bet_lost" class="active">Lost</button>
+                                    </div>
+                                </div>
+
+                                <!-- filter -->
+                                <div class="my-2">
+                                    <button class="flex md:hidden items-center justify-between w-full p-2.5 border-b border-black border-opacity-30 bg-white bg-opacity-20 rounded-t rounded" onclick="mofilterShow(this)">
+                                        <div class="flex items-center gap-2">
+                                            <i class="bc-i-filter"></i>
+                                            <div class="text-left">
+                                                <p>Filter</p>
+                                                <!-- <p class="fs10 leading-none">ddd</p> -->
+                                            </div>
+                                        </div>
+                                        <i class="bc-i-small-arrow-down fs10"></i>
+                                    </button>
+                                    
+                                    <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 w-full p-2.5 bg-white bg-opacity-20 rounded-t-none md:rounded-t rounded">
+                                        <div class="input_wrap w-full !h-14 md:mt-0 mt-0.5 !bg-white !bg-opacity-10"> 
+                                            <input id="bet-id" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                            <label for="bet-id" class="form-label text-xs text-white text-opacity-40">Bet ID</label> 
+                                        </div> 
+                                        <div class="custom_select w-full md:mt-0 mt-0.5">
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left">
+                                                <span class="text-xs opacity-50">Period</span>
+                                                <p>24 hours</p> 
+                                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                            </button>
+                                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                                <ul>
+                                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>24 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>72 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>One week</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>30 Days</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Custom</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="md:col-span-2 text-right md:mt-0 mt-0.5">
+                                            <button class="btn btn-success w-56 max-w-full">SHOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 text-center text-white text-opacity-70 text-xs">No Bets to show</div>
+                            </div>
+
+                            <!-- bonus - spin -->
+                            <div data-cont="bonuses_spins" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">bonuses</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="bonuses_spins" class="active">Casino Free Spins</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_point" class="">Loyalty Points</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_histofy" class="">Bonus history</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_bonus" class="">Casino Bonus</button>
+                                    </div>
+                                </div>
+
+                                <ul class="nav nav-link-tabs type03 rounded" role="tablist">
+                                    <li id="bonuses_spins-3-tab" class="nav-item flex-1" role="presentation"> 
+                                        <button class="nav-link w-full py-2 active" data-tw-toggle="pill" data-tw-target="#bonuses_spins-tab-3" type="button" role="tab" aria-controls="bonuses_spins-tab-3" aria-selected="true"> New </button> 
+                                    </li>
+                                    <li id="bonuses_spins-4-tab" class="nav-item flex-1" role="presentation"> 
+                                        <button class="nav-link w-full py-2" data-tw-toggle="pill" data-tw-target="#bonuses_spins-tab-4" type="button" role="tab" aria-controls="bonuses_spins-tab-4" aria-selected="false"> Activated </button> 
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-5">
+                                    <div id="bonuses_spins-tab-3" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="bonuses_spins-3-tab">
+                                        <div class="p-4 text-center text-white text-opacity-70 text-xs">There are no bonuses for selected type</div>
+                                    </div>
+                                    <div id="bonuses_spins-tab-4" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="bonuses_spins-4-tab">
+                                        <div class="p-4 text-center text-white text-opacity-70 text-xs">There are no bonuses for selected type</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- bonus - Points -->
+                            <div data-cont="bonuses_point" class="active">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">bonuses</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="bonuses_spins" class="">Casino Free Spins</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_point" class="active">Loyalty Points</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_histofy" class="">Bonus history</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_bonus" class="">Casino Bonus</button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-7">
+                                    <div><img class="h-36" src="./dist/images/icon/loyalty_point_1.png" alt=""></div>
+                                    <div class="flex-1"></div>
+                                </div>
+
+                            </div>
+
+                            <!-- bonus - history -->
+                            <div data-cont="bonuses_histofy" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">bonuses</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="bonuses_spins" class="">Casino Free Spins</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_point" class="">Loyalty Points</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_histofy" class="active">Bonus history</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_bonus" class="">Casino Bonus</button>
+                                    </div>
+                                </div>
+
+                                <!-- filter -->
+                                <div class="my-2">
+                                    <button class="flex md:hidden items-center justify-between w-full p-2.5 border-b border-black border-opacity-30 bg-white bg-opacity-20 rounded-t rounded" onclick="mofilterShow(this)">
+                                        <div class="flex items-center gap-2">
+                                            <i class="bc-i-filter"></i>
+                                            <div class="text-left">
+                                                <p>Filter</p>
+                                                <!-- <p class="fs10 leading-none">ddd</p> -->
+                                            </div>
+                                        </div>
+                                        <i class="bc-i-small-arrow-down fs10"></i>
+                                    </button>
+                                    
+                                    <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-2 w-full p-2.5 bg-white bg-opacity-20 rounded-t-none md:rounded-t rounded">
+                                        <div class="custom_select w-full md:mt-0 mt-0.5">
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left">
+                                                <span class="text-xs opacity-50">Category</span>
+                                                <p>Casino</p> 
+                                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                            </button>
+                                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                                <ul>
+                                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>Casino</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="custom_select w-full md:mt-0 mt-0.5">
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left">
+                                                <span class="text-xs opacity-50">Period</span>
+                                                <p>24 hours</p> 
+                                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                            </button>
+                                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                                <ul>
+                                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>1 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>2 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>3 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>6 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>12 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>24 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>48 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>72 hours</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>One week</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>30 Days</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Custom</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="md:col-span-2 text-right md:mt-0 mt-0.5">
+                                            <button class="btn btn-success w-56 max-w-full">SHOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 text-center text-white text-opacity-70 text-xs">There are no data for the selected time period</div>
+
+                            </div>
+
+                            <!-- bonus - Bonus -->
+                            <div data-cont="bonuses_bonus" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">bonuses</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="bonuses_spins" class="">Casino Free Spins</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_point" class="">Loyalty Points</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_histofy" class="">Bonus history</button>
+                                        <button onclick="profileTab(this)" data-target="bonuses_bonus" class="active">Casino Bonus</button>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 text-center text-white text-opacity-70 text-xs">There are no bonuses for selected type</div>
+
+                            </div>
+
+
+                            <!-- profile - detail -->
+                            <div data-cont="profile_detail" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">my profile</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="profile_detail" class="active ">Personal Details</button>
+                                        <button onclick="profileTab(this)" data-target="profile_password" class="">Change Password</button>
+                                        <button onclick="profileTab(this)" data-target="profile_time" class="">Time-Out</button>
+                                        <button onclick="profileTab(this)" data-target="profile_account" class="">Verify Account</button>
+                                        <button onclick="profileTab(this)" data-target="profile_twostep" class="">TWO-STEP AUTHENTICATION</button>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-2 mb-7">
+                                    <div class="md:col-span-2 input_wrap readonly on"> 
+                                        <input id="profile_id" type="text" class="form-control w-full" value="139620113" readonly oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_id" class="form-label text-xs text-white text-opacity-40">ID</label> 
+                                    </div> 
+                                    <div class="input_wrap readonly on"> 
+                                        <input id="profile_fname" type="text" class="form-control w-full" value="lee" readonly oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_fname" class="form-label text-xs text-white text-opacity-40">First name</label> 
+                                    </div> 
+                                    <div class="input_wrap readonly on"> 
+                                        <input id="profile_lname" type="text" class="form-control w-full" value="hana" readonly oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_lname" class="form-label text-xs text-white text-opacity-40">Last name</label> 
+                                    </div> 
+                                    <div class="input_wrap readonly on"> 
+                                        <input id="profile_birth" type="text" class="form-control w-full" value="hana" readonly oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_birth" class="form-label text-xs text-white text-opacity-40">Birth date</label>
+                                        <div class="absolute right-0 w-10 h-full flex items-center justify-center "> 
+                                            <i class="w-5 h-5 bc-i-datepicker text-xl opacity-40"></i>
+                                        </div> 
+                                    </div> 
+                                    <div class="input_wrap readonly on"> 
+                                        <input id="profile_gender" type="text" class="form-control w-full" value="Female" readonly oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_gender" class="form-label text-xs text-white text-opacity-40">Gender</label> 
+                                    </div> 
+                                    <div class="input_wrap on"> 
+                                        <input id="profile_mail" type="text" class="form-control w-full" value="aa@naver.com" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_mail" class="form-label text-xs text-white text-opacity-40">E-mail</label> 
+                                    </div> 
+                                    <div class="input_wrap readonly on"> 
+                                        <input id="profile_passport" type="text" class="form-control w-full" value="12354894" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_passport" class="form-label text-xs text-white text-opacity-40">Passport / ID</label> 
+                                    </div>
+                                    <div class="custom_select ">
+                                        <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
+                                            <span class="text-xs opacity-40">Country</span>
+                                            <p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> South Korea</p> 
+                                        </button>
+                                        <div></div>
+                                    </div>
+                                    <div class="input_wrap"> 
+                                        <input id="profile_city" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_city" class="form-label text-xs text-white text-opacity-40">City</label> 
+                                    </div> 
+                                    <div class="input_wrap"> 
+                                        <input id="profile_add" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_add" class="form-label text-xs text-white text-opacity-40">Address</label> 
+                                    </div> 
+                                    <div class="input_wrap readonly on"> 
+                                        <input id="profile_phone" type="text" class="form-control w-full" value="98756456153" readonly oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_phone" class="form-label text-xs text-white text-opacity-40">Phone number</label> 
+                                    </div> 
+                                    <div class="input_wrap readonly"> 
+                                        <input id="profile_social" type="text" class="form-control w-full" readonly oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="profile_social" class="form-label text-xs text-white text-opacity-40">Social Security Number</label> 
+                                    </div> 
+                                </div>
+
+                                <div class="py-1 bg-danger bg-opacity-20 text-center text-xs rounded">Subscribe for</div>
+                                <div class="my-2 border-t border-b border-white border-opacity-20">
+                                    <div class="flex items-center justify-between py-1">
+                                        <p class="flex-1 text-white text-opacity-70 font-medium">Internal Messages</p>
+                                        <div class="flex items-center gap-2 text-xs font-semibold">
+                                            <input type="radio" class="form-check-input" id="yes_1" checked>
+                                            <label for="yes_1">Yes</label>
+                                            <input type="radio" class="form-check-input" id="no_1">
+                                            <label for="no_1">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between py-1">
+                                        <p class="flex-1 text-white text-opacity-70 font-medium">Push Notifications</p>
+                                        <div class="flex items-center gap-2 text-xs font-semibold">
+                                            <input type="radio" class="form-check-input" id="yes_2" checked>
+                                            <label for="yes_2">Yes</label>
+                                            <input type="radio" class="form-check-input" id="no_2">
+                                            <label for="no_2">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between py-1">
+                                        <p class="flex-1 text-white text-opacity-70 font-medium">Phone Call</p>
+                                        <div class="flex items-center gap-2 text-xs font-semibold">
+                                            <input type="radio" class="form-check-input" id="yes_3" checked>
+                                            <label for="yes_3">Yes</label>
+                                            <input type="radio" class="form-check-input" id="no_3">
+                                            <label for="no_3">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between py-1">
+                                        <p class="flex-1 text-white text-opacity-70 font-medium">E-mail</p>
+                                        <div class="flex items-center gap-2 text-xs font-semibold">
+                                            <input type="radio" class="form-check-input" id="yes_4" checked>
+                                            <label for="yes_4">Yes</label>
+                                            <input type="radio" class="form-check-input" id="no_4">
+                                            <label for="no_4">No</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between py-1">
+                                        <p class="flex-1 text-white text-opacity-70 font-medium">SMS / Notification through internet applications </p>
+                                        <div class="flex items-center gap-2 text-xs font-semibold">
+                                            <input type="radio" class="form-check-input" id="yes_5" checked>
+                                            <label for="yes_5">Yes</label>
+                                            <input type="radio" class="form-check-input" id="no_5">
+                                            <label for="no_5">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="py-1 bg-danger bg-opacity-20 text-center text-xs rounded">Enter your password to save changes</div>
+                            
+                                <div class="input_wrap"> 
+                                    <input id="profile_passport" type="text" class="form-control w-full"  oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                    <label for="profile_passport" class="form-label text-xs text-white text-opacity-40">Current password</label> 
+                                    <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                                </div>
+                                <div class="mt-1 py-1 px-1 bg-danger bg-opacity-20 text-xs rounded">This field is required</div>
+    
+                                <div class="z-10 sticky bottom-0 pt-3 pb-3 md:pb-0 text-right bg-bg">
+                                    <button class="btn btn-success w-full max-w-sm text-xs">SAVE CHANGES</button>
+                                </div>
+                            </div>
+
+                            <!-- profile - password -->
+                            <div data-cont="profile_password" class="">
+                                 <!-- 모바일용 -->
+                                 <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">my profile</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="profile_detail" class=" ">Personal Details</button>
+                                        <button onclick="profileTab(this)" data-target="profile_password" class="active">Change Password</button>
+                                        <button onclick="profileTab(this)" data-target="profile_time" class="">Time-Out</button>
+                                        <button onclick="profileTab(this)" data-target="profile_account" class="">Verify Account</button>
+                                        <button onclick="profileTab(this)" data-target="profile_twostep" class="">TWO-STEP AUTHENTICATION</button>
+                                    </div>
+                                </div>
+
+                                <div class="input_wrap"> 
+                                    <input id="password_1" type="password" class="form-control w-full"  oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                    <label for="password_1" class="form-label text-xs text-white text-opacity-40">Current password</label> 
+                                    <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                                </div>
+                                <div class="mt-1 py-1 px-1 bg-danger bg-opacity-20 text-xs rounded">This field is required</div>
+
+                                <div class="input_wrap error mt-3"> 
+                                    <input id="password_2" type="password" class="form-control w-full"  oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                    <label for="password_2" class="form-label text-xs text-white text-opacity-40">New password</label> 
+                                    <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                                </div>
+                                <div class="mt-1 py-1 px-1 bg-danger bg-opacity-20 text-xs rounded">This field is required</div>
+
+                                <div class="input_wrap mt-3"> 
+                                    <input id="password_3" type="password" class="form-control w-full"  oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                    <label for="password_3" class="form-label text-xs text-white text-opacity-40">Confirm new password</label> 
+                                    <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                                </div>
+                                <div class="mt-1 py-1 px-1 bg-danger bg-opacity-20 text-xs rounded">This field is required</div>
+
+                                <div class="mt-5 text-right">
+                                    <button class="btn btn-success w-full max-w-sm text-xs" disabled>SAVE CHANGES</button>
+                                </div>
+
+                            </div>
+
+                            <!-- profile - Time-Out -->
+                            <div data-cont="profile_time" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                   <div class="flex items-center gap-2 py-2">
+                                       <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                       <p class="uppercase">my profile</p>
+                                   </div> 
+                                   <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                       <button onclick="profileTab(this)" data-target="profile_detail" class=" ">Personal Details</button>
+                                       <button onclick="profileTab(this)" data-target="profile_password" class="">Change Password</button>
+                                       <button onclick="profileTab(this)" data-target="profile_time" class="active">Time-Out</button>
+                                       <button onclick="profileTab(this)" data-target="profile_account" class="">Verify Account</button>
+                                       <button onclick="profileTab(this)" data-target="profile_twostep" class="">TWO-STEP AUTHENTICATION</button>
+                                   </div>
+                                </div>
+                                <div class="fs13 text-white text-opacity-80">
+                                    Do you want to terminate your activities on this website temporarily? You can use the Time Out feature. We recommend you withdraw your gaming balance before using this feature, as you will not be able to access and use your account during the selected period.
+                                </div>
+
+                                <div class="flex flex-col gap-3 mt-5">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="form-check-input" id="time_1">
+                                        <label for="time_1" class="font-bold text-xs">24 hours</label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="form-check-input" id="time_2">
+                                        <label for="time_2" class="font-bold text-xs">3 days</label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="form-check-input" id="time_3">
+                                        <label for="time_3" class="font-bold text-xs">One week</label>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5">
+                                    <button class="btn btn-success w-full max-w-sm text-xs" disabled>SAVE CHANGES</button>
+                                </div>  
+
+                            </div>
+
+                           <!-- profile - Verify -->
+                           <div data-cont="profile_account" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">my profile</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="profile_detail" class=" ">Personal Details</button>
+                                        <button onclick="profileTab(this)" data-target="profile_password" class="">Change Password</button>
+                                        <button onclick="profileTab(this)" data-target="profile_time" class="">Time-Out</button>
+                                        <button onclick="profileTab(this)" data-target="profile_account" class="active">Verify Account</button>
+                                        <button onclick="profileTab(this)" data-target="profile_twostep" class="">TWO-STEP AUTHENTICATION</button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-5 fs13 text-white text-opacity-80 font-medium leading-relaxed">
+                                    Dear user, in order to validate your account you need to upload a personal identification document. While uploading, make sure it corresponds to the following criteria:
+                                    <br/>
+                                    • The file is in JPG, PNG, GIF or PDF format and doesn't exceed 10MB.
+                                    <br/>
+                                    • The document in its validity period.
+                                    <br/>
+                                    • The picture should be in real colors, not black and white.
+                                    <br/>
+                                    • The picture should be taken from the original document, it is not allowed to do any digital photo montage.
+                                    <br/>
+                                    • The document picture, personal data, signature, seal and other information should be clearly readable.
+                                    <br/>
+                                    • If necessary the company can ask you to present other documents.
+                                </div>
+
+                                <div class="flex flex-wrap md:flex-nowrap gap-2">
+                                    <div class="custom_select shrink-0 w-full md:w-1/3">
+                                        <button class="w-full py-2 px-4 bg-white bg-opacity-15 rounded text-left">
+                                            <span class="text-xs opacity-40">Please select your type of ID</span>
+                                            <p>Choose gender</p> 
+                                            <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                        </button>
+                                        <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                            <ul>
+                                                <li class="px-3 h-8 text-xs !font-normal rounded"><p>Passport/ID card</p></li>
+                                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Other</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="input_wrap !h-14 file w-full on"> 
+                                        <input type="file" id="attach_file" class="hidden">
+                                        <label for="attach_file" class="form-label text-xs text-white text-opacity-40">Attach file</label> 
+                                        <label for="attach_file" class="!static block h-[18px]">Choose File</label>
+                                        <!-- <input id="" type="text" class="form-control w-full" value="Choose File" readonly oninput="inputChange(this)" onchange="inputChange(this)">  -->
+                                        <button class="password_btn bc-i-upload text-xl text-white text-opacity-80"></button>
+                                    </div> 
+                                    <button class="btn btn-success w-full md:w-auto px-7 uppercase text-xs">verify</button>
+                                </div>
+
+                                <div class="w-full h-0.5 my-3 bg-white bg-opacity-20"></div>
+
+                                <div class="text-white text-opacity-50 font-medium">
+                                    <p>Uploaded documents</p>
+                                    <p class="fs10">There are no uploaded documents.</p>
+                                    <div class="overflow-x-auto xscrollbar mt-2 mb-5">
+                                        <table class="table basic_type text-white text-xs">
+                                            <thead>
+                                                <tr>
+                                                    <th class="whitespace-nowrap">Document Name</th>
+                                                    <th class="whitespace-nowrap">Type</th>
+                                                    <th class="whitespace-nowrap">Date</th>
+                                                    <th class="whitespace-nowrap"></th>
+                                                    <th class="whitespace-nowrap">Status</th>
+                                                    <th class="whitespace-nowrap"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>2023-0326-kjkiwenklg01.PNG</td>
+                                                    <td>Passport / ID card</td>
+                                                    <td>01.11.2024</td>
+                                                    <td>
+                                                        <div class="flex gap-2">
+                                                            <button class="w-7 h-7 bg-white bg-opacity-10 rounded text-white text-opacity-50 bc-i-download"></button>
+                                                            <button class="w-7 h-7 bg-white bg-opacity-10 rounded text-white text-opacity-50 bc-i-eye"></button>
+                                                        </div>
+                                                    </td>
+                                                    <td>New</td>
+                                                    <td><i class="bc-i-time text-warning text-lg"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2023-0326-kjkiwenklg01.PNG</td>
+                                                    <td>Passport / ID card</td>
+                                                    <td>01.11.2024</td>
+                                                    <td>
+                                                        <div class="flex gap-2">
+                                                            <button class="w-7 h-7 bg-white bg-opacity-10 rounded text-white text-opacity-50 bc-i-download"></button>
+                                                            <button class="w-7 h-7 bg-white bg-opacity-10 rounded text-white text-opacity-50 bc-i-eye"></button>
+                                                        </div>
+                                                    </td>
+                                                    <td>New</td>
+                                                    <td><i class="bc-i-time text-warning text-lg"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- profile - TWO-STEP -->
+                            <div data-cont="profile_twostep" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">my profile</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="profile_detail" class=" ">Personal Details</button>
+                                        <button onclick="profileTab(this)" data-target="profile_password" class="">Change Password</button>
+                                        <button onclick="profileTab(this)" data-target="profile_time" class="">Time-Out</button>
+                                        <button onclick="profileTab(this)" data-target="profile_account" class="">Verify Account</button>
+                                        <button onclick="profileTab(this)" data-target="profile_twostep" class="active">TWO-STEP AUTHENTICATION</button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-2 text-xs text-white text-opacity-50">
+                                    Two-step authentication is designed for the ultimate security of your personal data. If it is activated, an outsider cannot access your personal account, even if they know your password. Complete two-step authentication and ensure the safety of your personal data.<br/>
+                                    <b>Attention: </b>
+                                    When activating two-step authentication, please complete the operation in the Google Authenticator application and only then close the page.
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <i class="block w-9 h-9 p-1 bg-white rounded"><img src="./dist/images/icon/authentication.png" alt=""></i>
+                                        <p class="mt-2 font-semibold text-base">Activate two-step authentication</p>
+                                    </div>
+                                    <div class="form-check form-switch"> 
+                                        <input id="checkbox-switch-7" class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+
+                                <div class="my-2">
+                                    <iframe allow="fullscreen" frameborder="0" height="450" scrolling="no" src="https://www.youtube.com/embed/cTeCEsiD3LI" title="How to activate two-step authentication?" width="100%"></iframe>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -674,7 +674,7 @@
 </div>
 
 <!-- SIGN IN 모달 -->
-<div id="sign_in-modal" class="modal" tabindex="-1" aria-hidden="true">
+<div id="sign_in-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body flex flex-col justify-between fix_height !p-0">
@@ -720,7 +720,7 @@
 </div>
 
 <!-- reset password 모달 -->
-<div id="reset_password-modal" class="modal" tabindex="-1" aria-hidden="true">
+<div id="reset_password-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body fix_height !p-0">
@@ -758,11 +758,11 @@
 </div>
 
 <!-- register 모달 -->
-<div id="register-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+<div id="register-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-2lg">
         <div class="modal-content">
             <div class="modal-body flex flex-col justify-between fix_height !p-0">
-                <div class="flex items-center justify-between h-12 px-3 border-b border-white border-opacity-5">
+                <div class="flex items-center justify-between shrink-0 h-12 px-3 border-b border-white border-opacity-5">
                     <img class="h-8 md:h-10" src="./dist/images/common/logo.svg" alt="">
                     <button class="underline text-white text-opacity-80 mr-10"  onclick="modalClose('register-modal'); modalOpen('sign_in-modal')">SIGN IN</button>
                     <button class="close_btn" onclick="modalClose('register-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
@@ -863,11 +863,11 @@
 </div>
 
 <!-- register step2 모달 -->
-<div id="register2-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+<div id="register2-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-2lg">
         <div class="modal-content">
             <div class="modal-body flex flex-col justify-between fix_height !p-0">
-                <div class="flex items-center justify-between h-12 px-3 border-b border-white border-opacity-5">
+                <div class="flex items-center justify-between shrink-0 h-12 px-3 border-b border-white border-opacity-5">
                     <img class="h-8 md:h-10" src="./dist/images/common/logo.svg" alt="">
                     <button class="underline text-white text-opacity-80 mr-10"  onclick="modalClose('register2-modal'); modalOpen('sign_in-modal')">SIGN IN</button>
                     <button class="close_btn" onclick="modalClose('register2-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
@@ -1035,120 +1035,27 @@
     </div>
 </div>
 
-<!-- show overflow-y-auto -->
-<!-- 
-style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;" 
--->
 
-<!-- 프로필 모달 -->
-<div id="profile-modal" class="modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-2xl modal-profile">
+<!-- upload success 모달 -->
+<div id="success-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
-            <div class="modal-body flex !p-0">
-
-                <div class="overflow-y-auto shrink-0 w-80 p-2.5 pr-3 bg-white bg-opacity-10">
-
-                    <div class="flex items-center gap-2.5 mb-3">
-                        <div class="flex items-center justify-center w-8 h-8 text-black bg-white bg-opacity-40 rounded-full">dd</div>
-                        <div>
-                            <p>no name</p>
-                            <div class="flex items-center gap-1 text-white text-opacity-50 fs11 leading-none">
-                                139620113
-                                <i class="bc-i-copy"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="bc-i-not-verified text-pending"></i>
-                            Sports Not Verified
-                        </div>
-                        <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase">verify now</button>
-                    </div>
-                    <div class="mb-3">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="bc-i-not-verified text-pending"></i>
-                            Casino Not Verified
-                        </div>
-                        <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase">verify now</button>
-                    </div>
-                    <div class="">
-
-                    </div>
-
-                    <button class="relative w-full h-12 py-1 px-2.5 mb-3 text-left bg-[#b8a338] rounded"><i class="absolute left-0 top-0 w-full h-full" style="background:radial-gradient(circle at -14% 113%,rgba(0,0,0,.3),rgba(0,0,0,0) 120%);"></i><span class="z-10 relative">Loyalty Points</span></button>
-
-                    <div class="overflow-hidden game_fold mb-3 rounded">
-                        <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5" onclick="gameToggle(this)">
-                            <div class="flex items-center gap-3 text-white text-opacity-70">
-                                <i class="bc-i-bet-builder-history text-xl"></i>
-                                <p class="font-medium uppercase">BET BUILDER HISTORY</p>
-                            </div>
-                            <i class="arrow bc-i-small-arrow-down text-xs"></i>
-                        </button>
-                        <div class="p-4 bg-white bg-opacity-10">
-                            <ul>
-                                <li><button onclick="profileTab(this)" data-target="bet_all" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">All</button></li>
-                                <li><button onclick="profileTab(this)" data-target="bet_open" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Open bets</button></li>
-                                <li><button onclick="profileTab(this)" data-target="bet_won" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Won</button></li>
-                                <li><button onclick="profileTab(this)" data-target="bet_lost" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Lost</button></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="overflow-hidden game_fold mb-3 rounded">
-                        <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5" onclick="gameToggle(this)">
-                            <div class="flex items-center gap-3 text-white text-opacity-70">
-                                <i class="bc-i-balance-management text-xl"></i>
-                                <p class="font-medium uppercase">Balance Management</p>
-                            </div>
-                            <i class="arrow bc-i-small-arrow-down text-xs"></i>
-                        </button>
-                        <div class="p-4 bg-white bg-opacity-10">
-                            <ul>
-                                <li><button onclick="profileTab(this)" data-target="balance_deposit" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Deposit</button></li>
-                                <li><button onclick="profileTab(this)" data-target="balance_transfer" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transfer</button></li>
-                                <li><button onclick="profileTab(this)" data-target="balance_withdraw" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw</button></li>
-                                <li><button onclick="profileTab(this)" data-target="balance_history" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transaction History</button></li>
-                                <li><button onclick="profileTab(this)" data-target="balance_status" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw Status</button></li>
-                                <li><button onclick="profileTab(this)" data-target="balance_my" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">My Wallets</button></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="overflow-hidden game_fold mb-3 rounded">
-                        <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5" onclick="gameToggle(this)">
-                            <div class="flex items-center gap-3 text-white text-opacity-70">
-                                <i class="bc-i-promotion text-xl"></i>
-                                <p class="font-medium uppercase">Bonuses</p>
-                            </div>
-                            <i class="arrow bc-i-small-arrow-down text-xs"></i>
-                        </button>
-                        <div class="p-4 bg-white bg-opacity-10">
-                            <ul>
-                                <li><button onclick="profileTab(this)" data-target="bonuses_spins" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Free Spins</button></li>
-                                <li><button onclick="profileTab(this)" data-target="bonuses_point" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Loyalty Points</button></li>
-                                <li><button onclick="profileTab(this)" data-target="bonuses_histofy" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Bonus history</button></li>
-                                <li><button onclick="profileTab(this)" data-target="bonuses_bonus" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Bonus</button></li>
-                            </ul>
-                        </div>
-                    </div>
-
+            <div class="modal-body p-4">
+                <button class="close_btn" onclick="modalClose('success-modal')"><i class="bc-i-close-remove"></i></button>
+                <div class="pt-3">
+                    <svg class="mx-auto" width="57px" height="57px" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>check_circle_outline-24px</title><g id="Balance-Management" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Balance-Management-I-Buddy-to-Buddy-|-Success-Pop-up" transform="translate(-691.000000, -344.000000)"><g id="check_circle_outline-24px" transform="translate(691.000000, 344.000000)"><polygon id="Path" points="0 0 57 0 57 57 0 57"></polygon><path d="M28.5,4.75 C15.39,4.75 4.75,15.39 4.75,28.5 C4.75,41.61 15.39,52.25 28.5,52.25 C41.61,52.25 52.25,41.61 52.25,28.5 C52.25,15.39 41.61,4.75 28.5,4.75 Z M28.5,47.5 C18.02625,47.5 9.5,38.97375 9.5,28.5 C9.5,18.02625 18.02625,9.5 28.5,9.5 C38.97375,9.5 47.5,18.02625 47.5,28.5 C47.5,38.97375 38.97375,47.5 28.5,47.5 Z M37.715,19.68875 L23.75,33.65375 L19.285,29.18875 C18.35875,28.2625 16.8625,28.2625 15.93625,29.18875 C15.01,30.115 15.01,31.61125 15.93625,32.5375 L22.0875,38.68875 C23.01375,39.615 24.51,39.615 25.43625,38.68875 L41.0875,23.0375 C42.01375,22.11125 42.01375,20.615 41.0875,19.68875 C40.16125,18.7625 38.64125,18.7625 37.715,19.68875 Z" id="Shape" fill="#16C72E"></path></g></g></g></svg>
                 </div>
-
-                <div class="flex-1">
-                    <div class="flex items-center justify-between h-[50px] px-4 border-b border-white border-opacity-10 bg-white bg-opacity-10">
-                        <h3></h3>
-                        <button class="p-2 bc-i-close-remove"></button>
-                    </div>
-                    <div class="profile_inner">
-                        <div></div>
-                    </div>
-                </div>
-
+                <div class="pt-5 text-center text-base font-medium">SUCCESS</div>
+                <div class="mt-5 mb-7 text-center text-base text-white text-opacity-70">Your file was successfully uploaded</div>
+                <button class="w-full py-2 bg-white bg-opacity-15 rounded">OK</button>
             </div>
         </div>
     </div>
 </div>
 
+<!-- 
+show overflow-y-auto 
+-->
+<!-- 
+style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;" 
+-->

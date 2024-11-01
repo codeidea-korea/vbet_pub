@@ -89,6 +89,7 @@ echo txtRecord('./@record/');
 					<button class="pop-modal" onclick="modalOpen('reset_password-modal')">reset password 모달</button>
 					<button class="pop-modal" onclick="modalOpen('register-modal')">register 모달</button>
 					<button class="pop-modal" onclick="modalOpen('register2-modal')">register Step2 모달</button>
+					<button class="pop-modal" onclick="modalOpen('success-modal')">success 모달</button>
 				</li>
 			</ul>
 		</li>
@@ -158,6 +159,13 @@ echo txtRecord('./@record/');
 						<li>
 							<button class="pop-modal" onclick="modalOpen('wheel_promo_ticket-modal')">ticket 모달</button>
 							<button class="pop-modal" onclick="modalOpen('wheel_promo_result-modal')">모바일 result 모달</button>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Belote">
+					<ul>
+						<li>
+							<a href="./belote.html" target="_blank" class="">belote</a>
 						</li>
 					</ul>
 				</li>
