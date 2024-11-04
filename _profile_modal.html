@@ -1,7 +1,7 @@
 
 <!-- 프로필 모달 -->
-<!-- <div id="profile-modal" class="modal mo_allfull show overflow-y-auto " tabindex="-1" aria-hidden="true" style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;" > -->
-<div id="profile-modal" class="modal mo_allfull " tabindex="-1" aria-hidden="true">
+<div id="profile-modal" class="modal mo_allfull show overflow-y-auto " tabindex="-1" aria-hidden="true" style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;" >
+<!-- <div id="profile-modal" class="modal mo_allfull " tabindex="-1" aria-hidden="true"> -->
     <div class="modal-dialog modal-2xl modal-profile">
         <div class="modal-content">
             <div class="modal-body !p-0">
@@ -93,8 +93,8 @@
                                     <button class="flex items-center justify-center w-8 h-8 bg-white bg-opacity-10 rounded bc-i-eye"></button>
                                 </div>
                                 <div class="grid grid-cols-2 gap-3">
-                                    <button onclick="profileTab(this)" data-target="deposit" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-wallet"></i> DEPOSIT</button>
-                                    <button onclick="profileTab(this)" data-target="withdraw" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-withdraw"></i> WITHDRAW</button>
+                                    <button onclick="profileTab(this)" data-target="balance_deposit" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-wallet"></i> DEPOSIT</button>
+                                    <button onclick="profileTab(this)" data-target="balance_withdraw" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-withdraw"></i> WITHDRAW</button>
                                 </div>
                             </div>
                             <div class="profile_balance bonus py-2.5 px-4 mb-4 rounded">
@@ -108,7 +108,7 @@
                             </div>
                         </div>
 
-                        <button class="relative md:block hidden w-full h-12 py-1 px-2.5 mb-3 text-left bg-[#b8a338] rounded">
+                        <button class="relative md:block hidden w-full h-12 py-1 px-2.5 mb-3 text-left bg-[#b8a338] rounded" onclick="profileTabClick('bonuses_point')">
                             <i class="absolute left-0 top-0 w-full h-full" style="background:radial-gradient(circle at -14% 113%,rgba(0,0,0,.3),rgba(0,0,0,0) 120%);"></i>
                             <span class="z-10 relative font-medium">Loyalty Points</span>
                         </button>
@@ -479,6 +479,492 @@
                                 <div class="p-4 text-center text-white text-opacity-70 text-xs">No Bets to show</div>
                             </div>
 
+                            <!-- balance - deposit -->
+                            <div data-cont="balance_deposit" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">balance management</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="balance_deposit" class="active">Deposit</button>
+                                        <button onclick="profileTab(this)" data-target="balance_transfer" class="">Transfer</button>
+                                        <button onclick="profileTab(this)" data-target="balance_withdraw" class="">Withdraw</button>
+                                        <button onclick="profileTab(this)" data-target="balance_history" class="">Transaction History</button>
+                                        <button onclick="profileTab(this)" data-target="balance_status" class="">Withdraw Status</button>
+                                        <button onclick="profileTab(this)" data-target="balance_my" class="">My Wallets</button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <img class="md:block hidden rounded" src="./dist/images/banner/deposit_banner.webp" alt="">
+                                    <img class="block md:hidden rounded" src="./dist/images/banner/deposit_banner_mobile.webp" alt="">
+                                </div>
+
+                                <button class="md:block hidden w-28 h-12 px-2.5 border border-white border-opacity-20 bg-white bg-opacity-25 rounded"><img class="w-full h-full object-contain" src="./dist/images/icon/pay24.png" alt=""></button>
+
+                                <div class="md:block hidden mt-2 md:p-5 md:bg-white md:bg-opacity-5 rounded">
+                                    <div class="w-[560px] max-w-full">
+                                        <div class="grid grid-cols-5 py-2.5 px-5 mb-5 bg-white bg-opacity-5 text-xs rounded">
+                                            <div>
+                                                <p class="text-white text-opacity-60">Payment Name</p>
+                                                <p class="text-white text-opacity-90">P24</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Fee</p>
+                                                <p class="text-white text-opacity-90">Free</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Process Time</p>
+                                                <p class="text-white text-opacity-90">Instant</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Min</p>
+                                                <p class="text-white text-opacity-90">1 ֏</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Max</p>
+                                                <p class="text-white text-opacity-90">1000000 ֏</p>
+                                            </div>
+                                        </div> 
+                                        <button class="btn btn-success w-96 max-w-full text-xs">DEPOSIT</button>
+                                        <p class="mt-5 text-white text-opacity-60">For making a deposit, please fill in all the mandatory fields above. </p>
+                                    </div>
+                                </div>
+
+                                <div class="md:hidden grid grid-cols-3 gap-2.5">
+                                    <button class="px-2.5 bg-white bg-opacity-10 rounded" onclick="profileTab(this)" data-target="balance_deposit2">
+                                        <img class="w-full h-14 object-contain" src="./dist/images/icon/pay24.png" alt="">
+                                        <p class="flex items-center justify-center h-10 border-t border-black text-white text-opacity-60 text-xs">P24</p>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!-- balance - deposit 2 -->
+                            <div data-cont="balance_deposit2" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabClick('balance_deposit')"></button>
+                                        <p class="uppercase">P24</p>
+                                    </div> 
+                                </div>
+
+                                <div class="mt-2 md:p-5 md:bg-white md:bg-opacity-5 rounded">
+                                    <div class="md:block hidden w-[560px] max-w-full">
+                                        <div class="grid grid-cols-5 py-2.5 px-5 mb-5 bg-white bg-opacity-5 text-xs rounded">
+                                            <div>
+                                                <p class="text-white text-opacity-60">Payment Name</p>
+                                                <p class="text-white text-opacity-90">P24</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Fee</p>
+                                                <p class="text-white text-opacity-90">Free</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Process Time</p>
+                                                <p class="text-white text-opacity-90">Instant</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Min</p>
+                                                <p class="text-white text-opacity-90">1 ֏</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Max</p>
+                                                <p class="text-white text-opacity-90">1000000 ֏</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="flex md:hidden gap-2 w-full p-2.5 bg-white bg-opacity-10 rounded">
+                                        <div class="flex items-center justify-center w-28 px-2.5 border-r border-black"><img src="./dist/images/icon/pay24.png" alt=""></div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between pb-1 text-xs border-b border-black">
+                                                <p class="text-white tex-opacity-60">Fee: Free</p>
+                                                <p class="text-white text-opacity-40">0-12 Hours</p>
+                                            </div>
+                                            <div class="flex items-center justify-between pt-1">
+                                                <div>
+                                                    <p class="text-white text-opacity-60 text-xs">Min</p>
+                                                    <p class="text-white text-opacity-90">500 ֏</p>
+                                                </div>
+                                                <div class="text-right">
+                                                    <p class="text-white text-opacity-60 text-xs">Max</p>
+                                                    <p class="text-white text-opacity-90">1000000 ֏</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-[560px] max-w-full mt-4">
+                                        <button class="btn btn-success w-96 max-w-full text-xs" disabled>DEPOSIT</button>
+                                        <p class="mt-5 text-white text-opacity-60">For making a deposit, please fill in all the mandatory fields above. </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- balance - Transfer -->
+                            <div data-cont="balance_transfer" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">balance management</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="balance_deposit" class="">Deposit</button>
+                                        <button onclick="profileTab(this)" data-target="balance_transfer" class="active">Transfer</button>
+                                        <button onclick="profileTab(this)" data-target="balance_withdraw" class="">Withdraw</button>
+                                        <button onclick="profileTab(this)" data-target="balance_history" class="">Transaction History</button>
+                                        <button onclick="profileTab(this)" data-target="balance_status" class="">Withdraw Status</button>
+                                        <button onclick="profileTab(this)" data-target="balance_my" class="">My Wallets</button>
+                                    </div>
+                                </div>
+
+                                <div class="w-[560px] max-w-full">
+                                    <div class="py-3 text-center">Transfer between my balances</div>
+                                    <div class="md:p-4 md:bg-white md:bg-opacity-5 rounded">
+                                        <div class="flex items-center justify-between p-2.5 bg-white bg-opacity-5 rounded">
+                                            <div class="flex-1">
+                                                <p class="text-xs text-white text-opacity-40">From</p>
+                                                <b class="text-base font-semibold">Casino</b>
+                                                <p class="text-xs text-white text-opacity-40">0.0 ֏</p>
+                                            </div>
+                                            <button class="flex items-center justify-center w-10 h-10 text-lg bc-i-exchange bg-white bg-opacity-10 rounded"></button>
+                                            <div class="flex-1 text-right">
+                                                <p class="text-xs text-white text-opacity-40">To</p>
+                                                <b class="text-base font-semibold">Sport</b>
+                                                <p class="text-xs text-white text-opacity-40">0.0 ֏</p>
+                                            </div>
+                                        </div>
+                                        <div class="input_wrap mt-4 mb-3"> 
+                                            <input id="balance_transfer" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                            <label for="balance_transfer" class="form-label text-xs text-white text-opacity-40">Amount</label> 
+                                        </div>
+                                        <button class="btn btn-success w-full h-12 text-xs" disabled>TRANSFER</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- balance - Withdraw -->
+                            <div data-cont="balance_withdraw" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">balance management</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="balance_deposit" class="">Deposit</button>
+                                        <button onclick="profileTab(this)" data-target="balance_transfer" class="">Transfer</button>
+                                        <button onclick="profileTab(this)" data-target="balance_withdraw" class="active">Withdraw</button>
+                                        <button onclick="profileTab(this)" data-target="balance_history" class="">Transaction History</button>
+                                        <button onclick="profileTab(this)" data-target="balance_status" class="">Withdraw Status</button>
+                                        <button onclick="profileTab(this)" data-target="balance_my" class="">My Wallets</button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <img class="md:block hidden rounded" src="./dist/images/banner/deposit_banner.webp" alt="">
+                                    <img class="block md:hidden rounded" src="./dist/images/banner/deposit_banner_mobile.webp" alt="">
+                                </div>
+
+                                <button class="md:block hidden w-28 h-12 px-2.5 border border-white border-opacity-20 bg-white bg-opacity-25 rounded"><img class="w-full h-full object-contain" src="./dist/images/icon/pay24.png" alt=""></button>
+
+                                <div class="md:block hidden mt-2 md:p-5 md:bg-white md:bg-opacity-5 rounded">
+                                    <div class="w-[560px] max-w-full">
+                                        <div class="grid grid-cols-5 py-2.5 px-5 mb-5 bg-white bg-opacity-5 text-xs rounded">
+                                            <div>
+                                                <p class="text-white text-opacity-60">Payment Name</p>
+                                                <p class="text-white text-opacity-90">P24</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Fee</p>
+                                                <p class="text-white text-opacity-90">Free</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Process Time</p>
+                                                <p class="text-white text-opacity-90">Instant</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Min</p>
+                                                <p class="text-white text-opacity-90">1 ֏</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Max</p>
+                                                <p class="text-white text-opacity-90">1000000 ֏</p>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                    <div class="overflow-hidden my-3 rounded text-xs font-medium">
+                                        <div class="flex items-center justify-between py-2.5 px-5 bg-white bg-opacity-5">
+                                            <p class="text-white text-opacity-60">Withdrawable Amount</p>
+                                            <p class="text-[#aa7f00]">0.0 ֏</p>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2.5 px-5 bg-white bg-opacity-10">
+                                            <p class="text-white text-opacity-60">Balance</p>
+                                            <p class="text-success">0.0 ֏</p>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2.5 px-5 bg-white bg-opacity-5">
+                                            <p class="text-white text-opacity-60">Unplayed amount</p>
+                                            <p class="text-[#aa7f00]">0.0 ֏</p>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2.5 px-5 bg-white bg-opacity-10">
+                                            <p class="text-white text-opacity-60">Unplayed Amount Fee</p>
+                                            <p class="text-[#aa7f00]">0.0 ֏</p>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2.5 px-5 bg-white bg-opacity-5">
+                                            <p class="text-white text-opacity-60">Unplayed Amount Percentage</p>
+                                            <p class="text-[#aa7f00]">3%</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-[560px] max-w-full mt-4">
+                                        <div class="input_wrap mb-5"> 
+                                            <input id="balance_transfer" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                            <label for="balance_transfer" class="form-label text-xs text-white text-opacity-40">Amount</label> 
+                                        </div>
+                                        <button class="btn btn-success w-96 max-w-full text-xs" disabled>WITHDRAW</button>
+                                        <p class="mt-5 text-white text-opacity-60">For making a withdrawal, please fill in all the mandatory fields above. </p>
+                                    </div>
+                                </div>
+
+                                <div class="md:hidden grid grid-cols-3 gap-2.5">
+                                    <button class="px-2.5 bg-white bg-opacity-10 rounded" onclick="profileTab(this)" data-target="balance_withdraw2">
+                                        <img class="w-full h-14 object-contain" src="./dist/images/icon/pay24.png" alt="">
+                                        <p class="flex items-center justify-center h-10 border-t border-black text-white text-opacity-60 text-xs">P24</p>
+                                    </button>
+                                </div>
+
+                            </div>
+                            
+                            <!-- balance - Withdraw 2 -->
+                            <div data-cont="balance_withdraw2" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabClick('balance_withdraw')"></button>
+                                        <p class="uppercase">P24</p>
+                                    </div> 
+                                </div>
+
+                                <div class="mt-2 md:p-5 md:bg-white md:bg-opacity-5 rounded">
+                                    <div class="md:block hidden w-[560px] max-w-full">
+                                        <div class="grid grid-cols-5 py-2.5 px-5 mb-5 bg-white bg-opacity-5 text-xs rounded">
+                                            <div>
+                                                <p class="text-white text-opacity-60">Payment Name</p>
+                                                <p class="text-white text-opacity-90">P24</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Fee</p>
+                                                <p class="text-white text-opacity-90">Free</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Process Time</p>
+                                                <p class="text-white text-opacity-90">Instant</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Min</p>
+                                                <p class="text-white text-opacity-90">1 ֏</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-opacity-60">Max</p>
+                                                <p class="text-white text-opacity-90">1000000 ֏</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="flex md:hidden gap-2 w-full p-2.5 bg-white bg-opacity-10 rounded">
+                                        <div class="flex items-center justify-center w-28 px-2.5 border-r border-black"><img src="./dist/images/icon/pay24.png" alt=""></div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between pb-1 text-xs border-b border-black">
+                                                <p class="text-white tex-opacity-60">Fee: Free</p>
+                                                <p class="text-white text-opacity-40">0-12 Hours</p>
+                                            </div>
+                                            <div class="flex items-center justify-between pt-1">
+                                                <div>
+                                                    <p class="text-white text-opacity-60 text-xs">Min</p>
+                                                    <p class="text-white text-opacity-90">500 ֏</p>
+                                                </div>
+                                                <div class="text-right">
+                                                    <p class="text-white text-opacity-60 text-xs">Max</p>
+                                                    <p class="text-white text-opacity-90">1000000 ֏</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-[560px] max-w-full mt-4">
+                                        <div class="input_wrap mb-5"> 
+                                            <input id="balance_transfer" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                            <label for="balance_transfer" class="form-label text-xs text-white text-opacity-40">Amount</label> 
+                                        </div>
+                                        <button class="btn btn-success w-96 max-w-full text-xs" disabled>WITHDRAW</button>
+                                        <p class="mt-5 text-white text-opacity-60">For making a withdrawal, please fill in all the mandatory fields above. </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- balance - History -->
+                            <div data-cont="balance_history" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">balance management</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="balance_deposit" class="">Deposit</button>
+                                        <button onclick="profileTab(this)" data-target="balance_transfer" class="">Transfer</button>
+                                        <button onclick="profileTab(this)" data-target="balance_withdraw" class="">Withdraw</button>
+                                        <button onclick="profileTab(this)" data-target="balance_history" class="active">Transaction History</button>
+                                        <button onclick="profileTab(this)" data-target="balance_status" class="">Withdraw Status</button>
+                                        <button onclick="profileTab(this)" data-target="balance_my" class="">My Wallets</button>
+                                    </div>
+                                </div>
+
+                                <!-- filter -->
+                                <div class="my-2">
+                                    <button class="flex md:hidden items-center justify-between w-full p-2.5 border-b border-black border-opacity-30 bg-white bg-opacity-20 rounded-t rounded" onclick="mofilterShow(this)">
+                                        <div class="flex items-center gap-2">
+                                            <i class="bc-i-filter"></i>
+                                            <div class="text-left">
+                                                <p>Filter</p>
+                                                <!-- <p class="fs10 leading-none">ddd</p> -->
+                                            </div>
+                                        </div>
+                                        <i class="bc-i-small-arrow-down fs10"></i>
+                                    </button>
+                                    
+                                    <div class="hidden md:grid grid-cols-1 md:grid-cols-4 gap-2 w-full p-2.5 bg-white bg-opacity-20 rounded-t-none md:rounded-t rounded">
+                                        <div class="custom_select w-full md:mt-0 mt-0.5">
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left">
+                                                <span class="text-xs opacity-50">Transaction</span>
+                                                <p>All</p> 
+                                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                            </button>
+                                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                                <ul>
+                                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>All</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Withdrawal request</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Withdrawal request Payment</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Deposit</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Deposit request</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Deposit request payment</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Rejected withdrawal request</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Bet</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Increasing the winning</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Decreasing the winning</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Loyalty Point Exchange</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="custom_select w-full md:mt-0 mt-0.5">
+                                            <button class="w-full py-2 px-3 bg-white bg-opacity-10 rounded text-left">
+                                                <span class="text-xs opacity-50">Category</span>
+                                                <p>Casino</p> 
+                                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                            </button>
+                                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                                <ul>
+                                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>Casino</p></li>
+                                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Sport</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="relative h-full md:mt-0 mt-0.5">
+                                                <label class="absolute top-2 left-3 text-xs opacity-50" for="balance_history_cal_1">Range</label>
+                                                <div class="absolute right-0 w-10 h-full flex items-center justify-center "> 
+                                                    <i class="w-4 h-4 bc-i-datepicker"></i>
+                                                </div>
+                                                <input type="text" class="datepicker form-control h-full pt-6 pr-12" id="balance_history_cal_1" data-single-mode="true">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="relative h-full md:mt-0 mt-0.5">
+                                                <label class="absolute top-2 left-3 text-xs opacity-50" for="balance_history_cal_2"></label>
+                                                <div class="absolute right-0 w-10 h-full flex items-center justify-center "> 
+                                                    <i class="w-4 h-4 bc-i-datepicker"></i>
+                                                </div>
+                                                <input type="text" class="datepicker form-control h-full pt-6 pr-12" id="balance_history_cal_2" data-single-mode="true">
+                                            </div>
+                                        </div>
+                                        <div class="md:col-span-4 text-right md:mt-0 mt-0.5">
+                                            <button class="btn btn-success w-56 max-w-full">SHOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="py-7 text-center fs13 text-white text-opacity-70">There are no data for the selected time period</div>
+
+                            </div>
+
+                            <!-- balance - Status -->
+                            <div data-cont="balance_status" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">balance management</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="balance_deposit" class="">Deposit</button>
+                                        <button onclick="profileTab(this)" data-target="balance_transfer" class="">Transfer</button>
+                                        <button onclick="profileTab(this)" data-target="balance_withdraw" class="">Withdraw</button>
+                                        <button onclick="profileTab(this)" data-target="balance_history" class="">Transaction History</button>
+                                        <button onclick="profileTab(this)" data-target="balance_status" class="active">Withdraw Status</button>
+                                        <button onclick="profileTab(this)" data-target="balance_my" class="">My Wallets</button>
+                                    </div>
+                                </div>
+
+                                <div class="overflow-x-auto xscrollbar">
+                                    <table class="table table-sm basic_type text-xs">
+                                        <thead>
+                                            <tr>
+                                                <th class="whitespace-nowrap">Date And ID</th>
+                                                <th class="whitespace-nowrap">Paid Time</th>
+                                                <th class="whitespace-nowrap">System</th>
+                                                <th class="whitespace-nowrap">Amount</th>
+                                                <th class="whitespace-nowrap">Status</th>
+                                                <th class="whitespace-nowrap">Cancel</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                    <div class="py-10 text-center fs13">No Withdrawal Information</div>
+                                </div>
+
+                            </div>
+
+                            <!-- balance - Wallets -->
+                            <div data-cont="balance_my" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">balance management</p>
+                                    </div> 
+                                    <div class="profile_top_tab relative overflow-x-auto noscrollbar flex text-xs whitespace-nowrap">
+                                        <button onclick="profileTab(this)" data-target="balance_deposit" class="">Deposit</button>
+                                        <button onclick="profileTab(this)" data-target="balance_transfer" class="">Transfer</button>
+                                        <button onclick="profileTab(this)" data-target="balance_withdraw" class="">Withdraw</button>
+                                        <button onclick="profileTab(this)" data-target="balance_history" class="">Transaction History</button>
+                                        <button onclick="profileTab(this)" data-target="balance_status" class="">Withdraw Status</button>
+                                        <button onclick="profileTab(this)" data-target="balance_my" class="active">My Wallets</button>
+                                    </div>
+                                </div>
+
+                                <div class="py-10 text-white text-opacity-70 text-center">
+                                    There are no saved wallets. You can add one from the Deposit screen through any payment method which offers ‘Save card’ option.
+                                </div>
+                                <div class="mt-5 text-right">
+                                    <button class="btn btn-success" onclick="profileTabClick('balance_deposit')">GO TO DEPOSIT SCREEN</button>
+                                </div>
+
+                            </div>
+
                             <!-- bonus - spin -->
                             <div data-cont="bonuses_spins" class="">
                                 <!-- 모바일용 -->
@@ -515,7 +1001,7 @@
                             </div>
 
                             <!-- bonus - Points -->
-                            <div data-cont="bonuses_point" class="active">
+                            <div data-cont="bonuses_point" class="">
                                 <!-- 모바일용 -->
                                 <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
                                     <div class="flex items-center gap-2 py-2">
@@ -530,9 +1016,580 @@
                                     </div>
                                 </div>
 
-                                <div class="flex items-center gap-7">
-                                    <div><img class="h-36" src="./dist/images/icon/loyalty_point_1.png" alt=""></div>
-                                    <div class="flex-1"></div>
+                                <div class="p-4 border md:border-none border-white border-opacity-5 md:bg-transparent bg-white bg-opacity-5 rounded">
+                                    <div class="flex items-center gap-7">
+                                        <div><img class="h-14 md:h-36" src="./dist/images/icon/loyalty_point_1.png" alt=""></div>
+                                        <div class="flex-1">
+                                            <p class="mb-2 text-lg md:text-2xl font-bold">BEGINNER</p>
+                                            <p class="text-base">1</p>
+                                            <p class="text-xs text-white text-opacity-80">5 XP until 2</p>
+                                            <div class="md:block hidden">
+                                                <p class="text-xs text-white text-opacity-50">0</p>
+                                                <div class="overflow-hidden relative w-full h-1.5 my-1.5 bg-white bg-opacity-10 rounded">
+                                                    <span class="absolute h-full rounded" style="width:10%; background:rgb(137,103,54)"></span>
+                                                </div>
+                                                <div class="flex items-center justify-between text-xs">
+                                                    <p>0</p>
+                                                    <p class="text-white text-opacity-50">435</p>
+                                                </div>
+                                                <div class="flex items-center justify-between text-xs">
+                                                    <p>Beginner: 1 - 9</p>
+                                                    <p class="text-white text-opacity-50">Next: Elite</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md:hidden block">
+                                        <p class="text-xs text-white text-opacity-50">0</p>
+                                        <div class="overflow-hidden relative w-full h-1.5 my-1.5 bg-white bg-opacity-10 rounded">
+                                            <span class="absolute h-full rounded" style="width:10%; background:rgb(137,103,54)"></span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs">
+                                            <p>0</p>
+                                            <p class="text-white text-opacity-50">435</p>
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs">
+                                            <p>Beginner: 1 - 9</p>
+                                            <p class="text-white text-opacity-50">Next: Elite</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="overflow-hidden nav nav-boxed-tabs md:!w-80 !max-w-full mt-5 !rounded" role="tablist">
+                                    <li id="bonuspoint-3-tab" class="nav-item flex-1" role="presentation">
+                                        <button class="nav-link w-full py-1 active" data-tw-toggle="pill" data-tw-target="#bonuspoint-tab-3" type="button" role="tab" aria-controls="bonuspoint-tab-3" aria-selected="true"> Benefits </button> 
+                                    </li>
+                                    <li id="bonuspoint-4-tab" class="nav-item flex-1" role="presentation">
+                                        <button class="nav-link w-full py-1" data-tw-toggle="pill" data-tw-target="#bonuspoint-tab-4" type="button" role="tab" aria-controls="bonuspoint-tab-4" aria-selected="false"> Levels </button> 
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-5">
+                                    <div id="bonuspoint-tab-3" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="bonuspoint-3-tab">
+                                        <div class="flex items-center justify-between">
+                                            <div class="text-white text-opacity-60 text-xs">Available cards: <b class="text-white text-opacity-100">0</b></div>
+                                            <div class="custom_select right">
+                                                <button class="flex items-center justify-between gap-2 w-full py-2 px-3 text-xs bg-white bg-opacity-10 rounded">
+                                                    <p>All</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                                </button>
+                                                <div class="!w-28 max-h-60 bg-bg shadow-2">
+                                                    <ul class="p-2">
+                                                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>All</p></li>
+                                                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Activated</p></li>
+                                                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Not Activated</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-10 text-xs text-white text-opacity-60 text-center">You don't have benefits yet</div>
+                                    </div>
+                                    <div id="bonuspoint-tab-4" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="bonuspoint-4-tab">
+                                        <div class="mySwiper overflow-hidden w-full" data-gap="20" data-per="auto" data-loop="false">
+                                            <div class="swiper-container">
+                                                <ul class="swiper-wrapper">
+                                                    <li class="swiper-slide !w-56">
+                                                        <div class="level_tab active flex items-center gap-5 p-4 rounded" onclick="levelTab(this)">
+                                                            <img class="w-14 -mt-2.5" src="./dist/images/icon/loyalty_point_1.png" alt="">
+                                                            <div>
+                                                                <p class="text-base font-extrabold">Beginner</p>
+                                                                <span class="text-xs font-semibold" style="color:rgb(137, 103, 54);">1 - 9</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide !w-56">
+                                                        <div class="level_tab flex items-center gap-5 p-4 rounded" onclick="levelTab(this)">
+                                                            <img class="w-14 -mt-2.5" src="./dist/images/icon/loyalty_point_2.png" alt="">
+                                                            <div>
+                                                                <p class="text-base font-extrabold">Elite</p>
+                                                                <span class="text-xs font-semibold" style="color:rgb(123, 130, 134);">10 - 19</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide !w-56">
+                                                        <div class="level_tab flex items-center gap-5 p-4 rounded" onclick="levelTab(this)">
+                                                            <img class="w-14 -mt-2.5" src="./dist/images/icon/loyalty_point_3.png" alt="">
+                                                            <div>
+                                                                <p class="text-base font-extrabold">Expert</p>
+                                                                <span class="text-xs font-semibold" style="color:rgb(244, 179, 29);">20 - 29</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide !w-56">
+                                                        <div class="level_tab flex items-center gap-5 p-4 rounded" onclick="levelTab(this)">
+                                                            <img class="w-14 -mt-2.5" src="./dist/images/icon/loyalty_point_4.png" alt="">
+                                                            <div>
+                                                                <p class="text-base font-extrabold">Pro</p>
+                                                                <span class="text-xs font-semibold" style="color:rgb(87, 148, 154);">30 - 39</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide !w-56">
+                                                        <div class="level_tab flex items-center gap-5 p-4 rounded" onclick="levelTab(this)">
+                                                            <img class="w-14 -mt-2.5" src="./dist/images/icon/loyalty_point_5.png" alt="">
+                                                            <div>
+                                                                <p class="text-base font-extrabold">Master</p>
+                                                                <span class="text-xs font-semibold" style="color:rgb(255, 126, 105);">40 - 49</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide !w-56">
+                                                        <div class="level_tab flex items-center gap-5 p-4 rounded" onclick="levelTab(this)">
+                                                            <img class="w-14 -mt-2.5" src="./dist/images/icon/loyalty_point_6.png" alt="">
+                                                            <div>
+                                                                <p class="text-base font-extrabold">Champion</p>
+                                                                <span class="text-xs font-semibold" style="color:rgb(128, 219, 71);">50 - 59</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide !w-56">
+                                                        <div class="level_tab flex items-center gap-5 p-4 rounded" onclick="levelTab(this)">
+                                                            <img class="w-14 -mt-2.5" src="./dist/images/icon/loyalty_point_7.png" alt="">
+                                                            <div>
+                                                                <p class="text-base font-extrabold">Legend</p>
+                                                                <span class="text-xs font-semibold" style="color:rgb(77, 150, 186);">60 - 69</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide !w-56">
+                                                        <div class="level_tab flex items-center gap-5 p-4 rounded" onclick="levelTab(this)">
+                                                            <img class="w-14 -mt-2.5" src="./dist/images/icon/loyalty_point_8.png" alt="">
+                                                            <div>
+                                                                <p class="text-base font-extrabold">Lord</p>
+                                                                <span class="text-xs font-semibold" style="color:rgb(58, 58, 58);">70 - 79</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide !w-56">
+                                                        <div class="level_tab flex items-center gap-5 p-4 rounded" onclick="levelTab(this)">
+                                                            <img class="w-14 -mt-2.5" src="./dist/images/icon/loyalty_point_9.png" alt="">
+                                                            <div>
+                                                                <p class="text-base font-extrabold">God</p>
+                                                                <span class="text-xs font-semibold" style="color:rgb(255, 70, 150);">80 - 80</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col md:flex-row gap-2 mt-5">
+                                            <div class="flex-1">
+                                                <div class="text-xs text-white text-opacity-60">Level Cards: <strong class="text-white">0</strong></div>
+                                                <div class="level_content mt-2">
+                                                    <div class="active">
+                                                        <div class="game_fold open overflow-hidden rounded mb-2">
+                                                            <button class="relative overflow-hidden flex items-center justify-between w-full h-12 px-3 bg-white bg-opacity-5" onclick="faqToggle(this)">
+                                                                <img class="absolute -left-3 h-12 opacity-20" src="./dist/images/icon/loyalty_point_1.png" alt="">
+                                                                <p class="relative z-10 flex items-center font-bold gap-2">Level Up Bonus</p>
+                                                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                            </button>
+                                                            <div class="overflow-hidden">
+                                                                <div class="grid grid-cols-3 p-2 px-3 mt-0.5 mb-[1px] bg-white bg-opacity-5 text-white text-opacity-60 text-xs rounded">
+                                                                    <p>Beginner</p>
+                                                                    <p>XP</p>
+                                                                    <p>Bonus</p>
+                                                                </div>
+                                                                <div class="overflow-y-auto h-56">
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5" style="border-radius:5px; box-shadow:rgb(137, 103, 54) 0px 0px 4px 1px inset;">
+                                                                        <p>1</p><p>0</p><p></p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>2</p><p>5</p><p></p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>3</p><p>6</p><p></p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>4</p><p>13</p><p></p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>5</p><p>30</p><p></p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>6</p><p>62</p><p></p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>7</p><p>114</p><p></p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>8</p><p>191</p><p></p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>9</p><p>296</p><p></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="game_fold open overflow-hidden rounded mb-2">
+                                                            <button class="relative overflow-hidden flex items-center justify-between w-full h-12 px-3 bg-white bg-opacity-5" onclick="faqToggle(this)">
+                                                                <img class="absolute -left-3 h-12 opacity-20" src="./dist/images/icon/loyalty_point_2.png" alt="">
+                                                                <p class="relative z-10 flex items-center font-bold gap-2">Level Up Bonus</p>
+                                                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                            </button>
+                                                            <div class="overflow-hidden">
+                                                                <div class="grid grid-cols-3 p-2 px-3 mt-0.5 mb-[1px] bg-white bg-opacity-5 text-white text-opacity-60 text-xs rounded">
+                                                                    <p>Elite</p>
+                                                                    <p>XP</p>
+                                                                    <p>Bonus</p>
+                                                                </div>
+                                                                <div class="overflow-y-auto h-56">
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>10</p><p>435</p><p>100 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>11</p><p>611</p><p>113.52 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>12</p><p>829</p><p>140.61 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>13</p><p>1093</p><p>170.28 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>14</p><p>1407</p><p>202.53 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>15</p><p>1776</p><p>238.10 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>16</p><p>2203</p><p>275.42 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>17</p><p>2693</p><p>316.05 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>18</p><p>3250</p><p>359.27 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>19</p><p>3877</p><p>404.42 ֏</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="game_fold open overflow-hidden rounded mb-2">
+                                                            <button class="relative overflow-hidden flex items-center justify-between w-full h-12 px-3 bg-white bg-opacity-5" onclick="faqToggle(this)">
+                                                                <img class="absolute -left-3 h-12 opacity-20" src="./dist/images/icon/loyalty_point_3.png" alt="">
+                                                                <p class="relative z-10 flex items-center font-bold gap-2">Level Up Bonus</p>
+                                                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                            </button>
+                                                            <div class="overflow-hidden">
+                                                                <div class="grid grid-cols-3 p-2 px-3 mt-0.5 mb-[1px] bg-white bg-opacity-5 text-white text-opacity-60 text-xs rounded">
+                                                                    <p>Expert</p>
+                                                                    <p>XP</p>
+                                                                    <p>Bonus</p>
+                                                                </div>
+                                                                <div class="overflow-y-auto h-56">
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>20</p><p>4580</p><p>453.44 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>21</p><p>5361</p><p>503.75 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>22</p><p>6225</p><p>557.28 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>23</p><p>7176</p><p>613.4 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>24</p><p>8217</p><p>671.45 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>25</p><p>9354</p><p>733.37 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>26</p><p>10589</p><p>796.58 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>27</p><p>11927</p><p>863.01 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>28</p><p>13372</p><p>932.03 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>29</p><p>14927</p><p>1002.98 ֏</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="game_fold open overflow-hidden rounded mb-2">
+                                                            <button class="relative overflow-hidden flex items-center justify-between w-full h-12 px-3 bg-white bg-opacity-5" onclick="faqToggle(this)">
+                                                                <img class="absolute -left-3 h-12 opacity-20" src="./dist/images/icon/loyalty_point_4.png" alt="">
+                                                                <p class="relative z-10 flex items-center font-bold gap-2">Level Up Bonus</p>
+                                                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                            </button>
+                                                            <div class="overflow-hidden">
+                                                                <div class="grid grid-cols-3 p-2 px-3 mt-0.5 mb-[1px] bg-white bg-opacity-5 text-white text-opacity-60 text-xs rounded">
+                                                                    <p>Pro</p>
+                                                                    <p>XP</p>
+                                                                    <p>Bonus</p>
+                                                                </div>
+                                                                <div class="overflow-y-auto h-56">
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>30</p><p>4580</p><p>453.44 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>31</p><p>5361</p><p>503.75 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>32</p><p>6225</p><p>557.28 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>33</p><p>7176</p><p>613.4 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>34</p><p>8217</p><p>671.45 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>35</p><p>9354</p><p>733.37 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>36</p><p>10589</p><p>796.58 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>37</p><p>11927</p><p>863.01 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>38</p><p>13372</p><p>932.03 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>39</p><p>14927</p><p>1002.98 ֏</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="game_fold open overflow-hidden rounded mb-2">
+                                                            <button class="relative overflow-hidden flex items-center justify-between w-full h-12 px-3 bg-white bg-opacity-5" onclick="faqToggle(this)">
+                                                                <img class="absolute -left-3 h-12 opacity-20" src="./dist/images/icon/loyalty_point_5.png" alt="">
+                                                                <p class="relative z-10 flex items-center font-bold gap-2">Level Up Bonus</p>
+                                                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                            </button>
+                                                            <div class="overflow-hidden">
+                                                                <div class="grid grid-cols-3 p-2 px-3 mt-0.5 mb-[1px] bg-white bg-opacity-5 text-white text-opacity-60 text-xs rounded">
+                                                                    <p>Master</p>
+                                                                    <p>XP</p>
+                                                                    <p>Bonus</p>
+                                                                </div>
+                                                                <div class="overflow-y-auto h-56">
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>40</p><p>4580</p><p>453.44 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>41</p><p>5361</p><p>503.75 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>42</p><p>6225</p><p>557.28 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>43</p><p>7176</p><p>613.4 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>44</p><p>8217</p><p>671.45 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>45</p><p>9354</p><p>733.37 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>46</p><p>10589</p><p>796.58 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>47</p><p>11927</p><p>863.01 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>48</p><p>13372</p><p>932.03 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>49</p><p>14927</p><p>1002.98 ֏</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="game_fold open overflow-hidden rounded mb-2">
+                                                            <button class="relative overflow-hidden flex items-center justify-between w-full h-12 px-3 bg-white bg-opacity-5" onclick="faqToggle(this)">
+                                                                <img class="absolute -left-3 h-12 opacity-20" src="./dist/images/icon/loyalty_point_6.png" alt="">
+                                                                <p class="relative z-10 flex items-center font-bold gap-2">Level Up Bonus</p>
+                                                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                            </button>
+                                                            <div class="overflow-hidden">
+                                                                <div class="grid grid-cols-3 p-2 px-3 mt-0.5 mb-[1px] bg-white bg-opacity-5 text-white text-opacity-60 text-xs rounded">
+                                                                    <p>Champion</p>
+                                                                    <p>XP</p>
+                                                                    <p>Bonus</p>
+                                                                </div>
+                                                                <div class="overflow-y-auto h-56">
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>50</p><p>4580</p><p>453.44 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>51</p><p>5361</p><p>503.75 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>52</p><p>6225</p><p>557.28 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>53</p><p>7176</p><p>613.4 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>54</p><p>8217</p><p>671.45 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>55</p><p>9354</p><p>733.37 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>56</p><p>10589</p><p>796.58 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>57</p><p>11927</p><p>863.01 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>58</p><p>13372</p><p>932.03 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>59</p><p>14927</p><p>1002.98 ֏</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="game_fold open overflow-hidden rounded mb-2">
+                                                            <button class="relative overflow-hidden flex items-center justify-between w-full h-12 px-3 bg-white bg-opacity-5" onclick="faqToggle(this)">
+                                                                <img class="absolute -left-3 h-12 opacity-20" src="./dist/images/icon/loyalty_point_7.png" alt="">
+                                                                <p class="relative z-10 flex items-center font-bold gap-2">Level Up Bonus</p>
+                                                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                            </button>
+                                                            <div class="overflow-hidden">
+                                                                <div class="grid grid-cols-3 p-2 px-3 mt-0.5 mb-[1px] bg-white bg-opacity-5 text-white text-opacity-60 text-xs rounded">
+                                                                    <p>Legend</p>
+                                                                    <p>XP</p>
+                                                                    <p>Bonus</p>
+                                                                </div>
+                                                                <div class="overflow-y-auto h-56">
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>60</p><p>4580</p><p>453.44 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>61</p><p>5361</p><p>503.75 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>62</p><p>6225</p><p>557.28 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>63</p><p>7176</p><p>613.4 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>64</p><p>8217</p><p>671.45 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>65</p><p>9354</p><p>733.37 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>66</p><p>10589</p><p>796.58 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>67</p><p>11927</p><p>863.01 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>68</p><p>13372</p><p>932.03 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>69</p><p>14927</p><p>1002.98 ֏</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="game_fold open overflow-hidden rounded mb-2">
+                                                            <button class="relative overflow-hidden flex items-center justify-between w-full h-12 px-3 bg-white bg-opacity-5" onclick="faqToggle(this)">
+                                                                <img class="absolute -left-3 h-12 opacity-20" src="./dist/images/icon/loyalty_point_8.png" alt="">
+                                                                <p class="relative z-10 flex items-center font-bold gap-2">Level Up Bonus</p>
+                                                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                            </button>
+                                                            <div class="overflow-hidden">
+                                                                <div class="grid grid-cols-3 p-2 px-3 mt-0.5 mb-[1px] bg-white bg-opacity-5 text-white text-opacity-60 text-xs rounded">
+                                                                    <p>Lord</p>
+                                                                    <p>XP</p>
+                                                                    <p>Bonus</p>
+                                                                </div>
+                                                                <div class="overflow-y-auto h-56">
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>70</p><p>4580</p><p>453.44 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>71</p><p>5361</p><p>503.75 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>72</p><p>6225</p><p>557.28 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>73</p><p>7176</p><p>613.4 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>74</p><p>8217</p><p>671.45 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>75</p><p>9354</p><p>733.37 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>76</p><p>10589</p><p>796.58 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>77</p><p>11927</p><p>863.01 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>78</p><p>13372</p><p>932.03 ֏</p>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>79</p><p>14927</p><p>1002.98 ֏</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="game_fold open overflow-hidden rounded mb-2">
+                                                            <button class="relative overflow-hidden flex items-center justify-between w-full h-12 px-3 bg-white bg-opacity-5" onclick="faqToggle(this)">
+                                                                <img class="absolute -left-3 h-12 opacity-20" src="./dist/images/icon/loyalty_point_9.png" alt="">
+                                                                <p class="relative z-10 flex items-center font-bold gap-2">Level Up Bonus</p>
+                                                                <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                                                            </button>
+                                                            <div class="overflow-hidden">
+                                                                <div class="grid grid-cols-3 p-2 px-3 mt-0.5 mb-[1px] bg-white bg-opacity-5 text-white text-opacity-60 text-xs rounded">
+                                                                    <p>God</p>
+                                                                    <p>XP</p>
+                                                                    <p>Bonus</p>
+                                                                </div>
+                                                                <div class="overflow-y-auto h-56">
+                                                                    <div class="grid grid-cols-3 p-3 bg-white bg-opacity-5 border-b border-white border-opacity-5">
+                                                                        <p>80</p><p>511628</p><p>60000 ֏</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="max-w-full md:max-w-xs text-center pb-4">
+                                                <img class="mx-auto mb-2" src="./dist/images/icon/loyalty-bonus-info.png" alt="">
+                                                <p class="font-medium">HOW TO RECEIVE XP POINTS? </p>
+                                                <p class="text-xs text-white text-opacity-60">
+                                                    Play “Slots” and “Live Casino”, get XP points and use them to reach new levels.<br/>
+                                                    <strong>430 AMD total bet = 1 XP point</strong><br/>
+                                                    Every time you level up, you will immediately receive a <strong>Level-up bonus</strong>  according to your level, except for the “Beginner” status.<br/>
+                                                    You can get XP points in the “Slots” section’s games of the website, as well as in all games of the “Live Casino” section, except for all types of Dragon Tiger games and Super Sic Bo, Mega Sic Bo, Baccarat, Andar Bahar types of games.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -630,7 +1687,6 @@
                                 <div class="p-4 text-center text-white text-opacity-70 text-xs">There are no bonuses for selected type</div>
 
                             </div>
-
 
                             <!-- profile - detail -->
                             <div data-cont="profile_detail" class="">
@@ -997,6 +2053,86 @@
 
                                 <div class="my-2">
                                     <iframe allow="fullscreen" frameborder="0" height="450" scrolling="no" src="https://www.youtube.com/embed/cTeCEsiD3LI" title="How to activate two-step authentication?" width="100%"></iframe>
+                                </div>
+
+                            </div>
+
+                            <!-- messages -->
+                            <div data-cont="message" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">Inbox</p>
+                                    </div> 
+                                </div>
+
+                            </div>
+
+                            <!-- cashback -->
+                            <div data-cont="cashback" class="">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">Cashback</p>
+                                    </div> 
+                                </div>
+
+                                <div class="md:hidden block">
+                                    <img src="./dist/images/banner/cashback_banner.webp" alt="">
+
+                                    <div class="overflow-hidden game_fold mb-3 rounded">
+                                        <button class="flex items-center justify-between w-full h-9 px-3 bg-white bg-opacity-10" onclick="gameToggle(this)">
+                                            <p class="font-medium text-xs">Cashback</p>
+                                            <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                                        </button>
+                                        <div class="p-3 bg-white bg-opacity-5 text-xs font-medium">
+                                            <b>Cash out</b><br/>
+                                            The Cashback of the previous day by 5% from 00:00-09:59<br/>
+                                            The Cashback of the current day by 7.5% from 10:00-23:59
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="md:p-2.5 md:bg-white md:bg-opacity-5 rounded">
+                                    <div class="p-2.5 md:p-5 bg-white bg-opacity-5 rounded">
+                                        <div class="pb-1 border-b border-white border-opacity-10 text-lg md:text-2xl font-medium">SLOTS</div>
+                                        <div class="flex items-center justify-between py-3 border-b border-white border-opacity-10">
+                                            <p class="text-white text-opacity-50 font-medium">Available For Cashout</p>
+                                            <p class="text-[gold]">*** ***</p>
+                                        </div>
+                                        <div class="pt-5">
+                                            <button class="w-96 max-w-full h-9 border border-white border-opacity-60 text-xs font-medium rounded uppercase">Get Cashback Amount</button>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 md:p-5 text-white text-opacity-60">
+                                        Cash out<br/>
+                                        The Cashback of the previous day by 5% from 00:00-09:59<br/>
+                                        The Cashback of the current day by 7.5% from 10:00-23:59
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- bonus - pie -->
+                            <div data-cont="bonus_pie" class="active">
+                                <!-- 모바일용 -->
+                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                    <div class="flex items-center gap-2 py-2">
+                                        <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
+                                        <p class="uppercase">BONUS - PIE</p>
+                                    </div> 
+                                </div>
+
+                                <div class="md:sticky top-0 bg-bg pt-3">
+                                    <div class="flex items-center gap-2">
+                                        <div class="custom_tooltip">
+                                            <i class="target bc-i-player-info"></i>
+                                            <div>Pie-Points you can exchange for available NFTs.</div>
+                                        </div>
+                                        <p class="text-white text-opacity-60">Available Points: <b>0</b></p>
+                                    </div>
                                 </div>
 
                             </div>

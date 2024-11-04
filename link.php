@@ -93,6 +93,11 @@ echo txtRecord('./@record/');
 				</li>
 			</ul>
 		</li>
+		<li class="mt20" data-label="프로필">
+			<ul>
+				<!-- <li></li> -->
+			</ul>
+		</li>
 		<li class="mt20" data-label="메뉴">
             <ul>
 				<li data-label="Live">

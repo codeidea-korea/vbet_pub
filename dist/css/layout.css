@@ -157,6 +157,7 @@ html {background-color:var(--bg-color);}
         INPUT_GROUP
         NAV-LINK-TABS
         TIPPY-BOX
+        CUSTOM_TOOLTIP
 
 
         CASINO_ITEM
@@ -431,6 +432,7 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .custom_select > .select_button .arrow:not(.noabsolute) {position:absolute; right:16px; top:50%; transform:translateY(-50%); }
 
 .custom_select > div:not(.select_button) {z-index:-1000; position:absolute; left:0; top:100%; overflow-y:auto; overflow-x:hidden; display:none; width:100%; max-height:320px; border-radius:8px; }
+.custom_select.right > div:not(.select_button) {left:auto; right:0; }
 .custom_select > div.h-auto {max-height:fit-content; }
 .custom_select ul li {display:flex; align-items:center; justify-content:space-between; font-weight:500; cursor:pointer; background:rgba(255,255,255,0.1); }
 .custom_select ul li:hover,
@@ -562,6 +564,16 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
             tippy-box
 ---------------------------------------------- */
 .tippy-box {border:1px solid #fff3; background-color:#000c; backdrop-filter:blur(2px); }
+
+
+/* ----------------------------------------------
+            CUSTOM_TOOLTIP
+---------------------------------------------- */
+.custom_tooltip {position:relative; }
+.custom_tooltip > div:not(.target) {position:absolute; left:0; top:100%; width:200px; height:auto; padding:6px 8px; background-color:#fff; color:#000; font-size:12px; line-height:1.2; border-radius:5px; }
+.custom_tooltip > div:not(.target):before {content:''; position:absolute; left:5px; bottom:calc(100% - 1px); width:6px; height:4px; border-bottom:4px solid #fff; border-left:3px solid transparent; border-right:3px solid transparent; }
+
+
 
 /* ----------------------------------------------
             SWIPER_ARROW
@@ -1136,10 +1148,13 @@ html.light .vbet_toggle .txt_area * {color:rgba(0,0,0,.5); }
 .modal .modal-dialog.modal-profile .modal-body .profile_area {height:85vh; }
 .modal .modal-dialog.modal-profile .modal-body .profile_inner {height:calc(85vh - 80px); padding:15px 15px 0; }
 
+.profile_area .profile_right {overflow:hidden; width:calc(100% - 320px) !important; }
+
 @media all and (max-width:767px){
     .modal .modal-dialog.modal-profile .modal-body {height:100%; }
     .modal .modal-dialog.modal-profile .modal-body .profile_area {height:calc(100% - 50px); }
     .modal .modal-dialog.modal-profile .modal-body .profile_inner {height:100%; padding:0 15px; }
+    .profile_area .profile_right {width:100% !important; }
 }
 
 .profile_tab {position:relative; }
@@ -1170,3 +1185,10 @@ html.light .vbet_toggle .txt_area * {color:rgba(0,0,0,.5); }
 
 .profile_card li.swiper-slide {transform:scale(0.9); transition:all 0.5s; }
 .profile_card li.swiper-slide.swiper-slide-active {transform:scale(1.0);}
+
+.level_tab {background-color:rgba(255,255,255,0.05); cursor:pointer; }
+.level_tab:hover,
+.level_tab.active {background-color:rgba(255,255,255,0.8); color:#000; }
+
+.level_content > div {display:none; }
+.level_content > div.active {display:block; }

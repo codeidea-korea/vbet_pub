@@ -389,6 +389,22 @@ const profileTabPrev = (item)=>{
     $('#profile-modal .profile_right').removeClass('open')
 }
 
+
+// level tab 
+const levelTab = (item)=>{
+    let liN = $(item).parent('li').index();
+
+    $(item).addClass('active').parent('li').siblings().find('.level_tab').removeClass('active');
+    $('.level_content > div').eq(liN).addClass('active').siblings().removeClass('active');
+}
+
+// 프로필 탭 클릭하기
+const profileTabClick = (item) =>{
+    let target = $(`.profile_area .profile_left button[data-target="${item}"]`)
+    target.click();
+}
+
+
 // jquery 모음
 const loadJquery = ()=>{
 
