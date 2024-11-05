@@ -404,6 +404,42 @@ const profileTabClick = (item) =>{
     target.click();
 }
 
+// 높이 고정 <-> 변동
+const heightChange = (item)=>{
+    $(item).prev('div').toggleClass('h-12')
+    if($(item).prev('div').hasClass('h-12')){
+        $(item).text('Show more')
+    }else{
+        $(item).text('Show less')
+    }
+}
+
+// 모바일 프로필 버튼
+const momenuTab = (item)=>{
+    let liN = $(item).index();
+
+    $(item).parent('ul').addClass('hidden')
+    $(item).parent('ul').next('.mo_menu_depth').removeClass('hidden')
+    $(item).parent('ul').next('.mo_menu_depth').find('>div').eq(liN).addClass('active').siblings().removeClass('active')
+}
+
+const momenuTabBase = (item)=>{
+    $(item).parents('.mo_menu_depth').addClass('hidden')
+    $(item).parents('.mo_menu_depth').prev('.mo_menu').removeClass('hidden')
+}
+
+// 가격 가리기
+const moneySecret = (item)=>{
+    let money = $('#profile-modal .money').data('money'); 
+
+    $(item).toggleClass('bc-i-eye bc-i-eye-hidden');
+    if($(item).hasClass('bc-i-eye')){
+        $('#profile-modal .money').text(money)
+    }else{
+        $('#profile-modal .money').text('*******')
+    }
+}
+
 
 // jquery 모음
 const loadJquery = ()=>{
@@ -634,6 +670,10 @@ const loadJquery = ()=>{
             ...options,
         });
     });
+
+    $('.custom_tooltip').on('click',function(){
+        $(this).toggleClass('active');
+    })
         
 
 }

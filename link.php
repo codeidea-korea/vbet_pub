@@ -91,11 +91,46 @@ echo txtRecord('./@record/');
 					<button class="pop-modal" onclick="modalOpen('register2-modal')">register Step2 모달</button>
 					<button class="pop-modal" onclick="modalOpen('success-modal')">success 모달</button>
 				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('betslip-modal')">모바일 betslip 모달</button>
+					<button class="pop-modal" onclick="modalOpen('game-modal')">게임 모달</button>
+				</li>
 			</ul>
 		</li>
 		<li class="mt20" data-label="프로필">
 			<ul>
-				<!-- <li></li> -->
+				<li>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bet_all');">BET BUILDER HISTORY - All</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bet_open');">BET BUILDER HISTORY - Open bets</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bet_won');">BET BUILDER HISTORY - Won</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bet_lost');">BET BUILDER HISTORY - Lost</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_deposit');">Balance Management - Deposit</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_transfer');">Balance Management - Transfer</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_withdraw');">Balance Management - Withdraw</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_history');">Balance Management - Transaction History</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_status');">Balance Management - Withdraw Status</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_my');">Balance Management - My Wallets</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_spins');">Bonuses - Casino Free Spins</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_point');">Bonuses - Loyalty Points</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_histofy');">Bonuses - Bonus history</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_bonus');">Bonuses - Casino Bonus</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_detail');">My profile - Personal Details</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_password');">My profile - Change Password</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_time');">My profile - Time-Out</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_account');">My profile - Verify Account</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_twostep');">My profile - TWO-STEP AUTHENTICATION</button>
+				</li>
+				<li>
+				<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('message');">message</button>
+				<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('cashback');">cashback</button>
+				<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonus_pie');">bonus - pie</button>
+				</li>
 			</ul>
 		</li>
 		<li class="mt20" data-label="메뉴">

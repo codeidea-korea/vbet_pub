@@ -18,13 +18,15 @@ html.light .bg-white\/10 {background-color:rgb(0 0 0 / 0.1); }
 
 :root {
     --darky-color:#1a243b;
+    --primary-color:#a71f67;
     --primary-light-color:#a71f67;
     --primary-light2-color:#d80d83;
     --primary-light2-opacity-color:#d80d8399;
     --primary-dark-color:#1e0923;
     --primary-dark2-color:#4a0635;
-    
 
+    --txt-color:#2a348f;
+    
     
     /* gradient */
     --pink-gradient:linear-gradient(175deg,#7f0dd8 10%,#a937f0 50%,#c80dd8 100%); 
@@ -33,6 +35,10 @@ html.light .bg-white\/10 {background-color:rgb(0 0 0 / 0.1); }
     --bg3-gradient:linear-gradient(to right,transparent,rgba(255,255,255,.5),transparent); 
     --bg4-gradient:radial-gradient(39.93% 60.21% at 50% 50%,#183149 0,#000 100%); 
     --bg5-gradient:linear-gradient(to left,#8d17c7,#031778);
+    --bg6-gradient:linear-gradient(111deg,#ff9525,#ff4d4d);
+    --bg7-gradient:linear-gradient(to bottom,rgba(255,255,255,.03),rgba(0,12,36,1));
+
+    --before-gradient:radial-gradient(circle at -14% 113%,rgba(0,0,0,.65),rgba(0,0,0,0) 120%);
     
 
     /* shadow */
@@ -77,12 +83,17 @@ html {background-color:var(--bg-color);}
 .bg-casinoInfo {background:linear-gradient(195deg,rgba(9,2,38,.2) 109%,rgba(99,0,83,.2) 20%),url('../images/casino/casino_bg.jpg') no-repeat 50% 50% / 100% ;}
 
 .hover-primary-color:hover {color:rgb(var(--color-primary)); }
+.color-txt {color:var(--txt-color); }
 
 .pink-gradient {background:var(--pink-gradient); }
 .bg2-gradient {background:var(--bg2-gradient); }
 .bg3-gradient {background:var(--bg3-gradient); }
 .bg4-gradient {background:var(--bg4-gradient); }
 .bg5-gradient {background:var(--bg5-gradient); }
+.bg6-gradient {background:var(--bg6-gradient); }
+.bg7-gradient {background:var(--bg7-gradient); }
+.before-gradient:after {content:''; position:absolute; left:0; top:0; width:100%; height:100%; background:var(--before-gradient); border-radius:4px;}
+.before-gradient:before {z-index:10; position:relative; }
 
 /* shadow */
 .shadow-1 {box-shadow:var(--shadow-1); }
@@ -470,6 +481,7 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 .form-control.focus_type:active {background-color:var(--primary-color); }
 
 .form-check-input[type="radio"] {border:2px solid rgba(255,255,255,0.6); background-color:transparent; }
+.form-check-input[type="radio"].type02 {border:2px solid #cacce3; }
 .form-check-input[type="radio"]:checked {border:2px solid rgb(var(--color-primary)); background-color:transparent; background-image:url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='mediumvioletred' xmlns='http://www.w3.org/2000/svg'><circle cx='8' cy='8' r='3'/></svg>"); }
 
 .form-switch input[type="checkbox"] {width:36px; height:20px; border:0 none; background-color:rgba(255,255,255,0.15); }
@@ -569,9 +581,16 @@ header .sub_menu ul li {opacity:.5; border-bottom:2px solid transparent; }
 /* ----------------------------------------------
             CUSTOM_TOOLTIP
 ---------------------------------------------- */
-.custom_tooltip {position:relative; }
-.custom_tooltip > div:not(.target) {position:absolute; left:0; top:100%; width:200px; height:auto; padding:6px 8px; background-color:#fff; color:#000; font-size:12px; line-height:1.2; border-radius:5px; }
-.custom_tooltip > div:not(.target):before {content:''; position:absolute; left:5px; bottom:calc(100% - 1px); width:6px; height:4px; border-bottom:4px solid #fff; border-left:3px solid transparent; border-right:3px solid transparent; }
+.custom_tooltip {position:relative; cursor:pointer; }
+.custom_tooltip:not(.hover_box) > .target {opacity:.5; }
+.custom_tooltip:not(.hover_box) > .target:hover,
+.custom_tooltip.active > .target {opacity:1; }
+.custom_tooltip > div:not(.target):not(.nostyle) {position:absolute; left:0; top:100%; display:none; width:200px; height:auto; padding:6px 8px; background-color:#fff; color:#000; font-size:12px; line-height:1.2; border-radius:5px; }
+.custom_tooltip.active > div:not(.target) {display:block; }
+.custom_tooltip > div:not(.target):not(.nostyle):before {content:''; position:absolute; left:5px; bottom:calc(100% - 1px); width:6px; height:4px; border-bottom:4px solid #fff; border-left:3px solid transparent; border-right:3px solid transparent; }
+
+.custom_tooltip.hover_box > div:not(.target) {display:none; position:absolute; left:0; top:100%; }
+.custom_tooltip.hover_box:hover > div:not(.target) {display:block; }
 
 
 
@@ -1192,3 +1211,7 @@ html.light .vbet_toggle .txt_area * {color:rgba(0,0,0,.5); }
 
 .level_content > div {display:none; }
 .level_content > div.active {display:block; }
+
+
+.mo_menu_depth > div {display:none; }
+.mo_menu_depth > div.active {display:block; }

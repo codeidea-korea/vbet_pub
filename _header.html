@@ -21,27 +21,27 @@
             <div class="custom_hover">
                 <button class="h-7 px-2 text-xs rounded">0.0 <b>֏</b></button>
                 <div class="w-60 p-2.5 bg-bg">
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-circle-dollar"></i>Deposit</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-transfer"></i>Transfer</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-withdraw"></i>Withdraw</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-history"></i>Transaction History</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-withdraws"></i>Withdraw Status</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-wallet"></i>My Wallets</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_deposit')"><i class="bc-i-circle-dollar"></i>Deposit</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_transfer')"><i class="bc-i-transfer"></i>Transfer</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_withdraw')"><i class="bc-i-withdraw"></i>Withdraw</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_history')"><i class="bc-i-history"></i>Transaction History</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_status')"><i class="bc-i-withdraws"></i>Withdraw Status</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_my')"><i class="bc-i-wallet"></i>My Wallets</a>
                 </div>
             </div>
 
             <hr class=" w-[1px] h-7 bg-white bg-opacity-10 border-none" />
 
             <div class="custom_hover">
-                <button class="py-1 px-2 rounded"><i class="bc-i-user text-shadow-1 text-2xl"></i></button>
+                <button class="py-1 px-2 rounded" onclick="modalOpen('profile-modal'); profileTabClick('profile_detail')"><i class="bc-i-user text-shadow-1 text-2xl"></i></button>
                 <div class="w-60 p-2.5 bg-bg">
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-bet-builder-history"></i>Bet Builder history</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-balance-management"></i>Balance Management</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-promotion"></i>Bonuses</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-user"></i>My Profile</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-message"></i>Messages</a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-cashback-cashout"></i>Cashback </a>
-                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded"><i class="bc-i-rewards"></i>BONUS - PIE </a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('bet_all')"><i class="bc-i-bet-builder-history"></i>Bet Builder history</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_deposit')"><i class="bc-i-balance-management"></i>Balance Management</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_spins')"><i class="bc-i-promotion"></i>Bonuses</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('profile_detail')"><i class="bc-i-user"></i>My Profile</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('message')"><i class="bc-i-message"></i>Messages</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('cashback')"><i class="bc-i-cashback-cashout"></i>Cashback </a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('bonus_pie')"><i class="bc-i-rewards"></i>BONUS - PIE </a>
                     <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded !mt-3"><i class="bc-i-logout"></i>Logout</a>
                 </div>
             </div>
@@ -222,8 +222,9 @@
         <li data-sub-cate="live"><a href="./live.html"><i class="bc-i-live"></i><span class="fs10">Live</span><b>64</b></a></li>
         <li data-sub-cate="sport"><a href="./sports.html"><i class="bc-i-prematch"></i><span class="fs10">Sport</span></a></li>
         <li data-sub-cate="occursum"><a href="javascript:;"><i class="bc-i-chat"></i><span class="fs10">Occursum</span></a></li>
+        <li><a href="javascript:;"><i class="bc-i-betslip"></i><span class="fs10">BetSlip</span><b>1</b></a></li>
         <li data-sub-cate="casino"><a href="./casino.html"><i class="bc-i-slots"></i><span class="fs10">Casino</span></a></li>
-        <li data-sub-cate="livecasino"><a href="./live_casino.html"><i class="bc-i-livecasino"></i><span class="fs10">Live Casino</span></a></li>
+        <!-- <li data-sub-cate="livecasino"><a href="./live_casino.html"><i class="bc-i-livecasino"></i><span class="fs10">Live Casino</span></a></li> -->
         <li class="menu"><a href="javascript:;" onclick="moMenuToggle()"><i class="bc-i-burger"></i><span class="fs10">Menu</span></a></li>
     </ul>
 </div>

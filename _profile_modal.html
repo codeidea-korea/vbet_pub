@@ -1,7 +1,6 @@
 
 <!-- 프로필 모달 -->
-<div id="profile-modal" class="modal mo_allfull show overflow-y-auto " tabindex="-1" aria-hidden="true" style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;" >
-<!-- <div id="profile-modal" class="modal mo_allfull " tabindex="-1" aria-hidden="true"> -->
+ㄴ<div id="profile-modal" class="modal mo_allfull " tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-2xl modal-profile">
         <div class="modal-content">
             <div class="modal-body !p-0">
@@ -13,7 +12,7 @@
 
                 <div class="flex profile_area">
                     <!-- 좌측메뉴 -->
-                    <div class="profile_left overflow-y-auto shrink-0 w-full md:w-80 p-2.5 pr-3 bg-white bg-opacity-10">
+                    <div class="profile_left open overflow-y-auto shrink-0 w-full md:w-80 p-2.5 pr-3 md:bg-white md:bg-opacity-10">
 
                         <div class="overflow-hidden block md:hidden px-8 mb-3">
                             <div class="profile_card mySwiper" data-loop="false" data-gap="0">
@@ -30,8 +29,8 @@
                                                     <button class="flex items-center justify-center w-8 h-8 bg-white bg-opacity-10 rounded bc-i-eye"></button>
                                                 </div>
                                                 <div class="grid grid-cols-2 gap-3">
-                                                    <button onclick="profileTab(this)" data-target="deposit" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-wallet"></i> DEPOSIT</button>
-                                                    <button onclick="profileTab(this)" data-target="withdraw" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-withdraw"></i> WITHDRAW</button>
+                                                    <button onclick="profileTabClick('balance_deposit')"  class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-wallet"></i> DEPOSIT</button>
+                                                    <button onclick="profileTabClick('balance_withdraw')"  class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-withdraw"></i> WITHDRAW</button>
                                                 </div>
                                             </div>
                                         </li>
@@ -56,7 +55,7 @@
                             <span class="z-10 relative font-medium">Loyalty Points</span>
                         </button>
 
-                        <div class="flex items-center gap-2.5 mb-3">
+                        <div class="relative flex items-center gap-2.5 mb-3">
                             <div class="flex items-center justify-center w-8 h-8 text-black bg-white bg-opacity-40 rounded-full">dd</div>
                             <div>
                                 <p>no name</p>
@@ -65,6 +64,7 @@
                                     <i class="bc-i-copy"></i>
                                 </div>
                             </div>
+                            <button class="absolute right-0 top-0 flex md:hidden items-center w-8 h-8 bc-i-small-arrow-right text-white text-opacity-60" onclick="profileTabClick('profile_detail')" ></button>
                         </div>
 
                         <div class="mb-3">
@@ -72,14 +72,14 @@
                                 <i class="bc-i-not-verified text-pending"></i>
                                 Sports Not Verified
                             </div>
-                            <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase">verify now</button>
+                            <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase" onclick="modalOpen('verify-modal')">verify now</button>
                         </div>
                         <div class="mb-3">
                             <div class="flex items-center gap-2 mb-2">
                                 <i class="bc-i-not-verified text-pending"></i>
                                 Casino Not Verified
                             </div>
-                            <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase">verify now</button>
+                            <button class="btn btn-outline-pending w-full bg-pending bg-opacity-10 text-white text-xs uppercase" onclick="modalOpen('verify-modal')">verify now</button>
                         </div>
 
                         <div class="md:block hidden mb-9">
@@ -88,22 +88,22 @@
                                 <div class="flex items-center justify-between mb-4">
                                     <div>
                                         <p>Main Balance</p>
-                                        <b class="text-xl font-bold">0.0 ֏</b>
+                                        <b class="text-xl font-bold money" data-money="0.0 ֏">0.0 ֏</b>
                                     </div>
-                                    <button class="flex items-center justify-center w-8 h-8 bg-white bg-opacity-10 rounded bc-i-eye"></button>
+                                    <button class="flex items-center justify-center w-8 h-8 bg-white bg-opacity-10 rounded bc-i-eye" onclick="moneySecret(this)"></button>
                                 </div>
                                 <div class="grid grid-cols-2 gap-3">
-                                    <button onclick="profileTab(this)" data-target="balance_deposit" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-wallet"></i> DEPOSIT</button>
-                                    <button onclick="profileTab(this)" data-target="balance_withdraw" class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-withdraw"></i> WITHDRAW</button>
+                                    <button onclick="profileTabClick('balance_deposit')"  class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-wallet"></i> DEPOSIT</button>
+                                    <button onclick="profileTabClick('balance_withdraw')"  class="h-9 px-1 bg-white bg-opacity-20 rounded"><i class="bc-i-withdraw"></i> WITHDRAW</button>
                                 </div>
                             </div>
                             <div class="profile_balance bonus py-2.5 px-4 mb-4 rounded">
                                 <i class="icon bc-i-promotion"></i>
                                 <p>Total Bonus Balance</p>
-                                <b class="text-xl font-bold">0.0 ֏</b>
+                                <b class="text-xl font-bold money" data-money="0.0 ֏">0.0 ֏</b>
                                 <div class="flex items-center justify-between border-t border-white border-opacity-20 mt-2 pt-2 text-xs">
                                     <p>Bonus Balance</p>
-                                    <b>0.0֏</b>
+                                    <b class="money" data-money="0.0 ֏">0.0֏</b>
                                 </div>
                             </div>
                         </div>
@@ -113,127 +113,388 @@
                             <span class="z-10 relative font-medium">Loyalty Points</span>
                         </button>
 
-                        <div class="overflow-hidden game_fold mb-3 rounded">
-                            <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
-                                <div class="flex items-center gap-3 text-white text-opacity-70">
-                                    <i class="bc-i-bet-builder-history text-xl"></i>
-                                    <p class="font-medium uppercase">BET BUILDER HISTORY</p>
+                        <div class="md:block hidden">
+                            <div class="overflow-hidden game_fold mb-3 rounded">
+                                <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
+                                    <div class="flex items-center gap-3 text-white text-opacity-70">
+                                        <i class="bc-i-bet-builder-history text-xl"></i>
+                                        <p class="font-medium uppercase">BET BUILDER HISTORY</p>
+                                    </div>
+                                    <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                                </button>
+                                <div class="p-4 bg-white bg-opacity-10">
+                                    <ul>
+                                        <li><button onclick="profileTab(this)" data-target="bet_all" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">All</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bet_open" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Open bets</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bet_won" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Won</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bet_lost" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Lost</button></li>
+                                    </ul>
                                 </div>
-                                <i class="arrow bc-i-small-arrow-down text-xs"></i>
-                            </button>
-                            <div class="p-4 bg-white bg-opacity-10">
-                                <ul>
-                                    <li><button onclick="profileTab(this)" data-target="bet_all" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">All</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="bet_open" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Open bets</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="bet_won" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Won</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="bet_lost" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Lost</button></li>
-                                </ul>
                             </div>
-                        </div>
 
-                        <div class="overflow-hidden game_fold mb-3 rounded">
-                            <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
-                                <div class="flex items-center gap-3 text-white text-opacity-70">
-                                    <i class="bc-i-balance-management text-xl"></i>
-                                    <p class="font-medium uppercase">Balance Management</p>
+                            <div class="overflow-hidden game_fold mb-3 rounded">
+                                <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
+                                    <div class="flex items-center gap-3 text-white text-opacity-70">
+                                        <i class="bc-i-balance-management text-xl"></i>
+                                        <p class="font-medium uppercase">Balance Management</p>
+                                    </div>
+                                    <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                                </button>
+                                <div class="p-4 bg-white bg-opacity-10">
+                                    <ul>
+                                        <li><button onclick="profileTab(this)" data-target="balance_deposit" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Deposit</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_transfer" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transfer</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_withdraw" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_history" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transaction History</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_status" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw Status</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_my" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">My Wallets</button></li>
+                                    </ul>
                                 </div>
-                                <i class="arrow bc-i-small-arrow-down text-xs"></i>
-                            </button>
-                            <div class="p-4 bg-white bg-opacity-10">
-                                <ul>
-                                    <li><button onclick="profileTab(this)" data-target="balance_deposit" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Deposit</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="balance_transfer" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transfer</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="balance_withdraw" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="balance_history" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Transaction History</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="balance_status" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Withdraw Status</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="balance_my" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">My Wallets</button></li>
-                                </ul>
                             </div>
-                        </div>
 
-                        <div class="overflow-hidden game_fold mb-3 rounded">
-                            <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
-                                <div class="flex items-center gap-3 text-white text-opacity-70">
-                                    <i class="bc-i-promotion text-xl"></i>
-                                    <p class="font-medium uppercase">Bonuses</p>
+                            <div class="overflow-hidden game_fold mb-3 rounded">
+                                <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
+                                    <div class="flex items-center gap-3 text-white text-opacity-70">
+                                        <i class="bc-i-promotion text-xl"></i>
+                                        <p class="font-medium uppercase">Bonuses</p>
+                                    </div>
+                                    <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                                </button>
+                                <div class="p-4 bg-white bg-opacity-10">
+                                    <ul>
+                                        <li><button onclick="profileTab(this)" data-target="bonuses_spins" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Free Spins</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bonuses_point" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Loyalty Points</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bonuses_histofy" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Bonus history</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bonuses_bonus" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Bonus</button></li>
+                                    </ul>
                                 </div>
-                                <i class="arrow bc-i-small-arrow-down text-xs"></i>
-                            </button>
-                            <div class="p-4 bg-white bg-opacity-10">
-                                <ul>
-                                    <li><button onclick="profileTab(this)" data-target="bonuses_spins" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Free Spins</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="bonuses_point" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Loyalty Points</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="bonuses_histofy" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Bonus history</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="bonuses_bonus" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Casino Bonus</button></li>
-                                </ul>
                             </div>
-                        </div>
 
-                        <div class="overflow-hidden game_fold mb-3 rounded">
-                            <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
-                                <div class="flex items-center gap-3 text-white text-opacity-70">
-                                    <i class="bc-i-user text-xl"></i>
-                                    <p class="font-medium uppercase">My profile</p>
+                            <div class="overflow-hidden game_fold mb-3 rounded">
+                                <button class="flex items-center justify-between w-full h-14 px-4 bg-white bg-opacity-5 hover:bg-opacity-10" onclick="gameToggle(this)">
+                                    <div class="flex items-center gap-3 text-white text-opacity-70">
+                                        <i class="bc-i-user text-xl"></i>
+                                        <p class="font-medium uppercase">My profile</p>
+                                    </div>
+                                    <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                                </button>
+                                <div class="p-4 bg-white bg-opacity-10">
+                                    <ul>
+                                        <li><button onclick="profileTab(this)" data-target="profile_detail" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Personal Details</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="profile_password" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Change Password</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="profile_time" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Time-Out</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="profile_account" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Verify Account</button></li>
+                                        <li><button onclick="profileTab(this)" data-target="profile_twostep" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">TWO-STEP AUTHENTICATION</button></li>
+                                    </ul>
                                 </div>
-                                <i class="arrow bc-i-small-arrow-down text-xs"></i>
+                            </div>
+
+                            <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" data-target="message" onclick="profileTab(this)">
+                                <div class="flex items-center gap-3 text-white text-opacity-70">
+                                    <i class="bc-i-message text-xl"></i>
+                                    <p class="font-medium uppercase">message</p>
+                                </div>
+                                <i class="arrow bc-i-small-arrow-right text-xs"></i>
+                                <span class="num">1</span>
                             </button>
-                            <div class="p-4 bg-white bg-opacity-10">
-                                <ul>
-                                    <li><button onclick="profileTab(this)" data-target="profile_detail" class="profile_tab active block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Personal Details</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="profile_password" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Change Password</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="profile_time" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Time-Out</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="profile_account" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">Verify Account</button></li>
-                                    <li><button onclick="profileTab(this)" data-target="profile_twostep" class="profile_tab block w-full h-full py-1 border-l-2 border-white border-opacity-20 pl-3 text-white text-opacity-60 hover:text-opacity-100 text-xs font-medium text-left">TWO-STEP AUTHENTICATION</button></li>
-                                </ul>
+
+                            <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" data-target="cashback" onclick="profileTab(this)">
+                                <div class="flex items-center gap-3 text-white text-opacity-70">
+                                    <i class="bc-i-cashback-cashout text-xl"></i>
+                                    <p class="font-medium uppercase">cashback</p>
+                                </div>
+                                <i class="arrow bc-i-small-arrow-right text-xs"></i>
+                            </button>
+
+                            <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" data-target="bonus_pie" onclick="profileTab(this)">
+                                <div class="flex items-center gap-3 text-white text-opacity-70">
+                                    <i class="bc-i-rewards text-xl"></i>
+                                    <p class="font-medium uppercase">bonus - pie</p>
+                                </div>
+                                <i class="arrow bc-i-small-arrow-right text-xs"></i>
+                            </button>
+
+                            <div class="p-3">
+                                <div class="flex gap-3 p-3 bg-white bg-opacity-5 rounded">
+                                    <div class="input_wrap"> 
+                                        <input id="promocode" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="promocode" class="form-label text-xs text-white text-opacity-40">Promo Code</label> 
+                                    </div> 
+                                    <button class="btn btn-success text-xs">APPLY</button>
+                                </div>
                             </div>
+                            <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded">
+                                <div class="flex items-center gap-3 text-white text-opacity-70">
+                                    <i class="bc-i-logout text-xl"></i>
+                                    <p class="font-medium uppercase">Logout</p>
+                                </div>
+                            </button>
+
                         </div>
 
-                        <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="profileTab(this)">
-                            <div class="flex items-center gap-3 text-white text-opacity-70">
-                                <i class="bc-i-message text-xl"></i>
-                                <p class="font-medium uppercase">message</p>
-                            </div>
-                            <i class="arrow bc-i-small-arrow-right text-xs"></i>
-                            <span class="num">1</span>
-                        </button>
+                        <div class="block md:hidden">
 
-                        <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="profileTab(this)">
-                            <div class="flex items-center gap-3 text-white text-opacity-70">
-                                <i class="bc-i-cashback-cashout text-xl"></i>
-                                <p class="font-medium uppercase">cashback</p>
-                            </div>
-                            <i class="arrow bc-i-small-arrow-right text-xs"></i>
-                        </button>
+                            <ul class="mo_menu">
+                                <li class="flex items-center justify-between h-10 px-3 bg-white bg-opacity-15 rounded" onclick="momenuTab(this)">
+                                    <div class="flex items-center gap-2 text-base">
+                                        <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-bet-builder-history bg-[#6585a1] before-gradient"></i>
+                                        Bet Builder history
+                                    </div>
+                                    <i class="bc-i-small-arrow-right text-xs"></i>
+                                </li>
+                                <li class="flex items-center justify-between h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded" onclick="momenuTab(this)">
+                                    <div class="flex items-center gap-2 text-base">
+                                        <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-balance-management bg-[#38b838] before-gradient"></i>
+                                        Balance Management
+                                    </div>
+                                    <i class="bc-i-small-arrow-right text-xs"></i>
+                                </li>
+                                <li class="flex items-center justify-between h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded" onclick="momenuTab(this)">
+                                    <div class="flex items-center gap-2 text-base">
+                                        <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-promotion bg-[#f7ff2b] before-gradient"></i>
+                                        Bonuses
+                                    </div>
+                                    <i class="bc-i-small-arrow-right text-xs"></i>
+                                </li>
+                                <li class="flex items-center justify-between h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded" onclick="momenuTab(this)">
+                                    <div class="flex items-center gap-2 text-base">
+                                        <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-user bg-[#8b928b] before-gradient"></i>
+                                        My Profile
+                                    </div>
+                                    <i class="bc-i-small-arrow-right text-xs"></i>
+                                </li>
+                                <li class="flex items-center justify-between h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded" onclick="momenuTab(this)">
+                                    <div class="flex items-center gap-2 text-base">
+                                        <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-message bg-[#5280dc] before-gradient"></i>
+                                        Messages
+                                    </div>
+                                    <i class="bc-i-small-arrow-right text-xs"></i>
+                                </li>
+                                <li class="flex items-center justify-between h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded" onclick="momenuTab(this)">
+                                    <div class="flex items-center gap-2 text-base">
+                                        <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-cashback-cashout bg-[#c76665] before-gradient"></i>
+                                        Cashback
+                                    </div>
+                                    <i class="bc-i-small-arrow-right text-xs"></i>
+                                </li>
+                                <li class="flex items-center justify-between h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded" data-target="bonus_pie" onclick="profileTab(this)">
+                                    <div class="flex items-center gap-2 text-base">
+                                        <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-rewards bg-[#6585a1] before-gradient"></i>
+                                        BONUS - PIE
+                                    </div>
+                                    <i class="bc-i-small-arrow-right text-xs"></i>
+                                </li>
+                            </ul>
+                            <div class="mo_menu_depth hidden">
+                                <div>
+                                    <ul>
+                                        <li class="flex items-center gap-3 h-10 px-3 text-base bg-white bg-opacity-5 rounded" onclick="momenuTabBase(this)"><i class="bc-i-small-arrow-left text-xs"></i>Bet Builder history</li>
+                                        <li><button onclick="profileTab(this)" data-target="bet_all" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-bet-history bg-[#6585a1] before-gradient"></i>
+                                                <p class="text-base font-medium">All</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bet_open" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-open-bets bg-[#6585a1] before-gradient"></i>
+                                                <p class="text-base font-medium">Open bets</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bet_won" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-won bg-[#6585a1] before-gradient"></i>
+                                                <p class="text-base font-medium">Won</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bet_lost" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-lost bg-[#6585a1] before-gradient"></i>
+                                                <p class="text-base font-medium">Lost</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                    </ul>
+                                </div>
 
-                        <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="profileTab(this)">
-                            <div class="flex items-center gap-3 text-white text-opacity-70">
-                                <i class="bc-i-rewards text-xl"></i>
-                                <p class="font-medium uppercase">bonus - pie</p>
-                            </div>
-                            <i class="arrow bc-i-small-arrow-right text-xs"></i>
-                        </button>
+                                <div>
+                                    <ul>
+                                        <li class="flex items-center gap-3 h-10 px-3 text-base bg-white bg-opacity-5 rounded" onclick="momenuTabBase(this)"><i class="bc-i-small-arrow-left text-xs"></i>Balance Management</li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_deposit" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-circle-dollar bg-[#38b889] before-gradient"></i>
+                                                <p class="text-base font-medium">Deposit</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_transfer" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-transfer bg-[#20ad53] before-gradient"></i>
+                                                <p class="text-base font-medium">Transfer</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_withdraw" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-withdraw bg-[#9fff2b] before-gradient"></i>
+                                                <p class="text-base font-medium">Withdraw</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_history" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-history bg-[#9ce8bb] before-gradient"></i>
+                                                <p class="text-base font-medium">Transaction History</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_status" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-withdraws bg-[#f7ff2b] before-gradient"></i>
+                                                <p class="text-base font-medium">Withdraw Status</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="balance_my" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-wallet bg-[#2bff92] before-gradient"></i>
+                                                <p class="text-base font-medium">My Wallets</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                    </ul>
+                                </div>
 
-                        <div class="p-3">
-                            <div class="flex gap-3 p-3 bg-white bg-opacity-5 rounded">
-                                <div class="input_wrap"> 
-                                    <input id="promocode" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
-                                    <label for="promocode" class="form-label text-xs text-white text-opacity-40">Promo Code</label> 
-                                </div> 
-                                <button class="btn btn-success text-xs">APPLY</button>
+                                <div>
+                                    <ul>
+                                        <li class="flex items-center gap-3 h-10 px-3 text-base bg-white bg-opacity-5 rounded" onclick="momenuTabBase(this)"><i class="bc-i-small-arrow-left text-xs"></i>Bonuses</li>
+                                        <li><button onclick="profileTab(this)" data-target="bonuses_spins" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-bonus bg-[#6585a1] before-gradient"></i>
+                                                <p class="text-base font-medium">Casino Free Spins</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bonuses_point" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-loyalty-points bg-[#b8a338] before-gradient"></i>
+                                                <p class="text-base font-medium">Loyalty Points</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bonuses_histofy" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-history bg-[#9ce8bb] before-gradient"></i>
+                                                <p class="text-base font-medium">Bonus history</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="bonuses_bonus" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-bonus-casino bg-[#877a11] before-gradient"></i>
+                                                <p class="text-base font-medium">Casino Bonus</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <ul>
+                                        <li class="flex items-center gap-3 h-10 px-3 text-base bg-white bg-opacity-5 rounded" onclick="momenuTabBase(this)"><i class="bc-i-small-arrow-left text-xs"></i>My Profile</li>
+                                        <li><button onclick="profileTab(this)" data-target="profile_detail" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-user bg-[#8b928b] before-gradient"></i>
+                                                <p class="text-base font-medium">Personal Details</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="profile_password" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-change-password bg-[#adbeb5] before-gradient"></i>
+                                                <p class="text-base font-medium">Change Password</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="profile_time" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-time-out bg-[#adc6d8] before-gradient"></i>
+                                                <p class="text-base font-medium">Time-Out</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="profile_account" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-verify-account bg-[#6a8374] before-gradient"></i>
+                                                <p class="text-base font-medium">Verify Account</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                        <li><button onclick="profileTab(this)" data-target="profile_twostep" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-two-factor-authentication bg-[#6585a1] before-gradient"></i>
+                                                <p class="text-base font-medium">TWO-STEP AUTHENTICATION</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <ul>
+                                        <li class="flex items-center gap-3 h-10 px-3 text-base bg-white bg-opacity-5 rounded" onclick="momenuTabBase(this)"><i class="bc-i-small-arrow-left text-xs"></i>Messages</li>
+                                        <li><button onclick="profileTab(this)" data-target="message" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-inbox bg-[#83a9f7] before-gradient"></i>
+                                                <p class="text-base font-medium">Inbox</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <ul>
+                                        <li class="flex items-center gap-3 h-10 px-3 text-base bg-white bg-opacity-5 rounded" onclick="momenuTabBase(this)"><i class="bc-i-small-arrow-left text-xs"></i>Cashback</li>
+                                        <li><button onclick="profileTab(this)" data-target="message" class="flex items-center justify-between w-full h-10 mt-[1px] px-3 bg-white bg-opacity-15 rounded">
+                                            <div class="flex items-center gap-2">
+                                                <i class="relative overlfow-hidden flex items-center justify-center w-6 h-6 rounded bc-i-cashback-cashout bg-[#c76665] before-gradient"></i>
+                                                <p class="text-base font-medium">Casino Cashback</p>
+                                            </div>
+                                            <i class="bc-i-small-arrow-right text-xs"></i>
+                                        </button></li>
+                                    </ul>
+                                </div>
+
                             </div>
+
+                            <div class="py-3">
+                                <div class="flex gap-3 ">
+                                    <div class="input_wrap flex-1"> 
+                                        <input id="promocode" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                        <label for="promocode" class="form-label text-xs text-white text-opacity-40">Promo Code</label> 
+                                    </div> 
+                                    <button class="btn btn-success px-10 text-xs" disabled>APPLY</button>
+                                </div>
+                            </div>
+                            
+                            <button class="profile_tab noactive flex items-center justify-between w-full h-10 px-4 mb-3 bg-white bg-opacity-15 rounded">
+                                <div class="flex items-center gap-3 text-white text-opacity-90">
+                                    <i class="bc-i-logout text-base"></i>
+                                    <p class="font-medium text-xs uppercase">Logout</p>
+                                </div>
+                            </button>
                         </div>
+                        
 
-                        <button class="profile_tab noactive flex items-center justify-between w-full h-14 px-4 mb-3 bg-white bg-opacity-5 hover:bg-opacity-10 rounded" onclick="profileTab(this)">
-                            <div class="flex items-center gap-3 text-white text-opacity-70">
-                                <i class="bc-i-logout text-xl"></i>
-                                <p class="font-medium uppercase">Logout</p>
-                            </div>
-                        </button>
 
                     </div>
 
                     <!-- 우측 컨텐츠 -->
-                    <div class="w-full md:flex-1 profile_right open">
+                    <div class="w-full md:flex-1 profile_right">
                         <!-- 타이틀 -->
                         <div class="hidden md:flex items-center justify-between h-[50px] px-4 border-b border-white border-opacity-10 bg-white bg-opacity-0 md:bg-opacity-10">
                             <h3 id="profielTit">Personal Details</h3>
@@ -2067,6 +2328,8 @@
                                     </div> 
                                 </div>
 
+                                <div class="py-10 text-center text-xs font-medium text-white text-opacity-70">You do not have any messages</div>
+
                             </div>
 
                             <!-- cashback -->
@@ -2116,16 +2379,16 @@
                             </div>
 
                             <!-- bonus - pie -->
-                            <div data-cont="bonus_pie" class="active">
+                            <div data-cont="bonus_pie" class="">
                                 <!-- 모바일용 -->
-                                <div class="z-10 sticky top-0 block md:hidden mb-2 bg-bg">
+                                <div class="z-10 sticky top-0 block md:hidden pt-2 bg-bg">
                                     <div class="flex items-center gap-2 py-2">
                                         <button class="bc-i-round-arrow-left text-xl" onclick="profileTabPrev(this)"></button>
                                         <p class="uppercase">BONUS - PIE</p>
                                     </div> 
                                 </div>
 
-                                <div class="md:sticky top-0 bg-bg pt-3">
+                                <div class="z-10 md:sticky -top-4 bg-bg pt-3 pb-2">
                                     <div class="flex items-center gap-2">
                                         <div class="custom_tooltip">
                                             <i class="target bc-i-player-info"></i>
@@ -2133,6 +2396,100 @@
                                         </div>
                                         <p class="text-white text-opacity-60">Available Points: <b>0</b></p>
                                     </div>
+                                    <div class="mt-2">
+                                        <div class="overflow-hidden h-12 p-1.5 bg-white bg-opacity-10 text-white text-opacity-60 rounded">
+                                            <strong>Bonus-Pie</strong> is a new bonus type. Players get Pie-Points by completing various missions and participating in promotions and special offers where <strong>BONUS-PIE POINTS</strong> are awarded as prizes. This bonus type gives Players a chance to get their<strong>“Pie-Points”</strong> which can be exchanged for NFTs of <strong> “Ortak”</strong> category games.
+                                        </div>
+                                        <button class="w-full py-1 text-center text-white font-medium text-opacity-60 hover:text-opacity-80" onclick="heightChange(this)">Show more</button>
+                                    </div>
+                                    <div class="flex items-center gap-2 mt-4">
+                                        <div class="custom_tooltip">
+                                            <i class="target bc-i-player-info"></i>
+                                            <div>All exchanged NFTs are available in Ortak Marketplace, You should sign up or sign in to view them</div>
+                                        </div>
+                                        <a href="javascript:;" class="btn btn-success px-4 text-xs rounded">CLAIM NFT</a>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 py-5">
+                                    <div>
+                                        <img class="rounded-t" src="./dist/images/banner/bonus_1.jpg" alt="">
+                                        <div class="flex items-center justify-between h-20 p-2.5 bg-white bg-opacity-5 rounded-b">
+                                            <div class="text-xs">
+                                                <p class="font-bold">FTN CRAZY TIME</p>
+                                                <span class="text-white text-opacity-70">100 Pts.</span>
+                                            </div>
+                                            <div class="custom_tooltip hover_box">
+                                                <button class="target btn btn-success px-5 py-2.5 text-xs" disabled>EXCHANGE</button>
+                                                <div class="nostyle py-0.5 text-xs text-white text-opacity-50">Insufficient Points</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img class="rounded-t" src="./dist/images/banner/bonus_2.jpg" alt="">
+                                        <div class="flex items-center justify-between h-20 p-2.5 bg-white bg-opacity-5 rounded-b">
+                                            <div class="text-xs">
+                                                <p class="font-bold">CREEDROOMZ CASHOUT BLACKJACK</p>
+                                                <span class="text-white text-opacity-70">65 Pts.</span>
+                                            </div>
+                                            <div class="custom_tooltip hover_box">
+                                                <button class="target btn btn-success px-5 py-2.5 text-xs" disabled>EXCHANGE</button>
+                                                <div class="nostyle py-0.5 text-xs text-white text-opacity-50">Insufficient Points</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img class="rounded-t" src="./dist/images/banner/bonus_3.jpg" alt="">
+                                        <div class="flex items-center justify-between h-20 p-2.5 bg-white bg-opacity-5 rounded-b">
+                                            <div class="text-xs">
+                                                <p class="font-bold">CREEDROOMZ ROULETTE</p>
+                                                <span class="text-white text-opacity-70">140 Pts.</span>
+                                            </div>
+                                            <div class="custom_tooltip hover_box">
+                                                <button class="target btn btn-success px-5 py-2.5 text-xs" disabled>EXCHANGE</button>
+                                                <div class="nostyle py-0.5 text-xs text-white text-opacity-50">Insufficient Points</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img class="rounded-t" src="./dist/images/banner/bonus_4.jpg" alt="">
+                                        <div class="flex items-center justify-between h-20 p-2.5 bg-white bg-opacity-5 rounded-b">
+                                            <div class="text-xs">
+                                                <p class="font-bold">FIERY FRUITS MORE SPINS</p>
+                                                <span class="text-white text-opacity-70">70.85 Pts.</span>
+                                            </div>
+                                            <div class="custom_tooltip hover_box">
+                                                <button class="target btn btn-success px-5 py-2.5 text-xs" disabled>EXCHANGE</button>
+                                                <div class="nostyle py-0.5 text-xs text-white text-opacity-50">Insufficient Points</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img class="rounded-t" src="./dist/images/banner/bonus_5.png" alt="">
+                                        <div class="flex items-center justify-between h-20 p-2.5 bg-white bg-opacity-5 rounded-b">
+                                            <div class="text-xs">
+                                                <p class="font-bold">GATES OF FTN</p>
+                                                <span class="text-white text-opacity-70">100.25 Pts.</span>
+                                            </div>
+                                            <div class="custom_tooltip hover_box">
+                                                <button class="target btn btn-success px-5 py-2.5 text-xs" disabled>EXCHANGE</button>
+                                                <div class="nostyle py-0.5 text-xs text-white text-opacity-50">Insufficient Points</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img class="rounded-t" src="./dist/images/banner/bonus_6.jpg" alt="">
+                                        <div class="flex items-center justify-between h-20 p-2.5 bg-white bg-opacity-5 rounded-b">
+                                            <div class="text-xs">
+                                                <p class="font-bold">VBET 21</p>
+                                                <span class="text-white text-opacity-70">36.8289 Pts.</span>
+                                            </div>
+                                            <div class="custom_tooltip hover_box">
+                                                <button class="target btn btn-success px-5 py-2.5 text-xs" disabled>EXCHANGE</button>
+                                                <div class="nostyle py-0.5 text-xs text-white text-opacity-50">Insufficient Points</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                             </div>

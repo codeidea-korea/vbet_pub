@@ -1053,9 +1053,291 @@
     </div>
 </div>
 
-<!-- 
-show overflow-y-auto 
--->
-<!-- 
-style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;" 
--->
+<!-- 모바일 - betslip -->
+<div id="betslip-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body flex flex-col justify-between !p-0">
+                <div class="z-20 sticky top-0 flex items-center justify-between shrink-0 h-12 px-3 border-b border-white border-opacity-5 bg-bg">
+                    <div class="text-xs font-medium">0.0֏</div>
+                    <button class="close_btn" onclick="modalClose('betslip-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
+                </div>
+                <div class="relative flex-1 px-2">
+                    <!-- Betslip -->
+                    <ul class="z-10 sticky top-12 nav nav-boxed-tabs bg-bg" role="tablist">
+                        <li id="bets-1-tab" class="nav-item flex-1" role="presentation"> 
+                            <button class="nav-link w-full py-1.5 active" data-tw-toggle="pill" data-tw-target="#bets-tab-1" type="button" role="tab" aria-controls="bets-tab-1" aria-selected="true">BetSlip</button> 
+                        </li>
+                        <li id="bets-2-tab" class="nav-item flex-1" role="presentation"> 
+                            <button class="nav-link w-full py-1.5" data-tw-toggle="pill" data-tw-target="#bets-tab-2" type="button" role="tab" aria-controls="bets-tab-2" aria-selected="false">Open Bets</button> 
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="bets-tab-1" class="relative tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="bets-1-tab">
+                            <div class="z-10 sticky top-[82px] py-0.5 bg-bg">
+                                <div class="flex items-center justify-between h-9 pr-3 bg-white bg-opacity-5 rounded">
+                                    <div class="custom_select">
+                                        <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded">
+                                            <i class="bc-i-settings text-base opacity-80"></i><p class="opacity-50">Always ask</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                        </button>
+                                        <div class="max-h-60 bg-bg shadow-2">
+                                            <ul class="p-2">
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Always ask</p></li>
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Accept Higher odds</p></li>
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Accept Any odds</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="draggable_modal_open bc-i-calculate text-base opacity-80"></button>
+                                </div>
+                                <div class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 rounded">
+                                    <div class="custom_select">
+                                        <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded text-xs">
+                                            <p>Multiple</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                        </button>
+                                        <div class="max-h-60 bg-bg shadow-2">
+                                            <ul class="p-2">
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Single</p></li>
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Multiple</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="opacity-50 underline text-xs">Remove All</button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 gap-0.5 my-0.5">
+                                <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                    <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                    <div>
+                                        <div class="flex items-center justify-between opacity-50">
+                                            <p>Imperial e-Sports</p>
+                                            <p class="text-warning">1.0004</p>
+                                        </div>
+                                        <div class="flex items-start justify-between mt-1 opacity-30">
+                                            <p>Match Winner</p>
+                                            <p class="text-danger font-semibold line-through"></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p class="fs11 opacity-30">Imperial e-Sports - Sharks Esports</p>
+                                            <p><i class="bc-i-attention text-danger fs10"></i></p>
+                                        </div>
+                                        <div class="flex items-center justify-between opacity-10">
+                                            <p class="fs11">17.10.2024,07:00</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 mt-2">
+                                        <i class="text-base text-danger bc-i-remove-circle"></i>
+                                        Event has been deleted
+                                    </div>
+                                </div>
+                                <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                    <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p>Sharks Esports</p>
+                                            <p class="text-warning font-semibold">2.44</p>
+                                        </div>
+                                        <div class="flex items-start justify-between mt-1 opacity-70">
+                                            <p>Map 3 Winner</p>
+                                            <p class="text-danger font-semibold line-through"></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p class="fs11 opacity-70">Imperial e-Sports - Sharks Esports</p>
+                                            <p><i class="bc-i-attention text-danger fs10"></i></p>
+                                        </div>
+                                        <div class="flex items-center justify-between opacity-50">
+                                            <p class="fs11">17.10.2024,07:00</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                    <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p>Sharks Esports</p>
+                                            <p class="text-warning font-semibold">2.44</p>
+                                        </div>
+                                        <div class="flex items-start justify-between mt-1">
+                                            <p class="opacity-70">Map 3 Winner</p>
+                                            <p class="text-danger font-semibold line-through">1.29</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center justify-between opacity-70">
+                                            <p class="fs11">Imperial e-Sports - Sharks Esports</p>
+                                            <p></p>
+                                        </div>
+                                        <div class="flex items-center justify-between opacity-50">
+                                            <p class="fs11">17.10.2024,07:00</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                    <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p>Sharks Esports</p>
+                                            <p class="text-warning font-semibold">2.44</p>
+                                        </div>
+                                        <div class="flex items-start justify-between mt-1 opacity-70">
+                                            <p>Map 3 Winner</p>
+                                            <p class="text-danger font-semibold line-through"></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center justify-between opacity-70">
+                                            <p class="fs11">Imperial e-Sports - Sharks Esports</p>
+                                            <p></p>
+                                        </div>
+                                        <div class="flex items-center justify-between opacity-50">
+                                            <p class="fs11">17.10.2024,07:00</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-10 text-center opacity-80">
+                                Your betslip is empty
+                            </div>
+
+                            <div class="p-2">
+                                <div class="flex items-center justify-between text-xs">
+                                    <p>Odds</p>
+                                    <p class="text-warning font-semibold">2.649</p>
+                                </div>
+                                <div class="py-2">
+                                    <input type="text" class="form-control line-add" placeholder="Enter stake">
+                                </div>
+                                <div class="flex items-center justify-between text-xs">
+                                    <p>POssible win:</p>
+                                    <p class="text-success font-semibold">0 ֏</p>
+                                </div>
+                            </div>
+
+                            <div class="sticky bottom-0 bg-bg pb-2">
+                                <div class="flex items-center gap-2 fs11 py-2 px-2.5 my-0.5 bg-warning bg-opacity-20 rounded">
+                                    <i class="bc-i-attention text-base text-warning opacity-60"></i>
+                                    To place your bet, please <a href="javascript:;" class="underline">Sign in</a> or <a href="javascript:;" class="underline">Register</a>
+                                </div>
+                                <div class="flex items-center gap-2 fs11 py-2 px-2.5 my-0.5 bg-warning bg-opacity-20 rounded">
+                                    <i class="bc-i-attention text-base text-warning opacity-60"></i>
+                                    There are deleted events
+                                </div>
+                                <div class="mt-0.5 p-2.5 bg-white bg-opacity-10 rounded">
+                                    <button class="w-full h-9 bg-white bg-opacity-10 rounded">BET NOW</button>
+                                </div>
+                                <div class="betslip_hoory !h-28 mt-3 pt-2">
+                                    <p class="desc text-xs text-center text-white text-opacity-80">Meet Your Game-Changer</p>
+                                    <p class="tit my-1 text-center text-2xl font-bold">Betting Assistant</p>
+                                    <button><i class="bc-i-hoory mr-2"></i> Ask Hoory AI</button>
+                                    <img src="./dist/images/icon/hoory.png" alt="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div id="bets-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="bets-2-tab">
+                            <div class="mt-2 text-right"><button class="underline text-white text-opacity-50">Go to bet history.</button></div>
+                            <div class="py-14 text-center">You have no open bets at the moment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 게임 모달 -->
+<div id="game-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body flex flex-col justify-between !p-0">
+                <div class="z-30 sticky top-0 flex items-center justify-between shrink-0 h-12 px-3 bg-bg">
+                    <div class="flex items-center gap-2 text-base font-medium">
+                        <i class="bc-i-favorite" onclick="zzimToggle(this)"></i>
+                        First Ballon
+                    </div>
+                    <button class="close_btn" onclick="modalClose('game-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
+                </div>
+                <div class="flex md:flex-row flex-col">
+                    <div class="flex-1 relative py-10 side-blur">
+                        <div class="absolute left-0 top-0 w-full h-full" style="z-index:5; background:url('./dist/images/casino/casino_bg.webp') no-repeat center center / cover;"></div>
+                        <div class="z-20 relative">
+                            <img class="w-56 mx-auto rounded" src="./dist/images/casino/casino_4.gif" alt="">
+                            <div class="text-center mt-2">
+                                <p class="font-medium text-2xl">Diamond Flash</p>
+                                <p class="text-white text-opacity-60">POPOK GAMING</p>
+                            </div>
+                            <div class="flex items-center justify-center gap-3 mt-5">
+                                <button class="btn btn-success py-2.5 px-5 text-xs">PLAY</button>
+                                <button class="btn border py-2.5 px-5 border-white text-xs">DEMO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shrink-0 md:w-72 bg7-gradient">
+                        <ul class="overflow-hidden nav nav-link-tabs type03 rounded-t" role="tablist">
+                            <li id="casino_game-5-tab" class="nav-item flex-1" role="presentation"> 
+                                <button class="nav-link w-full py-2 text-xs active" data-tw-toggle="pill" data-tw-target="#casino_game-tab-5" type="button" role="tab" aria-controls="casino_game-tab-5" aria-selected="true">Jackpot</button> 
+                            </li>
+                            <li id="casino_game-6-tab" class="nav-item flex-1" role="presentation"> 
+                                <button class="nav-link w-full py-2 text-xs" data-tw-toggle="pill" data-tw-target="#casino_game-tab-6" type="button" role="tab" aria-controls="casino_game-tab-6" aria-selected="false">Tournaments</button> 
+                            </li>
+                        </ul>
+                        <div class="tab-content p-3">
+                            <div id="casino_game-tab-5" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="casino_game-5-tab">
+                                <div class="mb-2 text-xs text-white text-opacity-60">BETCONSTRUCT JACKPOT</div>
+                                <div class="flex items-center justify-between w-full mb-1 py-2 px-4 bg-white bg-opacity-5 rounded">
+                                    <img class="w-10 h-10 object-contain" src="./dist/images/casino/casino_icon_4.png" alt="">
+                                    <div class="text-right text-xs font-medium">
+                                        <span class="text-warning">MEGA</span>
+                                        <p class="mt-2">376,297,998.9֏</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between w-full mb-1 py-3 px-4 bg-white bg-opacity-5 rounded">
+                                    <img class="w-10 h-9 object-contain" src="./dist/images/casino/casino_icon_1.png" alt="">
+                                    <div class="text-right text-xs font-medium">
+                                        <span class="text-warning">MAJOR</span>
+                                        <p class="mt-2">272,850,461.9֏</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between w-full mb-1 py-3 px-4 bg-white bg-opacity-5 rounded">
+                                    <img class="w-10 h-9 object-contain" src="./dist/images/casino/casino_icon_2.png" alt="">
+                                    <div class="text-right text-xs font-medium">
+                                        <span class="text-warning">MINOR</span>
+                                        <p class="mt-2">466,445.9֏</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between w-full mb-1 py-3 px-4 bg-white bg-opacity-5 rounded">
+                                    <img class="w-10 h-9 object-contain" src="./dist/images/casino/casino_icon_3.png" alt="">
+                                    <div class="text-right text-xs font-medium">
+                                        <span class="text-warning">MINI</span>
+                                        <p class="mt-2">10,642.9֏</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="casino_game-tab-6" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="casino_game-6-tab">
+                                <div class="w-full mb-1">
+                                    <a href="./casino_tournament_detail.html"><img class="w-full rounded" src="./dist/images/casino/casino_toura_1.png" alt=""></a>
+                                    <div class="block p-3 bg-white bg-opacity-10 rounded-b">
+                                        <b class="text-warning text-base font-medium">100,000 ֏</b>
+                                        <h5 class="text-base font-bold">VIRTUAL SPACE</h5>
+                                        <p class="mb-2 text-xs opacity-70">Buy in + Fee: 0֏<br>10.10.2024,05:01 <i class="bc-i-arrow-to fs10"></i>11.10.2024,04:59</p>
+                                        <button class="btn btn-success w-full">JOIN</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
